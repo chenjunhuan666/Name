@@ -1,12 +1,21 @@
 export type {
   Bazi,
   BaziAnalysis,
+  BaziInputValues,
+  BaziStrength,
+  BaziStrengthAnalysis,
+  CompleteBaziAnalysis,
   EarthlyBranch,
+  ElementRelation,
   ElementTendency,
   FiveElement,
   FiveElementDistribution,
   HeavenlyStem,
+  HiddenStemDetail,
   Pillar,
+  PillarAnalysis,
+  PillarKey,
+  StrengthBreakdown,
   YinYang,
 } from './bazi';
 export type {

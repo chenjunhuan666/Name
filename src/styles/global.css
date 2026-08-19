@@ -51,6 +51,18 @@ a {
   text-decoration: none;
 }
 
+.srOnly {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
 button:focus-visible,
 a:focus-visible,
 input:focus-visible,
@@ -386,6 +398,13 @@ select:focus-visible {
   grid-template-columns: repeat(4, 1fr);
 }
 
+.baziInputFieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
 .formField {
   min-width: 0;
   margin: 0;
@@ -425,6 +444,19 @@ select:focus-visible {
   cursor: not-allowed;
 }
 
+.formField select[aria-invalid="true"] {
+  border-color: rgba(163, 65, 50, 0.62);
+  background: rgba(163, 65, 50, 0.035);
+}
+
+.fieldError {
+  display: block;
+  margin-top: 6px;
+  color: var(--cinnabar-dark);
+  font-size: 11px;
+  line-height: 1.4;
+}
+
 .segmentedControl {
   display: grid;
   height: 44px;
@@ -458,6 +490,22 @@ select:focus-visible {
 
 .modeBody .fieldRow + .fieldRow {
   margin-top: 14px;
+}
+
+.baziGuide {
+  margin: 13px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.formMessage {
+  padding: 9px 11px;
+  margin: 12px 0 0;
+  border-left: 2px solid var(--cinnabar);
+  color: var(--cinnabar-dark);
+  background: rgba(163, 65, 50, 0.06);
+  font-size: 12px;
 }
 
 .primaryButton,
@@ -660,10 +708,10 @@ select:focus-visible {
 
 .pillar {
   display: grid;
-  min-height: 184px;
+  min-height: 276px;
   place-items: center;
   align-content: center;
-  padding: 18px;
+  padding: 22px 16px;
   gap: 8px;
 }
 
@@ -689,11 +737,57 @@ select:focus-visible {
   font-size: 24px;
 }
 
+.pillarMeta {
+  display: grid;
+  width: 100%;
+  padding-top: 12px;
+  margin-top: 5px;
+  border-top: 1px dashed var(--line);
+  color: var(--muted);
+  font-size: 10px;
+  gap: 5px;
+  line-height: 1.45;
+  text-align: left;
+}
+
 .analysisGrid {
   display: grid;
   margin-bottom: 20px;
   gap: 20px;
   grid-template-columns: 0.8fr 1.2fr;
+}
+
+.baziConfirmation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 28px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(172, 130, 60, 0.23);
+  border-radius: 3px 18px 3px 3px;
+  background: rgba(172, 130, 60, 0.06);
+  gap: 32px;
+}
+
+.baziConfirmation h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.baziConfirmation > div > p:last-child {
+  max-width: 710px;
+  margin: 9px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.confirmationButton {
+  width: auto;
+  min-width: 232px;
+  margin: 0;
 }
 
 .definitionList {
@@ -716,39 +810,230 @@ select:focus-visible {
   color: #9b9d97;
 }
 
+.definitionList dd.isReady {
+  color: var(--cinnabar-dark);
+  font-weight: 600;
+}
+
+.strengthReason {
+  padding: 13px 14px;
+  margin: 20px 0 0;
+  border-left: 2px solid var(--gold);
+  color: var(--muted);
+  background: rgba(172, 130, 60, 0.06);
+  font-size: 12px;
+  line-height: 1.75;
+}
+
 .elementBars {
   display: grid;
-  margin-top: 24px;
+  margin-top: 18px;
   gap: 14px;
+}
+
+.elementLegend {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  color: var(--muted);
+  font-size: 10px;
+  gap: 8px 16px;
+}
+
+.elementLegend span {
+  position: relative;
+  padding-left: 12px;
+}
+
+.elementLegend span::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--jade);
+  content: "";
+  transform: translateY(-50%);
+}
+
+.elementLegend span + span::before {
+  background: var(--gold);
 }
 
 .elementBar {
   display: grid;
   align-items: center;
   gap: 12px;
-  grid-template-columns: 28px 1fr 18px;
+  grid-template-columns: 30px 1fr;
 }
 
-.elementBar span,
-.elementBar small {
-  font-size: 13px;
+.elementBar > strong {
+  display: grid;
+  width: 29px;
+  height: 29px;
+  place-items: center;
+  border: 1px solid rgba(163, 65, 50, 0.2);
+  border-radius: 50%;
+  color: var(--cinnabar-dark);
+  font-family: var(--serif);
+  font-size: 14px;
+  font-weight: 500;
 }
 
-.elementBar i {
+.elementTracks {
+  display: grid;
+  gap: 7px;
+}
+
+.elementTracks > span {
+  display: grid;
+  align-items: center;
+  gap: 8px;
+  grid-template-columns: 31px 1fr 18px;
+}
+
+.elementTracks small {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.elementTracks i {
   overflow: hidden;
   height: 6px;
   border-radius: 999px;
   background: #e8e2d7;
 }
 
-.elementBar i::before {
+.elementTracks b {
   display: block;
-  width: 14%;
   height: 100%;
   border-radius: inherit;
-  background: #c6b8a3;
-  content: "";
-  opacity: 0.5;
+  background: var(--jade);
+  transition: width 260ms ease;
+}
+
+.elementTracks > span + span b {
+  background: var(--gold);
+}
+
+.elementTracks em {
+  color: var(--ink);
+  font-size: 11px;
+  font-style: normal;
+  text-align: right;
+}
+
+.elementFootnote {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.tendencyCard {
+  margin-bottom: 20px;
+}
+
+.strengthBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 12px;
+  border: 1px solid rgba(163, 65, 50, 0.2);
+  border-radius: 999px;
+  color: var(--cinnabar-dark);
+  background: rgba(163, 65, 50, 0.06);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.tendencyList {
+  display: grid;
+  border-block: 1px solid var(--line);
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.tendencyItem {
+  min-width: 0;
+  padding: 22px 18px;
+}
+
+.tendencyItem + .tendencyItem {
+  border-left: 1px solid var(--line);
+}
+
+.tendencyHeading {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tendencyHeading > strong {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid rgba(163, 65, 50, 0.22);
+  border-radius: 50%;
+  color: var(--cinnabar-dark);
+  font-family: var(--serif);
+  font-size: 17px;
+}
+
+.tendencyStars {
+  display: inline-flex;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+}
+
+.tendencyStars b {
+  color: var(--gold);
+  font-weight: 400;
+}
+
+.tendencyStars i {
+  color: #ddd5c8;
+  font-style: normal;
+}
+
+.tendencyHeading em {
+  width: 100%;
+  padding-left: 42px;
+  color: var(--muted);
+  font-size: 10px;
+  font-style: normal;
+}
+
+.tendencyMeta {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  color: var(--jade);
+  font-size: 10px;
+  gap: 6px;
+}
+
+.tendencyMeta span {
+  padding: 4px 7px;
+  border-radius: 999px;
+  background: rgba(49, 91, 80, 0.07);
+}
+
+.tendencyItem p {
+  margin: 13px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.modelDisclaimer {
+  padding-top: 18px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.7;
 }
 
 .phaseNotice {
@@ -1096,6 +1381,18 @@ select:focus-visible {
     grid-template-columns: 1fr;
   }
 
+  .tendencyList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tendencyItem:nth-child(odd) {
+    border-left: 0;
+  }
+
+  .tendencyItem:nth-child(n + 3) {
+    border-top: 1px solid var(--line);
+  }
+
   .scoreLegend {
     position: static;
   }
@@ -1227,6 +1524,16 @@ select:focus-visible {
     align-items: flex-start;
   }
 
+  .tendencyList {
+    grid-template-columns: 1fr;
+  }
+
+  .tendencyItem + .tendencyItem,
+  .tendencyItem:nth-child(n + 3) {
+    border-top: 1px solid var(--line);
+    border-left: 0;
+  }
+
   .filterBar {
     align-items: flex-start;
     flex-wrap: wrap;
@@ -1238,6 +1545,16 @@ select:focus-visible {
 
   .detailHero {
     gap: 24px;
+  }
+
+  .baziConfirmation {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .confirmationButton {
+    width: 100%;
+    min-width: 0;
   }
 
   .detailName span {

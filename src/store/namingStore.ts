@@ -51,7 +51,12 @@ export function namingReducer(
     case 'SET_BIRTH_INFO':
       return { ...state, birthInfo: action.payload };
     case 'SET_BAZI':
-      return { ...state, bazi: action.payload };
+      return {
+        ...state,
+        bazi: action.payload,
+        analysis: undefined,
+        generatedNames: [],
+      };
     case 'SET_ANALYSIS':
       return { ...state, analysis: action.payload };
     case 'SET_GENERATED_NAMES':

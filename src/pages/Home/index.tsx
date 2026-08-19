@@ -1,7 +1,13 @@
-import { useId } from 'react';
-import { Link } from 'react-router-dom';
+import { useId, useState } from 'react';
+import type { FormEvent } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { BaziInput } from '../../components/BaziInput';
+import { baziToInputValues } from '../../core/bazi/ganzhi';
+import { analyzeBazi } from '../../core/bazi/strengthAnalysis';
+import { validateBaziInput } from '../../core/validators/baziValidator';
+import type { BaziInputErrors } from '../../core/validators/baziValidator';
 import { useNaming } from '../../store/useNaming';
-import type { Gender, InputMode } from '../../types';
+import type { Gender, InputMode, PillarKey } from '../../types';
 
 const processSteps = [
   ['一', '录入信息', '出生信息或已知四柱'],
@@ -10,18 +16,62 @@ const processSteps = [
   ['四', '获得名字', '查看可解释的评分构成'],
 ] as const;
 
-const baziFields = ['年柱', '月柱', '日柱', '时柱'];
-
 export function HomePage() {
   const { state, dispatch } = useNaming();
   const surnameId = useId();
+  const navigate = useNavigate();
+  const [baziValues, setBaziValues] = useState(() =>
+    baziToInputValues(state.bazi),
+  );
+  const [baziErrors, setBaziErrors] = useState<BaziInputErrors>({});
+  const [formMessage, setFormMessage] = useState('');
 
   const setInputMode = (inputMode: InputMode) => {
     dispatch({ type: 'SET_INPUT_MODE', payload: inputMode });
+    setFormMessage('');
   };
 
   const setGender = (gender: Gender) => {
     dispatch({ type: 'SET_GENDER', payload: gender });
+  };
+
+  const updateBaziValue = (key: PillarKey, value: string) => {
+    setBaziValues((current) => ({ ...current, [key]: value }));
+    setBaziErrors((current) => {
+      const nextErrors = { ...current };
+      delete nextErrors[key];
+      return nextErrors;
+    });
+    setFormMessage('');
+  };
+
+  const submitKnownBazi = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    const normalizedSurname = state.surname.trim();
+    const validation = validateBaziInput(baziValues);
+
+    if (!/^[\u3400-\u9fff]{1,2}$/u.test(normalizedSurname)) {
+      setFormMessage('请输入 1～2 个汉字作为姓氏');
+      setBaziErrors(validation.isValid ? {} : validation.errors);
+      return;
+    }
+
+    if (!validation.isValid) {
+      setBaziErrors(validation.errors);
+      setFormMessage('请完成全部四柱选择后再提交');
+      return;
+    }
+
+    dispatch({ type: 'SET_SURNAME', payload: normalizedSurname });
+    dispatch({ type: 'SET_BAZI', payload: validation.bazi });
+    dispatch({
+      type: 'SET_ANALYSIS',
+      payload: analyzeBazi(validation.bazi),
+    });
+    setBaziErrors({});
+    setFormMessage('');
+    navigate('/analysis');
   };
 
   return (
@@ -49,7 +99,9 @@ export function HomePage() {
               <p className="eyebrow">起名信息</p>
               <h2 id="naming-panel-title">为宝宝寻名</h2>
             </div>
-            <span className="phaseTag">Phase 1 骨架</span>
+            <span className="phaseTag">
+              {state.inputMode === 'bazi' ? 'Phase 4 可用' : 'Phase 8 待接入'}
+            </span>
           </div>
 
           <div className="modeTabs" role="group" aria-label="起名方式">
@@ -139,25 +191,31 @@ export function HomePage() {
               </button>
             </div>
           ) : (
-            <div className="modeBody">
-              <div className="baziInputGrid">
-                {baziFields.map((field) => (
-                  <label className="formField" key={field}>
-                    <span>{field}</span>
-                    <select defaultValue="" disabled>
-                      <option value="">六十甲子</option>
-                    </select>
-                  </label>
-                ))}
-              </div>
-              <button className="primaryButton" disabled type="button">
-                四柱选择将在 Phase 2 开放
+            <form className="modeBody" noValidate onSubmit={submitKnownBazi}>
+              <BaziInput
+                errors={baziErrors}
+                onChange={updateBaziValue}
+                values={baziValues}
+              />
+              <p className="baziGuide">
+                选择项严格限定为合法六十甲子，提交时会再次校验并转换为统一 Bazi
+                对象。
+              </p>
+              {formMessage ? (
+                <p className="formMessage" role="alert">
+                  {formMessage}
+                </p>
+              ) : null}
+              <button className="primaryButton" type="submit">
+                生成八字并查看分析
               </button>
-            </div>
+            </form>
           )}
 
           <p className="panelFootnote">
-            当前已完成输入模式、姓氏和性别的全局状态；业务提交在对应算法阶段开放。
+            {state.inputMode === 'bazi'
+              ? '四柱仅在浏览器本地校验和保存，不会上传出生数据。'
+              : '农历转公历、节气与自动排盘将在 Phase 8 接入。'}
           </p>
         </div>
       </section>
