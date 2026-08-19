@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="10" fill="#a34132" />
+  <path d="M15 13h34v38H15z" fill="none" stroke="#f8edda" stroke-width="2" />
+  <text
+    x="32"
+    y="42"
+    fill="#fffaf0"
+    font-family="serif"
+    font-size="31"
+    text-anchor="middle"
+  >名</text>
+</svg>

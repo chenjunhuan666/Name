@@ -1,0 +1,10 @@
+node_modules
+dist
+.codex/
+pnpm-lock.yaml
+.DS_Store
+*.local
+*.log
+.vite
+.playwright-cli
+output/
