@@ -1,53 +1,236 @@
+import { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { PageIntro } from '../../components/PageIntro';
 import { PhaseNotice } from '../../components/PhaseNotice';
+import { useNaming } from '../../store/useNaming';
+import type { NameScoreDimension } from '../../types';
 
-const detailSections = [
-  ['五行适配', '结合日主、月令、藏干与生克关系解释'],
-  ['字义字形', '展示单字含义、结构、部首与生僻度'],
-  ['音韵谐音', '展示拼音、声调、声母、韵母与风险检查'],
-  ['典籍出处', '仅在有真实语料关联时展示原文来源'],
+const scoreDimensions: {
+  key: NameScoreDimension;
+  label: string;
+  weight: number;
+}[] = [
+  { key: 'element', label: '五行适配', weight: 30 },
+  { key: 'meaning', label: '字义标注', weight: 20 },
+  { key: 'phonetic', label: '音律', weight: 15 },
+  { key: 'classic', label: '文化出处', weight: 15 },
+  { key: 'homophone', label: '谐音安全', weight: 10 },
+  { key: 'shape', label: '字形', weight: 5 },
+  { key: 'rarity', label: '常用程度', weight: 5 },
 ];
 
 export function NameDetailPage() {
   const { nameId } = useParams();
+  const { state, dispatch } = useNaming();
+  const name =
+    state.generatedNames.find(({ id }) => id === nameId) ??
+    state.favorites.find(({ name: favorite }) => favorite.id === nameId)
+      ?.name ??
+    state.recentViews.find(({ name: recent }) => recent.id === nameId)?.name;
+  const isFavorite = state.favorites.some(
+    ({ name: favorite }) => favorite.id === nameId,
+  );
+
+  useEffect(() => {
+    if (name) {
+      dispatch({
+        type: 'RECORD_NAME_VIEW',
+        payload: { name, viewedAt: new Date().toISOString() },
+      });
+    }
+  }, [dispatch, name]);
+
+  if (!name) {
+    return (
+      <div className="pageWidth innerPage">
+        <PageIntro
+          eyebrow="姓名详情"
+          title="当前浏览器中未找到这个姓名"
+          description="该姓名既不在当前候选中，也未保存在收藏或最近浏览记录里。"
+          aside={<span className="phaseTag">结果已失效</span>}
+        />
+        <PhaseNotice
+          eyebrow="本地数据"
+          title="请返回推荐页重新生成"
+          description="这不是网络错误。返回推荐页后，会根据最近一次起名信息重新生成候选姓名。"
+        />
+        <div className="pageActions">
+          <Link className="secondaryButton" to="/names">
+            返回姓名推荐
+          </Link>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="pageWidth innerPage">
       <PageIntro
         eyebrow="姓名详情"
-        title="姓名解释页"
-        description={`当前详情标识：${nameId ?? '未指定'}。真实姓名内容将在生成模块接入后由结果数据驱动。`}
-        aside={<span className="phaseTag">页面骨架</span>}
+        title={name.fullName}
+        description={`${name.pinyin} · 声调 ${name.tones.join(' - ')}。以下分数只解释当前筛选条件下的排序依据，不代表命运或吉凶。`}
+        aside={<span className="phaseTag">Phase 9 可本地收藏</span>}
       />
 
       <section className="detailHero contentCard">
-        <div className="detailName" aria-hidden="true">
-          <span>姓</span>
-          <span>名</span>
-          <span>字</span>
+        <div className="detailName" aria-label={name.fullName}>
+          {[...name.fullName].map((character, index) => (
+            <span key={`${character}-${index}`}>{character}</span>
+          ))}
         </div>
         <div>
           <p className="eyebrow">综合推荐分</p>
-          <strong className="emptyScore">—</strong>
-          <p>待姓名生成与评分模块接入</p>
+          <strong>{name.score}</strong>
+          <p>当前七项维度加权结果</p>
+          <button
+            aria-pressed={isFavorite}
+            className="favoriteButton favoriteButton--detail"
+            onClick={() =>
+              dispatch({
+                type: 'TOGGLE_FAVORITE',
+                payload: {
+                  name,
+                  savedAt: new Date().toISOString(),
+                },
+              })
+            }
+            type="button"
+          >
+            {isFavorite ? '取消收藏' : '收藏这个姓名'}
+          </button>
         </div>
       </section>
 
-      <section className="detailGrid">
-        {detailSections.map(([title, description], index) => (
-          <article className="contentCard detailCard" key={title}>
-            <span className="detailCard__number">0{index + 1}</span>
-            <h2>{title}</h2>
-            <p>{description}</p>
+      <section className="nameCharacterDetails" aria-label="单字解释">
+        {name.characters.map((character) => (
+          <article className="contentCard" key={character.char}>
+            <header>
+              <strong>{character.char}</strong>
+              <div>
+                <h2>{character.pinyin}</h2>
+                <p>第 {character.tone} 声</p>
+              </div>
+            </header>
+            <p>{character.meaning}</p>
+            <dl>
+              <div>
+                <dt>五行</dt>
+                <dd>
+                  {Array.isArray(character.element)
+                    ? character.element.join(' / ')
+                    : character.element}
+                </dd>
+              </div>
+              <div>
+                <dt>部首</dt>
+                <dd>{character.radical ?? '未收录'}</dd>
+              </div>
+              <div>
+                <dt>笔画</dt>
+                <dd>{character.strokes ?? '未收录'}</dd>
+              </div>
+              <div>
+                <dt>生僻度</dt>
+                <dd>{character.rarity}</dd>
+              </div>
+            </dl>
+            <footer>{character.styleTags.join(' · ')}</footer>
           </article>
         ))}
       </section>
 
+      <section className="detailGrid">
+        <article className="contentCard detailCard">
+          <span className="detailCard__number">01</span>
+          <h2>音韵结构</h2>
+          <p>{name.pinyin}</p>
+          <dl className="phoneticDetails">
+            <div>
+              <dt>声调</dt>
+              <dd>{name.tones.join(' - ')}</dd>
+            </div>
+            <div>
+              <dt>声母</dt>
+              <dd>
+                {name.phoneticAssessment.initials
+                  .map((value) => value || '零声母')
+                  .join(' · ')}
+              </dd>
+            </div>
+            <div>
+              <dt>韵母</dt>
+              <dd>{name.phoneticAssessment.finals.join(' · ')}</dd>
+            </div>
+          </dl>
+          <p>{name.phoneticAssessment.notes.join('')}</p>
+        </article>
+
+        <article className="contentCard detailCard">
+          <span className="detailCard__number">02</span>
+          <h2>普通话谐音检查</h2>
+          <strong className="safeResult">基础检查通过</strong>
+          <p>{name.scoreExplanations.homophone}</p>
+          <p className="modelDisclaimer">
+            当前仅做静态词库的精确拼音匹配，不覆盖方言、所有网络语境或人工联想。
+          </p>
+        </article>
+      </section>
+
+      <section className="scoreBreakdownPanel contentCard">
+        <div className="libraryHeading">
+          <div>
+            <p className="eyebrow">评分构成</p>
+            <h2>每一分都有当前规则依据</h2>
+          </div>
+          <p>综合分 {name.score}</p>
+        </div>
+        <div className="scoreBreakdownList">
+          {scoreDimensions.map((dimension) => {
+            const dimensionScore = name.scoreBreakdown[dimension.key];
+
+            return (
+              <article key={dimension.key}>
+                <div>
+                  <strong>{dimension.label}</strong>
+                  <span>
+                    权重 {dimension.weight}% · {dimensionScore} 分
+                  </span>
+                </div>
+                <div className="scoreBar" aria-hidden="true">
+                  <i style={{ width: `${dimensionScore}%` }} />
+                </div>
+                <p>{name.scoreExplanations[dimension.key]}</p>
+              </article>
+            );
+          })}
+        </div>
+      </section>
+
+      <section className="classicReferencePanel contentCard">
+        <p className="eyebrow">国学出处</p>
+        {name.classic ? (
+          <>
+            <h2>{name.classic.display}</h2>
+            <p className="classicReferenceMeta">
+              {name.classic.author ? `作者：${name.classic.author}` : '作者未详'}
+            </p>
+            <blockquote>{name.classic.text}</blockquote>
+            <p>{name.scoreExplanations.classic}</p>
+          </>
+        ) : (
+          <>
+            <h2>未发现严格连续出处</h2>
+            <p>
+              在当前《诗经》《楚辞》、基础唐诗和宋词语料中，名字两字未按原顺序连续出现，因此不生成篇名、作者或原文。
+            </p>
+          </>
+        )}
+      </section>
+
       <PhaseNotice
-        eyebrow="Phase 6"
-        title="详情数据尚未接入"
-        description="详情页的数据契约已经由 GeneratedName、NameScoreBreakdown 与 ClassicReference 类型统一约束。"
+        eyebrow="Phase 9 已完成"
+        title="当前详情已加入最近浏览"
+        description="收藏和最近浏览只保存在当前浏览器；刷新页面后仍可从“本地记录”重新打开，不会上传到服务器。"
       />
 
       <div className="pageActions">

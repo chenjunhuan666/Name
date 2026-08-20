@@ -1,10 +1,6 @@
 import { createHashRouter } from 'react-router-dom';
 import { App } from './App';
-import { AnalysisPage } from './pages/Analysis';
 import { HomePage } from './pages/Home';
-import { NameDetailPage } from './pages/NameDetail';
-import { NamesPage } from './pages/Names';
-import { NotFoundPage } from './pages/NotFound';
 
 export const router = createHashRouter([
   {
@@ -12,10 +8,36 @@ export const router = createHashRouter([
     element: <App />,
     children: [
       { index: true, element: <HomePage /> },
-      { path: 'analysis', element: <AnalysisPage /> },
-      { path: 'names', element: <NamesPage /> },
-      { path: 'names/:nameId', element: <NameDetailPage /> },
-      { path: '*', element: <NotFoundPage /> },
+      {
+        path: 'analysis',
+        lazy: async () => ({
+          Component: (await import('./pages/Analysis')).AnalysisPage,
+        }),
+      },
+      {
+        path: 'names',
+        lazy: async () => ({
+          Component: (await import('./pages/Names')).NamesPage,
+        }),
+      },
+      {
+        path: 'names/:nameId',
+        lazy: async () => ({
+          Component: (await import('./pages/NameDetail')).NameDetailPage,
+        }),
+      },
+      {
+        path: 'records',
+        lazy: async () => ({
+          Component: (await import('./pages/Records')).RecordsPage,
+        }),
+      },
+      {
+        path: '*',
+        lazy: async () => ({
+          Component: (await import('./pages/NotFound')).NotFoundPage,
+        }),
+      },
     ],
   },
 ]);

@@ -3,6 +3,13 @@ import type { ClassicReference, Gender } from './naming';
 
 export type CharacterGender = Gender | 'neutral';
 
+export interface CharacterPronunciation {
+  char: string;
+  pinyin: string;
+  tone: 1 | 2 | 3 | 4;
+  strokes?: number;
+}
+
 export interface CharacterElementInfo {
   primary: FiveElement;
   alternatives?: FiveElement[];

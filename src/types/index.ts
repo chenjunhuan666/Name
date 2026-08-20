@@ -23,19 +23,29 @@ export type {
   CalendarResult,
   CalendarType,
   LunarDate,
+  LunarMonthOption,
   SolarTerm,
   TrueSolarTimeOptions,
 } from './calendar';
 export type {
   CharacterElementInfo,
   CharacterGender,
+  CharacterPronunciation,
   NamingCharacter,
 } from './character';
 export type {
   ClassicReference,
+  ClassicSource,
+  ClassicWork,
+  FavoriteNameRecord,
   GeneratedName,
   Gender,
+  HomophoneAssessment,
   InputMode,
   NameScoreBreakdown,
+  NameScoreDimension,
+  NamingHistoryRecord,
   NamingRequest,
+  PhoneticAssessment,
+  RecentNameViewRecord,
 } from './naming';

@@ -1,4 +1,4 @@
-import type { Bazi } from './bazi';
+import type { Bazi, EarthlyBranch } from './bazi';
 
 export type CalendarType = 'lunar';
 
@@ -25,8 +25,20 @@ export interface SolarTerm {
 export interface CalendarResult {
   lunarDate: LunarDate;
   solarDate: Date;
+  solarDateText: string;
   solarTerm?: SolarTerm;
+  nextSolarTerm?: SolarTerm;
+  hourBranch: EarthlyBranch;
+  hourLabel: string;
   bazi: Bazi;
+  calculationNotes: string[];
+}
+
+export interface LunarMonthOption {
+  month: number;
+  isLeapMonth: boolean;
+  dayCount: number;
+  label: string;
 }
 
 export interface TrueSolarTimeOptions {

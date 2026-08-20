@@ -1,13 +1,20 @@
-import { useId, useState } from 'react';
+import { lazy, Suspense, useId, useState } from 'react';
 import type { FormEvent } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { BaziInput } from '../../components/BaziInput';
 import { baziToInputValues } from '../../core/bazi/ganzhi';
 import { analyzeBazi } from '../../core/bazi/strengthAnalysis';
+import { createNamingHistoryRecord } from '../../core/storage/namingPersistence';
 import { validateBaziInput } from '../../core/validators/baziValidator';
 import type { BaziInputErrors } from '../../core/validators/baziValidator';
 import { useNaming } from '../../store/useNaming';
-import type { Gender, InputMode, PillarKey } from '../../types';
+import type { BirthInfo, Gender, InputMode, PillarKey } from '../../types';
+
+const BirthForm = lazy(() =>
+  import('../../components/BirthForm').then((module) => ({
+    default: module.BirthForm,
+  })),
+);
 
 const processSteps = [
   ['一', '录入信息', '出生信息或已知四柱'],
@@ -63,15 +70,70 @@ export function HomePage() {
       return;
     }
 
+    const analysis = analyzeBazi(validation.bazi);
     dispatch({ type: 'SET_SURNAME', payload: normalizedSurname });
+    dispatch({ type: 'CLEAR_BIRTH_RESULT' });
     dispatch({ type: 'SET_BAZI', payload: validation.bazi });
     dispatch({
       type: 'SET_ANALYSIS',
-      payload: analyzeBazi(validation.bazi),
+      payload: analysis,
+    });
+    dispatch({
+      type: 'ADD_NAMING_HISTORY',
+      payload: createNamingHistoryRecord({
+        inputMode: 'bazi',
+        surname: normalizedSurname,
+        gender: state.gender,
+        bazi: validation.bazi,
+        analysis,
+      }),
     });
     setBaziErrors({});
     setFormMessage('');
     navigate('/analysis');
+  };
+
+  const submitBirthInfo = async (birthInfo: BirthInfo) => {
+    const normalizedSurname = state.surname.trim();
+
+    if (!/^[\u3400-\u9fff]{1,2}$/u.test(normalizedSurname)) {
+      setFormMessage('请输入 1～2 个汉字作为姓氏');
+      return;
+    }
+
+    try {
+      const { calculateCalendarResult } = await import(
+        '../../core/calendar/calendarEngine'
+      );
+      const result = calculateCalendarResult(birthInfo);
+      const analysis = analyzeBazi(result.bazi);
+      dispatch({ type: 'SET_SURNAME', payload: normalizedSurname });
+      dispatch({ type: 'SET_BIRTH_INFO', payload: birthInfo });
+      dispatch({ type: 'SET_CALENDAR_RESULT', payload: result });
+      dispatch({ type: 'SET_BAZI', payload: result.bazi });
+      dispatch({
+        type: 'SET_ANALYSIS',
+        payload: analysis,
+      });
+      dispatch({
+        type: 'ADD_NAMING_HISTORY',
+        payload: createNamingHistoryRecord({
+          inputMode: 'birth',
+          surname: normalizedSurname,
+          gender: state.gender,
+          birthInfo,
+          calendarResult: result,
+          bazi: result.bazi,
+          analysis,
+        }),
+      });
+      setFormMessage('');
+      navigate('/analysis');
+    } catch (error: unknown) {
+      setFormMessage(
+        error instanceof Error ? error.message : '农历自动排盘失败',
+      );
+    }
   };
 
   return (
@@ -100,7 +162,7 @@ export function HomePage() {
               <h2 id="naming-panel-title">为宝宝寻名</h2>
             </div>
             <span className="phaseTag">
-              {state.inputMode === 'bazi' ? 'Phase 4 可用' : 'Phase 8 待接入'}
+              {state.inputMode === 'bazi' ? '手动四柱' : 'Phase 8 自动排盘'}
             </span>
           </div>
 
@@ -163,33 +225,20 @@ export function HomePage() {
           </div>
 
           {state.inputMode === 'birth' ? (
-            <div className="modeBody">
-              <div className="fieldRow">
-                <label className="formField">
-                  <span>历法</span>
-                  <select defaultValue="lunar" disabled>
-                    <option value="lunar">农历</option>
-                  </select>
-                </label>
-                <label className="formField formField--wide">
-                  <span>出生日期</span>
-                  <input disabled placeholder="Phase 8 接入农历日期选择" />
-                </label>
-              </div>
-              <div className="fieldRow">
-                <label className="formField">
-                  <span>出生时间</span>
-                  <input disabled placeholder="时 : 分" />
-                </label>
-                <label className="formField formField--wide">
-                  <span>出生地点（可选）</span>
-                  <input disabled placeholder="用于后续真太阳时扩展" />
-                </label>
-              </div>
-              <button className="primaryButton" disabled type="button">
-                自动排盘将在 Phase 8 开放
-              </button>
-            </div>
+            <Suspense
+              fallback={(
+                <div className="modeBody" role="status">
+                  正在加载农历排盘规则…
+                </div>
+              )}
+            >
+              <BirthForm
+                initialValue={state.birthInfo}
+                onChange={() => setFormMessage('')}
+                onSubmit={submitBirthInfo}
+                submitError={formMessage}
+              />
+            </Suspense>
           ) : (
             <form className="modeBody" noValidate onSubmit={submitKnownBazi}>
               <BaziInput
@@ -215,7 +264,7 @@ export function HomePage() {
           <p className="panelFootnote">
             {state.inputMode === 'bazi'
               ? '四柱仅在浏览器本地校验和保存，不会上传出生数据。'
-              : '农历转公历、节气与自动排盘将在 Phase 8 接入。'}
+              : '农历、节气和四柱均在浏览器本地计算；默认使用中国标准时间，真太阳时关闭。'}
           </p>
         </div>
       </section>
@@ -247,7 +296,7 @@ export function HomePage() {
             <h2>从生辰到姓名，四步有迹可循</h2>
           </div>
           <Link className="textLink" to="/analysis">
-            查看分析页骨架 →
+            查看八字分析 →
           </Link>
         </div>
         <div className="processGrid">

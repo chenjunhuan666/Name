@@ -3,6 +3,7 @@ import { PageIntro } from '../../components/PageIntro';
 import { PhaseNotice } from '../../components/PhaseNotice';
 import { FIVE_ELEMENTS } from '../../data/fiveElements';
 import { formatPillar } from '../../core/bazi/ganzhi';
+import { formatLunarDate } from '../../core/calendar/calendarEngine';
 import { useNaming } from '../../store/useNaming';
 import type { PillarKey } from '../../types';
 
@@ -13,8 +14,8 @@ const pillars: { key: PillarKey; label: string }[] = [
   { key: 'hour', label: '时柱' },
 ];
 export function AnalysisPage() {
-  const { state } = useNaming();
-  const { analysis, bazi } = state;
+  const { state, dispatch } = useNaming();
+  const { analysis, bazi, birthInfo, calendarResult } = state;
   const strengthBreakdown = analysis?.strengthBreakdown;
   const namingTendencies = analysis?.namingTendencies ?? [];
   const maximumElementCount = analysis
@@ -36,8 +37,10 @@ export function AnalysisPage() {
         description="四柱、日主、月令、表层五行与藏干五行将在这里形成一份可核对的结构化分析。"
         aside={
           <span className="phaseTag">
-            {analysis?.strength
-              ? 'Phase 4 起名方向'
+            {calendarResult
+              ? 'Phase 8 自动排盘'
+              : analysis?.strength
+                ? '手动四柱分析'
               : analysis
                 ? 'Phase 3 基础分析'
               : bazi
@@ -47,13 +50,64 @@ export function AnalysisPage() {
         }
       />
 
+      {calendarResult ? (
+        <section className="contentCard calendarEvidenceCard">
+          <div className="cardTitleRow">
+            <div>
+              <p className="eyebrow">自动排盘依据</p>
+              <h2>从农历输入到四柱结果</h2>
+            </div>
+            <span className="calculationBadge">中国标准时间</span>
+          </div>
+          <dl className="calendarEvidenceGrid">
+            <div>
+              <dt>农历输入</dt>
+              <dd>{formatLunarDate(calendarResult.lunarDate)}</dd>
+            </div>
+            <div>
+              <dt>转换公历</dt>
+              <dd>{calendarResult.solarDateText}</dd>
+            </div>
+            <div>
+              <dt>节气区间</dt>
+              <dd>
+                {calendarResult.solarTerm && calendarResult.nextSolarTerm
+                  ? `${calendarResult.solarTerm.name} ${calendarResult.solarTerm.occurredAt} → ${calendarResult.nextSolarTerm.name} ${calendarResult.nextSolarTerm.occurredAt}`
+                  : '未取得节气区间'}
+              </dd>
+            </div>
+            <div>
+              <dt>出生时辰</dt>
+              <dd>{calendarResult.hourLabel}</dd>
+            </div>
+            <div>
+              <dt>出生地点</dt>
+              <dd>{birthInfo?.location ?? '未填写'}</dd>
+            </div>
+            <div>
+              <dt>真太阳时</dt>
+              <dd>关闭，地点不参与计算</dd>
+            </div>
+          </dl>
+          <ul className="calculationNotes">
+            {calendarResult.calculationNotes.map((note) => (
+              <li key={note}>{note}</li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
+
       <section className="contentCard pillarsCard">
         <div className="cardTitleRow">
           <div>
             <p className="eyebrow">四柱排盘</p>
             <h2>您的四柱八字</h2>
           </div>
-          <Link className="quietButton" to="/">
+          <Link
+            className="quietButton"
+            onClick={() => dispatch({ type: 'SET_INPUT_MODE', payload: 'bazi' })}
+            to="/"
+          >
             手动修改八字
           </Link>
         </div>
@@ -94,7 +148,10 @@ export function AnalysisPage() {
         <section className="baziConfirmation">
           <div>
             <p className="eyebrow">八字确认</p>
-            <h2>{state.surname}宝宝的四柱已生成</h2>
+            <h2>
+              {state.surname}宝宝的
+              {calendarResult ? '自动排盘结果待确认' : '四柱已生成'}
+            </h2>
             <p>
               请先核对四柱。不同流派在节气交接、子初换日或真太阳时上可能存在差异，后续可随时返回手动修正。
             </p>
@@ -237,10 +294,10 @@ export function AnalysisPage() {
       ) : null}
 
       <PhaseNotice
-        eyebrow={analysis?.strength ? 'Phase 5' : analysis ? 'Phase 4' : bazi ? 'Phase 3' : 'Phase 2'}
+        eyebrow={analysis?.strength ? 'Phase 9 已完成' : analysis ? 'Phase 4' : bazi ? 'Phase 3' : 'Phase 2'}
         title={
           analysis?.strength
-            ? '起名方向已生成，等待汉字库'
+            ? 'V1 起名与本地记录闭环已完成'
             : analysis
               ? '基础结构已解析，等待旺衰判断'
             : bazi
@@ -249,7 +306,7 @@ export function AnalysisPage() {
         }
         description={
           analysis?.strength
-            ? '月令影响、五行生克、基础旺衰与五档起名倾向已由本地规则生成；下一阶段将建立带字义、拼音、声调和五行依据的初始汉字库。'
+            ? '农历自动排盘和手动四柱已进入同一套分析与起名流程；收藏姓名、最近浏览和最近起名会话会保存在当前浏览器。'
             : analysis
               ? '日主、月令、阴阳、表层五行与藏干五行已经由本地确定性规则生成；下一阶段将加入五行生克、月令影响与基础旺衰。'
             : bazi
@@ -259,11 +316,15 @@ export function AnalysisPage() {
       />
 
       <div className="pageActions">
-        <Link className="secondaryButton" to="/">
+        <Link
+          className="secondaryButton"
+          onClick={() => dispatch({ type: 'SET_INPUT_MODE', payload: 'bazi' })}
+          to="/"
+        >
           {bazi ? '修改四柱' : '录入四柱'}
         </Link>
         <Link className="primaryButton primaryButton--link" to="/names">
-          查看推荐页骨架
+          进入汉字筛选
         </Link>
       </div>
     </div>

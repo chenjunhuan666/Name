@@ -4,6 +4,7 @@ const navigation = [
   { to: '/', label: '起名首页', end: true },
   { to: '/analysis', label: '八字分析' },
   { to: '/names', label: '姓名推荐' },
+  { to: '/records', label: '本地记录' },
 ];
 
 export function App() {
@@ -36,7 +37,7 @@ export function App() {
             ))}
           </nav>
 
-          <span className="versionBadge">V1 · 本地计算</span>
+          <span className="versionBadge">V1 · 本地计算与存储</span>
         </div>
       </header>
 
