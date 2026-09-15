@@ -6,7 +6,8 @@ import type {
   NamingCharacter,
   PhoneticAssessment,
 } from '../../types';
-import { SCORE_WEIGHTS, scoreName } from './scorer';
+import { NAMING_SCORE_WEIGHTS } from '../../config/namingScore';
+import { scoreName } from './scorer';
 
 const characters: [NamingCharacter, NamingCharacter] = [
   {
@@ -78,9 +79,12 @@ const classic: ClassicReference = {
 };
 
 describe('scoreName', () => {
-  it('七项权重合计为 100%，并按固定权重计算一位小数综合分', () => {
+  it('八项配置权重合计为 100%，并按固定权重计算一位小数综合分', () => {
     expect(
-      Object.values(SCORE_WEIGHTS).reduce((total, weight) => total + weight, 0),
+      Object.values(NAMING_SCORE_WEIGHTS).reduce(
+        (total, weight) => total + weight,
+        0,
+      ),
     ).toBeCloseTo(1);
 
     const result = scoreName({
@@ -97,10 +101,11 @@ describe('scoreName', () => {
       phonetic: 80,
       classic: 0,
       homophone: 100,
+      modern: 80,
       shape: 100,
       rarity: 80,
     });
-    expect(result.score).toBe(79.5);
+    expect(result.score).toBe(78.3);
   });
 
   it('只有真实出处存在时才计入文化出处权重', () => {

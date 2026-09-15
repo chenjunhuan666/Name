@@ -1,11 +1,13 @@
 export interface BadHomophone {
   label: string;
   pinyin: string;
-  scope: 'given' | 'full';
+  scope: 'given' | 'full' | 'surname-first';
+  category?: 'negative' | 'internet';
+  approximate?: boolean;
 }
 
 export const BAD_HOMOPHONES: readonly BadHomophone[] = [
-  { label: '白痴', pinyin: 'baichi', scope: 'given' },
+  { label: '白痴', pinyin: 'baichi', scope: 'given', approximate: true },
   { label: '傻逼', pinyin: 'shabi', scope: 'given' },
   { label: '没用', pinyin: 'meiyong', scope: 'given' },
   { label: '无能', pinyin: 'wuneng', scope: 'full' },
@@ -30,4 +32,38 @@ export const BAD_HOMOPHONES: readonly BadHomophone[] = [
   { label: '饭桶', pinyin: 'fantong', scope: 'full' },
   { label: '禽兽', pinyin: 'qinshou', scope: 'full' },
   { label: '阳痿', pinyin: 'yangwei', scope: 'full' },
+  { label: '肚子', pinyin: 'duzi', scope: 'surname-first' },
+  { label: '屎真', pinyin: 'shizhen', scope: 'surname-first' },
+  {
+    label: '摆烂',
+    pinyin: 'bailan',
+    scope: 'given',
+    category: 'internet',
+    approximate: true,
+  },
+  {
+    label: '社死',
+    pinyin: 'shesi',
+    scope: 'given',
+    category: 'internet',
+    approximate: true,
+  },
+  {
+    label: '冤种',
+    pinyin: 'yuanzhong',
+    scope: 'given',
+    category: 'internet',
+  },
+  {
+    label: '内卷',
+    pinyin: 'neijuan',
+    scope: 'given',
+    category: 'internet',
+  },
+  {
+    label: '显眼包',
+    pinyin: 'xianyanbao',
+    scope: 'full',
+    category: 'internet',
+  },
 ] as const;

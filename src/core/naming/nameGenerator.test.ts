@@ -73,7 +73,8 @@ describe('generateNames', () => {
       limit: 30,
     });
 
-    expect(first).toHaveLength(30);
+    expect(first.length).toBeGreaterThanOrEqual(20);
+    expect(first.length).toBeLessThanOrEqual(30);
     expect(second).toEqual(first);
     expect(first.every((name) => name.fullName.startsWith('陈'))).toBe(true);
     expect(
@@ -81,6 +82,83 @@ describe('generateNames', () => {
     ).toBe(true);
     expect(first[0].scoreBreakdown.classic).toBe(0);
     expect(new Set(first.map((name) => name.id)).size).toBe(first.length);
+    expect(
+      Math.max(
+        ...Object.values(
+          Object.fromEntries(
+            [...new Set(first.map((name) => name.givenName[0]))].map((char) => [
+              char,
+              first.filter((name) => name.givenName[0] === char).length,
+            ]),
+          ),
+        ),
+      ),
+    ).toBeLessThanOrEqual(4);
+  });
+
+  it('候选排名不依赖来源数组的前 100 个位置', () => {
+    const forward = generateNames({
+      surname: '陈',
+      characters: sourceCharacters,
+      tendencies,
+      pronunciations,
+      limit: 20,
+    });
+    const reversed = generateNames({
+      surname: '陈',
+      characters: [...sourceCharacters].reverse(),
+      tendencies,
+      pronunciations,
+      limit: 20,
+    });
+
+    expect(reversed).toEqual(forward);
+  });
+
+  it('在组合层执行包含字、排除字与生僻度偏好', () => {
+    const names = generateNames({
+      surname: '陈',
+      characters: sourceCharacters,
+      tendencies,
+      pronunciations,
+      preference: {
+        styles: ['清雅'],
+        includeCharacters: ['清'],
+        excludeCharacters: ['安'],
+        rarityPreference: 'balanced',
+        genderExpression: 'neutral',
+      },
+      limit: 20,
+    });
+
+    expect(names.length).toBeGreaterThan(0);
+    expect(names.every((name) => name.givenName.includes('清'))).toBe(true);
+    expect(names.every((name) => !name.givenName.includes('安'))).toBe(true);
+  });
+
+  it('在生成层执行用户排除风格', () => {
+    const names = generateNames({
+      surname: '陈',
+      characters: [
+        sourceCharacters[0],
+        sourceCharacters[1],
+        { ...sourceCharacters[2], styleTags: ['温润'] },
+        { ...sourceCharacters[3], styleTags: ['温润'] },
+      ],
+      tendencies,
+      pronunciations,
+      preference: {
+        styles: [],
+        excludeStyles: ['清雅'],
+        rarityPreference: 'balanced',
+        genderExpression: 'neutral',
+      },
+      limit: 20,
+    });
+
+    expect(names.length).toBeGreaterThan(0);
+    expect(names.every((name) => name.styleTags.includes('温润'))).toBe(true);
+    expect(names.every((name) => !name.styleTags.includes('清雅'))).toBe(true);
   });
 
   it('移除姓与名组合命中的明显负面谐音', () => {
@@ -122,5 +200,30 @@ describe('generateNames', () => {
     expect(matched?.scoreBreakdown.classic).toBe(100);
     expect(reversed?.classic).toBeUndefined();
     expect(reversed?.scoreBreakdown.classic).toBe(0);
+  });
+
+  it('典籍偏好选中时只保留真实命中的对应来源', () => {
+    const characters: NamingCharacter[] = [
+      sourceCharacters[6],
+      { ...sourceCharacters[7], char: '扬', pinyin: 'yáng', tone: 2 },
+      ...sourceCharacters.slice(0, 2),
+    ];
+    const names = generateNames({
+      surname: '陈',
+      characters,
+      tendencies,
+      pronunciations,
+      classicWorks,
+      preference: {
+        styles: ['清雅'],
+        rarityPreference: 'balanced',
+        genderExpression: 'neutral',
+        classicPreference: 'shijing',
+      },
+      limit: 20,
+    });
+
+    expect(names.map(({ givenName }) => givenName)).toEqual(['清扬']);
+    expect(names[0].classic?.source).toBe('shijing');
   });
 });

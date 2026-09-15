@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "project": "gaaiyun/FOR-BAZI",
+    "repository": "https://github.com/gaaiyun/FOR-BAZI",
+    "commit": "31c1d28ca9f226d3d3ae0344dc66d0a4e5580e97",
+    "license": "MIT",
+    "sourcePath": "data/classical_texts"
+  },
+  "sourceVersion": "2.0",
+  "sourceLastUpdated": "2026-05-01",
+  "works": [
+    {
+      "id": "qiongtong_baojian",
+      "title": "穷通宝鉴",
+      "file": "qiongtong-baojian.json",
+      "entryCount": 120,
+      "categories": [
+        "调候用神"
+      ]
+    },
+    {
+      "id": "di_tian_sui",
+      "title": "滴天髓",
+      "file": "di-tian-sui.json",
+      "entryCount": 19,
+      "categories": [
+        "十干体性",
+        "理法"
+      ]
+    },
+    {
+      "id": "ziping_zhenquan",
+      "title": "子平真诠",
+      "file": "ziping-zhenquan.json",
+      "entryCount": 23,
+      "categories": [
+        "格局",
+        "用神",
+        "月令"
+      ]
+    },
+    {
+      "id": "sanming_tonghui",
+      "title": "三命通会",
+      "file": "sanming-tonghui.json",
+      "entryCount": 27,
+      "categories": [
+        "宫位",
+        "六亲",
+        "运年",
+        "强弱"
+      ]
+    },
+    {
+      "id": "yuanhai_ziping",
+      "title": "渊海子平",
+      "file": "yuanhai-ziping.json",
+      "entryCount": 187,
+      "categories": [
+        "天干体象",
+        "地支体象",
+        "十神",
+        "论法",
+        "总论",
+        "诗诀",
+        "格局"
+      ]
+    }
+  ]
+}

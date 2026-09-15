@@ -32,8 +32,9 @@ function analyzePillar(pillar: Pillar): PillarAnalysis {
     stemYinYang: stemInfo.yinYang,
     branchElement: branchInfo.element,
     branchYinYang: branchInfo.yinYang,
-    hiddenStems: branchInfo.hiddenStems.map((stem) => ({
+    hiddenStems: branchInfo.hiddenStems.map(({ stem, role }) => ({
       stem,
+      role,
       element: HEAVENLY_STEMS[stem].element,
       yinYang: HEAVENLY_STEMS[stem].yinYang,
     })),

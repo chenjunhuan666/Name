@@ -81,6 +81,16 @@ select:focus-visible {
   flex: 1;
 }
 
+.routeHydrateFallback {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  color: var(--muted);
+  font-family: var(--serif);
+  font-size: 18px;
+  letter-spacing: 0.08em;
+}
+
 .pageWidth {
   width: min(1180px, calc(100% - 48px));
   margin-inline: auto;
@@ -1120,6 +1130,67 @@ select:focus-visible {
   line-height: 1.7;
 }
 
+.ruleEvidencePanel {
+  margin-bottom: 20px;
+}
+
+.ruleEvidencePanel summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-family: var(--serif);
+  font-size: 20px;
+}
+
+.ruleEvidencePanel summary span {
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 12px;
+}
+
+.ruleEvidenceList {
+  display: grid;
+  margin-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.ruleEvidenceList article {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.ruleEvidenceList header,
+.ruleEvidenceList li {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.ruleEvidenceList header span,
+.ruleEvidenceList li small {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.ruleEvidenceList ul {
+  display: grid;
+  padding: 0;
+  margin: 12px 0 0;
+  gap: 8px;
+  list-style: none;
+}
+
+.ruleEvidenceList li code {
+  color: var(--cinnabar-dark);
+}
+
+.ruleEvidenceList li span {
+  flex: 1;
+  font-size: 12px;
+}
+
 .phaseNotice {
   display: flex;
   align-items: center;
@@ -1386,6 +1457,12 @@ select:focus-visible {
   margin: 0;
   color: var(--muted);
   text-align: center;
+}
+
+.libraryMessageWarning {
+  padding: 12px 20px;
+  color: #825c20;
+  background: #fff7de;
 }
 
 .libraryFootnote {

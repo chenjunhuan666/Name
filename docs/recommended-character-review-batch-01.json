@@ -1,0 +1,2854 @@
+{
+  "schemaVersion": 1,
+  "batchId": "positive-below-production-threshold-01",
+  "sourceQueue": {
+    "path": "docs/recommended-character-review.json",
+    "sha256": "64d93b706de5cda4fe979fc32bdd9d5c661b0a929e25b536043b25cadd072846",
+    "sourceCommit": "57302376e92bdb7e60f344d2e4a179ba57ca2c7e",
+    "dictionarySha256": "2a3150ac04c1641388424684364145e0d01781baf8db3e8018e1ca22b39bce69"
+  },
+  "policy": {
+    "scope": "83 characters marked positive by the source but below the production namingUsage threshold of 40",
+    "allowedDecisions": [
+      "pending",
+      "approved",
+      "rejected"
+    ],
+    "approvalRequirements": [
+      "review.decision must be approved",
+      "review.note must explain the naming suitability decision",
+      "review.approvedMeaning must contain the reviewer-confirmed runtime meaning",
+      "review.reviewedBy must identify the reviewer",
+      "review.reviewedAt must be an ISO-8601 timestamp"
+    ],
+    "overwriteProtection": "this initializer uses exclusive creation and must never overwrite an existing review file"
+  },
+  "counts": {
+    "total": 83,
+    "pending": 0,
+    "approved": 20,
+    "rejected": 63
+  },
+  "entries": [
+    {
+      "char": "懂",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 0,
+          "meaning": "懂事、明白",
+          "styleTags": [
+            "清雅",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "dǒng",
+          "tone": 3,
+          "element": "木",
+          "radical": "忄",
+          "strokes": 15,
+          "standardIndex": 3300,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。来源“懂事”带有评价性扩写；默认推荐不优先使用此类日常认知动词。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "充",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "充实、充满",
+          "styleTags": [
+            "刚健",
+            "明朗"
+          ]
+        },
+        "facts": {
+          "pinyin": "chōng",
+          "tone": 1,
+          "element": "土",
+          "radical": "亠",
+          "strokes": 6,
+          "standardIndex": 525,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。两词典支持充足/填充；CC-CEDICT 同时有假扮义。建议保留充足义，但不将整个字解释为只有正向义项；由用户决定是否接受多义性。",
+        "approvedMeaning": "充足、充实",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "兔",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "玉兔、敏捷",
+          "styleTags": [
+            "灵动",
+            "温婉"
+          ]
+        },
+        "facts": {
+          "pinyin": "tù",
+          "tone": 4,
+          "element": "金",
+          "radical": "刀",
+          "strokes": 8,
+          "standardIndex": 1195,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。来源“敏捷”不是所附词典的单字释义；动物选择偏个人偏好，默认池先排除。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "舰",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "军舰巨舰",
+          "styleTags": [
+            "刚健",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "jiàn",
+          "tone": 4,
+          "element": "木",
+          "radical": "舟",
+          "strokes": 10,
+          "standardIndex": 1978,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。军事器物意象明确，不作为本批泛用默认候选。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "谅",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "原谅、体谅",
+          "styleTags": [
+            "沉稳",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "liàng",
+          "tone": 4,
+          "element": "火",
+          "radical": "讠",
+          "strokes": 10,
+          "standardIndex": 2125,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。多义且偏人际动作；当前不优先保留。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "祷",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "祈祷、祷告",
+          "styleTags": [
+            "仙气",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "dǎo",
+          "tone": 3,
+          "element": "金",
+          "radical": "礻",
+          "strokes": 11,
+          "standardIndex": 2464,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。祈祷语境偏特定偏好，且有 8 个已知组合命中；不以命中数作为全字禁用证明。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "攀",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "攀登，高升",
+          "styleTags": [
+            "刚健",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "pān",
+          "tone": 1,
+          "element": "木",
+          "radical": "手",
+          "strokes": 19,
+          "standardIndex": 3456,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。两词典支持攀爬，CC-CEDICT 亦含牵连、攀附关系义。建议仅采用攀登，不把来源“高升”当作字典事实。",
+        "approvedMeaning": "攀登",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "貂",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "华美、珍贵",
+          "styleTags": [
+            "清雅",
+            "富贵"
+          ]
+        },
+        "facts": {
+          "pinyin": "diāo",
+          "tone": 1,
+          "element": "金",
+          "radical": "豸",
+          "strokes": 12,
+          "standardIndex": 5226,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。来源“华美、珍贵”没有在所附词条直接成立；不以引申评价替代字义。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "企",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "企盼、企业",
+          "styleTags": [
+            "刚健",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "qǐ",
+          "tone": 3,
+          "element": "木",
+          "radical": "人",
+          "strokes": 6,
+          "standardIndex": 490,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。独立语义依赖所选义项，另有 13 个已知组合命中；不优先扩入。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "茸",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "初生柔软",
+          "styleTags": [
+            "灵动",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "rōng",
+          "tone": 1,
+          "element": "木",
+          "radical": "艹",
+          "strokes": 9,
+          "standardIndex": 1402,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。读音已纠正为 róng，来源冲突不再作为排除理由；柔细意象在本次保守默认选择中不优先。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "恤",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "体恤、怜悯",
+          "styleTags": [
+            "清雅",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "xù",
+          "tone": 4,
+          "element": "水",
+          "radical": "忄",
+          "strokes": 9,
+          "standardIndex": 1689,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。正向帮助义与忧虑义并存，默认候选先排除。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "笋",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "竹笋、新生",
+          "styleTags": [
+            "清雅",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "sǔn",
+          "tone": 3,
+          "element": "木",
+          "radical": "竹",
+          "strokes": 10,
+          "standardIndex": 1953,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。来源“新生”属联想；不优先收录食材/物种具体名称。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "涧",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "山涧清泉",
+          "styleTags": [
+            "清雅",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "jiàn",
+          "tone": 4,
+          "element": "水",
+          "radical": "氵",
+          "strokes": 10,
+          "standardIndex": 2082,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。延续旧复核对“贱”同音的谨慎建议；这是口语联想取舍，不是词义负面或普遍禁字规则。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "烹",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "烹饪，煮制",
+          "styleTags": [
+            "沉稳",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "pēng",
+          "tone": 1,
+          "element": "水",
+          "radical": "灬",
+          "strokes": 11,
+          "standardIndex": 2377,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。明确烹饪动作，词典另有古代煮杀义；不纳入默认推荐。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "揽",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "包揽、拥抱",
+          "styleTags": [
+            "刚健",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "lǎn",
+          "tone": 3,
+          "element": "火",
+          "radical": "扌",
+          "strokes": 12,
+          "standardIndex": 2518,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。多义动作且含垄断义，另有 2 个已知组合命中；不优先收录。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "湃",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "澎湃，激荡",
+          "styleTags": [
+            "刚健",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "pài",
+          "tone": 4,
+          "element": "水",
+          "radical": "氵",
+          "strokes": 12,
+          "standardIndex": 2762,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。CC-CEDICT 指向复词，来源激荡意象依赖搭配，默认排除。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "酿",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "酿造、酝酿",
+          "styleTags": [
+            "清雅",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "niàng",
+          "tone": 4,
+          "element": "木",
+          "radical": "酉",
+          "strokes": 14,
+          "standardIndex": 3088,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。明确制作过程；“酝酿”联想不足以改变默认取舍。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "篱",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "篱笆、田园",
+          "styleTags": [
+            "清雅",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "lí",
+          "tone": 2,
+          "element": "木",
+          "radical": "竹",
+          "strokes": 16,
+          "standardIndex": 3360,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。来源“田园”是意象扩写，不将围栏义优先纳入默认池。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "夙",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "早；平素",
+          "styleTags": [
+            "书卷",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "sù",
+          "tone": 4,
+          "element": "金",
+          "radical": "夕",
+          "strokes": 6,
+          "standardIndex": 3614,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。两词典支持早和既往/长期义。建议保留简明释义，不自动扩写为功成名就或志向远大。",
+        "approvedMeaning": "早、素来",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "讴",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "歌唱赞美",
+          "styleTags": [
+            "明朗",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "ōu",
+          "tone": 1,
+          "element": "土",
+          "radical": "讠",
+          "strokes": 6,
+          "standardIndex": 3631,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。两词典支持歌唱、歌曲。建议保留声音意象；来源“赞美”不作为唯一、已核实的单字义。",
+        "approvedMeaning": "歌唱",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "邸",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "府邸尊贵",
+          "styleTags": [
+            "富贵",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "dǐ",
+          "tone": 3,
+          "element": "火",
+          "radical": "阝",
+          "strokes": 7,
+          "standardIndex": 3743,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。不把特定住所义直接等同个人尊贵品质。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "诤",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "直言规劝",
+          "styleTags": [
+            "刚健",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "zhèng",
+          "tone": 4,
+          "element": "火",
+          "radical": "讠",
+          "strokes": 8,
+          "standardIndex": 4056,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。两词典支持规劝/直言批评。建议保留此义；CC-CEDICT 记录台湾 zhēng，不能承诺跨地区读音唯一。",
+        "approvedMeaning": "直言规劝",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "柢",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "根基，稳固",
+          "styleTags": [
+            "沉稳",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "dǐ",
+          "tone": 3,
+          "element": "木",
+          "radical": "木",
+          "strokes": 9,
+          "standardIndex": 4154,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。两词典支持根基。建议保留具体义；“稳固”是可联想意象，不直接写为字义事实。",
+        "approvedMeaning": "根、根基",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "胄",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "甲胄后代",
+          "styleTags": [
+            "刚健",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "zhòu",
+          "tone": 4,
+          "element": "火",
+          "radical": "月",
+          "strokes": 9,
+          "standardIndex": 4208,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。两个领域的意义并存，泛用解释容易混合，默认排除。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "咤",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "叱咤、怒斥",
+          "styleTags": [
+            "刚健"
+          ]
+        },
+        "facts": {
+          "pinyin": "zhà",
+          "tone": 4,
+          "element": "金",
+          "radical": "口",
+          "strokes": 9,
+          "standardIndex": 4226,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。不从完整词语抽出“有气势”的正向单字结论。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "皈",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "皈依归向",
+          "styleTags": [
+            "清雅",
+            "仙气"
+          ]
+        },
+        "facts": {
+          "pinyin": "guī",
+          "tone": 1,
+          "element": "木",
+          "radical": "白",
+          "strokes": 9,
+          "standardIndex": 4265,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。来源皈依语境较特定，不作为泛用默认推荐。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "矜",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "庄重怜悯",
+          "styleTags": [
+            "书卷",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "jīn",
+          "tone": 1,
+          "element": "木",
+          "radical": "矛",
+          "strokes": 9,
+          "standardIndex": 4392,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "用户明确同意 docs/recommended-character-remaining-review-2026-09-08.md 的逐字提案。新词典明确列出端庄克制义，解决旧摘录仅支持怜悯的局限；同页也有夸耀、傲慢等义及其他音读。建议保留选定义项，不宣称单义或单音。[教育部：矜](https://dict.revised.moe.edu.tw/dictView.jsp?ID=6528&la=0&powerMode=0)",
+        "approvedMeaning": "庄重自持",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-08T00:37:53Z"
+      }
+    },
+    {
+      "char": "钺",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "古代兵器",
+          "styleTags": [
+            "刚健",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "yuè",
+          "tone": 4,
+          "element": "金",
+          "radical": "钅",
+          "strokes": 10,
+          "standardIndex": 4532,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。兵器义明确，默认排除。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "颀",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "身材修长",
+          "styleTags": [
+            "清雅",
+            "刚健"
+          ]
+        },
+        "facts": {
+          "pinyin": "qí",
+          "tone": 2,
+          "element": "木",
+          "radical": "页",
+          "strokes": 10,
+          "standardIndex": 4583,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "Unihan 与 CC-CEDICT 的固定证据支持该释义和读音；同意作为泛用推荐候选收录，具体组合继续接受现有语义、谐音和全名过滤。已知 13 个 hui+qi 危险名字保留硬拦截；收录不代表所有搭配均自然或无风险。",
+        "approvedMeaning": "身材修长",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T00:38:22Z"
+      }
+    },
+    {
+      "char": "菖",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "菖蒲、驱邪",
+          "styleTags": [
+            "清雅",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "chāng",
+          "tone": 1,
+          "element": "木",
+          "radical": "艹",
+          "strokes": 11,
+          "standardIndex": 4753,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。来源“驱邪”未由所附词条支持，且词条指向复词，默认排除。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "萏",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "菡萏、荷花",
+          "styleTags": [
+            "清雅",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "dàn",
+          "tone": 4,
+          "element": "木",
+          "radical": "艹",
+          "strokes": 11,
+          "standardIndex": 4760,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。有花卉义但本轮不优先选择该构词字；另有怀萏、奔萏两组合命中，不能据此断言所有搭配危险。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "皑",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "洁白明亮",
+          "styleTags": [
+            "清雅",
+            "明朗"
+          ]
+        },
+        "facts": {
+          "pinyin": "ái",
+          "tone": 2,
+          "element": "火",
+          "radical": "白",
+          "strokes": 11,
+          "standardIndex": 4911,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。延续旧复核对“癌”同音的谨慎选择；不是否定雪白义，也不新增全字拦截。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "喃",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "喃喃细语",
+          "styleTags": [
+            "温婉",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "nán",
+          "tone": 2,
+          "element": "火",
+          "radical": "口",
+          "strokes": 12,
+          "standardIndex": 5130,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。主要为声音/动作描写，默认候选不优先。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "嵋",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "峨眉山之秀",
+          "styleTags": [
+            "清雅",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "méi",
+          "tone": 2,
+          "element": "土",
+          "radical": "山",
+          "strokes": 12,
+          "standardIndex": 5176,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。词条支持地名，不直接支持“秀美”人格释义，另有 10 个组合命中。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "腴",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "丰腴肥美",
+          "styleTags": [
+            "清雅",
+            "富贵"
+          ]
+        },
+        "facts": {
+          "pinyin": "yú",
+          "tone": 2,
+          "element": "金",
+          "radical": "月",
+          "strokes": 12,
+          "standardIndex": 5231,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。身体肥胖义并存；泛用推荐先排除。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "弼",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "辅佐，辅助",
+          "styleTags": [
+            "刚健",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "bì",
+          "tone": 4,
+          "element": "水",
+          "radical": "弓",
+          "strokes": 12,
+          "standardIndex": 5317,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。两词典支持辅助。建议保留，同时承认莎弼、纱弼两个已知危险搭配；现有语义与谐音规则均拦截，不因字符收录解除。",
+        "approvedMeaning": "辅佐、辅助",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "跹",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "轻盈飞舞",
+          "styleTags": [
+            "灵动",
+            "仙气"
+          ]
+        },
+        "facts": {
+          "pinyin": "xiān",
+          "tone": 1,
+          "element": "金",
+          "radical": "足",
+          "strokes": 13,
+          "standardIndex": 5457,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。两词典侧重点不同，不将“轻盈飞舞”视为共同支持的完整释义；默认排除。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "馐",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "美食，佳肴",
+          "styleTags": [
+            "清雅",
+            "富贵"
+          ]
+        },
+        "facts": {
+          "pinyin": "xiū",
+          "tone": 1,
+          "element": "金",
+          "radical": "饣",
+          "strokes": 13,
+          "standardIndex": 5537,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。饮食具体义，不优先收录。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "髦",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "英俊、时尚",
+          "styleTags": [
+            "刚健",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "máo",
+          "tone": 2,
+          "element": "水",
+          "radical": "髟",
+          "strokes": 14,
+          "standardIndex": 5630,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "用户明确同意 docs/recommended-character-remaining-review-2026-09-08.md 的逐字提案。新词典有出众人物的比喻用法，旧仅列毛发/时尚的证据不完整。建议采用该比喻义，不改写成相貌英俊；毛发、发式等义继续并存。[教育部：髦](https://dict.revised.moe.edu.tw/dictView.jsp?ID=1162&la=0&powerMode=0)",
+        "approvedMeaning": "杰出人才（比喻义）",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-08T00:37:53Z"
+      }
+    },
+    {
+      "char": "犒",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "犒劳奖赏",
+          "styleTags": [
+            "刚健",
+            "明朗"
+          ]
+        },
+        "facts": {
+          "pinyin": "kào",
+          "tone": 4,
+          "element": "木",
+          "radical": "牜",
+          "strokes": 14,
+          "standardIndex": 5741,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。场景性动作明确，默认排除。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "箐",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "山间竹林",
+          "styleTags": [
+            "清雅",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "qìng",
+          "tone": 4,
+          "element": "木",
+          "radical": "竹",
+          "strokes": 14,
+          "standardIndex": 5742,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "用户同意 docs/recommended-character-qing-review-2026-09-08.md：保留 qìng/四声与山间竹林义；接受汉典直接音义依据的来源层级，保留教育部 qiàn 异读差异，不把词义或机器检查当作姓名自然度证明。",
+        "approvedMeaning": "山间竹林",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-08T09:20:50Z"
+      }
+    },
+    {
+      "char": "銮",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "皇帝车铃",
+          "styleTags": [
+            "富贵",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "luán",
+          "tone": 2,
+          "element": "金",
+          "radical": "金",
+          "strokes": 14,
+          "standardIndex": 5778,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-remaining-review-2026-09-08.md 的逐字提案。词义成立，但本批默认池不优先帝王器物意象；不将其直接美化为人的尊贵，也不称其不能用于姓名。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-08T00:37:53Z"
+      }
+    },
+    {
+      "char": "踔",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "腾跃、卓异",
+          "styleTags": [
+            "刚健",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "chuō",
+          "tone": 1,
+          "element": "火",
+          "radical": "足",
+          "strokes": 15,
+          "standardIndex": 5911,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "用户明确同意 docs/recommended-character-remaining-review-2026-09-08.md 的逐字提案。固定 Unihan、CC-CEDICT 支持 chuō，后者已明确注明台湾 zhuó；本次台湾词典的标音与该地区提示一致，并支持超越义。沿用项目 chuō 是明确取舍，不用台湾条目判原读音错误。[教育部：踔](https://dict.revised.moe.edu.tw/dictView.jsp?ID=8060&la=0&powerMode=0)",
+        "approvedMeaning": "跨步、超越",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-08T00:37:53Z"
+      }
+    },
+    {
+      "char": "踵",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "脚后跟、继承",
+          "styleTags": [
+            "沉稳",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "zhǒng",
+          "tone": 3,
+          "element": "火",
+          "radical": "足",
+          "strokes": 16,
+          "standardIndex": 6093,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。身体部位和动作义并存，另有 15 个组合命中，默认排除。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "膳",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "膳食、饮食",
+          "styleTags": [
+            "富贵",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "shàn",
+          "tone": 4,
+          "element": "金",
+          "radical": "月",
+          "strokes": 16,
+          "standardIndex": 6136,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。饮食义明确，默认排除。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "鹭",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "白鹭，高洁",
+          "styleTags": [
+            "清雅",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "lù",
+          "tone": 4,
+          "element": "火",
+          "radical": "鸟",
+          "strokes": 18,
+          "standardIndex": 6334,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。两词典支持鸟类名称。建议作为自然意象候选保留；不将来源“高洁”或所有鹭均为白色写作词典事实。",
+        "approvedMeaning": "鹭鸟",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "镯",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "手镯，饰品",
+          "styleTags": [
+            "温婉",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "zhuó",
+          "tone": 2,
+          "element": "金",
+          "radical": "钅",
+          "strokes": 18,
+          "standardIndex": 6346,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。首饰具体器物义，默认排除。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "鎏",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "金纯美，镀金",
+          "styleTags": [
+            "富贵",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "liú",
+          "tone": 2,
+          "element": "金",
+          "radical": "金",
+          "strokes": 18,
+          "standardIndex": 6362,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "用户明确同意 docs/recommended-character-remaining-review-2026-09-08.md 的逐字提案。新词典支持品质良好的黄金义，与固定 Unihan 的纯金方向相符。拟用释义不混入镀金，也不写成现代金含量指标；已知鎏芒组合仍被规则拦截。[教育部：鎏](https://dict.variants.moe.edu.tw/dictView.jsp?ID=74059&la=1)",
+        "approvedMeaning": "成色好的黄金",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-08T00:37:53Z"
+      }
+    },
+    {
+      "char": "鬟",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "环形发",
+          "styleTags": [
+            "温婉",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "huán",
+          "tone": 2,
+          "element": "水",
+          "radical": "髟",
+          "strokes": 23,
+          "standardIndex": 6477,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。发式具体义，不作为泛用默认候选。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "衢",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "大路通达",
+          "styleTags": [
+            "清雅",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "qú",
+          "tone": 2,
+          "element": "木",
+          "radical": "行",
+          "strokes": 24,
+          "standardIndex": 6489,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。不把道路直接等同事业通达；另有衢思组合命中，默认排除。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "铖",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "人名用字，兵器",
+          "styleTags": [
+            "刚健",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "chéng",
+          "tone": 2,
+          "element": "金",
+          "radical": "钅",
+          "strokes": 11,
+          "standardIndex": 7181,
+          "standardLevel": 3
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "Unihan 与 CC-CEDICT 的固定证据支持人名用法及读音；同意作为泛用推荐候选收录。运行时释义不采用尚未获得独立支持的“兵器”义；具体组合继续接受现有语义、谐音和全名过滤。",
+        "approvedMeaning": "人名用字",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T00:38:22Z"
+      }
+    },
+    {
+      "char": "孩",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 0,
+          "meaning": "孩子童真",
+          "styleTags": [
+            "温婉",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "hái",
+          "tone": 2,
+          "element": "水",
+          "radical": "子",
+          "strokes": 9,
+          "standardIndex": 1730,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。年龄/称谓义明确，默认候选不优先。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "恳",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 1,
+          "meaning": "诚恳、恳切",
+          "styleTags": [
+            "质朴",
+            "温婉"
+          ]
+        },
+        "facts": {
+          "pinyin": "kěn",
+          "tone": 3,
+          "element": "木",
+          "radical": "心",
+          "strokes": 10,
+          "standardIndex": 2130,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。延续旧复核的词法与“啃”同音顾虑；是谨慎偏好而非已验证的姓名自然度结论。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "伙",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "伙伴、合作",
+          "styleTags": [
+            "质朴",
+            "刚健"
+          ]
+        },
+        "facts": {
+          "pinyin": "huǒ",
+          "tone": 3,
+          "element": "火",
+          "radical": "亻",
+          "strokes": 6,
+          "standardIndex": 475,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。多义和量词/构词用途较强，另有 6 个组合命中，默认排除。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "苞",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "花苞、含苞",
+          "styleTags": [
+            "灵动",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "bāo",
+          "tone": 1,
+          "element": "木",
+          "radical": "艹",
+          "strokes": 8,
+          "standardIndex": 1009,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "用户明确同意 docs/recommended-character-remaining-review-2026-09-08.md 的逐字提案。新词典直接收未开放花朵义，能够支持从既有多义记录中选定花苞义。建议接受植物意象，不扩写为才华出众、前程无限。[教育部：苞](https://dict.variants.moe.edu.tw/dictView.jsp?ID=37649&la=0)",
+        "approvedMeaning": "花苞",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-08T00:37:53Z"
+      }
+    },
+    {
+      "char": "禀",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "承受；禀赋",
+          "styleTags": [
+            "书卷",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "bǐng",
+          "tone": 3,
+          "element": "水",
+          "radical": "示",
+          "strokes": 13,
+          "standardIndex": 2987,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。CC-CEDICT 含赋予、接受，两词典亦涉及向上报告。建议选择有据义项，但不扩写为天赋卓越；需接受报告义并存。",
+        "approvedMeaning": "赋予、承受",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "嘹",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "声音响亮清脆",
+          "styleTags": [
+            "明朗",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "liáo",
+          "tone": 2,
+          "element": "火",
+          "radical": "口",
+          "strokes": 15,
+          "standardIndex": 3239,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。依赖复词的表达，默认候选不优先。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "赡",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "富足、充裕",
+          "styleTags": [
+            "富贵",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "shàn",
+          "tone": 4,
+          "element": "火",
+          "radical": "贝",
+          "strokes": 17,
+          "standardIndex": 3414,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。所附两词典对来源“富足、充裕”的支持不完全一致；默认不以此正向扩写收录。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "玎",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "玉石声响",
+          "styleTags": [
+            "灵动",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "dīng",
+          "tone": 1,
+          "element": "火",
+          "radical": "王",
+          "strokes": 6,
+          "standardIndex": 3565,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。两词典支持清脆叮当声。建议保留声音意象；现有摘录不足以限定声音必来自玉石，拟用释义不加该限定。",
+        "approvedMeaning": "叮当声",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "抉",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "抉择、挑选",
+          "styleTags": [
+            "书卷",
+            "刚健"
+          ]
+        },
+        "facts": {
+          "pinyin": "jué",
+          "tone": 2,
+          "element": "火",
+          "radical": "扌",
+          "strokes": 7,
+          "standardIndex": 3657,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。动作义并非稳定品质，默认排除。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "呦",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "鹿鸣声",
+          "styleTags": [
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "yōu",
+          "tone": 1,
+          "element": "土",
+          "radical": "口",
+          "strokes": 8,
+          "standardIndex": 3921,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。拟声/语气用途较强，默认候选不优先。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "饴",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "甘甜，麦芽糖",
+          "styleTags": [
+            "温婉",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "yí",
+          "tone": 2,
+          "element": "土",
+          "radical": "饣",
+          "strokes": 8,
+          "standardIndex": 3993,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。来源“甘甜”可以联想但核心为具体食品，默认排除。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "庖",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "厨房，厨师",
+          "styleTags": [
+            "书卷",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "páo",
+          "tone": 2,
+          "element": "水",
+          "radical": "广",
+          "strokes": 8,
+          "standardIndex": 3996,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。场所义明确，默认排除。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "咩",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "羊叫声",
+          "styleTags": [
+            "灵动",
+            "温婉"
+          ]
+        },
+        "facts": {
+          "pinyin": "miē",
+          "tone": 1,
+          "element": "水",
+          "radical": "口",
+          "strokes": 9,
+          "standardIndex": 4225,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。拟声及方言语气用途，默认候选不优先。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "狩",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "狩猎、征伐",
+          "styleTags": [
+            "刚健",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "shòu",
+          "tone": 4,
+          "element": "金",
+          "radical": "犭",
+          "strokes": 9,
+          "standardIndex": 4294,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。不优先军事/狩猎场景，默认排除。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "徕",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "招徕、到来",
+          "styleTags": [
+            "清雅",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "lái",
+          "tone": 2,
+          "element": "火",
+          "radical": "彳",
+          "strokes": 10,
+          "standardIndex": 4584,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。词条强调复词，默认候选不优先。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "胭",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "胭脂红润",
+          "styleTags": [
+            "温婉",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "yān",
+          "tone": 1,
+          "element": "土",
+          "radical": "月",
+          "strokes": 10,
+          "standardIndex": 4592,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。化妆品具体义，不把来源“红润”直接当作个人品质。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "脍",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "细切鱼肉",
+          "styleTags": [
+            "书卷",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "kuài",
+          "tone": 4,
+          "element": "木",
+          "radical": "月",
+          "strokes": 10,
+          "standardIndex": 4593,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。食品处理义明确，默认排除。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "谌",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "真诚可信",
+          "styleTags": [
+            "沉稳",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "chén",
+          "tone": 2,
+          "element": "金",
+          "radical": "讠",
+          "strokes": 11,
+          "standardIndex": 4994,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。两词典支持真诚、忠信，亦记录姓氏。建议作为名字候选保留该义，不据姓氏条目断言所有姓氏读音与名字场景相同。",
+        "approvedMeaning": "真诚、忠信",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "啾",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "鸟鸣声",
+          "styleTags": [
+            "灵动",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "jiū",
+          "tone": 1,
+          "element": "木",
+          "radical": "口",
+          "strokes": 12,
+          "standardIndex": 5154,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。并非仅美好鸟鸣，默认候选不优先。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "犊",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "牛犊、初生",
+          "styleTags": [
+            "质朴",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "dú",
+          "tone": 2,
+          "element": "金",
+          "radical": "牜",
+          "strokes": 12,
+          "standardIndex": 5196,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。不以来源“初生”覆盖完整义项，默认排除。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "飨",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "宴请、祭祀",
+          "styleTags": [
+            "书卷",
+            "富贵"
+          ]
+        },
+        "facts": {
+          "pinyin": "xiǎng",
+          "tone": 3,
+          "element": "水",
+          "radical": "飠",
+          "strokes": 12,
+          "standardIndex": 5338,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。特定仪式/饮食动作，默认排除。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "嘤",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "鸟鸣声，细弱貌",
+          "styleTags": [
+            "灵动",
+            "温婉"
+          ]
+        },
+        "facts": {
+          "pinyin": "yīng",
+          "tone": 1,
+          "element": "土",
+          "radical": "口",
+          "strokes": 14,
+          "standardIndex": 5719,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。本轮不优先拟声构词，不将其断言为负面字。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "嶂",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "直立山峰",
+          "styleTags": [
+            "刚健",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "zhàng",
+          "tone": 4,
+          "element": "土",
+          "radical": "山",
+          "strokes": 14,
+          "standardIndex": 5726,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。自然物义成立，但屏障意象不在本轮优先候选内。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "箬",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "竹叶，箬竹",
+          "styleTags": [
+            "清雅",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "ruò",
+          "tone": 4,
+          "element": "木",
+          "radical": "竹",
+          "strokes": 14,
+          "standardIndex": 5747,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。不将植物名称泛化为已获支持的人格品质，默认排除。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "箜",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "箜篌，乐器",
+          "styleTags": [
+            "灵动",
+            "仙气"
+          ]
+        },
+        "facts": {
+          "pinyin": "kōng",
+          "tone": 1,
+          "element": "木",
+          "radical": "竹",
+          "strokes": 14,
+          "standardIndex": 5751,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。乐器词语不等于该单字独立适名，默认排除。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "鲛",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "鲛人，神话",
+          "styleTags": [
+            "灵动",
+            "仙气"
+          ]
+        },
+        "facts": {
+          "pinyin": "jiāo",
+          "tone": 1,
+          "element": "木",
+          "radical": "鱼",
+          "strokes": 14,
+          "standardIndex": 5771,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。固定词条未支持来源“鲛人”神话释义，不以该解释扩入。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "蹁",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "轻盈旋转",
+          "styleTags": [
+            "灵动",
+            "仙气"
+          ]
+        },
+        "facts": {
+          "pinyin": "pián",
+          "tone": 2,
+          "element": "水",
+          "radical": "足",
+          "strokes": 16,
+          "standardIndex": 6096,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-remaining-review-2026-09-08.md 的逐字提案。正向复词证据已找到，但不足以把来源“轻盈旋转”当成不带语境的单字核心释义；保守默认排除。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-08T00:37:53Z"
+      }
+    },
+    {
+      "char": "篝",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "竹笼，篝火",
+          "styleTags": [
+            "明朗",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "gōu",
+          "tone": 1,
+          "element": "木",
+          "radical": "竹",
+          "strokes": 16,
+          "standardIndex": 6124,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。来源“篝火”是复词，不把其意象直接转为单字释义。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "嬴",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "姓氏；盈余",
+          "styleTags": [
+            "富贵",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "yíng",
+          "tone": 2,
+          "element": "木",
+          "radical": "女",
+          "strokes": 16,
+          "standardIndex": 6164,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-remaining-review-2026-09-08.md 的逐字提案。词义成立；本批不优先用古通假或姓氏联想承载现代成功寓意，默认排除。这不是字形等于现代赢，也不否定现实人名用法。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-08T00:37:53Z"
+      }
+    },
+    {
+      "char": "燧",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "钻木取火",
+          "styleTags": [
+            "刚健",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "suì",
+          "tone": 4,
+          "element": "火",
+          "radical": "火",
+          "strokes": 16,
+          "standardIndex": 6173,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。特定器具/警报场景，默认候选不优先。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    },
+    {
+      "char": "濂",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "清廉濂溪",
+          "styleTags": [
+            "清雅",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "lián",
+          "tone": 2,
+          "element": "水",
+          "radical": "氵",
+          "strokes": 16,
+          "standardIndex": 6181,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "用户明确同意 docs/recommended-character-remaining-review-2026-09-08.md 的逐字提案。新词典明确为河流名称。建议按水名用字收录，不写来源中的清廉品质；水名本身成立，是否喜欢这种意象由用户决定。[教育部：濂](https://dict.variants.moe.edu.tw/dictView.jsp?ID=25075&la=0)",
+        "approvedMeaning": "水名，指濂溪",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-08T00:37:53Z"
+      }
+    },
+    {
+      "char": "鸷",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "凶猛的鸟",
+          "styleTags": [
+            "刚健"
+          ]
+        },
+        "facts": {
+          "pinyin": "zhì",
+          "tone": 4,
+          "element": "火",
+          "radical": "鸟",
+          "strokes": 11,
+          "standardIndex": 4732,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold",
+          "meaning-risk-keyword"
+        ]
+      },
+      "review": {
+        "decision": "rejected",
+        "note": "用户明确同意 docs/recommended-character-decision-proposal-batch-01.md 的逐字提案。固定词条明确含强烈负面义，建议默认排除。",
+        "approvedMeaning": "",
+        "reviewedBy": "用户（本会话确认）：01a06ee1-4a74-71c1-8904-a0d60283e9d3",
+        "reviewedAt": "2026-09-05T12:05:57Z"
+      }
+    }
+  ]
+}

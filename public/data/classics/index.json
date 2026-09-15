@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 2,
+  "imageryRegistry": {
+    "path": "manual-imagery.json",
+    "entryCount": 2,
+    "reviewedAt": "2026-09-12"
+  },
+  "source": {
+    "project": "chinese-poetry/chinese-poetry",
+    "repository": "https://github.com/chinese-poetry/chinese-poetry",
+    "commit": "b8594f81a89752241442f2ce267d6f66f96704ee",
+    "license": "MIT"
+  },
+  "supplementalSources": [
+    {
+      "source": "zhouyi",
+      "project": "gujilab/chinese-classical-corpus",
+      "repository": "https://github.com/gujilab/chinese-classical-corpus",
+      "commit": "09a6873e46760f20027e20bf48814f5c5cc05d66",
+      "license": "CC0-1.0",
+      "input": "output/wujing/zhouyi.json"
+    },
+    {
+      "source": "zhuangzi",
+      "project": "kanripo/KR5c0126",
+      "repository": "https://github.com/kanripo/KR5c0126",
+      "commit": "abb9cd323dfd9520894b56b3b8ba2ec0ea50554f",
+      "license": "CC-BY-SA-4.0",
+      "input": "KR5c0126_001.txt ... KR5c0126_033.txt"
+    }
+  ],
+  "packages": [
+    {
+      "source": "shijing",
+      "path": "core/shijing.json",
+      "workCount": 305,
+      "available": true,
+      "load": "on-demand"
+    },
+    {
+      "source": "chuci",
+      "path": "core/chuci.json",
+      "workCount": 65,
+      "available": true,
+      "load": "on-demand"
+    },
+    {
+      "source": "lunyu",
+      "path": "core/lunyu.json",
+      "workCount": 20,
+      "available": true,
+      "load": "on-demand"
+    },
+    {
+      "source": "mengzi",
+      "path": "core/mengzi.json",
+      "workCount": 14,
+      "available": true,
+      "load": "on-demand"
+    },
+    {
+      "source": "zhouyi",
+      "path": "core/zhouyi.json",
+      "workCount": 69,
+      "available": true,
+      "load": "on-demand"
+    },
+    {
+      "source": "zhuangzi",
+      "path": "core/zhuangzi.json",
+      "workCount": 33,
+      "available": true,
+      "load": "on-demand"
+    },
+    {
+      "source": "tang",
+      "path": "tang/tang.json",
+      "workCount": 176,
+      "available": true,
+      "load": "on-demand"
+    },
+    {
+      "source": "songci",
+      "path": "song/songci.json",
+      "workCount": 280,
+      "available": true,
+      "load": "on-demand"
+    }
+  ]
+}

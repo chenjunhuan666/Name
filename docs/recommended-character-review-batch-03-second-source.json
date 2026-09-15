@@ -1,0 +1,7071 @@
+{
+  "schemaVersion": 1,
+  "batchId": "neutral-second-source-03",
+  "sourceQueue": {
+    "path": "docs/recommended-character-review.json",
+    "sha256": "64d93b706de5cda4fe979fc32bdd9d5c661b0a929e25b536043b25cadd072846",
+    "sourceCommit": "57302376e92bdb7e60f344d2e4a179ba57ca2c7e",
+    "dictionarySha256": "2a3150ac04c1641388424684364145e0d01781baf8db3e8018e1ca22b39bce69"
+  },
+  "policy": {
+    "scope": "previously rejected neutral candidates whose sole blocker was insufficient evidence; hard and explicit rejections are excluded",
+    "entryEligibility": {
+      "sentiments": [
+        "neutral"
+      ],
+      "namingUsage": {
+        "min": 30
+      },
+      "rarityLevel": {
+        "maxInclusive": 2
+      }
+    },
+    "allowedDecisions": [
+      "approved"
+    ],
+    "decisionRule": {
+      "priorRuleIdsExactly": [
+        "neutral.score.below-approve-threshold"
+      ],
+      "corpusMinimumOccurrences": 5,
+      "corpusEvidencePoints": 20,
+      "approveThreshold": 70
+    },
+    "runtimeSourceMarkers": [
+      "Chinese-Names-Corpus:47d4af8d816f6212787ddfc49173cac3b994b58d:gender-120W"
+    ],
+    "sourceBoundary": "corpus occurrence is evidence of observed name use, not proof that every concrete full name is suitable",
+    "sourceQueueVerifiedSha256": "64d93b706de5cda4fe979fc32bdd9d5c661b0a929e25b536043b25cadd072846"
+  },
+  "sources": {
+    "project": "wainshine/Chinese-Names-Corpus",
+    "repository": "https://github.com/wainshine/Chinese-Names-Corpus",
+    "commit": "47d4af8d816f6212787ddfc49173cac3b994b58d",
+    "license": "Apache-2.0",
+    "corpusSha256": "30d83f3e682d355ac1d3f18482c14ff5e2bdd0ebe704bff1ef196eabdf93939b",
+    "surnameWorkbookSha256": "c0ec61ece459e1527f692bff9d1bb8d184f49d48966659b1eb3822769e8f28b6",
+    "licenseSha256": "e03ba41d7fab20700769fe4118bab50d800cb74f990353a05d2f5fff1c228363",
+    "corpusPath": "Chinese_Names_Corpus/Chinese_Names_Corpus_Gender（120W）.txt",
+    "surnameWorkbookPath": "Chinese_Names_Corpus/Chinese_Family_Name（1k）.xlsx",
+    "compoundSurnameCount": 56
+  },
+  "counts": {
+    "total": 204,
+    "pending": 0,
+    "approved": 204,
+    "rejected": 0
+  },
+  "entries": [
+    {
+      "char": "瑟",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 55,
+          "rarityLevel": 2,
+          "meaning": "古琴、萧瑟",
+          "styleTags": [
+            "清雅",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "sè",
+          "tone": 4,
+          "element": "木",
+          "radical": "王",
+          "strokes": 13,
+          "standardIndex": 2825,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 29 次；原审计仅因证据分不足（50），补充独立语料证据后为 70，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "古琴、萧瑟",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "幻",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 50,
+          "rarityLevel": 1,
+          "meaning": "梦幻、变化",
+          "styleTags": [
+            "灵动",
+            "仙气"
+          ]
+        },
+        "facts": {
+          "pinyin": "huàn",
+          "tone": 4,
+          "element": "水",
+          "radical": "幺",
+          "strokes": 4,
+          "standardIndex": 189,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 12 次；原审计仅因证据分不足（53），补充独立语料证据后为 73，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "梦幻、变化",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "迹",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 50,
+          "rarityLevel": 2,
+          "meaning": "足迹、踪迹",
+          "styleTags": [
+            "书卷",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "jì",
+          "tone": 4,
+          "element": "火",
+          "radical": "辶",
+          "strokes": 9,
+          "standardIndex": 1623,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 8 次；原审计仅因证据分不足（50），补充独立语料证据后为 70，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "足迹、踪迹",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "处",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 45,
+          "rarityLevel": 0,
+          "meaning": "处世、处置",
+          "styleTags": [
+            "沉稳",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "chù",
+          "tone": 4,
+          "element": "金",
+          "radical": "夂",
+          "strokes": 5,
+          "standardIndex": 294,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 6 次；原审计仅因证据分不足（54），补充独立语料证据后为 74，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "处世、处置",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "当",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 45,
+          "rarityLevel": 0,
+          "meaning": "担当、应当",
+          "styleTags": [
+            "刚健",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "dāng",
+          "tone": 1,
+          "element": "火",
+          "radical": "彐",
+          "strokes": 6,
+          "standardIndex": 418,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 35 次；原审计仅因证据分不足（54），补充独立语料证据后为 74，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "担当、应当",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "字",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 45,
+          "rarityLevel": 1,
+          "meaning": "文字名表",
+          "styleTags": [
+            "书卷",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "zì",
+          "tone": 4,
+          "element": "金",
+          "radical": "子",
+          "strokes": 6,
+          "standardIndex": 548,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 5 次；原审计仅因证据分不足（51），补充独立语料证据后为 71，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "文字名表",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "服",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 45,
+          "rarityLevel": 1,
+          "meaning": "衣服、从事",
+          "styleTags": [
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "fú",
+          "tone": 2,
+          "element": "水",
+          "radical": "月",
+          "strokes": 8,
+          "standardIndex": 1190,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 14 次；原审计仅因证据分不足（51），补充独立语料证据后为 71，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "衣服、从事",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "芹",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 45,
+          "rarityLevel": 2,
+          "meaning": "芹菜草、谦词",
+          "styleTags": [
+            "清雅",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "qín",
+          "tone": 2,
+          "element": "木",
+          "radical": "艹",
+          "strokes": 7,
+          "standardIndex": 666,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 1836 次；原审计仅因证据分不足（68），补充独立语料证据后为 88，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "芹菜草、谦词",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "沫",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 45,
+          "rarityLevel": 2,
+          "meaning": "泡沫、飞沫",
+          "styleTags": [
+            "灵动",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "mò",
+          "tone": 4,
+          "element": "水",
+          "radical": "氵",
+          "strokes": 8,
+          "standardIndex": 1239,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 54 次；原审计仅因证据分不足（68），补充独立语料证据后为 88，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "泡沫、飞沫",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "绅",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 45,
+          "rarityLevel": 2,
+          "meaning": "绅士",
+          "styleTags": [
+            "书卷",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "shēn",
+          "tone": 1,
+          "element": "金",
+          "radical": "纟",
+          "strokes": 8,
+          "standardIndex": 1339,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 12 次；原审计仅因证据分不足（68），补充独立语料证据后为 88，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "绅士",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "荧",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 45,
+          "rarityLevel": 2,
+          "meaning": "微光闪烁",
+          "styleTags": [
+            "灵动",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "yíng",
+          "tone": 2,
+          "element": "火",
+          "radical": "艹",
+          "strokes": 9,
+          "standardIndex": 1417,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 20 次；原审计仅因证据分不足（68），补充独立语料证据后为 88，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "微光闪烁",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "屏",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 45,
+          "rarityLevel": 2,
+          "meaning": "屏风、屏障",
+          "styleTags": [
+            "清雅",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "píng",
+          "tone": 2,
+          "element": "水",
+          "radical": "尸",
+          "strokes": 9,
+          "standardIndex": 1724,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 265 次；原审计仅因证据分不足（68），补充独立语料证据后为 88，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "屏风、屏障",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "翁",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 45,
+          "rarityLevel": 2,
+          "meaning": "老者、长者",
+          "styleTags": [
+            "沉稳",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "wēng",
+          "tone": 1,
+          "element": "土",
+          "radical": "羽",
+          "strokes": 10,
+          "standardIndex": 1992,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 16 次；原审计仅因证据分不足（68），补充独立语料证据后为 88，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "老者、长者",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "阅",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 45,
+          "rarityLevel": 2,
+          "meaning": "阅读、阅历",
+          "styleTags": [
+            "书卷",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "yuè",
+          "tone": 4,
+          "element": "土",
+          "radical": "门",
+          "strokes": 10,
+          "standardIndex": 2048,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 25 次；原审计仅因证据分不足（68），补充独立语料证据后为 88，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "阅读、阅历",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "尉",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 45,
+          "rarityLevel": 2,
+          "meaning": "古代官名、武职",
+          "styleTags": [
+            "沉稳",
+            "刚健"
+          ]
+        },
+        "facts": {
+          "pinyin": "wèi",
+          "tone": 4,
+          "element": "土",
+          "radical": "寸",
+          "strokes": 11,
+          "standardIndex": 2471,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 61 次；原审计仅因证据分不足（68），补充独立语料证据后为 88，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "古代官名、武职",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "堪",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 45,
+          "rarityLevel": 2,
+          "meaning": "堪称、忍受",
+          "styleTags": [
+            "沉稳",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "kān",
+          "tone": 1,
+          "element": "土",
+          "radical": "土",
+          "strokes": 12,
+          "standardIndex": 2509,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 12 次；原审计仅因证据分不足（68），补充独立语料证据后为 88，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "堪称、忍受",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "蜀",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 45,
+          "rarityLevel": 2,
+          "meaning": "蜀地古国",
+          "styleTags": [
+            "沉稳",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "shǔ",
+          "tone": 3,
+          "element": "金",
+          "radical": "虫",
+          "strokes": 13,
+          "standardIndex": 2934,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 52 次；原审计仅因证据分不足（68），补充独立语料证据后为 88，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "蜀地古国",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "泾",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 45,
+          "rarityLevel": 2,
+          "meaning": "泾渭分明",
+          "styleTags": [
+            "清雅",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "jīng",
+          "tone": 1,
+          "element": "水",
+          "radical": "氵",
+          "strokes": 8,
+          "standardIndex": 4024,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 17 次；原审计仅因证据分不足（68），补充独立语料证据后为 88，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "泾渭分明",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "轲",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 45,
+          "rarityLevel": 2,
+          "meaning": "车接，孟轲",
+          "styleTags": [
+            "书卷",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "kē",
+          "tone": 1,
+          "element": "木",
+          "radical": "车",
+          "strokes": 9,
+          "standardIndex": 4179,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 96 次；原审计仅因证据分不足（68），补充独立语料证据后为 88，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "车接，孟轲",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "浚",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 45,
+          "rarityLevel": 2,
+          "meaning": "疏浚、深挖",
+          "styleTags": [
+            "沉稳",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "jùn",
+          "tone": 4,
+          "element": "水",
+          "radical": "氵",
+          "strokes": 10,
+          "standardIndex": 4658,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 88 次；原审计仅因证据分不足（68），补充独立语料证据后为 88，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "疏浚、深挖",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "渭",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 45,
+          "rarityLevel": 2,
+          "meaning": "渭水、河流",
+          "styleTags": [
+            "清雅",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "wèi",
+          "tone": 4,
+          "element": "水",
+          "radical": "氵",
+          "strokes": 12,
+          "standardIndex": 5282,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 91 次；原审计仅因证据分不足（68），补充独立语料证据后为 88，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "渭水、河流",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "是",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 0,
+          "meaning": "是非、正确",
+          "styleTags": [
+            "沉稳",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "shì",
+          "tone": 4,
+          "element": "金",
+          "radical": "日",
+          "strokes": 9,
+          "standardIndex": 1479,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 13 次；原审计仅因证据分不足（52），补充独立语料证据后为 72，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "是非、正确",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "速",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 0,
+          "meaning": "快速、迅速",
+          "styleTags": [
+            "刚健",
+            "明朗"
+          ]
+        },
+        "facts": {
+          "pinyin": "sù",
+          "tone": 4,
+          "element": "金",
+          "radical": "辶",
+          "strokes": 10,
+          "standardIndex": 1853,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 27 次；原审计仅因证据分不足（52），补充独立语料证据后为 72，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "快速、迅速",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "于",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 1,
+          "meaning": "在于、去往",
+          "styleTags": [
+            "书卷",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "yú",
+          "tone": 2,
+          "element": "土",
+          "radical": "二",
+          "strokes": 3,
+          "standardIndex": 24,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 251 次；原审计仅因证据分不足（69），补充独立语料证据后为 89，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "在于、去往",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "凡",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 1,
+          "meaning": "平凡、凡俗",
+          "styleTags": [
+            "质朴",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "fán",
+          "tone": 2,
+          "element": "水",
+          "radical": "几",
+          "strokes": 3,
+          "standardIndex": 50,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 2121 次；原审计仅因证据分不足（69），补充独立语料证据后为 89，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "平凡、凡俗",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "弓",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 1,
+          "meaning": "弓箭、弯曲",
+          "styleTags": [
+            "刚健",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "gōng",
+          "tone": 1,
+          "element": "木",
+          "radical": "弓",
+          "strokes": 3,
+          "standardIndex": 63,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 14 次；原审计仅因证据分不足（69），补充独立语料证据后为 89，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "弓箭、弯曲",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "井",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 1,
+          "meaning": "水井、井然",
+          "styleTags": [
+            "质朴",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "jǐng",
+          "tone": 3,
+          "element": "火",
+          "radical": "二",
+          "strokes": 4,
+          "standardIndex": 77,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 281 次；原审计仅因证据分不足（69），补充独立语料证据后为 89，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "水井、井然",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "尤",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 1,
+          "meaning": "尤其、突出",
+          "styleTags": [
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "yóu",
+          "tone": 2,
+          "element": "土",
+          "radical": "尢",
+          "strokes": 4,
+          "standardIndex": 98,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 50 次；原审计仅因证据分不足（69），补充独立语料证据后为 89，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "尤其、突出",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "引",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 1,
+          "meaning": "引导、拉弓",
+          "styleTags": [
+            "书卷",
+            "刚健"
+          ]
+        },
+        "facts": {
+          "pinyin": "yǐn",
+          "tone": 3,
+          "element": "土",
+          "radical": "弓",
+          "strokes": 4,
+          "standardIndex": 176,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 119 次；原审计仅因证据分不足（69），补充独立语料证据后为 89，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "引导、拉弓",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "付",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 1,
+          "meaning": "交付、付出",
+          "styleTags": [
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "fù",
+          "tone": 4,
+          "element": "水",
+          "radical": "亻",
+          "strokes": 5,
+          "standardIndex": 269,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 477 次；原审计仅因证据分不足（69），补充独立语料证据后为 89，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "交付、付出",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "训",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 1,
+          "meaning": "教导、训诫",
+          "styleTags": [
+            "刚健",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "xùn",
+          "tone": 4,
+          "element": "水",
+          "radical": "讠",
+          "strokes": 5,
+          "standardIndex": 319,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 275 次；原审计仅因证据分不足（69），补充独立语料证据后为 89，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "教导、训诫",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "辽",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 1,
+          "meaning": "辽阔、远大",
+          "styleTags": [
+            "明朗",
+            "刚健"
+          ]
+        },
+        "facts": {
+          "pinyin": "liáo",
+          "tone": 2,
+          "element": "火",
+          "radical": "辶",
+          "strokes": 5,
+          "standardIndex": 331,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 31 次；原审计仅因证据分不足（69），补充独立语料证据后为 89，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "辽阔、远大",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "共",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 1,
+          "meaning": "共同、共享",
+          "styleTags": [
+            "质朴",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "gòng",
+          "tone": 4,
+          "element": "木",
+          "radical": "八",
+          "strokes": 6,
+          "standardIndex": 371,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 24 次；原审计仅因证据分不足（69），补充独立语料证据后为 89，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "共同、共享",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "列",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 1,
+          "meaning": "排列、行列",
+          "styleTags": [
+            "刚健",
+            "明朗"
+          ]
+        },
+        "facts": {
+          "pinyin": "liè",
+          "tone": 4,
+          "element": "金",
+          "radical": "刂",
+          "strokes": 6,
+          "standardIndex": 399,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 109 次；原审计仅因证据分不足（69），补充独立语料证据后为 89，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "排列、行列",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "因",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 1,
+          "meaning": "原因、凭借",
+          "styleTags": [
+            "书卷",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "yīn",
+          "tone": 1,
+          "element": "土",
+          "radical": "囗",
+          "strokes": 6,
+          "standardIndex": 430,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 53 次；原审计仅因证据分不足（69），补充独立语料证据后为 89，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "原因、凭借",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "衣",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 1,
+          "meaning": "衣服、衣裳",
+          "styleTags": [
+            "清雅",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "yī",
+          "tone": 1,
+          "element": "土",
+          "radical": "衣",
+          "strokes": 6,
+          "standardIndex": 520,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 30 次；原审计仅因证据分不足（69），补充独立语料证据后为 89，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "衣服、衣裳",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "问",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 1,
+          "meaning": "求索、追问",
+          "styleTags": [
+            "书卷",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "wèn",
+          "tone": 4,
+          "element": "金",
+          "radical": "门",
+          "strokes": 6,
+          "standardIndex": 528,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 35 次；原审计仅因证据分不足（69），补充独立语料证据后为 89，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "求索、追问",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "异",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 1,
+          "meaning": "不同、奇特",
+          "styleTags": [
+            "灵动",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "yì",
+          "tone": 4,
+          "element": "土",
+          "radical": "廾",
+          "strokes": 6,
+          "standardIndex": 568,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 94 次；原审计仅因证据分不足（69），补充独立语料证据后为 89，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "不同、奇特",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "约",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 1,
+          "meaning": "约定、简约",
+          "styleTags": [
+            "清雅",
+            "温婉"
+          ]
+        },
+        "facts": {
+          "pinyin": "yuē",
+          "tone": 1,
+          "element": "土",
+          "radical": "纟",
+          "strokes": 6,
+          "standardIndex": 593,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 37 次；原审计仅因证据分不足（69），补充独立语料证据后为 89，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "约定、简约",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "芦",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 1,
+          "meaning": "芦苇，自然",
+          "styleTags": [
+            "清雅",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "lú",
+          "tone": 2,
+          "element": "木",
+          "radical": "艹",
+          "strokes": 7,
+          "standardIndex": 672,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 16 次；原审计仅因证据分不足（69），补充独立语料证据后为 89，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "芦苇，自然",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "肖",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 1,
+          "meaning": "相似、肖像",
+          "styleTags": [
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "xiào",
+          "tone": 4,
+          "element": "木",
+          "radical": "月",
+          "strokes": 7,
+          "standardIndex": 713,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 665 次；原审计仅因证据分不足（69），补充独立语料证据后为 89，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "相似、肖像",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "邻",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 1,
+          "meaning": "邻居、亲近",
+          "styleTags": [
+            "质朴",
+            "温婉"
+          ]
+        },
+        "facts": {
+          "pinyin": "lín",
+          "tone": 2,
+          "element": "火",
+          "radical": "阝",
+          "strokes": 7,
+          "standardIndex": 801,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 27 次；原审计仅因证据分不足（69），补充独立语料证据后为 89，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "邻居、亲近",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "系",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 1,
+          "meaning": "联系，系统",
+          "styleTags": [
+            "书卷",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "xì",
+          "tone": 4,
+          "element": "金",
+          "radical": "糸",
+          "strokes": 7,
+          "standardIndex": 825,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 9 次；原审计仅因证据分不足（69），补充独立语料证据后为 89，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "联系，系统",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "改",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 1,
+          "meaning": "改变、改正",
+          "styleTags": [
+            "明朗"
+          ]
+        },
+        "facts": {
+          "pinyin": "gǎi",
+          "tone": 3,
+          "element": "木",
+          "radical": "攵",
+          "strokes": 7,
+          "standardIndex": 908,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 277 次；原审计仅因证据分不足（69），补充独立语料证据后为 89，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "改变、改正",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "轮",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 1,
+          "meaning": "车轮，轮回",
+          "styleTags": [
+            "明朗",
+            "刚健"
+          ]
+        },
+        "facts": {
+          "pinyin": "lún",
+          "tone": 2,
+          "element": "火",
+          "radical": "车",
+          "strokes": 8,
+          "standardIndex": 1061,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 16 次；原审计仅因证据分不足（69），补充独立语料证据后为 89，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "车轮，轮回",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "放",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 1,
+          "meaning": "释放、开放",
+          "styleTags": [
+            "明朗",
+            "刚健"
+          ]
+        },
+        "facts": {
+          "pinyin": "fàng",
+          "tone": 4,
+          "element": "水",
+          "radical": "攵",
+          "strokes": 8,
+          "standardIndex": 1223,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 262 次；原审计仅因证据分不足（69），补充独立语料证据后为 89，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "释放、开放",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "郑",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 1,
+          "meaning": "郑重、郑国",
+          "styleTags": [
+            "沉稳",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "zhèng",
+          "tone": 4,
+          "element": "火",
+          "radical": "阝",
+          "strokes": 8,
+          "standardIndex": 1229,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 88 次；原审计仅因证据分不足（69），补充独立语料证据后为 89，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "郑重、郑国",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "细",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 1,
+          "meaning": "细腻，精致",
+          "styleTags": [
+            "温婉",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "xì",
+          "tone": 4,
+          "element": "金",
+          "radical": "纟",
+          "strokes": 8,
+          "standardIndex": 1340,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 842 次；原审计仅因证据分不足（69），补充独立语料证据后为 89，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "细腻，精致",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "胡",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 1,
+          "meaning": "胡须、边远",
+          "styleTags": [
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "hú",
+          "tone": 2,
+          "element": "土",
+          "radical": "月",
+          "strokes": 9,
+          "standardIndex": 1419,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 103 次；原审计仅因证据分不足（69），补充独立语料证据后为 89，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "胡须、边远",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "染",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 1,
+          "meaning": "染色，渲染",
+          "styleTags": [
+            "灵动",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "rǎn",
+          "tone": 3,
+          "element": "水",
+          "radical": "木",
+          "strokes": 9,
+          "standardIndex": 1675,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 12 次；原审计仅因证据分不足（69），补充独立语料证据后为 89，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "染色，渲染",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "席",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 1,
+          "meaning": "席位，宴席",
+          "styleTags": [
+            "沉稳",
+            "富贵"
+          ]
+        },
+        "facts": {
+          "pinyin": "xí",
+          "tone": 2,
+          "element": "金",
+          "radical": "巾",
+          "strokes": 10,
+          "standardIndex": 2023,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 20 次；原审计仅因证据分不足（69），补充独立语料证据后为 89，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "席位，宴席",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "凉",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 1,
+          "meaning": "清凉、清爽",
+          "styleTags": [
+            "清雅",
+            "明朗"
+          ]
+        },
+        "facts": {
+          "pinyin": "liáng",
+          "tone": 2,
+          "element": "火",
+          "radical": "冫",
+          "strokes": 10,
+          "standardIndex": 2040,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 42 次；原审计仅因证据分不足（69），补充独立语料证据后为 89，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "清凉、清爽",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "萨",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 1,
+          "meaning": "菩萨、佛教",
+          "styleTags": [
+            "仙气"
+          ]
+        },
+        "facts": {
+          "pinyin": "sà",
+          "tone": 4,
+          "element": "木",
+          "radical": "艹",
+          "strokes": 11,
+          "standardIndex": 2217,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 16 次；原审计仅因证据分不足（69），补充独立语料证据后为 89，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "菩萨、佛教",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "雀",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 1,
+          "meaning": "麻雀，小巧",
+          "styleTags": [
+            "灵动",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "què",
+          "tone": 4,
+          "element": "金",
+          "radical": "隹",
+          "strokes": 11,
+          "standardIndex": 2255,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 11 次；原审计仅因证据分不足（69），补充独立语料证据后为 89，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "麻雀，小巧",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "略",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 1,
+          "meaning": "谋略，方略",
+          "styleTags": [
+            "刚健",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "lüè",
+          "tone": 4,
+          "element": "火",
+          "radical": "田",
+          "strokes": 11,
+          "standardIndex": 2277,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 48 次；原审计仅因证据分不足（69），补充独立语料证据后为 89，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "谋略，方略",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "停",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 1,
+          "meaning": "停驻、宁静",
+          "styleTags": [
+            "沉稳",
+            "温婉"
+          ]
+        },
+        "facts": {
+          "pinyin": "tíng",
+          "tone": 2,
+          "element": "火",
+          "radical": "亻",
+          "strokes": 11,
+          "standardIndex": 2333,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 43 次；原审计仅因证据分不足（69），补充独立语料证据后为 89，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "停驻、宁静",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "族",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 1,
+          "meaning": "族群宗亲",
+          "styleTags": [
+            "沉稳",
+            "刚健"
+          ]
+        },
+        "facts": {
+          "pinyin": "zú",
+          "tone": 2,
+          "element": "金",
+          "radical": "方",
+          "strokes": 11,
+          "standardIndex": 2392,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 6 次；原审计仅因证据分不足（69），补充独立语料证据后为 89，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "族群宗亲",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "盖",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 1,
+          "meaning": "覆盖、盖子",
+          "styleTags": [
+            "刚健",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "gài",
+          "tone": 4,
+          "element": "木",
+          "radical": "皿",
+          "strokes": 11,
+          "standardIndex": 2400,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 18 次；原审计仅因证据分不足（69），补充独立语料证据后为 89，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "覆盖、盖子",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "续",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 1,
+          "meaning": "继续、延续",
+          "styleTags": [
+            "沉稳",
+            "刚健"
+          ]
+        },
+        "facts": {
+          "pinyin": "xù",
+          "tone": 4,
+          "element": "金",
+          "radical": "纟",
+          "strokes": 11,
+          "standardIndex": 2488,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 56 次；原审计仅因证据分不足（69），补充独立语料证据后为 89，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "继续、延续",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "棉",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 1,
+          "meaning": "棉花柔软",
+          "styleTags": [
+            "质朴",
+            "温婉"
+          ]
+        },
+        "facts": {
+          "pinyin": "mián",
+          "tone": 2,
+          "element": "木",
+          "radical": "木",
+          "strokes": 12,
+          "standardIndex": 2574,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 44 次；原审计仅因证据分不足（69），补充独立语料证据后为 89，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "棉花柔软",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "掌",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 1,
+          "meaning": "手掌、掌握",
+          "styleTags": [
+            "刚健",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "zhǎng",
+          "tone": 3,
+          "element": "金",
+          "radical": "手",
+          "strokes": 12,
+          "standardIndex": 2610,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 11 次；原审计仅因证据分不足（69），补充独立语料证据后为 89，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "手掌、掌握",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "稀",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 1,
+          "meaning": "稀少，珍贵",
+          "styleTags": [
+            "清雅",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "xī",
+          "tone": 1,
+          "element": "木",
+          "radical": "禾",
+          "strokes": 12,
+          "standardIndex": 2678,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 12 次；原审计仅因证据分不足（69），补充独立语料证据后为 89，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "稀少，珍贵",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "醒",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 1,
+          "meaning": "清醒、醒悟",
+          "styleTags": [
+            "灵动",
+            "明朗"
+          ]
+        },
+        "facts": {
+          "pinyin": "xǐng",
+          "tone": 3,
+          "element": "金",
+          "radical": "酉",
+          "strokes": 16,
+          "standardIndex": 3336,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 84 次；原审计仅因证据分不足（69），补充独立语料证据后为 89，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "清醒、醒悟",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "戎",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 2,
+          "meaning": "军事、兵戎",
+          "styleTags": [
+            "刚健"
+          ]
+        },
+        "facts": {
+          "pinyin": "róng",
+          "tone": 2,
+          "element": "木",
+          "radical": "戈",
+          "strokes": 6,
+          "standardIndex": 352,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 67 次；原审计仅因证据分不足（66），补充独立语料证据后为 86，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "军事、兵戎",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "阶",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 2,
+          "meaning": "台阶、品阶",
+          "styleTags": [
+            "书卷",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "jiē",
+          "tone": 1,
+          "element": "木",
+          "radical": "阝",
+          "strokes": 6,
+          "standardIndex": 574,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 33 次；原审计仅因证据分不足（66），补充独立语料证据后为 86，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "台阶、品阶",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "纵",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 2,
+          "meaning": "放纵自如",
+          "styleTags": [
+            "刚健",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "zòng",
+          "tone": 4,
+          "element": "火",
+          "radical": "纟",
+          "strokes": 7,
+          "standardIndex": 936,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 11 次；原审计仅因证据分不足（66），补充独立语料证据后为 86，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "放纵自如",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "茅",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 2,
+          "meaning": "茅草、茅屋",
+          "styleTags": [
+            "质朴",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "máo",
+          "tone": 2,
+          "element": "木",
+          "radical": "艹",
+          "strokes": 8,
+          "standardIndex": 1016,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 10 次；原审计仅因证据分不足（66），补充独立语料证据后为 86，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "茅草、茅屋",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "荆",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 2,
+          "meaning": "荆棘、荆楚",
+          "styleTags": [
+            "刚健",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "jīng",
+          "tone": 1,
+          "element": "水",
+          "radical": "艹",
+          "strokes": 9,
+          "standardIndex": 1401,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 34 次；原审计仅因证据分不足（66），补充独立语料证据后为 86，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "荆棘、荆楚",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "盾",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 2,
+          "meaning": "盾牌，后盾",
+          "styleTags": [
+            "刚健",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "dùn",
+          "tone": 4,
+          "element": "火",
+          "radical": "目",
+          "strokes": 9,
+          "standardIndex": 1579,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 23 次；原审计仅因证据分不足（66），补充独立语料证据后为 86，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "盾牌，后盾",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "骆",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 2,
+          "meaning": "骆驼、骆姓",
+          "styleTags": [
+            "刚健",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "luò",
+          "tone": 4,
+          "element": "火",
+          "radical": "马",
+          "strokes": 9,
+          "standardIndex": 1760,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 5 次；原审计仅因证据分不足（66），补充独立语料证据后为 86，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "骆驼、骆姓",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "耘",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 2,
+          "meaning": "耕耘、勤劳",
+          "styleTags": [
+            "质朴",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "yún",
+          "tone": 2,
+          "element": "水",
+          "radical": "耒",
+          "strokes": 10,
+          "standardIndex": 1767,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 111 次；原审计仅因证据分不足（66），补充独立语料证据后为 86，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "耕耘、勤劳",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "崖",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 2,
+          "meaning": "悬崖、山崖",
+          "styleTags": [
+            "刚健",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "yá",
+          "tone": 2,
+          "element": "土",
+          "radical": "山",
+          "strokes": 11,
+          "standardIndex": 2292,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 19 次；原审计仅因证据分不足（66），补充独立语料证据后为 86，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "悬崖、山崖",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "衔",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 2,
+          "meaning": "衔枚、官衔",
+          "styleTags": [
+            "书卷",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "xián",
+          "tone": 2,
+          "element": "金",
+          "radical": "行",
+          "strokes": 11,
+          "standardIndex": 2342,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 7 次；原审计仅因证据分不足（66），补充独立语料证据后为 86，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "衔枚、官衔",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "渔",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 2,
+          "meaning": "捕鱼，收获",
+          "styleTags": [
+            "质朴",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "yú",
+          "tone": 2,
+          "element": "水",
+          "radical": "氵",
+          "strokes": 11,
+          "standardIndex": 2425,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 33 次；原审计仅因证据分不足（66），补充独立语料证据后为 86，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "捕鱼，收获",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "综",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 2,
+          "meaning": "综合统筹",
+          "styleTags": [
+            "书卷",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "zōng",
+          "tone": 1,
+          "element": "金",
+          "radical": "纟",
+          "strokes": 11,
+          "standardIndex": 2496,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 9 次；原审计仅因证据分不足（66），补充独立语料证据后为 86，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "综合统筹",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "畴",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 2,
+          "meaning": "田畴、范畴",
+          "styleTags": [
+            "书卷",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "chóu",
+          "tone": 2,
+          "element": "金",
+          "radical": "田",
+          "strokes": 12,
+          "standardIndex": 2627,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 16 次；原审计仅因证据分不足（66），补充独立语料证据后为 86，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "田畴、范畴",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "皖",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 2,
+          "meaning": "安徽简称",
+          "styleTags": [
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "wǎn",
+          "tone": 3,
+          "element": "木",
+          "radical": "白",
+          "strokes": 12,
+          "standardIndex": 2699,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 18 次；原审计仅因证据分不足（66），补充独立语料证据后为 86，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "安徽简称",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "竣",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 2,
+          "meaning": "竣工、完成",
+          "styleTags": [
+            "沉稳",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "jùn",
+          "tone": 4,
+          "element": "金",
+          "radical": "立",
+          "strokes": 12,
+          "standardIndex": 2736,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 33 次；原审计仅因证据分不足（66），补充独立语料证据后为 86，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "竣工、完成",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "敷",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 2,
+          "meaning": "敷陈、铺展",
+          "styleTags": [
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "fū",
+          "tone": 1,
+          "element": "金",
+          "radical": "攵",
+          "strokes": 15,
+          "standardIndex": 3219,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 8 次；原审计仅因证据分不足（66），补充独立语料证据后为 86，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "敷陈、铺展",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "檬",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 2,
+          "meaning": "柠檬清新",
+          "styleTags": [
+            "清雅",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "méng",
+          "tone": 2,
+          "element": "木",
+          "radical": "木",
+          "strokes": 17,
+          "standardIndex": 3394,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 10 次；原审计仅因证据分不足（66），补充独立语料证据后为 86，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "柠檬清新",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "汶",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 2,
+          "meaning": "汶水古河",
+          "styleTags": [
+            "清雅",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "wèn",
+          "tone": 4,
+          "element": "水",
+          "radical": "氵",
+          "strokes": 7,
+          "standardIndex": 3779,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 119 次；原审计仅因证据分不足（66），补充独立语料证据后为 86，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "汶水古河",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "栎",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 2,
+          "meaning": "栎木，坚实",
+          "styleTags": [
+            "刚健",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "lì",
+          "tone": 4,
+          "element": "木",
+          "radical": "木",
+          "strokes": 9,
+          "standardIndex": 4155,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 14 次；原审计仅因证据分不足（66），补充独立语料证据后为 86，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "栎木，坚实",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "倪",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 2,
+          "meaning": "端倪、幼童",
+          "styleTags": [
+            "书卷",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "ní",
+          "tone": 2,
+          "element": "金",
+          "radical": "亻",
+          "strokes": 10,
+          "standardIndex": 4571,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 26 次；原审计仅因证据分不足（66），补充独立语料证据后为 86，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "端倪、幼童",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "烽",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 2,
+          "meaning": "烽火、边塞",
+          "styleTags": [
+            "刚健",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "fēng",
+          "tone": 1,
+          "element": "火",
+          "radical": "火",
+          "strokes": 11,
+          "standardIndex": 4959,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 124 次；原审计仅因证据分不足（66），补充独立语料证据后为 86，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "烽火、边塞",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "翟",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 2,
+          "meaning": "长尾雉、姓",
+          "styleTags": [
+            "书卷",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "dí",
+          "tone": 2,
+          "element": "土",
+          "radical": "羽",
+          "strokes": 14,
+          "standardIndex": 5838,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 7 次；原审计仅因证据分不足（66），补充独立语料证据后为 86，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "长尾雉、姓",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "樵",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 40,
+          "rarityLevel": 2,
+          "meaning": "砍柴，樵夫",
+          "styleTags": [
+            "质朴",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "qiáo",
+          "tone": 2,
+          "element": "木",
+          "radical": "木",
+          "strokes": 16,
+          "standardIndex": 6059,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "neutral-sentiment"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 37 次；原审计仅因证据分不足（66），补充独立语料证据后为 86，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "砍柴，樵夫",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "习",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 0,
+          "meaning": "学习，习惯",
+          "styleTags": [
+            "沉稳",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "xí",
+          "tone": 2,
+          "element": "水",
+          "radical": "乙",
+          "strokes": 3,
+          "standardIndex": 70,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 181 次；原审计仅因证据分不足（68），补充独立语料证据后为 88，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "学习，习惯",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "支",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 0,
+          "meaning": "支撑、分支",
+          "styleTags": [
+            "质朴",
+            "刚健"
+          ]
+        },
+        "facts": {
+          "pinyin": "zhī",
+          "tone": 1,
+          "element": "火",
+          "radical": "支",
+          "strokes": 4,
+          "standardIndex": 89,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 30 次；原审计仅因证据分不足（68），补充独立语料证据后为 88，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "支撑、分支",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "目",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 0,
+          "meaning": "目光、目标",
+          "styleTags": [
+            "明朗",
+            "刚健"
+          ]
+        },
+        "facts": {
+          "pinyin": "mù",
+          "tone": 4,
+          "element": "水",
+          "radical": "目",
+          "strokes": 5,
+          "standardIndex": 236,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 15 次；原审计仅因证据分不足（68），补充独立语料证据后为 88，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "目光、目标",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "农",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 0,
+          "meaning": "农业、勤劳",
+          "styleTags": [
+            "质朴",
+            "刚健"
+          ]
+        },
+        "facts": {
+          "pinyin": "nóng",
+          "tone": 2,
+          "element": "火",
+          "radical": "冖",
+          "strokes": 6,
+          "standardIndex": 558,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 329 次；原审计仅因证据分不足（68），补充独立语料证据后为 88，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "农业、勤劳",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "围",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 0,
+          "meaning": "围绕、包围",
+          "styleTags": [
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "wéi",
+          "tone": 2,
+          "element": "土",
+          "radical": "囗",
+          "strokes": 7,
+          "standardIndex": 728,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 35 次；原审计仅因证据分不足（68），补充独立语料证据后为 88，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "围绕、包围",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "委",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 0,
+          "meaning": "委托、委婉",
+          "styleTags": [
+            "温婉",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "wěi",
+          "tone": 3,
+          "element": "土",
+          "radical": "女",
+          "strokes": 8,
+          "standardIndex": 1133,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 70 次；原审计仅因证据分不足（68），补充独立语料证据后为 88，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "委托、委婉",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "房",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 0,
+          "meaning": "房屋、房间",
+          "styleTags": [
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "fáng",
+          "tone": 2,
+          "element": "水",
+          "radical": "户",
+          "strokes": 8,
+          "standardIndex": 1290,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 48 次；原审计仅因证据分不足（68），补充独立语料证据后为 88，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "房屋、房间",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "洞",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 0,
+          "meaning": "洞穴、洞察",
+          "styleTags": [
+            "灵动",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "dòng",
+          "tone": 4,
+          "element": "水",
+          "radical": "氵",
+          "strokes": 9,
+          "standardIndex": 1669,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 22 次；原审计仅因证据分不足（68），补充独立语料证据后为 88，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "洞穴、洞察",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "球",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 0,
+          "meaning": "圆球、地球",
+          "styleTags": [
+            "刚健",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "qiú",
+          "tone": 2,
+          "element": "木",
+          "radical": "王",
+          "strokes": 11,
+          "standardIndex": 2155,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 328 次；原审计仅因证据分不足（68），补充独立语料证据后为 88，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "圆球、地球",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "左",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "左右辅助",
+          "styleTags": [
+            "刚健",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "zuǒ",
+          "tone": 3,
+          "element": "火",
+          "radical": "工",
+          "strokes": 5,
+          "standardIndex": 214,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 42 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "左右辅助",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "占",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "占据、占领",
+          "styleTags": [
+            "刚健"
+          ]
+        },
+        "facts": {
+          "pinyin": "zhàn",
+          "tone": 4,
+          "element": "金",
+          "radical": "卜",
+          "strokes": 5,
+          "standardIndex": 228,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 1555 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "占据、占领",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "由",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "自由、缘由",
+          "styleTags": [
+            "质朴",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "yóu",
+          "tone": 2,
+          "element": "土",
+          "radical": "田",
+          "strokes": 5,
+          "standardIndex": 245,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 57 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "自由、缘由",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "矛",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "矛盾、长矛",
+          "styleTags": [
+            "刚健"
+          ]
+        },
+        "facts": {
+          "pinyin": "máo",
+          "tone": 2,
+          "element": "水",
+          "radical": "矛",
+          "strokes": 5,
+          "standardIndex": 343,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 17 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "矛盾、长矛",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "场",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "场地、场合",
+          "styleTags": [
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "chǎng",
+          "tone": 3,
+          "element": "火",
+          "radical": "土",
+          "strokes": 6,
+          "standardIndex": 367,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 20 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "场地、场合",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "米",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "米粮细小",
+          "styleTags": [
+            "质朴",
+            "明朗"
+          ]
+        },
+        "facts": {
+          "pinyin": "mǐ",
+          "tone": 3,
+          "element": "水",
+          "radical": "米",
+          "strokes": 6,
+          "standardIndex": 533,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 165 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "米粮细小",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "论",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "议论、学说",
+          "styleTags": [
+            "书卷",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "lùn",
+          "tone": 4,
+          "element": "火",
+          "radical": "讠",
+          "strokes": 6,
+          "standardIndex": 556,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 17 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "议论、学说",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "坊",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "街坊、作坊",
+          "styleTags": [
+            "质朴",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "fāng",
+          "tone": 1,
+          "element": "土",
+          "radical": "土",
+          "strokes": 7,
+          "standardIndex": 647,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 36 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "街坊、作坊",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "劳",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "勤劳、辛劳",
+          "styleTags": [
+            "质朴",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "láo",
+          "tone": 2,
+          "element": "火",
+          "radical": "力",
+          "strokes": 7,
+          "standardIndex": 674,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 9 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "勤劳、辛劳",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "村",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "村庄、乡村",
+          "styleTags": [
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "cūn",
+          "tone": 1,
+          "element": "木",
+          "radical": "木",
+          "strokes": 7,
+          "standardIndex": 682,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 172 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "村庄、乡村",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "呈",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "呈现、呈献",
+          "styleTags": [
+            "书卷",
+            "明朗"
+          ]
+        },
+        "facts": {
+          "pinyin": "chéng",
+          "tone": 2,
+          "element": "火",
+          "radical": "口",
+          "strokes": 7,
+          "standardIndex": 716,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 126 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "呈现、呈献",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "序",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "顺序、序言",
+          "styleTags": [
+            "沉稳",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "xù",
+          "tone": 4,
+          "element": "金",
+          "radical": "广",
+          "strokes": 7,
+          "standardIndex": 840,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 87 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "顺序、序言",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "夜",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "夜晚、夜色",
+          "styleTags": [
+            "沉稳",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "yè",
+          "tone": 4,
+          "element": "土",
+          "radical": "夕",
+          "strokes": 8,
+          "standardIndex": 1209,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 15 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "夜晚、夜色",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "总",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "聚合统领",
+          "styleTags": [
+            "沉稳",
+            "刚健"
+          ]
+        },
+        "facts": {
+          "pinyin": "zǒng",
+          "tone": 3,
+          "element": "金",
+          "radical": "心",
+          "strokes": 9,
+          "standardIndex": 1654,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 18 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "聚合统领",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "钻",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "钻研深入",
+          "styleTags": [
+            "刚健",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "zuān",
+          "tone": 1,
+          "element": "金",
+          "radical": "钅",
+          "strokes": 10,
+          "standardIndex": 1930,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 8 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "钻研深入",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "称",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "称量、相称",
+          "styleTags": [
+            "沉稳",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "chēng",
+          "tone": 1,
+          "element": "金",
+          "radical": "禾",
+          "strokes": 10,
+          "standardIndex": 1948,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 8 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "称量、相称",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "眼",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "眼睛、见识",
+          "styleTags": [
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "yǎn",
+          "tone": 3,
+          "element": "木",
+          "radical": "目",
+          "strokes": 11,
+          "standardIndex": 2263,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 6 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "眼睛、见识",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "移",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "移动、迁移",
+          "styleTags": [
+            "灵动",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "yí",
+          "tone": 2,
+          "element": "土",
+          "radical": "禾",
+          "strokes": 11,
+          "standardIndex": 2316,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 17 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "移动、迁移",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "腊",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "腊月、腊肉",
+          "styleTags": [
+            "质朴",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "là",
+          "tone": 4,
+          "element": "火",
+          "radical": "月",
+          "strokes": 12,
+          "standardIndex": 2712,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 206 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "腊月、腊肉",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "频",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "频繁多次",
+          "styleTags": [
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "pín",
+          "tone": 2,
+          "element": "水",
+          "radical": "页",
+          "strokes": 13,
+          "standardIndex": 2892,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 63 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "频繁多次",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "滩",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "水边沙滩",
+          "styleTags": [
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "tān",
+          "tone": 1,
+          "element": "水",
+          "radical": "氵",
+          "strokes": 13,
+          "standardIndex": 3022,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 15 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "水边沙滩",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "警",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "警戒、警醒",
+          "styleTags": [
+            "刚健",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "jǐng",
+          "tone": 3,
+          "element": "木",
+          "radical": "言",
+          "strokes": 19,
+          "standardIndex": 3453,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 13 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "警戒、警醒",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "介",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "耿介、介于",
+          "styleTags": [
+            "书卷",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "jiè",
+          "tone": 4,
+          "element": "木",
+          "radical": "人",
+          "strokes": 4,
+          "standardIndex": 140,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 162 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "耿介、介于",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "巩",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "巩固、坚硬",
+          "styleTags": [
+            "刚健",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "gǒng",
+          "tone": 3,
+          "element": "木",
+          "radical": "工",
+          "strokes": 6,
+          "standardIndex": 361,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 17 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "巩固、坚硬",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "译",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "翻译、转化",
+          "styleTags": [
+            "书卷",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "yì",
+          "tone": 4,
+          "element": "金",
+          "radical": "讠",
+          "strokes": 7,
+          "standardIndex": 898,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 78 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "翻译、转化",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "坪",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "平坦场地",
+          "styleTags": [
+            "沉稳",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "píng",
+          "tone": 2,
+          "element": "土",
+          "radical": "土",
+          "strokes": 8,
+          "standardIndex": 960,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 103 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "平坦场地",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "荫",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "树荫、庇护",
+          "styleTags": [
+            "清雅",
+            "温婉"
+          ]
+        },
+        "facts": {
+          "pinyin": "yīn",
+          "tone": 1,
+          "element": "木",
+          "radical": "艹",
+          "strokes": 9,
+          "standardIndex": 1420,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 115 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "树荫、庇护",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "皆",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "皆是、全部",
+          "styleTags": [
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "jiē",
+          "tone": 1,
+          "element": "木",
+          "radical": "白",
+          "strokes": 9,
+          "standardIndex": 1465,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 11 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "皆是、全部",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "钥",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "钥匙、关键",
+          "styleTags": [
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "yào",
+          "tone": 4,
+          "element": "金",
+          "radical": "钅",
+          "strokes": 9,
+          "standardIndex": 1531,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 18 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "钥匙、关键",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "兹",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "此时、此",
+          "styleTags": [
+            "书卷",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "zī",
+          "tone": 1,
+          "element": "金",
+          "radical": "丷",
+          "strokes": 9,
+          "standardIndex": 1653,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 12 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "此时、此",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "逊",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "谦逊、退让",
+          "styleTags": [
+            "沉稳",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "xùn",
+          "tone": 4,
+          "element": "金",
+          "radical": "辶",
+          "strokes": 9,
+          "standardIndex": 1728,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 86 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "谦逊、退让",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "畔",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "田畔，水边",
+          "styleTags": [
+            "清雅",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "pàn",
+          "tone": 4,
+          "element": "水",
+          "radical": "田",
+          "strokes": 10,
+          "standardIndex": 1899,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 22 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "田畔，水边",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "圃",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "园圃、苗圃",
+          "styleTags": [
+            "清雅",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "pǔ",
+          "tone": 3,
+          "element": "水",
+          "radical": "囗",
+          "strokes": 10,
+          "standardIndex": 1906,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 16 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "园圃、苗圃",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "倚",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "倚靠、依靠",
+          "styleTags": [
+            "清雅",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "yǐ",
+          "tone": 3,
+          "element": "木",
+          "radical": "亻",
+          "strokes": 10,
+          "standardIndex": 1957,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 18 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "倚靠、依靠",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "葱",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "青葱、草木",
+          "styleTags": [
+            "质朴",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "cōng",
+          "tone": 1,
+          "element": "木",
+          "radical": "艹",
+          "strokes": 12,
+          "standardIndex": 2554,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 13 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "青葱、草木",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "粟",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "粟米、谷物",
+          "styleTags": [
+            "质朴",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "sù",
+          "tone": 4,
+          "element": "金",
+          "radical": "米",
+          "strokes": 12,
+          "standardIndex": 2583,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 32 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "粟米、谷物",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "熔",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "熔化、锻炼",
+          "styleTags": [
+            "刚健"
+          ]
+        },
+        "facts": {
+          "pinyin": "róng",
+          "tone": 2,
+          "element": "火",
+          "radical": "火",
+          "strokes": 14,
+          "standardIndex": 3158,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 27 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "熔化、锻炼",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "狄",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "北方民族",
+          "styleTags": [
+            "刚健",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "dí",
+          "tone": 2,
+          "element": "火",
+          "radical": "犭",
+          "strokes": 7,
+          "standardIndex": 3746,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 71 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "北方民族",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "泮",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "学宫水池",
+          "styleTags": [
+            "书卷",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "pàn",
+          "tone": 4,
+          "element": "水",
+          "radical": "氵",
+          "strokes": 8,
+          "standardIndex": 4020,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 15 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "学宫水池",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "舸",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "大船",
+          "styleTags": [
+            "清雅",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "gě",
+          "tone": 3,
+          "element": "木",
+          "radical": "舟",
+          "strokes": 11,
+          "standardIndex": 4915,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 36 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "大船",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "瑕",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "玉之斑点",
+          "styleTags": [
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "xiá",
+          "tone": 2,
+          "element": "土",
+          "radical": "王",
+          "strokes": 13,
+          "standardIndex": 5345,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 15 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "玉之斑点",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "漩",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "水流旋转",
+          "styleTags": [
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "xuán",
+          "tone": 2,
+          "element": "水",
+          "radical": "氵",
+          "strokes": 14,
+          "standardIndex": 5810,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 8 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "水流旋转",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "缨",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "冠缨、丝带",
+          "styleTags": [
+            "清雅",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "yīng",
+          "tone": 1,
+          "element": "土",
+          "radical": "纟",
+          "strokes": 14,
+          "standardIndex": 5845,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 63 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "冠缨、丝带",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "木",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 0,
+          "meaning": "树木、质朴",
+          "styleTags": [
+            "质朴",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "mù",
+          "tone": 4,
+          "element": "木",
+          "radical": "木",
+          "strokes": 4,
+          "standardIndex": 87,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 1085 次；原审计仅因证据分不足（68），补充独立语料证据后为 88，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "树木、质朴",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "毛",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 0,
+          "meaning": "毛发、细致",
+          "styleTags": [
+            "质朴",
+            "明朗"
+          ]
+        },
+        "facts": {
+          "pinyin": "máo",
+          "tone": 2,
+          "element": "水",
+          "radical": "毛",
+          "strokes": 4,
+          "standardIndex": 123,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 250 次；原审计仅因证据分不足（68），补充独立语料证据后为 88，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "毛发、细致",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "早",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 0,
+          "meaning": "早晨、提前",
+          "styleTags": [
+            "明朗",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "zǎo",
+          "tone": 3,
+          "element": "金",
+          "radical": "日",
+          "strokes": 6,
+          "standardIndex": 419,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 39 次；原审计仅因证据分不足（68），补充独立语料证据后为 88，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "早晨、提前",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "次",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 0,
+          "meaning": "其次、第二",
+          "styleTags": [
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "cì",
+          "tone": 4,
+          "element": "金",
+          "radical": "欠",
+          "strokes": 6,
+          "standardIndex": 521,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 29 次；原审计仅因证据分不足（68），补充独立语料证据后为 88，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "其次、第二",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "更",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 0,
+          "meaning": "更改更加",
+          "styleTags": [
+            "沉稳",
+            "明朗"
+          ]
+        },
+        "facts": {
+          "pinyin": "gèng",
+          "tone": 4,
+          "element": "木",
+          "radical": "曰",
+          "strokes": 7,
+          "standardIndex": 693,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 128 次；原审计仅因证据分不足（68），补充独立语料证据后为 88，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "更改更加",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "豆",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 0,
+          "meaning": "豆子、豆蔻",
+          "styleTags": [
+            "质朴",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "dòu",
+          "tone": 4,
+          "element": "火",
+          "radical": "豆",
+          "strokes": 7,
+          "standardIndex": 696,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 104 次；原审计仅因证据分不足（68），补充独立语料证据后为 88，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "豆子、豆蔻",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "里",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 0,
+          "meaning": "内里、乡里",
+          "styleTags": [
+            "质朴",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "lǐ",
+          "tone": 3,
+          "element": "火",
+          "radical": "里",
+          "strokes": 7,
+          "standardIndex": 721,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 404 次；原审计仅因证据分不足（68），补充独立语料证据后为 88，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "内里、乡里",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "岗",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 0,
+          "meaning": "山岗岗位",
+          "styleTags": [
+            "刚健",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "gǎng",
+          "tone": 3,
+          "element": "土",
+          "radical": "山",
+          "strokes": 7,
+          "standardIndex": 754,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 407 次；原审计仅因证据分不足（68），补充独立语料证据后为 88，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "山岗岗位",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "帮",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 0,
+          "meaning": "帮助、辅助",
+          "styleTags": [
+            "质朴",
+            "刚健"
+          ]
+        },
+        "facts": {
+          "pinyin": "bāng",
+          "tone": 1,
+          "element": "水",
+          "radical": "巾",
+          "strokes": 9,
+          "standardIndex": 1356,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 330 次；原审计仅因证据分不足（68），补充独立语料证据后为 88，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "帮助、辅助",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "换",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 0,
+          "meaning": "交换、变换",
+          "styleTags": [
+            "灵动",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "huàn",
+          "tone": 4,
+          "element": "水",
+          "radical": "扌",
+          "strokes": 10,
+          "standardIndex": 1806,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 70 次；原审计仅因证据分不足（68），补充独立语料证据后为 88，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "交换、变换",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "管",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 0,
+          "meaning": "管理调理",
+          "styleTags": [
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "guǎn",
+          "tone": 3,
+          "element": "木",
+          "radical": "竹",
+          "strokes": 14,
+          "standardIndex": 3123,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 9 次；原审计仅因证据分不足（68），补充独立语料证据后为 88，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "管理调理",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "乃",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 1,
+          "meaning": "于是、你的",
+          "styleTags": [
+            "书卷",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "nǎi",
+          "tone": 3,
+          "element": "火",
+          "radical": "丿",
+          "strokes": 2,
+          "standardIndex": 20,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 672 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "于是、你的",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "及",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 1,
+          "meaning": "达到、及时",
+          "styleTags": [
+            "书卷",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "jí",
+          "tone": 2,
+          "element": "木",
+          "radical": "又",
+          "strokes": 3,
+          "standardIndex": 52,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 10 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "达到、及时",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "门",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 1,
+          "meaning": "门户门第",
+          "styleTags": [
+            "沉稳",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "mén",
+          "tone": 2,
+          "element": "水",
+          "radical": "门",
+          "strokes": 3,
+          "standardIndex": 55,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 13 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "门户门第",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "厅",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 1,
+          "meaning": "厅堂",
+          "styleTags": [
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "tīng",
+          "tone": 1,
+          "element": "火",
+          "radical": "厂",
+          "strokes": 4,
+          "standardIndex": 90,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 10 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "厅堂",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "仓",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 1,
+          "meaning": "仓廪、积蓄",
+          "styleTags": [
+            "沉稳",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "cāng",
+          "tone": 1,
+          "element": "金",
+          "radical": "人",
+          "strokes": 4,
+          "standardIndex": 149,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 154 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "仓廪、积蓄",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "以",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 1,
+          "meaning": "用、凭借",
+          "styleTags": [
+            "书卷",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "yǐ",
+          "tone": 3,
+          "element": "土",
+          "radical": "人",
+          "strokes": 4,
+          "standardIndex": 182,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 659 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "用、凭借",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "臣",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 1,
+          "meaning": "臣子、辅佐",
+          "styleTags": [
+            "沉稳",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "chén",
+          "tone": 2,
+          "element": "金",
+          "radical": "臣",
+          "strokes": 6,
+          "standardIndex": 380,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 1190 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "臣子、辅佐",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "夺",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 1,
+          "meaning": "夺取，夺目",
+          "styleTags": [
+            "刚健"
+          ]
+        },
+        "facts": {
+          "pinyin": "duó",
+          "tone": 2,
+          "element": "火",
+          "radical": "大",
+          "strokes": 6,
+          "standardIndex": 396,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 10 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "夺取，夺目",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "产",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 1,
+          "meaning": "生产、财富",
+          "styleTags": [
+            "富贵"
+          ]
+        },
+        "facts": {
+          "pinyin": "chǎn",
+          "tone": 3,
+          "element": "金",
+          "radical": "亠",
+          "strokes": 6,
+          "standardIndex": 522,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 8 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "生产、财富",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "宅",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 1,
+          "meaning": "住宅、宅院",
+          "styleTags": [
+            "沉稳",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "zhái",
+          "tone": 2,
+          "element": "火",
+          "radical": "宀",
+          "strokes": 6,
+          "standardIndex": 547,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 7 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "住宅、宅院",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "沪",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 1,
+          "meaning": "沪上、水名",
+          "styleTags": [
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "hù",
+          "tone": 4,
+          "element": "水",
+          "radical": "氵",
+          "strokes": 7,
+          "standardIndex": 869,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 35 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "沪上、水名",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "沉",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 1,
+          "meaning": "沉静、深沉",
+          "styleTags": [
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "chén",
+          "tone": 2,
+          "element": "水",
+          "radical": "氵",
+          "strokes": 7,
+          "standardIndex": 871,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 19 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "沉静、深沉",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "拔",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 1,
+          "meaning": "拔出提升",
+          "styleTags": [
+            "刚健"
+          ]
+        },
+        "facts": {
+          "pinyin": "bá",
+          "tone": 2,
+          "element": "水",
+          "radical": "扌",
+          "strokes": 8,
+          "standardIndex": 959,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 9 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "拔出提升",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "叔",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 1,
+          "meaning": "叔父、排行",
+          "styleTags": [
+            "质朴",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "shū",
+          "tone": 1,
+          "element": "金",
+          "radical": "又",
+          "strokes": 8,
+          "standardIndex": 1065,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 151 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "叔父、排行",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "受",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 1,
+          "meaning": "接受、承受",
+          "styleTags": [
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "shòu",
+          "tone": 4,
+          "element": "金",
+          "radical": "又",
+          "strokes": 8,
+          "standardIndex": 1174,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 12 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "接受、承受",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "查",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 1,
+          "meaning": "查验、考核",
+          "styleTags": [
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "chá",
+          "tone": 2,
+          "element": "金",
+          "radical": "木",
+          "strokes": 9,
+          "standardIndex": 1431,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 7 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "查验、考核",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "垒",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 1,
+          "meaning": "堡垒、堆砌",
+          "styleTags": [
+            "刚健",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "lěi",
+          "tone": 3,
+          "element": "土",
+          "radical": "土",
+          "strokes": 9,
+          "standardIndex": 1751,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 125 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "堡垒、堆砌",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "索",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 1,
+          "meaning": "探索、索求",
+          "styleTags": [
+            "书卷",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "suǒ",
+          "tone": 3,
+          "element": "金",
+          "radical": "糸",
+          "strokes": 10,
+          "standardIndex": 1851,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 27 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "探索、索求",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "检",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 1,
+          "meaning": "检点自律",
+          "styleTags": [
+            "沉稳",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "jiǎn",
+          "tone": 3,
+          "element": "木",
+          "radical": "木",
+          "strokes": 11,
+          "standardIndex": 2227,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 70 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "检点自律",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "野",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 1,
+          "meaning": "原野、旷野",
+          "styleTags": [
+            "刚健",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "yě",
+          "tone": 3,
+          "element": "土",
+          "radical": "里",
+          "strokes": 11,
+          "standardIndex": 2265,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 347 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "原野、旷野",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "盘",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 1,
+          "meaning": "圆盘，盘旋",
+          "styleTags": [
+            "沉稳",
+            "富贵"
+          ]
+        },
+        "facts": {
+          "pinyin": "pán",
+          "tone": 2,
+          "element": "水",
+          "radical": "皿",
+          "strokes": 11,
+          "standardIndex": 2343,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 29 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "圆盘，盘旋",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "惊",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 1,
+          "meaning": "惊异、惊喜",
+          "styleTags": [
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "jīng",
+          "tone": 1,
+          "element": "木",
+          "radical": "忄",
+          "strokes": 11,
+          "standardIndex": 2445,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 28 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "惊异、惊喜",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "绳",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 1,
+          "meaning": "绳索",
+          "styleTags": [
+            "质朴",
+            "刚健"
+          ]
+        },
+        "facts": {
+          "pinyin": "shéng",
+          "tone": 2,
+          "element": "金",
+          "radical": "纟",
+          "strokes": 11,
+          "standardIndex": 2491,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 21 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "绳索",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "棱",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 1,
+          "meaning": "棱角、锋芒",
+          "styleTags": [
+            "刚健",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "léng",
+          "tone": 2,
+          "element": "木",
+          "radical": "木",
+          "strokes": 12,
+          "standardIndex": 2563,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 14 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "棱角、锋芒",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "链",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 1,
+          "meaning": "链接、纽带",
+          "styleTags": [
+            "刚健"
+          ]
+        },
+        "facts": {
+          "pinyin": "liàn",
+          "tone": 4,
+          "element": "金",
+          "radical": "钅",
+          "strokes": 12,
+          "standardIndex": 2658,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 11 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "链接、纽带",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "鲁",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 1,
+          "meaning": "愚钝，国名",
+          "styleTags": [
+            "沉稳",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "lǔ",
+          "tone": 3,
+          "element": "火",
+          "radical": "鱼",
+          "strokes": 12,
+          "standardIndex": 2717,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 546 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "愚钝，国名",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "璃",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 1,
+          "meaning": "玻璃、晶莹",
+          "styleTags": [
+            "灵动",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "lí",
+          "tone": 2,
+          "element": "火",
+          "radical": "王",
+          "strokes": 14,
+          "standardIndex": 3051,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 9 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "玻璃、晶莹",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "熊",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 1,
+          "meaning": "熊类、强壮",
+          "styleTags": [
+            "刚健",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "xióng",
+          "tone": 2,
+          "element": "水",
+          "radical": "灬",
+          "strokes": 14,
+          "standardIndex": 3185,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 115 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "熊类、强壮",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "翻",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 1,
+          "meaning": "翻越、翻译",
+          "styleTags": [
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "fān",
+          "tone": 1,
+          "element": "水",
+          "radical": "羽",
+          "strokes": 18,
+          "standardIndex": 3445,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 10 次；原审计仅因证据分不足（65），补充独立语料证据后为 85，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "翻越、翻译",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "仑",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "昆仑，条理",
+          "styleTags": [
+            "沉稳",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "lún",
+          "tone": 2,
+          "element": "火",
+          "radical": "人",
+          "strokes": 4,
+          "standardIndex": 143,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 86 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "昆仑，条理",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "亢",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "高亢、亢奋",
+          "styleTags": [
+            "刚健",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "kàng",
+          "tone": 4,
+          "element": "木",
+          "radical": "亠",
+          "strokes": 4,
+          "standardIndex": 162,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 19 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "高亢、亢奋",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "邑",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "城邑、封地",
+          "styleTags": [
+            "书卷",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "yì",
+          "tone": 4,
+          "element": "土",
+          "radical": "邑",
+          "strokes": 7,
+          "standardIndex": 748,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 12 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "城邑、封地",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "闽",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "福建别称",
+          "styleTags": [
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "mǐn",
+          "tone": 3,
+          "element": "水",
+          "radical": "门",
+          "strokes": 9,
+          "standardIndex": 1637,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 114 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "福建别称",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "秧",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "秧苗、庄稼",
+          "styleTags": [
+            "质朴",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "yāng",
+          "tone": 1,
+          "element": "火",
+          "radical": "禾",
+          "strokes": 10,
+          "standardIndex": 1946,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 9 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "秧苗、庄稼",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "毫",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "细微、笔毫",
+          "styleTags": [
+            "书卷",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "háo",
+          "tone": 2,
+          "element": "水",
+          "radical": "毛",
+          "strokes": 11,
+          "standardIndex": 2376,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 15 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "细微、笔毫",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "巢",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "巢穴、安居",
+          "styleTags": [
+            "质朴",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "cháo",
+          "tone": 2,
+          "element": "金",
+          "radical": "巛",
+          "strokes": 11,
+          "standardIndex": 2500,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 8 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "巢穴、安居",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "循",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "遵循、循环",
+          "styleTags": [
+            "沉稳",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "xún",
+          "tone": 2,
+          "element": "火",
+          "radical": "彳",
+          "strokes": 12,
+          "standardIndex": 2705,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 31 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "遵循、循环",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "絮",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "柳絮、絮叨",
+          "styleTags": [
+            "温婉",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "xù",
+          "tone": 4,
+          "element": "金",
+          "radical": "糸",
+          "strokes": 12,
+          "standardIndex": 2809,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 21 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "柳絮、絮叨",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "辑",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "辑录、编辑",
+          "styleTags": [
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "jí",
+          "tone": 2,
+          "element": "金",
+          "radical": "车",
+          "strokes": 13,
+          "standardIndex": 2889,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 11 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "辑录、编辑",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "锡",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "金属，赐予",
+          "styleTags": [
+            "沉稳",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "xī",
+          "tone": 1,
+          "element": "金",
+          "radical": "钅",
+          "strokes": 13,
+          "standardIndex": 2938,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 1522 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "金属，赐予",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "溶",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "溶解、融化",
+          "styleTags": [
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "róng",
+          "tone": 2,
+          "element": "水",
+          "radical": "氵",
+          "strokes": 13,
+          "standardIndex": 3019,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 50 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "溶解、融化",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "兢",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "兢兢业业",
+          "styleTags": [
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "jīng",
+          "tone": 1,
+          "element": "木",
+          "radical": "儿",
+          "strokes": 14,
+          "standardIndex": 3077,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 38 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "兢兢业业",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "漱",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "洗漱漱口",
+          "styleTags": [
+            "清雅",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "shù",
+          "tone": 4,
+          "element": "水",
+          "radical": "氵",
+          "strokes": 14,
+          "standardIndex": 3162,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 9 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "洗漱漱口",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "弋",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "射箭、轻逸",
+          "styleTags": [
+            "刚健",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "yì",
+          "tone": 4,
+          "element": "火",
+          "radical": "弋",
+          "strokes": 3,
+          "standardIndex": 3504,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 42 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "射箭、轻逸",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "讷",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "说话迟钝",
+          "styleTags": [
+            "沉稳",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "nè",
+          "tone": 4,
+          "element": "火",
+          "radical": "讠",
+          "strokes": 6,
+          "standardIndex": 3634,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 11 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "说话迟钝",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "邺",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "古都名",
+          "styleTags": [
+            "书卷",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "yè",
+          "tone": 4,
+          "element": "土",
+          "radical": "阝",
+          "strokes": 7,
+          "standardIndex": 3696,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 11 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "古都名",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "汾",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "水名、古韵",
+          "styleTags": [
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "fén",
+          "tone": 2,
+          "element": "水",
+          "radical": "氵",
+          "strokes": 7,
+          "standardIndex": 3776,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 9 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "水名、古韵",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "垠",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "边际、尽头",
+          "styleTags": [
+            "书卷",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "yín",
+          "tone": 2,
+          "element": "土",
+          "radical": "土",
+          "strokes": 9,
+          "standardIndex": 4107,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 32 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "边际、尽头",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "郡",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "郡县、地名",
+          "styleTags": [
+            "书卷",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "jùn",
+          "tone": 4,
+          "element": "木",
+          "radical": "阝",
+          "strokes": 9,
+          "standardIndex": 4375,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 66 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "郡县、地名",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "胥",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "官吏等待",
+          "styleTags": [
+            "书卷",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "xū",
+          "tone": 1,
+          "element": "金",
+          "radical": "月",
+          "strokes": 9,
+          "standardIndex": 4379,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 10 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "官吏等待",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "皋",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "水边高地",
+          "styleTags": [
+            "清雅",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "gāo",
+          "tone": 1,
+          "element": "木",
+          "radical": "白",
+          "strokes": 10,
+          "standardIndex": 4579,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 51 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "水边高地",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "舫",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "画舫游船",
+          "styleTags": [
+            "清雅",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "fǎng",
+          "tone": 3,
+          "element": "水",
+          "radical": "舟",
+          "strokes": 10,
+          "standardIndex": 4585,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 35 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "画舫游船",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "娣",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "弟妹，陪嫁",
+          "styleTags": [
+            "温婉"
+          ]
+        },
+        "facts": {
+          "pinyin": "dì",
+          "tone": 4,
+          "element": "火",
+          "radical": "女",
+          "strokes": 10,
+          "standardIndex": 4694,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 1066 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "弟妹，陪嫁",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "覃",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "深广延长",
+          "styleTags": [
+            "书卷",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "tán",
+          "tone": 2,
+          "element": "木",
+          "radical": "覀",
+          "strokes": 12,
+          "standardIndex": 5107,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 14 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "深广延长",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    },
+    {
+      "char": "藜",
+      "evidence": {
+        "source": {
+          "sentiment": "neutral",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "藜杖野菜",
+          "styleTags": [
+            "质朴",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "lí",
+          "tone": 2,
+          "element": "木",
+          "radical": "艹",
+          "strokes": 18,
+          "standardIndex": 6320,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "neutral-sentiment",
+          "below-production-usage-threshold"
+        ]
+      },
+      "review": {
+        "decision": "approved",
+        "note": "第二来源规则审校：固定姓名语料中作为名字用字出现 14 次；原审计仅因证据分不足（62），补充独立语料证据后为 82，且未命中既有硬拒绝规则。",
+        "approvedMeaning": "藜杖野菜",
+        "reviewedBy": "项目第二来源规则审校（用户明确授权 V2.3）",
+        "reviewedAt": "2026-09-11T18:10:56.870Z"
+      }
+    }
+  ]
+}

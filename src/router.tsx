@@ -1,11 +1,13 @@
 import { createHashRouter } from 'react-router-dom';
 import { App } from './App';
+import { RouteHydrateFallback } from './components/RouteHydrateFallback';
 import { HomePage } from './pages/Home';
 
 export const router = createHashRouter([
   {
     path: '/',
     element: <App />,
+    hydrateFallbackElement: <RouteHydrateFallback />,
     children: [
       { index: true, element: <HomePage /> },
       {

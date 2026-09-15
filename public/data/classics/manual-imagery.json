@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "policy": "C 级仅登记同篇整体意象，不能覆盖 A/B 级原文关联。",
+  "reviewedAt": "2026-09-12",
+  "entries": [
+    {
+      "workId": "shijing-001",
+      "givenName": "洲宁",
+      "explanation": "取《关雎》河洲、琴瑟相友的安宁和谐整体意象；两字不是原文连续或同句抽取。",
+      "evidenceText": "关关雎鸠，在河之洲。窈窕淑女，君子好逑。"
+    },
+    {
+      "workId": "zhouyi-001",
+      "givenName": "健行",
+      "explanation": "取《乾》天行健与自强不息的整体意象；采用意象重组，不宣称原文出现‘健行’。",
+      "evidenceText": "《象》曰：天行健，君子以自强不息。"
+    }
+  ]
+}

@@ -1,17 +1,25 @@
 import type {
   CharacterPronunciation,
+  ClassicReference,
   ClassicWork,
   ElementTendency,
   GeneratedName,
   NamingCharacter,
+  NamingPreference,
 } from '../../types';
+import {
+  CHARACTER_RANK_SCORE,
+  GENERATOR_LIMITS,
+} from '../../config/namingScore';
 import { createClassicPhraseIndex } from '../classics/classicRepository';
+import { rerankForDiversity } from './diversity';
+import { filterCharacterPool } from './filters/characterFilter';
+import { passesHomophoneFilter } from './filters/homophoneFilter';
+import { passesPairFilter } from './filters/pairFilter';
 import { assessHomophone } from './homophone';
 import { assessPhonetics } from './phonetic';
 import { scoreName } from './scorer';
-
-const MAX_POOL_SIZE = 100;
-const DEFAULT_RESULT_LIMIT = 60;
+import { assessSemanticPair } from './semanticPair';
 
 export interface GenerateNamesOptions {
   surname: string;
@@ -19,6 +27,7 @@ export interface GenerateNamesOptions {
   tendencies?: ElementTendency[];
   pronunciations?: CharacterPronunciation[];
   classicWorks?: ClassicWork[];
+  preference?: NamingPreference;
   limit?: number;
 }
 
@@ -34,16 +43,105 @@ function primaryElements(character: NamingCharacter) {
     : [character.element];
 }
 
+function rankCharacters(
+  characters: readonly NamingCharacter[],
+  tendencies?: ElementTendency[],
+  preference?: NamingPreference,
+): NamingCharacter[] {
+  const tendencyMap = new Map(
+    tendencies?.map(({ element, level }) => [element, level]) ?? [],
+  );
+  const preferredStyles = new Set(preference?.styles ?? []);
+  const included = new Set(preference?.includeCharacters ?? []);
+
+  function score(character: NamingCharacter): number {
+    const elementScore = Math.max(
+      ...primaryElements(character).map(
+        (element) =>
+          tendencyMap.get(element) ?? CHARACTER_RANK_SCORE.defaultElementLevel,
+      ),
+    );
+    const styleScore = character.styleTags.filter((style) =>
+      preferredStyles.has(style as NamingPreference['styles'][number]),
+    ).length;
+    const genderScore =
+      !preference ||
+      preference.genderExpression === 'neutral' ||
+      character.gender === 'neutral' ||
+      (preference.genderExpression === 'masculine' &&
+        character.gender === 'male') ||
+      (preference.genderExpression === 'feminine' &&
+        character.gender === 'female')
+        ? 1
+        : 0;
+
+    return (
+      elementScore * CHARACTER_RANK_SCORE.elementMultiplier +
+      styleScore * CHARACTER_RANK_SCORE.styleMatchBonus +
+      genderScore * CHARACTER_RANK_SCORE.genderMatchBonus +
+      (included.has(character.char)
+        ? CHARACTER_RANK_SCORE.includedCharacterBonus
+        : 0) -
+      character.rarity * CHARACTER_RANK_SCORE.rarityPenaltyMultiplier
+    );
+  }
+
+  return [...characters].sort(
+    (left, right) =>
+      score(right) - score(left) ||
+      left.char.localeCompare(right.char, 'zh-CN'),
+  );
+}
+
+function compareNames(left: GeneratedName, right: GeneratedName): number {
+  return (
+    right.score - left.score ||
+    right.scoreBreakdown.phonetic - left.scoreBreakdown.phonetic ||
+    right.scoreBreakdown.element - left.scoreBreakdown.element ||
+    left.givenName.localeCompare(right.givenName, 'zh-CN')
+  );
+}
+
+function matchesClassicPreference(
+  classic: ClassicReference | undefined,
+  preference: NamingPreference['classicPreference'],
+): boolean {
+  if (!preference || preference === 'none') {
+    return true;
+  }
+  if (!classic) {
+    return false;
+  }
+
+  const sourceGroups: Record<
+    Exclude<NamingPreference['classicPreference'], undefined | 'none'>,
+    string[]
+  > = {
+    shijing: ['shijing'],
+    chuci: ['chuci'],
+    confucian: ['lunyu', 'mengzi', 'zhouyi'],
+    taoist: ['zhuangzi'],
+    tang: ['tang'],
+    song: ['songci'],
+  };
+  return sourceGroups[preference].includes(classic.source);
+}
+
 export function generateNames({
   surname,
   characters,
   tendencies,
   pronunciations = [],
   classicWorks = [],
-  limit = DEFAULT_RESULT_LIMIT,
+  preference,
+  limit = GENERATOR_LIMITS.defaultResultLimit,
 }: GenerateNamesOptions): GeneratedName[] {
   const normalizedSurname = surname.trim();
-  if (!normalizedSurname || characters.length < 2 || limit <= 0) {
+  if (
+    !normalizedSurname ||
+    characters.length < GENERATOR_LIMITS.minimumCharacterPool ||
+    limit <= 0
+  ) {
     return [];
   }
 
@@ -60,21 +158,47 @@ export function generateNames({
   const surnameStrokes = surnamePronunciations
     .map(({ strokes }) => strokes)
     .filter((value): value is number => typeof value === 'number');
-  const pool = characters.slice(0, MAX_POOL_SIZE);
+  const eligibleCharacters = filterCharacterPool(characters, preference);
+  const rankedCharacters = rankCharacters(
+    eligibleCharacters,
+    tendencies,
+    preference,
+  );
+  const firstPool = rankedCharacters.slice(0, GENERATOR_LIMITS.firstCharacterTopK);
+  const secondPool = rankedCharacters.slice(0, GENERATOR_LIMITS.secondCharacterTopK);
   const generated: GeneratedName[] = [];
+  const retainedCapacity = Math.max(
+    limit * GENERATOR_LIMITS.retainedBufferFactor,
+    limit,
+  );
 
-  pool.forEach((firstCharacter) => {
-    pool.forEach((secondCharacter) => {
-      if (firstCharacter.char === secondCharacter.char) {
+  firstPool.forEach((firstCharacter) => {
+    secondPool.forEach((secondCharacter) => {
+      const semanticAssessment = assessSemanticPair(
+        firstCharacter,
+        secondCharacter,
+      );
+      if (
+        !passesPairFilter(
+          firstCharacter,
+          secondCharacter,
+          semanticAssessment,
+          preference,
+        )
+      ) {
         return;
       }
 
       const givenName = firstCharacter.char + secondCharacter.char;
       const fullName = normalizedSurname + givenName;
       const classic = classicPhraseIndex.get(givenName);
+      if (!matchesClassicPreference(classic, preference?.classicPreference)) {
+        return;
+      }
+
       const givenPinyin = [firstCharacter.pinyin, secondCharacter.pinyin];
       const homophoneAssessment = assessHomophone(surnamePinyin, givenPinyin);
-      if (!homophoneAssessment.safe) {
+      if (!passesHomophoneFilter(homophoneAssessment)) {
         return;
       }
 
@@ -96,6 +220,7 @@ export function generateNames({
         homophone: homophoneAssessment,
         surnameStrokes,
         classic,
+        semantic: semanticAssessment,
       });
       const elements = [
         ...primaryElements(firstCharacter),
@@ -133,19 +258,20 @@ export function generateNames({
         scoreExplanations: scoring.scoreExplanations,
         phoneticAssessment,
         homophoneAssessment,
-        recommendation: `${elements.join('、')}按当前起名倾向参与匹配；${phoneticAssessment.notes[0]}普通话基础负面谐音库未发现精确命中。${classic ? `名字连续见于${classic.display}。` : '基础典籍语料未发现严格连续出处。'}`,
+        semanticAssessment,
+        recommendation: `${elements.join('、')}按当前起名倾向参与匹配；${semanticAssessment.notes[0]}；${phoneticAssessment.notes[0]}普通话基础负面谐音库未发现精确命中。${classic ? `${classic.level} 级文化关联见${classic.display}。` : '当前典籍语料未发现可核对文化关联。'}`,
         classic,
       });
+
+      if (
+        generated.length >=
+        retainedCapacity * GENERATOR_LIMITS.compactionTriggerFactor
+      ) {
+        generated.sort(compareNames).splice(retainedCapacity);
+      }
     });
   });
 
-  return generated
-    .sort(
-      (left, right) =>
-        right.score - left.score ||
-        right.scoreBreakdown.phonetic - left.scoreBreakdown.phonetic ||
-        right.scoreBreakdown.element - left.scoreBreakdown.element ||
-        left.givenName.localeCompare(right.givenName, 'zh-CN'),
-    )
-    .slice(0, limit);
+  const sorted = generated.sort(compareNames).slice(0, retainedCapacity);
+  return rerankForDiversity(sorted, limit);
 }

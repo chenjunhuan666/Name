@@ -1,3 +1,5 @@
+import type { BaziRelation } from './relations';
+
 export type HeavenlyStem =
   | '甲'
   | '乙'
@@ -28,6 +30,13 @@ export type FiveElement = '木' | '火' | '土' | '金' | '水';
 
 export type YinYang = '阴' | '阳';
 
+export type HiddenStemRole = 'main' | 'middle' | 'residual';
+
+export interface HiddenStem {
+  stem: HeavenlyStem;
+  role: HiddenStemRole;
+}
+
 export interface Pillar {
   stem: HeavenlyStem;
   branch: EarthlyBranch;
@@ -46,7 +55,9 @@ export type BaziInputValues = Record<PillarKey, string>;
 
 export type FiveElementDistribution = Record<FiveElement, number>;
 
-export type BaziStrength = '偏弱' | '中和' | '偏旺';
+export type BaziStrength = '偏弱' | '稍弱' | '中和' | '稍旺' | '偏旺';
+
+export type BaziStrengthV2 = BaziStrength;
 
 export type ElementRelation =
   | '同类'
@@ -60,27 +71,60 @@ export interface ElementTendency {
   level: 1 | 2 | 3 | 4 | 5;
   relation: ElementRelation;
   weightedPresence: number;
+  evidenceScore?: number;
   reason: string;
+  ruleIds?: string[];
+}
+
+export type BasicClimate = '平和' | '偏寒' | '偏暖' | '偏燥' | '偏湿' | '寒湿';
+
+export interface BasicTiaohouAnalysis {
+  monthCommand: EarthlyBranch;
+  climate: BasicClimate;
+  favoredElements: FiveElement[];
+  adjustment: 0 | 1;
+  reason: string;
+  ruleIds: string[];
 }
 
 export interface StrengthBreakdown {
-  weightedElements: FiveElementDistribution;
-  supportWeight: number;
-  regulatingWeight: number;
-  totalWeight: number;
-  supportRatio: number;
+  supportScore: number;
+  weakenScore: number;
+  netScore: number;
   monthCommandElement: FiveElement;
+  evidence: StrengthEvidence[];
+}
+
+export type StrengthEvidenceType =
+  | 'month-command'
+  | 'root'
+  | 'support'
+  | 'control'
+  | 'output'
+  | 'wealth'
+  | 'season';
+
+export interface StrengthEvidence {
+  type: StrengthEvidenceType;
+  element: FiveElement;
+  effect: 'support' | 'weaken' | 'neutral';
+  level: 1 | 2 | 3 | 4 | 5;
+  reason: string;
+  ruleIds: string[];
 }
 
 export interface BaziStrengthAnalysis {
   strength: BaziStrength;
+  strengthRuleIds: string[];
   strengthReason: string;
   strengthBreakdown: StrengthBreakdown;
+  tiaohou: BasicTiaohouAnalysis;
   namingTendencies: ElementTendency[];
 }
 
 export interface HiddenStemDetail {
   stem: HeavenlyStem;
+  role: HiddenStemRole;
   element: FiveElement;
   yinYang: YinYang;
 }
@@ -104,9 +148,12 @@ export interface BaziAnalysis {
   hiddenElements: FiveElementDistribution;
   pillars: Record<PillarKey, PillarAnalysis>;
   strength?: BaziStrength;
+  strengthRuleIds?: string[];
   strengthReason?: string;
   strengthBreakdown?: StrengthBreakdown;
+  tiaohou?: BasicTiaohouAnalysis;
   namingTendencies?: ElementTendency[];
+  relations?: BaziRelation[];
 }
 
 export type CompleteBaziAnalysis = Omit<

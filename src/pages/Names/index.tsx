@@ -3,11 +3,16 @@ import { Link } from 'react-router-dom';
 import { PageIntro } from '../../components/PageIntro';
 import { PhaseNotice } from '../../components/PhaseNotice';
 import {
+  NAMING_SCORE_DIMENSIONS,
+  RARITY_LIMITS,
+} from '../../config/namingScore';
+import { NAMING_STYLE_OPTIONS } from '../../config/namingStyles';
+import {
   filterCharacters,
   loadCharacterLibrary,
   loadPronunciationLibrary,
 } from '../../core/characters/characterRepository';
-import { loadClassicLibrary } from '../../core/classics/classicRepository';
+import { loadClassicLibraryWithDiagnostics } from '../../core/classics/classicRepository';
 import { generateNames } from '../../core/naming/nameGenerator';
 import { FIVE_ELEMENTS } from '../../data/fiveElements';
 import { useNaming } from '../../store/useNaming';
@@ -17,37 +22,38 @@ import type {
   FiveElement,
   Gender,
   GeneratedName,
-  NameScoreDimension,
   NamingCharacter,
+  NamingPreference,
+  NamingStyle,
 } from '../../types';
 
-const scoreDimensions: {
-  key: NameScoreDimension;
-  label: string;
-  weight: number;
-}[] = [
-  { key: 'element', label: '五行适配', weight: 30 },
-  { key: 'meaning', label: '字义标注', weight: 20 },
-  { key: 'phonetic', label: '音律', weight: 15 },
-  { key: 'classic', label: '文化出处', weight: 15 },
-  { key: 'homophone', label: '谐音安全', weight: 10 },
-  { key: 'shape', label: '字形', weight: 5 },
-  { key: 'rarity', label: '常用程度', weight: 5 },
-];
-const styleOptions = [
-  '全部',
-  '清雅',
-  '书卷',
-  '刚健',
-  '明朗',
-  '灵动',
-  '沉稳',
-  '温婉',
-] as const;
+const styleOptions = ['全部', ...NAMING_STYLE_OPTIONS] as const;
 const rarityOptions = [
-  { label: '常用字', value: 0.25 },
-  { label: '含次常用字', value: 0.5 },
+  { label: '常用优先', value: 'common', maxRarity: RARITY_LIMITS.common },
+  { label: '均衡', value: 'balanced', maxRarity: RARITY_LIMITS.balanced },
+  {
+    label: '允许个性字',
+    value: 'distinctive',
+    maxRarity: RARITY_LIMITS.distinctive,
+  },
 ] as const;
+const classicOptions: Array<{
+  label: string;
+  value: NonNullable<NamingPreference['classicPreference']>;
+}> = [
+  { label: '不限典籍', value: 'none' },
+  { label: '诗经', value: 'shijing' },
+  { label: '楚辞', value: 'chuci' },
+  { label: '儒家经典', value: 'confucian' },
+  { label: '道家经典', value: 'taoist' },
+  { label: '唐诗', value: 'tang' },
+  { label: '宋词', value: 'song' },
+];
+const preferenceStyleSet = new Set<NamingStyle>(NAMING_STYLE_OPTIONS);
+
+function parseCharacterInput(value: string): string[] {
+  return [...new Set(Array.from(value).filter((char) => /\p{Script=Han}/u.test(char)))];
+}
 const genderOptions: { label: string; value: Gender | 'all' }[] = [
   { label: '全部', value: 'all' },
   { label: '男宝', value: 'male' },
@@ -83,6 +89,7 @@ export function NamesPage() {
     CharacterPronunciation[]
   >([]);
   const [classicWorks, setClassicWorks] = useState<ClassicWork[]>([]);
+  const [classicLoadWarning, setClassicLoadWarning] = useState('');
   const [loadError, setLoadError] = useState('');
   const [isLoading, setIsLoading] = useState(true);
   const [query, setQuery] = useState('');
@@ -91,22 +98,27 @@ export function NamesPage() {
   );
   const [gender, setGender] = useState<Gender | 'all'>(state.gender);
   const [style, setStyle] = useState<(typeof styleOptions)[number]>('全部');
-  const [maxRarity, setMaxRarity] = useState(0.5);
+  const [excludedStyles, setExcludedStyles] = useState<NamingStyle[]>([]);
+  const [rarityPreference, setRarityPreference] =
+    useState<NamingPreference['rarityPreference']>('balanced');
+  const [classicPreference, setClassicPreference] =
+    useState<NonNullable<NamingPreference['classicPreference']>>('none');
+  const [includeCharacters, setIncludeCharacters] = useState('');
+  const [excludeCharacters, setExcludeCharacters] = useState('');
   const [sortBy, setSortBy] = useState<SortKey>('score');
+  const [visibleLimit, setVisibleLimit] = useState<30 | 60>(30);
+  const maxRarity =
+    rarityOptions.find(({ value }) => value === rarityPreference)?.maxRarity ??
+    RARITY_LIMITS.default;
 
   useEffect(() => {
     let isActive = true;
 
-    Promise.all([
-      loadCharacterLibrary(),
-      loadPronunciationLibrary(),
-      loadClassicLibrary(),
-    ])
-      .then(([library, pronunciationLibrary, classicLibrary]) => {
+    Promise.all([loadCharacterLibrary(), loadPronunciationLibrary()])
+      .then(([library, pronunciationLibrary]) => {
         if (isActive) {
           setCharacters(library);
           setPronunciations(pronunciationLibrary);
-          setClassicWorks(classicLibrary);
           setLoadError('');
         }
       })
@@ -123,6 +135,17 @@ export function NamesPage() {
         }
       });
 
+    loadClassicLibraryWithDiagnostics().then(({ works, warnings }) => {
+      if (isActive) {
+        setClassicWorks(works);
+        setClassicLoadWarning(
+          warnings.length
+            ? `部分典籍数据未加载，核心姓名生成不受影响：${warnings.join('；')}`
+            : '',
+        );
+      }
+    });
+
     return () => {
       isActive = false;
     };
@@ -134,10 +157,11 @@ export function NamesPage() {
         elements: element === 'all' ? undefined : [element],
         gender: gender === 'all' ? undefined : gender,
         styleTags: style === '全部' ? undefined : [style],
+        excludedStyleTags: excludedStyles,
         maxRarity,
         query,
       }),
-    [characters, element, gender, maxRarity, query, style],
+    [characters, element, excludedStyles, gender, maxRarity, query, style],
   );
   const visibleCharacters = filteredCharacters.slice(0, 30);
   const generatedNames = useMemo(
@@ -148,18 +172,42 @@ export function NamesPage() {
         tendencies: state.analysis?.namingTendencies,
         pronunciations,
         classicWorks,
+        preference: {
+          styles:
+            style !== '全部' && preferenceStyleSet.has(style as NamingStyle)
+              ? [style as NamingStyle]
+              : [],
+          excludeStyles: excludedStyles,
+          includeCharacters: parseCharacterInput(includeCharacters),
+          excludeCharacters: parseCharacterInput(excludeCharacters),
+          rarityPreference,
+          genderExpression:
+            gender === 'male'
+              ? 'masculine'
+              : gender === 'female'
+                ? 'feminine'
+                : 'neutral',
+          classicPreference,
+        },
       }),
     [
       classicWorks,
       filteredCharacters,
+      gender,
+      includeCharacters,
       pronunciations,
+      rarityPreference,
+      classicPreference,
+      excludeCharacters,
+      excludedStyles,
       state.analysis?.namingTendencies,
       state.surname,
+      style,
     ],
   );
   const visibleNames = useMemo(
-    () => sortNames(generatedNames, sortBy).slice(0, 24),
-    [generatedNames, sortBy],
+    () => sortNames(generatedNames, sortBy).slice(0, visibleLimit),
+    [generatedNames, sortBy, visibleLimit],
   );
 
   useEffect(() => {
@@ -171,7 +219,7 @@ export function NamesPage() {
       <PageIntro
         eyebrow="姓名推荐"
         title="从候选好字，组合可解释姓名"
-        description="筛选条件会实时生成双字名，并按五行、字义、音律、真实典籍关联、谐音、字形与常用程度综合排序。"
+        description="筛选条件会实时生成双字名，并按五行、组合语义、音律、分级典籍关联、谐音、字形与常用程度综合排序。"
         aside={<span className="phaseTag">Phase 9 本地收藏</span>}
       />
 
@@ -226,12 +274,48 @@ export function NamesPage() {
                 aria-pressed={style === item}
                 className={style === item ? 'isSelected' : ''}
                 key={item}
-                onClick={() => setStyle(item)}
+                onClick={() => {
+                  setStyle(item);
+                  if (item !== '全部') {
+                    setExcludedStyles((current) =>
+                      current.filter((excluded) => excluded !== item),
+                    );
+                  }
+                }}
                 type="button"
               >
                 {item}
               </button>
             ))}
+          </div>
+        </div>
+
+        <div className="filterGroup filterGroup--styles">
+          <span>排除风格</span>
+          <div>
+            {NAMING_STYLE_OPTIONS.map((item) => {
+              const isExcluded = excludedStyles.includes(item);
+              return (
+                <button
+                  aria-pressed={isExcluded}
+                  className={isExcluded ? 'isSelected' : ''}
+                  key={item}
+                  onClick={() => {
+                    setExcludedStyles((current) =>
+                      isExcluded
+                        ? current.filter((styleName) => styleName !== item)
+                        : [...current, item],
+                    );
+                    if (style === item) {
+                      setStyle('全部');
+                    }
+                  }}
+                  type="button"
+                >
+                  {item}
+                </button>
+              );
+            })}
           </div>
         </div>
 
@@ -248,10 +332,51 @@ export function NamesPage() {
           <label>
             <span>生僻度</span>
             <select
-              onChange={(event) => setMaxRarity(Number(event.target.value))}
-              value={maxRarity}
+              onChange={(event) =>
+                setRarityPreference(
+                  event.target.value as NamingPreference['rarityPreference'],
+                )
+              }
+              value={rarityPreference}
             >
               {rarityOptions.map((item) => (
+                <option key={item.value} value={item.value}>
+                  {item.label}
+                </option>
+              ))}
+            </select>
+          </label>
+          <label>
+            <span>包含字</span>
+            <input
+              maxLength={8}
+              onChange={(event) => setIncludeCharacters(event.target.value)}
+              placeholder="例如：清、宁"
+              value={includeCharacters}
+            />
+          </label>
+          <label>
+            <span>排除字</span>
+            <input
+              maxLength={16}
+              onChange={(event) => setExcludeCharacters(event.target.value)}
+              placeholder="例如：梓、沐"
+              value={excludeCharacters}
+            />
+          </label>
+          <label>
+            <span>典籍</span>
+            <select
+              onChange={(event) =>
+                setClassicPreference(
+                  event.target.value as NonNullable<
+                    NamingPreference['classicPreference']
+                  >,
+                )
+              }
+              value={classicPreference}
+            >
+              {classicOptions.map((item) => (
                 <option key={item.value} value={item.value}>
                   {item.label}
                 </option>
@@ -287,7 +412,25 @@ export function NamesPage() {
               ))}
             </select>
           </label>
+          <label className="nameSortControl">
+            <span>显示数量</span>
+            <select
+              onChange={(event) =>
+                setVisibleLimit(Number(event.target.value) as 30 | 60)
+              }
+              value={visibleLimit}
+            >
+              <option value={30}>前 30 个</option>
+              <option value={60}>前 60 个</option>
+            </select>
+          </label>
         </div>
+
+        {classicLoadWarning ? (
+          <p className="libraryMessage libraryMessageWarning" role="status">
+            {classicLoadWarning}
+          </p>
+        ) : null}
 
         {loadError ? (
           <p className="libraryMessage" role="alert">
@@ -327,14 +470,18 @@ export function NamesPage() {
                 <p
                   className={`nameClassicReference${name.classic ? ' hasSource' : ''}`}
                 >
-                  <strong>典籍关联</strong>
+                  <strong>
+                    {name.classic
+                      ? `${name.classic.level === 'C' ? '意象化用' : '原文取名'} · ${name.classic.level ?? 'A'}级`
+                      : '典籍关联'}
+                  </strong>
                   {name.classic ? (
                     <>
                       <span>{name.classic.display}</span>
                       <q>{name.classic.text}</q>
                     </>
                   ) : (
-                    <span>基础语料未发现名字两字连续出现，不附会出处。</span>
+                    <span>当前语料未发现可核对关联，不附会出处。</span>
                   )}
                 </p>
                 <div className="nameScoreSummary" aria-label="主要评分构成">
@@ -447,8 +594,7 @@ export function NamesPage() {
 
           {filteredCharacters.length > visibleCharacters.length ? (
             <p className="libraryFootnote">
-              当前预览前 {visibleCharacters.length} 字；上方姓名生成会从前 100
-              个高适用度候选中进行确定性组合。
+              当前预览前 {visibleCharacters.length} 字；上方姓名生成会从完整筛选结果中分阶段选取候选并进行确定性组合。
             </p>
           ) : null}
         </section>
@@ -457,10 +603,10 @@ export function NamesPage() {
           <p className="eyebrow">评分说明</p>
           <h2>综合分不是吉凶分</h2>
           <p>
-            分数只用于比较候选与当前条件的匹配程度。文化出处只在名字两字按原顺序连续命中原文时得分；无真实命中则为 0 分，不补写来源。
+            分数只用于比较候选与当前条件的匹配程度。文化出处区分 A 级原文连续、B 级同句同序和人工登记的 C 级同篇意象；无可核对关联则为 0 分。
           </p>
           <ul>
-            {scoreDimensions.map((dimension) => (
+            {NAMING_SCORE_DIMENSIONS.map((dimension) => (
               <li key={dimension.key}>
                 <span>{dimension.label}</span>
                 <strong>

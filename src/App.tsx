@@ -37,7 +37,7 @@ export function App() {
             ))}
           </nav>
 
-          <span className="versionBadge">V1 · 本地计算与存储</span>
+          <span className="versionBadge">V2 · 可追溯本地计算</span>
         </div>
       </header>
 
@@ -51,6 +51,7 @@ export function App() {
           <p>
             分析结果用于文化参考，不代表命运判断；出生信息仅在本地处理。
           </p>
+          <a href={`${import.meta.env.BASE_URL}about.html`}>方法、数据与隐私说明</a>
         </div>
       </footer>
     </div>

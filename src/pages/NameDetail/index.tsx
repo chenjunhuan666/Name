@@ -2,22 +2,8 @@ import { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { PageIntro } from '../../components/PageIntro';
 import { PhaseNotice } from '../../components/PhaseNotice';
+import { NAMING_SCORE_DIMENSIONS } from '../../config/namingScore';
 import { useNaming } from '../../store/useNaming';
-import type { NameScoreDimension } from '../../types';
-
-const scoreDimensions: {
-  key: NameScoreDimension;
-  label: string;
-  weight: number;
-}[] = [
-  { key: 'element', label: '五行适配', weight: 30 },
-  { key: 'meaning', label: '字义标注', weight: 20 },
-  { key: 'phonetic', label: '音律', weight: 15 },
-  { key: 'classic', label: '文化出处', weight: 15 },
-  { key: 'homophone', label: '谐音安全', weight: 10 },
-  { key: 'shape', label: '字形', weight: 5 },
-  { key: 'rarity', label: '常用程度', weight: 5 },
-];
 
 export function NameDetailPage() {
   const { nameId } = useParams();
@@ -81,7 +67,7 @@ export function NameDetailPage() {
         <div>
           <p className="eyebrow">综合推荐分</p>
           <strong>{name.score}</strong>
-          <p>当前七项维度加权结果</p>
+          <p>当前八项维度加权结果</p>
           <button
             aria-pressed={isFavorite}
             className="favoriteButton favoriteButton--detail"
@@ -168,10 +154,14 @@ export function NameDetailPage() {
         <article className="contentCard detailCard">
           <span className="detailCard__number">02</span>
           <h2>普通话谐音检查</h2>
-          <strong className="safeResult">基础检查通过</strong>
+          <strong className="safeResult">
+            {name.homophoneAssessment.matches.length
+              ? '存在近音提示'
+              : '分层检查通过'}
+          </strong>
           <p>{name.scoreExplanations.homophone}</p>
           <p className="modelDisclaimer">
-            当前仅做静态词库的精确拼音匹配，不覆盖方言、所有网络语境或人工联想。
+            当前覆盖完整姓名、名字两字、姓与首字的精确匹配，并对部分普通话近音和网络负面词作提示；不覆盖方言或全部人工联想。
           </p>
         </article>
       </section>
@@ -185,8 +175,10 @@ export function NameDetailPage() {
           <p>综合分 {name.score}</p>
         </div>
         <div className="scoreBreakdownList">
-          {scoreDimensions.map((dimension) => {
-            const dimensionScore = name.scoreBreakdown[dimension.key];
+          {NAMING_SCORE_DIMENSIONS.map((dimension) => {
+            const dimensionScore =
+              name.scoreBreakdown[dimension.key] ??
+              (dimension.key === 'modern' ? 80 : 0);
 
             return (
               <article key={dimension.key}>
@@ -199,7 +191,10 @@ export function NameDetailPage() {
                 <div className="scoreBar" aria-hidden="true">
                   <i style={{ width: `${dimensionScore}%` }} />
                 </div>
-                <p>{name.scoreExplanations[dimension.key]}</p>
+                <p>
+                  {name.scoreExplanations[dimension.key] ??
+                    '旧版收藏记录未包含该维度，展示中性基准分。'}
+                </p>
               </article>
             );
           })}
@@ -207,7 +202,11 @@ export function NameDetailPage() {
       </section>
 
       <section className="classicReferencePanel contentCard">
-        <p className="eyebrow">国学出处</p>
+        <p className="eyebrow">
+          {name.classic
+            ? `${name.classic.level === 'C' ? '意象化用' : '原文取名'} · ${name.classic.level ?? 'A'}级`
+            : '国学出处'}
+        </p>
         {name.classic ? (
           <>
             <h2>{name.classic.display}</h2>
@@ -219,9 +218,9 @@ export function NameDetailPage() {
           </>
         ) : (
           <>
-            <h2>未发现严格连续出处</h2>
+            <h2>未发现可核对典籍关联</h2>
             <p>
-              在当前《诗经》《楚辞》、基础唐诗和宋词语料中，名字两字未按原顺序连续出现，因此不生成篇名、作者或原文。
+              当前语料中未发现 A/B 级原文关联或经人工登记的 C 级意象关联，因此不生成篇名、作者或原文。
             </p>
           </>
         )}

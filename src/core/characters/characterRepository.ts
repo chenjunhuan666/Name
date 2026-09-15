@@ -3,12 +3,15 @@ import type {
   CharacterPronunciation,
   FiveElement,
   NamingCharacter,
+  NamingCharacterV2,
 } from '../../types';
+import { normalizeNamingStyles } from '../../config/namingStyles';
 
 export interface CharacterFilters {
   elements?: FiveElement[];
   gender?: CharacterGender;
   styleTags?: string[];
+  excludedStyleTags?: string[];
   maxRarity?: number;
   query?: string;
 }
@@ -68,6 +71,13 @@ export function filterCharacters(
     }
 
     if (
+      filters.excludedStyleTags?.length &&
+      filters.excludedStyleTags.some((tag) => character.styleTags.includes(tag))
+    ) {
+      return false;
+    }
+
+    if (
       filters.maxRarity !== undefined &&
       character.rarity > filters.maxRarity
     ) {
@@ -90,7 +100,7 @@ export function filterCharacters(
 
 export async function loadCharacterLibrary(): Promise<NamingCharacter[]> {
   const response = await fetch(
-    `${import.meta.env.BASE_URL}data/characters/basic.json`,
+    `${import.meta.env.BASE_URL}data/characters/recommended-v2.json`,
   );
 
   if (!response.ok) {
@@ -103,7 +113,27 @@ export async function loadCharacterLibrary(): Promise<NamingCharacter[]> {
     throw new Error('汉字库格式错误：根节点必须是数组');
   }
 
-  return characters as NamingCharacter[];
+  return (characters as NamingCharacterV2[])
+    .filter((character) => character.naming.suitable)
+    .map((character) => ({
+      char: character.char,
+      pinyin: character.pinyin,
+      tone: character.tone,
+      element: character.elements.alternatives?.length
+        ? [character.elements.primary, ...character.elements.alternatives]
+        : character.elements.primary,
+      elementConfidence: character.elements.confidence,
+      elementBasis: character.elements.basis,
+      radical: character.radical,
+      strokes: character.strokes,
+      traditionalStrokes: character.traditionalStrokes,
+      meaning:
+        character.meanings.modern ?? character.meanings.classical ?? '释义待补充',
+      gender: character.naming.gender,
+      rarity: character.naming.rarity,
+      styleTags: normalizeNamingStyles(character.naming.styleTags),
+      negative: false,
+    }));
 }
 
 export async function loadPronunciationLibrary(): Promise<

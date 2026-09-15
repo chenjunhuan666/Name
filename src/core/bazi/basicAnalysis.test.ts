@@ -56,5 +56,11 @@ describe('analyzeBasicBazi', () => {
     expect(analysis.pillars.day.hiddenStems.map(({ stem }) => stem)).toEqual([
       '辛',
     ]);
+    expect(analysis.pillars.year.hiddenStems.map(({ role }) => role)).toEqual([
+      'main',
+      'middle',
+      'residual',
+    ]);
+    expect(analysis.pillars.day.hiddenStems[0].role).toBe('main');
   });
 });

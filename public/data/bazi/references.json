@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "references": [
+    {
+      "id": "modern-six-breaks",
+      "title": "第二十四章：地支六害六破介绍",
+      "work": "玄霖易學现代教程",
+      "sourceType": "modern-commentary",
+      "sourceUrl": "https://xuanlinyi.com/article_detail?id=301988",
+      "note": "2026-09-08 核对六组配对事实；公开网页不等于开源许可，不复制正文或吉凶断语；不视为古籍原文。"
+    },
+    {
+      "id": "classic-yuanhai-ziping",
+      "title": "渊海子平结构化资料",
+      "work": "《渊海子平》",
+      "sourceType": "classical",
+      "sourceUrl": "https://github.com/gaaiyun/FOR-BAZI/blob/31c1d28ca9f226d3d3ae0344dc66d0a4e5580e97/data/classical_texts/yuanhai_ziping.json",
+      "note": "FOR-BAZI 的结构化转录；引文仍需回到具体篇章核验。"
+    },
+    {
+      "id": "classic-sanming-tonghui",
+      "title": "三命通会结构化资料",
+      "work": "《三命通会》",
+      "sourceType": "classical",
+      "sourceUrl": "https://github.com/gaaiyun/FOR-BAZI/blob/31c1d28ca9f226d3d3ae0344dc66d0a4e5580e97/data/classical_texts/sanming_tonghui.json",
+      "note": "FOR-BAZI 的结构化转录；作为佐证而非单一裁决来源。"
+    },
+    {
+      "id": "classic-ditian-sui-strength",
+      "title": "衰旺与中和",
+      "work": "《滴天髓》",
+      "chapter": "衰旺、中和",
+      "sourceType": "classical",
+      "sourceUrl": "https://github.com/gaaiyun/FOR-BAZI/blob/31c1d28ca9f226d3d3ae0344dc66d0a4e5580e97/data/classical_texts/di_tian_sui.json",
+      "note": "支持先辨衰旺、再论损益的原则，不支持固定数值权重。"
+    },
+    {
+      "id": "classic-ziping-month-command",
+      "title": "月令与取用",
+      "work": "《子平真诠》",
+      "chapter": "论用神、论用神变化",
+      "sourceType": "classical",
+      "sourceUrl": "https://github.com/gaaiyun/FOR-BAZI/blob/31c1d28ca9f226d3d3ae0344dc66d0a4e5580e97/data/classical_texts/ziping_zhenquan.json",
+      "note": "用于确立月令的高优先级，不等于月令单独决定旺衰。"
+    },
+    {
+      "id": "classic-qiongtong-season",
+      "title": "逐月调候资料",
+      "work": "《穷通宝鉴》",
+      "chapter": "十干逐月调候",
+      "sourceType": "classical",
+      "sourceUrl": "https://github.com/gaaiyun/FOR-BAZI/blob/31c1d28ca9f226d3d3ae0344dc66d0a4e5580e97/data/classical_texts/qiongtong_baojian.json",
+      "note": "用于寒暖燥湿的基础调节；V2.1 不承诺完整调候用神。"
+    },
+    {
+      "id": "oss-bazi-wuxing-tables",
+      "title": "五行、干支、藏干与关系表",
+      "work": "bazi-skill references/wuxing-tables.md",
+      "sourceType": "open-source",
+      "sourceUrl": "https://github.com/jinchenma94/bazi-skill/blob/112a5d84cd1a001a0038cafca3be68d93e4c0cc9/references/wuxing-tables.md",
+      "note": "MIT 许可的现代汇总表，用于交叉核对基础对照关系。"
+    },
+    {
+      "id": "project-v2-strength-model",
+      "title": "Name V2 旺衰证据模型",
+      "work": "Name 项目模型",
+      "sourceType": "project-model",
+      "note": "证据等级、工程权重和五档分类均是项目建模，不宣称为古籍固定数值。"
+    }
+  ]
+}

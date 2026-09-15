@@ -1,0 +1,534 @@
+{
+  "schemaVersion": 1,
+  "batchId": "positive-below-production-threshold-01",
+  "sourceGuidance": {
+    "path": "docs/recommended-character-review-guidance-batch-01.json",
+    "sha256": "60a9e233ca4508c47d2177c325ab4d12eb2bd5447a70653f923e8433a8b151ab"
+  },
+  "sources": {
+    "lexical": {
+      "name": "Unicode Unihan Database",
+      "version": "17.0.0",
+      "releaseUrl": "https://www.unicode.org/Public/17.0.0/ucd/Unihan.zip",
+      "file": "Unihan_Readings.txt",
+      "sha256": "575e69c9ad85a4737a889a4f94cbd987042a90a1a6cc16dd3f4ed995c715b17c",
+      "fields": [
+        "kDefinition",
+        "kMandarin"
+      ],
+      "evidenceBoundary": "information for lexical meaning and customary Mandarin reading; not a personal-name suitability standard"
+    },
+    "nameUsage": {
+      "name": "psychbruce/ChineseNames",
+      "commit": "dd948e738da42d22f5158877d359df359b190589",
+      "file": "data-csv/givenname.csv",
+      "sha256": "d85e2cd23cd1dffaa4b64fe22c2220fe31ceec4daaa70d66ce4d5e99c32ee58e",
+      "sourceUrl": "https://raw.githubusercontent.com/psychbruce/ChineseNames/dd948e738da42d22f5158877d359df359b190589/data-csv/givenname.csv",
+      "coverage": "Han Chinese given-name characters, birth cohorts 1930-2008, living in 2008",
+      "license": "GPL-3 and CC BY-NC-SA; non-commercial use only",
+      "evidenceBoundary": "research-only present/absent coverage check; raw frequencies and ratings are not copied, and this source is excluded from runtime and release data"
+    }
+  },
+  "policy": {
+    "nonBinding": "supported means only that the fixed source core meaning, pronunciation and historical name-corpus coverage have independent support; it is not approval",
+    "requiredBeforeDecision": "a human reviewer must still check complete dictionary senses, homophones, two-character combinations and contemporary naming suitability before writing approved or rejected",
+    "runtimeEffect": "none",
+    "finalDecisionWritten": false
+  },
+  "counts": {
+    "total": 19,
+    "evidenceStatus": {
+      "supported": 9,
+      "ambiguous": 7,
+      "insufficient": 3
+    },
+    "nameCorpusCoverage": {
+      "present": 16,
+      "absent": 3
+    },
+    "meaningAlignment": {
+      "corroborated": 11,
+      "partial": 7,
+      "unsupported": 1
+    },
+    "pinyinMatches": 19,
+    "finalDecisionsWritten": 0
+  },
+  "entries": [
+    {
+      "char": "充",
+      "sourceEvidence": {
+        "meaning": "充实、充满",
+        "pinyin": "chōng"
+      },
+      "independentEvidence": {
+        "unihan": {
+          "codePoint": "U+5145",
+          "definition": "fill, be full, supply",
+          "mandarin": "chōng",
+          "pinyinMatches": true,
+          "meaningAlignment": "corroborated"
+        },
+        "chineseNames": {
+          "coverage": "present",
+          "interpretation": "该字符出现在 1930—2008 历史姓名字符统计中；只证明曾被用于姓名，不证明当前适名性。"
+        }
+      },
+      "assessment": {
+        "evidenceStatus": "supported",
+        "summary": "“充实、充满”的核心义项得到独立字义支持，且历史姓名字符语料有收录。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "攀",
+      "sourceEvidence": {
+        "meaning": "攀登，高升",
+        "pinyin": "pān"
+      },
+      "independentEvidence": {
+        "unihan": {
+          "codePoint": "U+6500",
+          "definition": "climb; pull; hang on to",
+          "mandarin": "pān",
+          "pinyinMatches": true,
+          "meaningAlignment": "partial"
+        },
+        "chineseNames": {
+          "coverage": "present",
+          "interpretation": "该字符出现在 1930—2008 历史姓名字符统计中；只证明曾被用于姓名，不证明当前适名性。"
+        }
+      },
+      "assessment": {
+        "evidenceStatus": "ambiguous",
+        "summary": "独立字义支持“攀登”，但不直接支持“高升”这一正向引申；历史姓名字符语料有收录。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "涧",
+      "sourceEvidence": {
+        "meaning": "山涧清泉",
+        "pinyin": "jiàn"
+      },
+      "independentEvidence": {
+        "unihan": {
+          "codePoint": "U+6DA7",
+          "definition": "brook, mountain stream",
+          "mandarin": "jiàn",
+          "pinyinMatches": true,
+          "meaningAlignment": "corroborated"
+        },
+        "chineseNames": {
+          "coverage": "present",
+          "interpretation": "该字符出现在 1930—2008 历史姓名字符统计中；只证明曾被用于姓名，不证明当前适名性。"
+        }
+      },
+      "assessment": {
+        "evidenceStatus": "supported",
+        "summary": "独立字义支持山间溪流这一自然意象，且历史姓名字符语料有收录。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "夙",
+      "sourceEvidence": {
+        "meaning": "早；平素",
+        "pinyin": "sù"
+      },
+      "independentEvidence": {
+        "unihan": {
+          "codePoint": "U+5919",
+          "definition": "early in morning, dawn; previous",
+          "mandarin": "sù",
+          "pinyinMatches": true,
+          "meaningAlignment": "corroborated"
+        },
+        "chineseNames": {
+          "coverage": "absent",
+          "interpretation": "该字符未出现在此数据集中；来源说明极罕见字符未收录，因此不能推断为从未用于姓名。"
+        }
+      },
+      "assessment": {
+        "evidenceStatus": "insufficient",
+        "summary": "独立字义支持“清早、从前”，但历史姓名字符语料未收录，姓名使用证据不足。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "讴",
+      "sourceEvidence": {
+        "meaning": "歌唱赞美",
+        "pinyin": "ōu"
+      },
+      "independentEvidence": {
+        "unihan": {
+          "codePoint": "U+8BB4",
+          "definition": "sing; songs",
+          "mandarin": "ōu",
+          "pinyinMatches": true,
+          "meaningAlignment": "partial"
+        },
+        "chineseNames": {
+          "coverage": "present",
+          "interpretation": "该字符出现在 1930—2008 历史姓名字符统计中；只证明曾被用于姓名，不证明当前适名性。"
+        }
+      },
+      "assessment": {
+        "evidenceStatus": "ambiguous",
+        "summary": "独立字义支持“歌唱、歌曲”，但不直接确认“赞美”这一语境；历史姓名字符语料有收录。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "诤",
+      "sourceEvidence": {
+        "meaning": "直言规劝",
+        "pinyin": "zhèng"
+      },
+      "independentEvidence": {
+        "unihan": {
+          "codePoint": "U+8BE4",
+          "definition": "to expostulate; to remonstrate",
+          "mandarin": "zhèng",
+          "pinyinMatches": true,
+          "meaningAlignment": "corroborated"
+        },
+        "chineseNames": {
+          "coverage": "present",
+          "interpretation": "该字符出现在 1930—2008 历史姓名字符统计中；只证明曾被用于姓名，不证明当前适名性。"
+        }
+      },
+      "assessment": {
+        "evidenceStatus": "supported",
+        "summary": "独立字义支持直言规劝，且历史姓名字符语料有收录。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "柢",
+      "sourceEvidence": {
+        "meaning": "根基，稳固",
+        "pinyin": "dǐ"
+      },
+      "independentEvidence": {
+        "unihan": {
+          "codePoint": "U+67E2",
+          "definition": "root, base; bottom of object",
+          "mandarin": "dǐ",
+          "pinyinMatches": true,
+          "meaningAlignment": "corroborated"
+        },
+        "chineseNames": {
+          "coverage": "absent",
+          "interpretation": "该字符未出现在此数据集中；来源说明极罕见字符未收录，因此不能推断为从未用于姓名。"
+        }
+      },
+      "assessment": {
+        "evidenceStatus": "insufficient",
+        "summary": "独立字义支持“根、基础”，但历史姓名字符语料未收录，姓名使用证据不足。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "颀",
+      "sourceEvidence": {
+        "meaning": "身材修长",
+        "pinyin": "qí"
+      },
+      "independentEvidence": {
+        "unihan": {
+          "codePoint": "U+9880",
+          "definition": "tall and slim",
+          "mandarin": "qí",
+          "pinyinMatches": true,
+          "meaningAlignment": "corroborated"
+        },
+        "chineseNames": {
+          "coverage": "present",
+          "interpretation": "该字符出现在 1930—2008 历史姓名字符统计中；只证明曾被用于姓名，不证明当前适名性。"
+        }
+      },
+      "assessment": {
+        "evidenceStatus": "supported",
+        "summary": "独立字义支持身材修长，且历史姓名字符语料有收录。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "皑",
+      "sourceEvidence": {
+        "meaning": "洁白明亮",
+        "pinyin": "ái"
+      },
+      "independentEvidence": {
+        "unihan": {
+          "codePoint": "U+7691",
+          "definition": "brilliant white",
+          "mandarin": "ái",
+          "pinyinMatches": true,
+          "meaningAlignment": "corroborated"
+        },
+        "chineseNames": {
+          "coverage": "present",
+          "interpretation": "该字符出现在 1930—2008 历史姓名字符统计中；只证明曾被用于姓名，不证明当前适名性。"
+        }
+      },
+      "assessment": {
+        "evidenceStatus": "supported",
+        "summary": "独立字义支持洁白明亮，且历史姓名字符语料有收录。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "嵋",
+      "sourceEvidence": {
+        "meaning": "峨眉山之秀",
+        "pinyin": "méi"
+      },
+      "independentEvidence": {
+        "unihan": {
+          "codePoint": "U+5D4B",
+          "definition": "Omei mountain in Sichuan",
+          "mandarin": "méi",
+          "pinyinMatches": true,
+          "meaningAlignment": "partial"
+        },
+        "chineseNames": {
+          "coverage": "present",
+          "interpretation": "该字符出现在 1930—2008 历史姓名字符统计中；只证明曾被用于姓名，不证明当前适名性。"
+        }
+      },
+      "assessment": {
+        "evidenceStatus": "ambiguous",
+        "summary": "独立字义仅确认峨眉山地名，不直接支持“秀美”的审美引申；历史姓名字符语料有收录。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "弼",
+      "sourceEvidence": {
+        "meaning": "辅佐，辅助",
+        "pinyin": "bì"
+      },
+      "independentEvidence": {
+        "unihan": {
+          "codePoint": "U+5F3C",
+          "definition": "aid, assist, help; correct",
+          "mandarin": "bì",
+          "pinyinMatches": true,
+          "meaningAlignment": "corroborated"
+        },
+        "chineseNames": {
+          "coverage": "present",
+          "interpretation": "该字符出现在 1930—2008 历史姓名字符统计中；只证明曾被用于姓名，不证明当前适名性。"
+        }
+      },
+      "assessment": {
+        "evidenceStatus": "supported",
+        "summary": "独立字义支持辅佐、帮助，且历史姓名字符语料有收录。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "鹭",
+      "sourceEvidence": {
+        "meaning": "白鹭，高洁",
+        "pinyin": "lù"
+      },
+      "independentEvidence": {
+        "unihan": {
+          "codePoint": "U+9E6D",
+          "definition": "heron, egret; Ardea species (various)",
+          "mandarin": "lù",
+          "pinyinMatches": true,
+          "meaningAlignment": "partial"
+        },
+        "chineseNames": {
+          "coverage": "present",
+          "interpretation": "该字符出现在 1930—2008 历史姓名字符统计中；只证明曾被用于姓名，不证明当前适名性。"
+        }
+      },
+      "assessment": {
+        "evidenceStatus": "ambiguous",
+        "summary": "独立字义确认白鹭类鸟名，不直接支持“高洁”的象征义；历史姓名字符语料有收录。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "鎏",
+      "sourceEvidence": {
+        "meaning": "金纯美，镀金",
+        "pinyin": "liú"
+      },
+      "independentEvidence": {
+        "unihan": {
+          "codePoint": "U+938F",
+          "definition": "pure gold",
+          "mandarin": "liú",
+          "pinyinMatches": true,
+          "meaningAlignment": "partial"
+        },
+        "chineseNames": {
+          "coverage": "present",
+          "interpretation": "该字符出现在 1930—2008 历史姓名字符统计中；只证明曾被用于姓名，不证明当前适名性。"
+        }
+      },
+      "assessment": {
+        "evidenceStatus": "ambiguous",
+        "summary": "独立字义支持“纯金”，但不完整支持“纯美、镀金”的全部释义；历史姓名字符语料有收录。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "铖",
+      "sourceEvidence": {
+        "meaning": "人名用字，兵器",
+        "pinyin": "chéng"
+      },
+      "independentEvidence": {
+        "unihan": {
+          "codePoint": "U+94D6",
+          "definition": "person's name",
+          "mandarin": "chéng",
+          "pinyinMatches": true,
+          "meaningAlignment": "corroborated"
+        },
+        "chineseNames": {
+          "coverage": "present",
+          "interpretation": "该字符出现在 1930—2008 历史姓名字符统计中；只证明曾被用于姓名，不证明当前适名性。"
+        }
+      },
+      "assessment": {
+        "evidenceStatus": "supported",
+        "summary": "独立字义直接标注为人名用字，历史姓名字符语料也有收录；“兵器”义仍需另证。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "恳",
+      "sourceEvidence": {
+        "meaning": "诚恳、恳切",
+        "pinyin": "kěn"
+      },
+      "independentEvidence": {
+        "unihan": {
+          "codePoint": "U+6073",
+          "definition": "sincere, earnest, cordial",
+          "mandarin": "kěn",
+          "pinyinMatches": true,
+          "meaningAlignment": "corroborated"
+        },
+        "chineseNames": {
+          "coverage": "present",
+          "interpretation": "该字符出现在 1930—2008 历史姓名字符统计中；只证明曾被用于姓名，不证明当前适名性。"
+        }
+      },
+      "assessment": {
+        "evidenceStatus": "supported",
+        "summary": "独立字义支持诚恳、恳切，且历史姓名字符语料有收录。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "禀",
+      "sourceEvidence": {
+        "meaning": "承受；禀赋",
+        "pinyin": "bǐng"
+      },
+      "independentEvidence": {
+        "unihan": {
+          "codePoint": "U+7980",
+          "definition": "report to, petition",
+          "mandarin": "bǐng",
+          "pinyinMatches": true,
+          "meaningAlignment": "unsupported"
+        },
+        "chineseNames": {
+          "coverage": "absent",
+          "interpretation": "该字符未出现在此数据集中；来源说明极罕见字符未收录，因此不能推断为从未用于姓名。"
+        }
+      },
+      "assessment": {
+        "evidenceStatus": "insufficient",
+        "summary": "独立字义只给出禀报、请求，未支持“承受、禀赋”；历史姓名字符语料也未收录。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "玎",
+      "sourceEvidence": {
+        "meaning": "玉石声响",
+        "pinyin": "dīng"
+      },
+      "independentEvidence": {
+        "unihan": {
+          "codePoint": "U+738E",
+          "definition": "jingling, tinkling",
+          "mandarin": "dīng",
+          "pinyinMatches": true,
+          "meaningAlignment": "partial"
+        },
+        "chineseNames": {
+          "coverage": "present",
+          "interpretation": "该字符出现在 1930—2008 历史姓名字符统计中；只证明曾被用于姓名，不证明当前适名性。"
+        }
+      },
+      "assessment": {
+        "evidenceStatus": "ambiguous",
+        "summary": "独立字义支持清脆声响，但不直接限定为玉石声；历史姓名字符语料有收录。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "谌",
+      "sourceEvidence": {
+        "meaning": "真诚可信",
+        "pinyin": "chén"
+      },
+      "independentEvidence": {
+        "unihan": {
+          "codePoint": "U+8C0C",
+          "definition": "sincere, faithful; surname",
+          "mandarin": "chén",
+          "pinyinMatches": true,
+          "meaningAlignment": "corroborated"
+        },
+        "chineseNames": {
+          "coverage": "present",
+          "interpretation": "该字符出现在 1930—2008 历史姓名字符统计中；只证明曾被用于姓名，不证明当前适名性。"
+        }
+      },
+      "assessment": {
+        "evidenceStatus": "supported",
+        "summary": "独立字义支持真诚、可信，并含姓氏义；历史姓名字符语料有收录。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "濂",
+      "sourceEvidence": {
+        "meaning": "清廉濂溪",
+        "pinyin": "lián"
+      },
+      "independentEvidence": {
+        "unihan": {
+          "codePoint": "U+6FC2",
+          "definition": "a waterfall; a river in Hunan",
+          "mandarin": "lián",
+          "pinyinMatches": true,
+          "meaningAlignment": "partial"
+        },
+        "chineseNames": {
+          "coverage": "present",
+          "interpretation": "该字符出现在 1930—2008 历史姓名字符统计中；只证明曾被用于姓名，不证明当前适名性。"
+        }
+      },
+      "assessment": {
+        "evidenceStatus": "ambiguous",
+        "summary": "独立字义只确认瀑布、河流地名，不直接支持“清廉、濂溪”的文化联想；历史姓名字符语料有收录。",
+        "finalDecisionWritten": false
+      }
+    }
+  ]
+}

@@ -6,7 +6,43 @@ export type Gender = 'male' | 'female';
 
 export type InputMode = 'birth' | 'bazi';
 
-export type ClassicSource = 'shijing' | 'chuci' | 'tang' | 'songci';
+export type ClassicSource =
+  | 'shijing'
+  | 'chuci'
+  | 'lunyu'
+  | 'mengzi'
+  | 'zhouyi'
+  | 'zhuangzi'
+  | 'tang'
+  | 'songci';
+
+export type NamingStyle =
+  | '清雅'
+  | '大气'
+  | '儒雅'
+  | '温润'
+  | '自然'
+  | '书卷'
+  | '古典'
+  | '简约'
+  | '中性';
+
+export interface NamingPreference {
+  styles: NamingStyle[];
+  excludeStyles?: NamingStyle[];
+  includeCharacters?: string[];
+  excludeCharacters?: string[];
+  rarityPreference: 'common' | 'balanced' | 'distinctive';
+  genderExpression: 'masculine' | 'feminine' | 'neutral';
+  classicPreference?:
+    | 'shijing'
+    | 'chuci'
+    | 'confucian'
+    | 'taoist'
+    | 'tang'
+    | 'song'
+    | 'none';
+}
 
 export interface ClassicWork {
   id: string;
@@ -17,6 +53,11 @@ export interface ClassicWork {
   chapter?: string;
   lines: string[];
   display: string;
+  imageryNames?: Array<{
+    givenName: string;
+    explanation: string;
+    evidenceText?: string;
+  }>;
 }
 
 export interface ClassicReference {
@@ -29,6 +70,9 @@ export interface ClassicReference {
   text: string;
   display: string;
   meaning?: string;
+  level?: 'A' | 'B' | 'C';
+  matchType?: 'exact-phrase' | 'same-sentence' | 'same-work-imagery';
+  explanation?: string;
 }
 
 export interface NameScoreBreakdown {
@@ -37,6 +81,7 @@ export interface NameScoreBreakdown {
   phonetic: number;
   classic: number;
   homophone: number;
+  modern?: number;
   shape: number;
   rarity: number;
 }
@@ -55,6 +100,25 @@ export interface HomophoneAssessment {
   score: number;
   normalizedFullName: string;
   matches: string[];
+  details?: HomophoneMatch[];
+}
+
+export interface HomophoneMatch {
+  label: string;
+  scope: 'given' | 'full' | 'surname-first';
+  category: 'negative' | 'internet';
+  matchType: 'exact' | 'approximate';
+}
+
+export interface SemanticPairAssessment {
+  score: number;
+  natural: boolean;
+  completeImage: boolean;
+  styleConsistency: boolean;
+  overlyPopular: boolean;
+  overlyWebNovel: boolean;
+  nameLike: boolean;
+  notes: string[];
 }
 
 export interface GeneratedName {
@@ -70,9 +134,11 @@ export interface GeneratedName {
   styleTags: string[];
   score: number;
   scoreBreakdown: NameScoreBreakdown;
-  scoreExplanations: Record<NameScoreDimension, string>;
+  scoreExplanations: Partial<Record<NameScoreDimension, string>> &
+    Record<Exclude<NameScoreDimension, 'modern'>, string>;
   phoneticAssessment: PhoneticAssessment;
   homophoneAssessment: HomophoneAssessment;
+  semanticAssessment?: SemanticPairAssessment;
   recommendation: string;
   classic?: ClassicReference;
 }
@@ -105,4 +171,5 @@ export interface NamingRequest {
   bazi: Bazi;
   analysis: BaziAnalysis;
   styleTags?: string[];
+  preference?: NamingPreference;
 }

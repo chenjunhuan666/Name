@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { PageIntro } from '../../components/PageIntro';
 import { PhaseNotice } from '../../components/PhaseNotice';
 import { FIVE_ELEMENTS } from '../../data/fiveElements';
+import { findBaziRule } from '../../data/baziRules';
 import { formatPillar } from '../../core/bazi/ganzhi';
 import { formatLunarDate } from '../../core/calendar/calendarEngine';
 import { useNaming } from '../../store/useNaming';
@@ -200,15 +201,26 @@ export function AnalysisPage() {
               <dt>基础旺衰</dt>
               <dd className={analysis?.strength ? 'isReady' : undefined}>
                 {analysis?.strength && strengthBreakdown
-                  ? `${analysis.strength}（支持比例 ${strengthBreakdown.supportRatio}%）`
+                  ? `${analysis.strength}（支持证据 ${strengthBreakdown.supportScore} / 制约证据 ${strengthBreakdown.weakenScore}）`
                   : analysis
                     ? 'Phase 4 待判断'
                     : '待分析'}
               </dd>
             </div>
+            <div>
+              <dt>基础调候</dt>
+              <dd className={analysis?.tiaohou ? 'isReady' : undefined}>
+                {analysis?.tiaohou
+                  ? `${analysis.tiaohou.climate}${analysis.tiaohou.favoredElements.length ? ` · 调节方向 ${analysis.tiaohou.favoredElements.join('、')}` : ' · 无额外调节'}`
+                  : '待分析'}
+              </dd>
+            </div>
           </dl>
           {analysis?.strengthReason ? (
             <p className="strengthReason">{analysis.strengthReason}</p>
+          ) : null}
+          {analysis?.tiaohou ? (
+            <p className="strengthReason">{analysis.tiaohou.reason}</p>
           ) : null}
         </section>
 
@@ -248,8 +260,7 @@ export function AnalysisPage() {
             })}
           </div>
           <p className="elementFootnote">
-            图表保留原始次数用于核对；旺衰模型另按表层每项 1、藏干每项
-            0.5，并为月令主五行额外增加 1.5 权重。
+            图表只保留原始次数用于核对；V2 旺衰由月令、季节、通根、透干、生扶与克泄耗证据综合判定。
           </p>
         </section>
       </div>
@@ -265,7 +276,7 @@ export function AnalysisPage() {
           </div>
           <div className="tendencyList">
             {namingTendencies.map(
-              ({ element, level, reason, relation, weightedPresence }) => (
+              ({ element, level, reason, relation, evidenceScore }) => (
                 <article className="tendencyItem" key={element}>
                   <div className="tendencyHeading">
                     <strong>{element}</strong>
@@ -280,7 +291,7 @@ export function AnalysisPage() {
                   </div>
                   <div className="tendencyMeta">
                     <span>{relation}</span>
-                    <span>加权值 {weightedPresence}</span>
+                    <span>结构证据值 {evidenceScore ?? 0}</span>
                   </div>
                   <p>{reason}</p>
                 </article>
@@ -288,16 +299,83 @@ export function AnalysisPage() {
             )}
           </div>
           <p className="modelDisclaimer">
-            这是用于 V1 姓名筛选的透明启发式结果，不等同于完整命理定论；五行缺失不会被直接判定为必须补入姓名。
+            这是用于 V2 起名的可追溯工程模型，不等同于完整命理定论；五行缺失不会被直接判定为必须补入姓名。
           </p>
         </section>
       ) : null}
 
+      {strengthBreakdown?.evidence.length ? (
+        <details className="ruleEvidencePanel contentCard">
+          <summary>
+            规则依据与来源
+            <span>{strengthBreakdown.evidence.length} 条结构证据 + 基础调候</span>
+          </summary>
+          <div className="ruleEvidenceList">
+            {analysis?.tiaohou ? (
+              <article>
+                <header>
+                  <strong>{analysis.tiaohou.reason}</strong>
+                  <span>起名倾向修正 · {analysis.tiaohou.adjustment} 档</span>
+                </header>
+                <ul>
+                  {analysis.tiaohou.ruleIds.map((ruleId) => {
+                    const rule = findBaziRule(ruleId);
+                    return (
+                      <li key={ruleId}>
+                        <code>{ruleId}</code>
+                        <span>{rule?.name ?? '规则说明待补充'}</span>
+                        {rule?.references[0] ? (
+                          <small>{rule.references[0].work}</small>
+                        ) : null}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </article>
+            ) : null}
+            {strengthBreakdown.evidence.map((evidence, index) => (
+              <article key={`${evidence.type}-${evidence.element}-${index}`}>
+                <header>
+                  <strong>{evidence.reason}</strong>
+                  <span>
+                    {evidence.effect === 'support'
+                      ? '支持'
+                      : evidence.effect === 'weaken'
+                        ? '制约'
+                        : '中性'}{' '}
+                    · {evidence.level} / 5
+                  </span>
+                </header>
+                <ul>
+                  {evidence.ruleIds.map((ruleId) => {
+                    const rule = findBaziRule(ruleId);
+                    return (
+                      <li key={ruleId}>
+                        <code>{ruleId}</code>
+                        <span>{rule?.name ?? '规则说明待补充'}</span>
+                        {rule?.references[0] ? (
+                          <small>
+                            {rule.references[0].work}
+                            {rule.references[0].chapter
+                              ? ` · ${rule.references[0].chapter}`
+                              : ''}
+                          </small>
+                        ) : null}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </details>
+      ) : null}
+
       <PhaseNotice
-        eyebrow={analysis?.strength ? 'Phase 9 已完成' : analysis ? 'Phase 4' : bazi ? 'Phase 3' : 'Phase 2'}
+        eyebrow={analysis?.strength ? 'V2.1 规则引擎' : analysis ? 'Phase 4' : bazi ? 'Phase 3' : 'Phase 2'}
         title={
           analysis?.strength
-            ? 'V1 起名与本地记录闭环已完成'
+            ? 'V2 旺衰证据已进入起名链路'
             : analysis
               ? '基础结构已解析，等待旺衰判断'
             : bazi
@@ -306,7 +384,7 @@ export function AnalysisPage() {
         }
         description={
           analysis?.strength
-            ? '农历自动排盘和手动四柱已进入同一套分析与起名流程；收藏姓名、最近浏览和最近起名会话会保存在当前浏览器。'
+            ? '月令、季节、通根、透干、生扶与克泄耗已转为可追溯证据；基础调候只修正起名五档倾向，不输出唯一喜用神。'
             : analysis
               ? '日主、月令、阴阳、表层五行与藏干五行已经由本地确定性规则生成；下一阶段将加入五行生克、月令影响与基础旺衰。'
             : bazi

@@ -6,19 +6,19 @@ import type {
   NameScoreDimension,
   NamingCharacter,
   PhoneticAssessment,
+  SemanticPairAssessment,
 } from '../../types';
-
-export const SCORE_WEIGHTS: Record<NameScoreDimension, number> = {
-  element: 0.3,
-  meaning: 0.2,
-  phonetic: 0.15,
-  classic: 0.15,
-  homophone: 0.1,
-  shape: 0.05,
-  rarity: 0.05,
-};
-
-const ELEMENT_LEVEL_SCORES = [0, 45, 60, 75, 90, 100] as const;
+import {
+  CLASSIC_LEVEL_SCORES,
+  ELEMENT_SCORE,
+  ELEMENT_LEVEL_SCORES,
+  MEANING_SCORE,
+  MODERN_AESTHETIC_SCORE,
+  NAMING_SCORE_WEIGHTS,
+  RARITY_SCORE,
+  SCORE_ROUNDING_FACTOR,
+  SHAPE_SCORE,
+} from '../../config/namingScore';
 
 interface ScoreNameOptions {
   characters: [NamingCharacter, NamingCharacter];
@@ -27,6 +27,7 @@ interface ScoreNameOptions {
   homophone: HomophoneAssessment;
   surnameStrokes: number[];
   classic?: ClassicReference;
+  semantic?: SemanticPairAssessment;
 }
 
 export interface NameScoringResult {
@@ -46,7 +47,7 @@ function calculateElementScore(
   tendencies?: ElementTendency[],
 ): number {
   if (!tendencies?.length) {
-    return 70;
+    return ELEMENT_SCORE.fallback;
   }
 
   const tendencyMap = new Map(
@@ -55,7 +56,10 @@ function calculateElementScore(
   const scores = characters.map((character) =>
     Math.max(
       ...characterElements(character).map(
-        (element) => ELEMENT_LEVEL_SCORES[tendencyMap.get(element) ?? 3],
+        (element) =>
+          ELEMENT_LEVEL_SCORES[
+            tendencyMap.get(element) ?? ELEMENT_SCORE.defaultTendencyLevel
+          ],
       ),
     ),
   );
@@ -65,39 +69,100 @@ function calculateElementScore(
 
 function calculateMeaningScore(
   characters: [NamingCharacter, NamingCharacter],
+  semantic?: SemanticPairAssessment,
 ): number {
   const scores = characters.map((character) => {
-    const positiveBasis = character.negative ? 0 : 80;
-    const meaningCompleteness = character.meaning.trim().length >= 2 ? 10 : 0;
-    const styleCompleteness = character.styleTags.length >= 2 ? 10 : 5;
+    const positiveBasis = character.negative
+      ? MEANING_SCORE.negativeBase
+      : MEANING_SCORE.positiveBase;
+    const meaningCompleteness =
+      character.meaning.trim().length >= MEANING_SCORE.minimumMeaningLength
+        ? MEANING_SCORE.meaningCompletenessBonus
+        : 0;
+    const styleCompleteness =
+      character.styleTags.length >= MEANING_SCORE.richStyleMinimumCount
+        ? MEANING_SCORE.richStyleBonus
+        : MEANING_SCORE.basicStyleBonus;
     return positiveBasis + meaningCompleteness + styleCompleteness;
   });
 
-  return Math.round((scores[0] + scores[1]) / 2);
+  const characterScore = (scores[0] + scores[1]) / 2;
+  return Math.round(
+    semantic
+      ? characterScore * MEANING_SCORE.characterWeight +
+          semantic.score * MEANING_SCORE.semanticWeight
+      : characterScore,
+  );
 }
 
 function calculateShapeScore(strokes: number[]): number {
   if (strokes.length < 2) {
-    return 75;
+    return SHAPE_SCORE.neutral;
   }
 
   const totalPenalty = strokes.slice(1).reduce((penalty, strokesValue, index) => {
     const difference = Math.abs(strokesValue - strokes[index]);
-    return penalty + Math.max(0, difference - 5) * 3;
+    return (
+      penalty +
+      Math.max(0, difference - SHAPE_SCORE.freeStrokeDifference) *
+        SHAPE_SCORE.penaltyPerExtraStroke
+    );
   }, 0);
 
-  return Math.max(55, Math.round(100 - totalPenalty));
+  return Math.max(
+    SHAPE_SCORE.minimum,
+    Math.round(SHAPE_SCORE.maximum - totalPenalty),
+  );
 }
 
 function calculateRarityScore(
   characters: [NamingCharacter, NamingCharacter],
 ): number {
   const averageRarity = (characters[0].rarity + characters[1].rarity) / 2;
-  return Math.round(100 - averageRarity * 100);
+  return Math.round(
+    RARITY_SCORE.maximum - averageRarity * RARITY_SCORE.scale,
+  );
 }
 
 function roundToOneDecimal(value: number): number {
-  return Math.round(value * 10) / 10;
+  return (
+    Math.round(value * SCORE_ROUNDING_FACTOR) / SCORE_ROUNDING_FACTOR
+  );
+}
+
+function calculateClassicScore(classic?: ClassicReference): number {
+  return classic && (!classic.level || classic.level === 'A')
+    ? CLASSIC_LEVEL_SCORES.A
+    : classic?.level === 'B'
+      ? CLASSIC_LEVEL_SCORES.B
+      : classic?.level === 'C'
+        ? CLASSIC_LEVEL_SCORES.C
+        : 0;
+}
+
+function calculateModernScore(semantic?: SemanticPairAssessment): number {
+  if (!semantic) {
+    return MODERN_AESTHETIC_SCORE.base;
+  }
+
+  const score =
+    MODERN_AESTHETIC_SCORE.base +
+    (semantic.natural ? MODERN_AESTHETIC_SCORE.naturalBonus : 0) +
+    (semantic.completeImage ? MODERN_AESTHETIC_SCORE.completeImageBonus : 0) +
+    (semantic.styleConsistency
+      ? MODERN_AESTHETIC_SCORE.styleConsistencyBonus
+      : 0) -
+    (semantic.overlyPopular
+      ? MODERN_AESTHETIC_SCORE.overlyPopularPenalty
+      : 0) -
+    (semantic.overlyWebNovel
+      ? MODERN_AESTHETIC_SCORE.overlyWebNovelPenalty
+      : 0);
+
+  return Math.min(
+    MODERN_AESTHETIC_SCORE.maximum,
+    Math.max(MODERN_AESTHETIC_SCORE.minimum, score),
+  );
 }
 
 export function scoreName({
@@ -107,9 +172,10 @@ export function scoreName({
   homophone,
   surnameStrokes,
   classic,
+  semantic,
 }: ScoreNameOptions): NameScoringResult {
   const element = calculateElementScore(characters, tendencies);
-  const meaning = calculateMeaningScore(characters);
+  const meaning = calculateMeaningScore(characters, semantic);
   const knownStrokes = [
     ...surnameStrokes,
     ...characters.map(({ strokes }) => strokes),
@@ -120,16 +186,17 @@ export function scoreName({
     element,
     meaning,
     phonetic: phonetic.score,
-    classic: classic ? 100 : 0,
+    classic: calculateClassicScore(classic),
     homophone: homophone.score,
+    modern: calculateModernScore(semantic),
     shape,
     rarity,
   };
   const weightedScore = (
-    Object.entries(scoreBreakdown) as [NameScoreDimension, number][]
+    Object.entries(NAMING_SCORE_WEIGHTS) as [NameScoreDimension, number][]
   ).reduce(
-    (total, [dimension, dimensionScore]) =>
-      total + dimensionScore * SCORE_WEIGHTS[dimension],
+    (total, [dimension, weight]) =>
+      total + (scoreBreakdown[dimension] ?? 0) * weight,
     0,
   );
   const elements = characters.flatMap(characterElements).join('、');
@@ -139,14 +206,21 @@ export function scoreName({
     scoreBreakdown,
     scoreExplanations: {
       element: `按当前八字五档倾向评估名字中的${elements}。`,
-      meaning: '仅按正向字库准入、字义与风格标注完整度评分。',
+      meaning: semantic
+        ? `结合单字正向准入和组合语义评估：${semantic.notes.join('；')}。`
+        : '仅按正向字库准入、字义与风格标注完整度评分。',
       phonetic: phonetic.notes.join(''),
       classic: classic
-        ? `名字两字按原顺序连续见于${classic.display}。`
-        : '基础典籍语料中未发现名字两字按原顺序连续出现，本项不附会出处。',
+        ? `${classic.explanation ?? '名字与原文建立了可核对关联'}出处等级 ${classic.level ?? 'A'}，见${classic.display}。`
+        : '当前典籍语料中未发现 A/B 级原文关联或经人工登记的 C 级意象关联，本项不附会出处。',
       homophone: homophone.safe
-        ? '普通话基础负面谐音库未发现精确命中。'
+        ? homophone.matches.length
+          ? `未命中硬性负面谐音，但存在近音提示：${homophone.matches.join('、')}。`
+          : '完整姓名、名字两字及姓与首字均未命中普通话负面谐音。'
         : `命中：${homophone.matches.join('、')}。`,
+      modern: semantic
+        ? `按姓名自然度、完整意象、风格一致性和流行度评估：${semantic.notes.join('；')}。`
+        : '组合语义信息不足，现代审美采用中性基准分。',
       shape: knownStrokes.length >= 2
         ? `按已知笔画 ${knownStrokes.join('-')} 的相邻差异评估。`
         : '已知笔画不足，本项采用中性分。',

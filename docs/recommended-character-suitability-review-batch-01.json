@@ -1,0 +1,1463 @@
+{
+  "schemaVersion": 1,
+  "batchId": "positive-below-production-threshold-01",
+  "sourceIndependentReview": {
+    "path": "docs/recommended-character-independent-review-batch-01.json",
+    "sha256": "b17cc11ac5d6fb453334b117619ff793c73d995cbd757d00e6b320f31fc4c6da"
+  },
+  "sources": {
+    "dictionary": {
+      "name": "CC-CEDICT",
+      "publisher": "MDBG",
+      "release": "2026-09-03 08:26:05 GMT",
+      "downloadUrl": "https://www.mdbg.net/chinese/export/cedict/cedict_1_0_ts_utf-8_mdbg.txt.gz",
+      "decompressedSha256": "c211a1138cdc1194b492532c4ac3eb3a7bb786cbba2165ba885f91d34f266c88",
+      "license": "CC BY-SA 4.0",
+      "attributionUrl": "https://www.mdbg.net/chinese/dictionary?page=cc-cedict"
+    },
+    "projectHomophoneRules": {
+      "path": "src/data/badHomophones.ts",
+      "sha256": "cd72184220291c6edcc6b3012568bf8673ad9528f1a6ac1bcd4c809975650de7"
+    },
+    "recommendedLayer": {
+      "path": "public/data/characters/recommended-v2.json",
+      "sha256": "8e58a131cc4fc4737d50b0c21e99e0c40bef5d98dee8ccd5665b77bf088e3674",
+      "enabledCharacters": 1433
+    }
+  },
+  "policy": {
+    "nonBinding": "recommendations are a prepared sign-off worksheet, not review.decision values",
+    "machineCheckBoundary": "the pair screen only applies current project rules to given-name syllables; it does not check surname-dependent readings, dialects, every negative homophone or human-perceived naturalness",
+    "requiredForApproval": "a named human reviewer must choose the final decision, verify the actual surname and complete name, provide a reason, and record a canonical UTC timestamp",
+    "runtimeEffect": "none",
+    "finalDecisionWritten": false
+  },
+  "counts": {
+    "total": 9,
+    "recommendations": {
+      "approveCandidate": 2,
+      "needsHumanJudgment": 4,
+      "rejectCandidate": 3
+    },
+    "homophoneRisk": {
+      "high": 3,
+      "medium": 5,
+      "low": 1
+    },
+    "finalDecisionsWritten": 0
+  },
+  "entries": [
+    {
+      "char": "充",
+      "sourceEvidence": {
+        "meaning": "充实、充满",
+        "pinyin": "chōng",
+        "styleTags": [
+          "刚健",
+          "明朗"
+        ]
+      },
+      "dictionaryReview": {
+        "entries": [
+          {
+            "traditional": "充",
+            "simplified": "充",
+            "pinyin": "chong1",
+            "definitions": [
+              "sufficient; full",
+              "to fill",
+              "to serve as; to act as",
+              "to act falsely as; to pose as"
+            ]
+          }
+        ]
+      },
+      "homophoneReview": {
+        "riskLevel": "medium",
+        "exactHomophones": [
+          {
+            "char": "忡",
+            "entries": [
+              {
+                "pinyin": "chong1",
+                "definitions": [
+                  "grieved",
+                  "distressed",
+                  "sad",
+                  "uneasy"
+                ]
+              }
+            ]
+          },
+          {
+            "char": "憃",
+            "entries": [
+              {
+                "pinyin": "chong1",
+                "definitions": [
+                  "foolish; stupid; dull; silly"
+                ]
+              }
+            ]
+          },
+          {
+            "char": "冲",
+            "entries": [
+              {
+                "pinyin": "chong1",
+                "definitions": [
+                  "(of water) to dash against",
+                  "to mix with water",
+                  "to infuse",
+                  "to rinse",
+                  "to flush",
+                  "to develop (a film)",
+                  "to rise in the air",
+                  "to clash",
+                  "to collide with"
+                ]
+              },
+              {
+                "pinyin": "chong1",
+                "definitions": [
+                  "thoroughfare",
+                  "to go straight ahead",
+                  "to rush",
+                  "to clash"
+                ]
+              },
+              {
+                "pinyin": "chong4",
+                "definitions": [
+                  "powerful",
+                  "vigorous",
+                  "pungent",
+                  "towards",
+                  "in view of"
+                ]
+              }
+            ]
+          }
+        ],
+        "projectGivenNamePairScreen": {
+          "screenedPairs": 2866,
+          "matchedPairs": 0,
+          "matches": [],
+          "ruleSource": "src/data/badHomophones.ts; given-name scope only; surname-dependent scopes not evaluated"
+        },
+        "surnameDependentRiskChecked": false
+      },
+      "pairReview": {
+        "samples": [
+          {
+            "pair": "充和",
+            "pinyin": [
+              "chōng",
+              "hé"
+            ],
+            "partner": {
+              "char": "和",
+              "meaning": "和谐、平和",
+              "styleTags": [
+                "温婉",
+                "明朗",
+                "沉稳"
+              ]
+            },
+            "projectChecks": {
+              "currentGivenNameHomophoneMatches": [],
+              "sharedStyles": [
+                "明朗"
+              ]
+            },
+            "evidenceBoundary": "sample for human review only; passing current project rules does not prove naturalness or full-name safety"
+          },
+          {
+            "pair": "宇充",
+            "pinyin": [
+              "yǔ",
+              "chōng"
+            ],
+            "partner": {
+              "char": "宇",
+              "meaning": "宇宙，气宇轩昂",
+              "styleTags": [
+                "刚健",
+                "明朗"
+              ]
+            },
+            "projectChecks": {
+              "currentGivenNameHomophoneMatches": [],
+              "sharedStyles": [
+                "刚健",
+                "明朗"
+              ]
+            },
+            "evidenceBoundary": "sample for human review only; passing current project rules does not prove naturalness or full-name safety"
+          }
+        ],
+        "naturalnessVerified": false
+      },
+      "recommendation": {
+        "value": "needs-human-judgment",
+        "rationale": "正向核心义明确，但完整义项包含“冒充、假扮”，单字也偏常用动词；建议只在双字语义自然且姓氏连读安全时考虑。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "涧",
+      "sourceEvidence": {
+        "meaning": "山涧清泉",
+        "pinyin": "jiàn",
+        "styleTags": [
+          "清雅",
+          "灵动"
+        ]
+      },
+      "dictionaryReview": {
+        "entries": [
+          {
+            "traditional": "㵎",
+            "simplified": "涧",
+            "pinyin": "jian4",
+            "definitions": [
+              "variant of 澗|涧[jian4]"
+            ]
+          },
+          {
+            "traditional": "澗",
+            "simplified": "涧",
+            "pinyin": "jian4",
+            "definitions": [
+              "mountain stream"
+            ]
+          }
+        ]
+      },
+      "homophoneReview": {
+        "riskLevel": "high",
+        "exactHomophones": [
+          {
+            "char": "贱",
+            "entries": [
+              {
+                "pinyin": "jian4",
+                "definitions": [
+                  "inexpensive",
+                  "lowly",
+                  "despicable",
+                  "(bound form) (humble) my"
+                ]
+              }
+            ]
+          }
+        ],
+        "projectGivenNamePairScreen": {
+          "screenedPairs": 2866,
+          "matchedPairs": 0,
+          "matches": [],
+          "ruleSource": "src/data/badHomophones.ts; given-name scope only; surname-dependent scopes not evaluated"
+        },
+        "surnameDependentRiskChecked": false
+      },
+      "pairReview": {
+        "samples": [
+          {
+            "pair": "涧宁",
+            "pinyin": [
+              "jiàn",
+              "níng"
+            ],
+            "partner": {
+              "char": "宁",
+              "meaning": "安宁、宁静",
+              "styleTags": [
+                "清雅",
+                "沉稳"
+              ]
+            },
+            "projectChecks": {
+              "currentGivenNameHomophoneMatches": [],
+              "sharedStyles": [
+                "清雅"
+              ]
+            },
+            "evidenceBoundary": "sample for human review only; passing current project rules does not prove naturalness or full-name safety"
+          },
+          {
+            "pair": "泽涧",
+            "pinyin": [
+              "zé",
+              "jiàn"
+            ],
+            "partner": {
+              "char": "泽",
+              "meaning": "恩泽、润泽",
+              "styleTags": [
+                "清雅",
+                "明朗"
+              ]
+            },
+            "projectChecks": {
+              "currentGivenNameHomophoneMatches": [],
+              "sharedStyles": [
+                "清雅"
+              ]
+            },
+            "evidenceBoundary": "sample for human review only; passing current project rules does not prove naturalness or full-name safety"
+          }
+        ],
+        "naturalnessVerified": false
+      },
+      "recommendation": {
+        "value": "reject-candidate",
+        "rationale": "山涧意象清晰，但与常用贬义字“贱”完全同音，默认推荐会产生明显口语误听风险。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "诤",
+      "sourceEvidence": {
+        "meaning": "直言规劝",
+        "pinyin": "zhèng",
+        "styleTags": [
+          "刚健",
+          "清雅"
+        ]
+      },
+      "dictionaryReview": {
+        "entries": [
+          {
+            "traditional": "諍",
+            "simplified": "诤",
+            "pinyin": "zheng4",
+            "definitions": [
+              "to admonish",
+              "to warn sb of their errors",
+              "to criticize frankly",
+              "Taiwan pr. [zheng1]"
+            ]
+          }
+        ]
+      },
+      "homophoneReview": {
+        "riskLevel": "medium",
+        "exactHomophones": [
+          {
+            "char": "症",
+            "entries": [
+              {
+                "pinyin": "zheng4",
+                "definitions": [
+                  "disease",
+                  "illness"
+                ]
+              },
+              {
+                "pinyin": "zheng1",
+                "definitions": [
+                  "abdominal tumor",
+                  "bowel obstruction",
+                  "(fig.) sticking point"
+                ]
+              }
+            ]
+          },
+          {
+            "char": "挣",
+            "entries": [
+              {
+                "pinyin": "zheng1",
+                "definitions": [
+                  "used in 掙扎|挣扎[zheng1 zha2]"
+                ]
+              },
+              {
+                "pinyin": "zheng4",
+                "definitions": [
+                  "to struggle to get free",
+                  "to strive to acquire",
+                  "to make (money)"
+                ]
+              }
+            ]
+          }
+        ],
+        "projectGivenNamePairScreen": {
+          "screenedPairs": 2866,
+          "matchedPairs": 0,
+          "matches": [],
+          "ruleSource": "src/data/badHomophones.ts; given-name scope only; surname-dependent scopes not evaluated"
+        },
+        "surnameDependentRiskChecked": false
+      },
+      "pairReview": {
+        "samples": [
+          {
+            "pair": "诤远",
+            "pinyin": [
+              "zhèng",
+              "yuǎn"
+            ],
+            "partner": {
+              "char": "远",
+              "meaning": "远大、深远",
+              "styleTags": [
+                "沉稳",
+                "清雅"
+              ]
+            },
+            "projectChecks": {
+              "currentGivenNameHomophoneMatches": [],
+              "sharedStyles": [
+                "清雅"
+              ]
+            },
+            "evidenceBoundary": "sample for human review only; passing current project rules does not prove naturalness or full-name safety"
+          },
+          {
+            "pair": "弘诤",
+            "pinyin": [
+              "hóng",
+              "zhèng"
+            ],
+            "partner": {
+              "char": "弘",
+              "meaning": "弘扬、光大",
+              "styleTags": [
+                "刚健",
+                "书卷"
+              ]
+            },
+            "projectChecks": {
+              "currentGivenNameHomophoneMatches": [],
+              "sharedStyles": [
+                "刚健"
+              ]
+            },
+            "evidenceBoundary": "sample for human review only; passing current project rules does not prove naturalness or full-name safety"
+          }
+        ],
+        "naturalnessVerified": false
+      },
+      "recommendation": {
+        "value": "needs-human-judgment",
+        "rationale": "直言规劝具有品格含义，但字义偏行为，且词典记录台湾读音 zhēng；需要结合姓氏、地区读音和双字语义判断。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "颀",
+      "sourceEvidence": {
+        "meaning": "身材修长",
+        "pinyin": "qí",
+        "styleTags": [
+          "清雅",
+          "刚健"
+        ]
+      },
+      "dictionaryReview": {
+        "entries": [
+          {
+            "traditional": "頎",
+            "simplified": "颀",
+            "pinyin": "qi2",
+            "definitions": [
+              "tall"
+            ]
+          }
+        ]
+      },
+      "homophoneReview": {
+        "riskLevel": "low",
+        "exactHomophones": [
+          {
+            "char": "娸",
+            "entries": [
+              {
+                "pinyin": "qi2",
+                "definitions": [
+                  "to ridicule",
+                  "ugly"
+                ]
+              }
+            ]
+          },
+          {
+            "char": "疧",
+            "entries": [
+              {
+                "pinyin": "qi2",
+                "definitions": [
+                  "(literary) disease",
+                  "Taiwan pr. [zhi1]"
+                ]
+              }
+            ]
+          }
+        ],
+        "projectGivenNamePairScreen": {
+          "screenedPairs": 2866,
+          "matchedPairs": 13,
+          "matches": [
+            {
+              "pair": "辉颀",
+              "pinyin": [
+                "huī",
+                "qí"
+              ],
+              "matches": [
+                {
+                  "label": "晦气",
+                  "matchType": "exact"
+                }
+              ]
+            },
+            {
+              "pair": "慧颀",
+              "pinyin": [
+                "huì",
+                "qí"
+              ],
+              "matches": [
+                {
+                  "label": "晦气",
+                  "matchType": "exact"
+                }
+              ]
+            },
+            {
+              "pair": "惠颀",
+              "pinyin": [
+                "huì",
+                "qí"
+              ],
+              "matches": [
+                {
+                  "label": "晦气",
+                  "matchType": "exact"
+                }
+              ]
+            },
+            {
+              "pair": "晖颀",
+              "pinyin": [
+                "huī",
+                "qí"
+              ],
+              "matches": [
+                {
+                  "label": "晦气",
+                  "matchType": "exact"
+                }
+              ]
+            },
+            {
+              "pair": "恢颀",
+              "pinyin": [
+                "huī",
+                "qí"
+              ],
+              "matches": [
+                {
+                  "label": "晦气",
+                  "matchType": "exact"
+                }
+              ]
+            },
+            {
+              "pair": "汇颀",
+              "pinyin": [
+                "huì",
+                "qí"
+              ],
+              "matches": [
+                {
+                  "label": "晦气",
+                  "matchType": "exact"
+                }
+              ]
+            },
+            {
+              "pair": "绘颀",
+              "pinyin": [
+                "huì",
+                "qí"
+              ],
+              "matches": [
+                {
+                  "label": "晦气",
+                  "matchType": "exact"
+                }
+              ]
+            },
+            {
+              "pair": "蕙颀",
+              "pinyin": [
+                "huì",
+                "qí"
+              ],
+              "matches": [
+                {
+                  "label": "晦气",
+                  "matchType": "exact"
+                }
+              ]
+            },
+            {
+              "pair": "会颀",
+              "pinyin": [
+                "huì",
+                "qí"
+              ],
+              "matches": [
+                {
+                  "label": "晦气",
+                  "matchType": "exact"
+                }
+              ]
+            },
+            {
+              "pair": "徽颀",
+              "pinyin": [
+                "huī",
+                "qí"
+              ],
+              "matches": [
+                {
+                  "label": "晦气",
+                  "matchType": "exact"
+                }
+              ]
+            },
+            {
+              "pair": "卉颀",
+              "pinyin": [
+                "huì",
+                "qí"
+              ],
+              "matches": [
+                {
+                  "label": "晦气",
+                  "matchType": "exact"
+                }
+              ]
+            },
+            {
+              "pair": "荟颀",
+              "pinyin": [
+                "huì",
+                "qí"
+              ],
+              "matches": [
+                {
+                  "label": "晦气",
+                  "matchType": "exact"
+                }
+              ]
+            },
+            {
+              "pair": "诲颀",
+              "pinyin": [
+                "huì",
+                "qí"
+              ],
+              "matches": [
+                {
+                  "label": "晦气",
+                  "matchType": "exact"
+                }
+              ]
+            }
+          ],
+          "ruleSource": "src/data/badHomophones.ts; given-name scope only; surname-dependent scopes not evaluated"
+        },
+        "surnameDependentRiskChecked": false
+      },
+      "pairReview": {
+        "samples": [
+          {
+            "pair": "颀然",
+            "pinyin": [
+              "qí",
+              "rán"
+            ],
+            "partner": {
+              "char": "然",
+              "meaning": "自然，如此",
+              "styleTags": [
+                "书卷",
+                "清雅",
+                "沉稳"
+              ]
+            },
+            "projectChecks": {
+              "currentGivenNameHomophoneMatches": [],
+              "sharedStyles": [
+                "清雅"
+              ]
+            },
+            "evidenceBoundary": "sample for human review only; passing current project rules does not prove naturalness or full-name safety"
+          },
+          {
+            "pair": "宇颀",
+            "pinyin": [
+              "yǔ",
+              "qí"
+            ],
+            "partner": {
+              "char": "宇",
+              "meaning": "宇宙，气宇轩昂",
+              "styleTags": [
+                "刚健",
+                "明朗"
+              ]
+            },
+            "projectChecks": {
+              "currentGivenNameHomophoneMatches": [],
+              "sharedStyles": [
+                "刚健"
+              ]
+            },
+            "evidenceBoundary": "sample for human review only; passing current project rules does not prove naturalness or full-name safety"
+          }
+        ],
+        "naturalnessVerified": false
+      },
+      "recommendation": {
+        "value": "approve-candidate",
+        "rationale": "字义正向、读音稳定，显著负面同音字较生僻；可进入人工批准候选，但仍需核对具体姓氏连读。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "皑",
+      "sourceEvidence": {
+        "meaning": "洁白明亮",
+        "pinyin": "ái",
+        "styleTags": [
+          "清雅",
+          "明朗"
+        ]
+      },
+      "dictionaryReview": {
+        "entries": [
+          {
+            "traditional": "皚",
+            "simplified": "皑",
+            "pinyin": "ai2",
+            "definitions": [
+              "(literary) white as snow"
+            ]
+          }
+        ]
+      },
+      "homophoneReview": {
+        "riskLevel": "high",
+        "exactHomophones": [
+          {
+            "char": "癌",
+            "entries": [
+              {
+                "pinyin": "ai2",
+                "definitions": [
+                  "cancer; (esp.) carcinoma"
+                ]
+              }
+            ]
+          },
+          {
+            "char": "騃",
+            "entries": [
+              {
+                "pinyin": "ai2",
+                "definitions": [
+                  "stupid",
+                  "idiotic"
+                ]
+              }
+            ]
+          },
+          {
+            "char": "挨",
+            "entries": [
+              {
+                "pinyin": "ai1",
+                "definitions": [
+                  "in order; in sequence",
+                  "close to; adjacent to"
+                ]
+              },
+              {
+                "pinyin": "ai2",
+                "definitions": [
+                  "to suffer; to endure",
+                  "to pull through (hard times)",
+                  "to delay; to stall; to play for time; to dawdle"
+                ]
+              }
+            ]
+          }
+        ],
+        "projectGivenNamePairScreen": {
+          "screenedPairs": 2866,
+          "matchedPairs": 0,
+          "matches": [],
+          "ruleSource": "src/data/badHomophones.ts; given-name scope only; surname-dependent scopes not evaluated"
+        },
+        "surnameDependentRiskChecked": false
+      },
+      "pairReview": {
+        "samples": [
+          {
+            "pair": "皑宁",
+            "pinyin": [
+              "ái",
+              "níng"
+            ],
+            "partner": {
+              "char": "宁",
+              "meaning": "安宁、宁静",
+              "styleTags": [
+                "清雅",
+                "沉稳"
+              ]
+            },
+            "projectChecks": {
+              "currentGivenNameHomophoneMatches": [],
+              "sharedStyles": [
+                "清雅"
+              ]
+            },
+            "evidenceBoundary": "sample for human review only; passing current project rules does not prove naturalness or full-name safety"
+          },
+          {
+            "pair": "皑然",
+            "pinyin": [
+              "ái",
+              "rán"
+            ],
+            "partner": {
+              "char": "然",
+              "meaning": "自然，如此",
+              "styleTags": [
+                "书卷",
+                "清雅",
+                "沉稳"
+              ]
+            },
+            "projectChecks": {
+              "currentGivenNameHomophoneMatches": [],
+              "sharedStyles": [
+                "清雅"
+              ]
+            },
+            "evidenceBoundary": "sample for human review only; passing current project rules does not prove naturalness or full-name safety"
+          }
+        ],
+        "naturalnessVerified": false
+      },
+      "recommendation": {
+        "value": "reject-candidate",
+        "rationale": "洁白意象正向，但与高显著度疾病词“癌”完全同音，作为默认推荐字风险过高。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "弼",
+      "sourceEvidence": {
+        "meaning": "辅佐，辅助",
+        "pinyin": "bì",
+        "styleTags": [
+          "刚健",
+          "书卷"
+        ]
+      },
+      "dictionaryReview": {
+        "entries": [
+          {
+            "traditional": "弼",
+            "simplified": "弼",
+            "pinyin": "bi4",
+            "definitions": [
+              "to assist"
+            ]
+          }
+        ]
+      },
+      "homophoneReview": {
+        "riskLevel": "medium",
+        "exactHomophones": [
+          {
+            "char": "弊",
+            "entries": [
+              {
+                "pinyin": "bi4",
+                "definitions": [
+                  "detriment",
+                  "fraud",
+                  "harm",
+                  "defeat"
+                ]
+              }
+            ]
+          },
+          {
+            "char": "毙",
+            "entries": [
+              {
+                "pinyin": "bi4",
+                "definitions": [
+                  "to die",
+                  "to shoot dead",
+                  "to reject",
+                  "to fall forward",
+                  "(suffix) to death"
+                ]
+              },
+              {
+                "pinyin": "bi4",
+                "definitions": [
+                  "to collapse",
+                  "variant of 斃|毙[bi4]",
+                  "variant of 獙[bi4]"
+                ]
+              }
+            ]
+          },
+          {
+            "char": "敝",
+            "entries": [
+              {
+                "pinyin": "bi4",
+                "definitions": [
+                  "my (polite)",
+                  "poor",
+                  "ruined",
+                  "shabby",
+                  "worn out",
+                  "defeated"
+                ]
+              }
+            ]
+          },
+          {
+            "char": "愎",
+            "entries": [
+              {
+                "pinyin": "bi4",
+                "definitions": [
+                  "perverse",
+                  "obstinate",
+                  "willful"
+                ]
+              }
+            ]
+          },
+          {
+            "char": "婢",
+            "entries": [
+              {
+                "pinyin": "bi4",
+                "definitions": [
+                  "slave girl",
+                  "maid servant"
+                ]
+              }
+            ]
+          },
+          {
+            "char": "痹",
+            "entries": [
+              {
+                "pinyin": "bi4",
+                "definitions": [
+                  "paralysis",
+                  "numbness"
+                ]
+              }
+            ]
+          }
+        ],
+        "projectGivenNamePairScreen": {
+          "screenedPairs": 2866,
+          "matchedPairs": 2,
+          "matches": [
+            {
+              "pair": "莎弼",
+              "pinyin": [
+                "shā",
+                "bì"
+              ],
+              "matches": [
+                {
+                  "label": "傻逼",
+                  "matchType": "exact"
+                }
+              ]
+            },
+            {
+              "pair": "纱弼",
+              "pinyin": [
+                "shā",
+                "bì"
+              ],
+              "matches": [
+                {
+                  "label": "傻逼",
+                  "matchType": "exact"
+                }
+              ]
+            }
+          ],
+          "ruleSource": "src/data/badHomophones.ts; given-name scope only; surname-dependent scopes not evaluated"
+        },
+        "surnameDependentRiskChecked": false
+      },
+      "pairReview": {
+        "samples": [
+          {
+            "pair": "弘弼",
+            "pinyin": [
+              "hóng",
+              "bì"
+            ],
+            "partner": {
+              "char": "弘",
+              "meaning": "弘扬、光大",
+              "styleTags": [
+                "刚健",
+                "书卷"
+              ]
+            },
+            "projectChecks": {
+              "currentGivenNameHomophoneMatches": [],
+              "sharedStyles": [
+                "刚健",
+                "书卷"
+              ]
+            },
+            "evidenceBoundary": "sample for human review only; passing current project rules does not prove naturalness or full-name safety"
+          },
+          {
+            "pair": "弼文",
+            "pinyin": [
+              "bì",
+              "wén"
+            ],
+            "partner": {
+              "char": "文",
+              "meaning": "文采、文化",
+              "styleTags": [
+                "书卷",
+                "清雅"
+              ]
+            },
+            "projectChecks": {
+              "currentGivenNameHomophoneMatches": [],
+              "sharedStyles": [
+                "书卷"
+              ]
+            },
+            "evidenceBoundary": "sample for human review only; passing current project rules does not prove naturalness or full-name safety"
+          }
+        ],
+        "naturalnessVerified": false
+      },
+      "recommendation": {
+        "value": "needs-human-judgment",
+        "rationale": "“辅佐”义明确且有传统人名语感，但同音负面字较多；双字组合能否稳定消歧必须结合姓氏判断。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "铖",
+      "sourceEvidence": {
+        "meaning": "人名用字，兵器",
+        "pinyin": "chéng",
+        "styleTags": [
+          "刚健",
+          "沉稳"
+        ]
+      },
+      "dictionaryReview": {
+        "entries": [
+          {
+            "traditional": "鋮",
+            "simplified": "铖",
+            "pinyin": "cheng2",
+            "definitions": [
+              "(used in people's names)"
+            ]
+          }
+        ]
+      },
+      "homophoneReview": {
+        "riskLevel": "medium",
+        "exactHomophones": [
+          {
+            "char": "惩",
+            "entries": [
+              {
+                "pinyin": "cheng2",
+                "definitions": [
+                  "to punish",
+                  "to reprimand",
+                  "to warn"
+                ]
+              }
+            ]
+          },
+          {
+            "char": "裎",
+            "entries": [
+              {
+                "pinyin": "cheng2",
+                "definitions": [
+                  "to take off one's clothes",
+                  "naked"
+                ]
+              },
+              {
+                "pinyin": "cheng3",
+                "definitions": [
+                  "an ancient type of clothing"
+                ]
+              }
+            ]
+          },
+          {
+            "char": "酲",
+            "entries": [
+              {
+                "pinyin": "cheng2",
+                "definitions": [
+                  "(literary) inebriated",
+                  "hungover"
+                ]
+              }
+            ]
+          }
+        ],
+        "projectGivenNamePairScreen": {
+          "screenedPairs": 2866,
+          "matchedPairs": 0,
+          "matches": [],
+          "ruleSource": "src/data/badHomophones.ts; given-name scope only; surname-dependent scopes not evaluated"
+        },
+        "surnameDependentRiskChecked": false
+      },
+      "pairReview": {
+        "samples": [
+          {
+            "pair": "铖宇",
+            "pinyin": [
+              "chéng",
+              "yǔ"
+            ],
+            "partner": {
+              "char": "宇",
+              "meaning": "宇宙，气宇轩昂",
+              "styleTags": [
+                "刚健",
+                "明朗"
+              ]
+            },
+            "projectChecks": {
+              "currentGivenNameHomophoneMatches": [],
+              "sharedStyles": [
+                "刚健"
+              ]
+            },
+            "evidenceBoundary": "sample for human review only; passing current project rules does not prove naturalness or full-name safety"
+          },
+          {
+            "pair": "泽铖",
+            "pinyin": [
+              "zé",
+              "chéng"
+            ],
+            "partner": {
+              "char": "泽",
+              "meaning": "恩泽、润泽",
+              "styleTags": [
+                "清雅",
+                "明朗"
+              ]
+            },
+            "projectChecks": {
+              "currentGivenNameHomophoneMatches": [],
+              "sharedStyles": []
+            },
+            "evidenceBoundary": "sample for human review only; passing current project rules does not prove naturalness or full-name safety"
+          }
+        ],
+        "naturalnessVerified": false
+      },
+      "recommendation": {
+        "value": "approve-candidate",
+        "rationale": "词典直接标注用于人名，且常见同音联想“成、诚”较正向；可进入人工批准候选，但字义解释不得扩写为未经证实的兵器义。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "恳",
+      "sourceEvidence": {
+        "meaning": "诚恳、恳切",
+        "pinyin": "kěn",
+        "styleTags": [
+          "质朴",
+          "温婉"
+        ]
+      },
+      "dictionaryReview": {
+        "entries": [
+          {
+            "traditional": "懇",
+            "simplified": "恳",
+            "pinyin": "ken3",
+            "definitions": [
+              "earnest"
+            ]
+          }
+        ]
+      },
+      "homophoneReview": {
+        "riskLevel": "high",
+        "exactHomophones": [
+          {
+            "char": "啃",
+            "entries": [
+              {
+                "pinyin": "ken3",
+                "definitions": [
+                  "to gnaw",
+                  "to nibble",
+                  "to bite"
+                ]
+              }
+            ]
+          }
+        ],
+        "projectGivenNamePairScreen": {
+          "screenedPairs": 2866,
+          "matchedPairs": 0,
+          "matches": [],
+          "ruleSource": "src/data/badHomophones.ts; given-name scope only; surname-dependent scopes not evaluated"
+        },
+        "surnameDependentRiskChecked": false
+      },
+      "pairReview": {
+        "samples": [
+          {
+            "pair": "恳诚",
+            "pinyin": [
+              "kěn",
+              "chéng"
+            ],
+            "partner": {
+              "char": "诚",
+              "meaning": "真诚、诚信",
+              "styleTags": [
+                "书卷",
+                "沉稳"
+              ]
+            },
+            "projectChecks": {
+              "currentGivenNameHomophoneMatches": [],
+              "sharedStyles": []
+            },
+            "evidenceBoundary": "sample for human review only; passing current project rules does not prove naturalness or full-name safety"
+          },
+          {
+            "pair": "诚恳",
+            "pinyin": [
+              "chéng",
+              "kěn"
+            ],
+            "partner": {
+              "char": "诚",
+              "meaning": "真诚、诚信",
+              "styleTags": [
+                "书卷",
+                "沉稳"
+              ]
+            },
+            "projectChecks": {
+              "currentGivenNameHomophoneMatches": [],
+              "sharedStyles": []
+            },
+            "evidenceBoundary": "sample for human review only; passing current project rules does not prove naturalness or full-name safety"
+          }
+        ],
+        "naturalnessVerified": false
+      },
+      "recommendation": {
+        "value": "reject-candidate",
+        "rationale": "诚恳义正向，但字形和词法高度依赖“恳求、诚恳”等常用词，与口语动词“啃”完全同音，双字姓名自然度不足。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "谌",
+      "sourceEvidence": {
+        "meaning": "真诚可信",
+        "pinyin": "chén",
+        "styleTags": [
+          "沉稳",
+          "书卷"
+        ]
+      },
+      "dictionaryReview": {
+        "entries": [
+          {
+            "traditional": "諶",
+            "simplified": "谌",
+            "pinyin": "Chen2",
+            "definitions": [
+              "surname Chen"
+            ]
+          },
+          {
+            "traditional": "諶",
+            "simplified": "谌",
+            "pinyin": "chen2",
+            "definitions": [
+              "faithful",
+              "sincere"
+            ]
+          }
+        ]
+      },
+      "homophoneReview": {
+        "riskLevel": "medium",
+        "exactHomophones": [
+          {
+            "char": "沉",
+            "entries": [
+              {
+                "pinyin": "chen2",
+                "definitions": [
+                  "variant of 沉[chen2]"
+                ]
+              },
+              {
+                "pinyin": "chen2",
+                "definitions": [
+                  "to submerge",
+                  "to immerse",
+                  "to sink",
+                  "to keep down",
+                  "to lower",
+                  "to drop",
+                  "deep",
+                  "profound",
+                  "heavy"
+                ]
+              }
+            ]
+          },
+          {
+            "char": "尘",
+            "entries": [
+              {
+                "pinyin": "chen2",
+                "definitions": [
+                  "dust",
+                  "dirt",
+                  "earth"
+                ]
+              }
+            ]
+          },
+          {
+            "char": "陈",
+            "entries": [
+              {
+                "pinyin": "Chen2",
+                "definitions": [
+                  "surname Chen",
+                  "Chen (c. 1045 – 479 BC), a Zhou dynasty state",
+                  "Chen (557–589), one of the Southern Dynasties 南朝[Nan2 Chao2]"
+                ]
+              },
+              {
+                "pinyin": "chen2",
+                "definitions": [
+                  "(bound form) to lay out; to exhibit; to display",
+                  "(bound form) to narrate; to state; to explain; to tell",
+                  "old; stale"
+                ]
+              }
+            ]
+          }
+        ],
+        "projectGivenNamePairScreen": {
+          "screenedPairs": 2866,
+          "matchedPairs": 0,
+          "matches": [],
+          "ruleSource": "src/data/badHomophones.ts; given-name scope only; surname-dependent scopes not evaluated"
+        },
+        "surnameDependentRiskChecked": false
+      },
+      "pairReview": {
+        "samples": [
+          {
+            "pair": "谌睿",
+            "pinyin": [
+              "chén",
+              "ruì"
+            ],
+            "partner": {
+              "char": "睿",
+              "meaning": "睿智、通达",
+              "styleTags": [
+                "书卷",
+                "清雅",
+                "沉稳"
+              ]
+            },
+            "projectChecks": {
+              "currentGivenNameHomophoneMatches": [],
+              "sharedStyles": [
+                "沉稳",
+                "书卷"
+              ]
+            },
+            "evidenceBoundary": "sample for human review only; passing current project rules does not prove naturalness or full-name safety"
+          },
+          {
+            "pair": "礼谌",
+            "pinyin": [
+              "lǐ",
+              "chén"
+            ],
+            "partner": {
+              "char": "礼",
+              "meaning": "礼仪、文明",
+              "styleTags": [
+                "书卷",
+                "清雅",
+                "沉稳"
+              ]
+            },
+            "projectChecks": {
+              "currentGivenNameHomophoneMatches": [],
+              "sharedStyles": [
+                "沉稳",
+                "书卷"
+              ]
+            },
+            "evidenceBoundary": "sample for human review only; passing current project rules does not prove naturalness or full-name safety"
+          }
+        ],
+        "naturalnessVerified": false
+      },
+      "recommendation": {
+        "value": "needs-human-judgment",
+        "rationale": "真诚信义得到支持，但同时是姓氏用字，且“沉、尘”等同音联想较强；作为名字时需结合姓氏避免身份和语义混淆。",
+        "finalDecisionWritten": false
+      }
+    }
+  ]
+}

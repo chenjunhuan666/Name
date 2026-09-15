@@ -1,0 +1,23 @@
+CC BY-SA 4.0 attribution and license pointer
+
+Kanseki Repository / Kanripo KR5c0126
+Source: https://github.com/kanripo/KR5c0126
+Pinned commit: abb9cd323dfd9520894b56b3b8ba2ec0ea50554f
+License: Creative Commons Attribution-ShareAlike 4.0 International
+Canonical license text: https://creativecommons.org/licenses/by-sa/4.0/legalcode
+
+Name V2 distributes a transformed copy as:
+public/data/classics/core/zhuangzi.json
+
+Changes made by Name V2: normalized the source into the project JSON schema;
+removed Kanripo page-number, digitization-source, and Org metadata markers;
+preserved the 33 source chapters and traditional characters; did not perform
+automatic simplified/traditional conversion.
+
+The transformed data is provided under CC BY-SA 4.0. Redistribution must keep
+the source attribution, this changes notice, the license link, and the same
+license for adaptations.
+
+CC-CEDICT is used only in non-runtime review documents and is not copied into
+the published application data. Its detailed attribution and pinned snapshot
+are recorded in /THIRD_PARTY_NOTICES.md.

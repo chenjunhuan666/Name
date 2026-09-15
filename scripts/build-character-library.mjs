@@ -1,5 +1,6 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
+import { applyPronunciationCorrection } from './character-pronunciation-corrections.mjs';
 
 const sourcePath = process.argv[2];
 const outputPath = process.argv[3] ?? 'public/data/characters/basic.json';
@@ -62,7 +63,7 @@ const characters = source.characters
     rarity: item.rarityLevel / 4,
     styleTags: [...new Set(item.styleTags)],
     negative: false,
-  }));
+  })).map(applyPronunciationCorrection);
 
 const pronunciations = source.characters
   .filter(
@@ -78,7 +79,7 @@ const pronunciations = source.characters
     pinyin: item.pinyin,
     tone: item.toneLevel,
     strokes: item.strokeCount || undefined,
-  }));
+  })).map(applyPronunciationCorrection);
 
 if (characters.length < 1000 || characters.length > 3000) {
   throw new Error(

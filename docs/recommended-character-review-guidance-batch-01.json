@@ -1,0 +1,2925 @@
+{
+  "schemaVersion": 1,
+  "batchId": "positive-below-production-threshold-01",
+  "sourceBatch": {
+    "path": "docs/recommended-character-review-batch-01.json",
+    "sha256": "298dd7b7d77dc8b6e5697202fb55ba5e161470bd540649fda52d511a48535ccf"
+  },
+  "policy": {
+    "evidenceBoundary": "preliminary guidance based only on the fixed source meaning, usage, rarity and risk flags; it is not an independent dictionary or personal-name corpus verification",
+    "nonBinding": "guidance must never be copied automatically into review.decision; a human reviewer must make and record every final decision",
+    "runtimeEffect": "none"
+  },
+  "counts": {
+    "total": 83,
+    "retainForIndependentCheck": 19,
+    "likelyReject": 45,
+    "needsDisambiguation": 19,
+    "finalDecisionsWritten": 0
+  },
+  "entries": [
+    {
+      "char": "懂",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 0,
+          "meaning": "懂事、明白",
+          "styleTags": [
+            "清雅",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "dǒng",
+          "tone": 3,
+          "element": "木",
+          "radical": "忄",
+          "strokes": 15,
+          "standardIndex": 3300,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "action-or-dependent-context",
+        "rationale": "主要义项偏动作、功能或依赖特定语境，单独作为人名用字时语义不稳定。",
+        "requiredCheck": "若不能证明独立人名义项和自然搭配，则维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "充",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "充实、充满",
+          "styleTags": [
+            "刚健",
+            "明朗"
+          ]
+        },
+        "facts": {
+          "pinyin": "chōng",
+          "tone": 1,
+          "element": "土",
+          "radical": "亠",
+          "strokes": 6,
+          "standardIndex": 525,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "retain-for-independent-check",
+        "label": "建议保留进入独立复核",
+        "reasonCode": "plausible-positive-meaning",
+        "rationale": "现有来源释义呈现正向品质、自然意象或较明确的人名用字可能性；仍需独立词典和真实姓名用例支持后才能批准。",
+        "requiredCheck": "核对规范词典义项、常见姓名用例、谐音与双字搭配。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "兔",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "玉兔、敏捷",
+          "styleTags": [
+            "灵动",
+            "温婉"
+          ]
+        },
+        "facts": {
+          "pinyin": "tù",
+          "tone": 4,
+          "element": "金",
+          "radical": "刀",
+          "strokes": 8,
+          "standardIndex": 1195,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "舰",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "军舰巨舰",
+          "styleTags": [
+            "刚健",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "jiàn",
+          "tone": 4,
+          "element": "木",
+          "radical": "舟",
+          "strokes": 10,
+          "standardIndex": 1978,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "谅",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "原谅、体谅",
+          "styleTags": [
+            "沉稳",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "liàng",
+          "tone": 4,
+          "element": "火",
+          "radical": "讠",
+          "strokes": 10,
+          "standardIndex": 2125,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "action-or-dependent-context",
+        "rationale": "主要义项偏动作、功能或依赖特定语境，单独作为人名用字时语义不稳定。",
+        "requiredCheck": "若不能证明独立人名义项和自然搭配，则维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "祷",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "祈祷、祷告",
+          "styleTags": [
+            "仙气",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "dǎo",
+          "tone": 3,
+          "element": "金",
+          "radical": "礻",
+          "strokes": 11,
+          "standardIndex": 2464,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "action-or-dependent-context",
+        "rationale": "主要义项偏动作、功能或依赖特定语境，单独作为人名用字时语义不稳定。",
+        "requiredCheck": "若不能证明独立人名义项和自然搭配，则维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "攀",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "攀登，高升",
+          "styleTags": [
+            "刚健",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "pān",
+          "tone": 1,
+          "element": "木",
+          "radical": "手",
+          "strokes": 19,
+          "standardIndex": 3456,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "retain-for-independent-check",
+        "label": "建议保留进入独立复核",
+        "reasonCode": "plausible-positive-meaning",
+        "rationale": "现有来源释义呈现正向品质、自然意象或较明确的人名用字可能性；仍需独立词典和真实姓名用例支持后才能批准。",
+        "requiredCheck": "核对规范词典义项、常见姓名用例、谐音与双字搭配。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "貂",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "华美、珍贵",
+          "styleTags": [
+            "清雅",
+            "富贵"
+          ]
+        },
+        "facts": {
+          "pinyin": "diāo",
+          "tone": 1,
+          "element": "金",
+          "radical": "豸",
+          "strokes": 12,
+          "standardIndex": 5226,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "企",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "企盼、企业",
+          "styleTags": [
+            "刚健",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "qǐ",
+          "tone": 3,
+          "element": "木",
+          "radical": "人",
+          "strokes": 6,
+          "standardIndex": 490,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "action-or-dependent-context",
+        "rationale": "主要义项偏动作、功能或依赖特定语境，单独作为人名用字时语义不稳定。",
+        "requiredCheck": "若不能证明独立人名义项和自然搭配，则维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "茸",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "初生柔软",
+          "styleTags": [
+            "灵动",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "rōng",
+          "tone": 1,
+          "element": "木",
+          "radical": "艹",
+          "strokes": 9,
+          "standardIndex": 1402,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "恤",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "体恤、怜悯",
+          "styleTags": [
+            "清雅",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "xù",
+          "tone": 4,
+          "element": "水",
+          "radical": "忄",
+          "strokes": 9,
+          "standardIndex": 1689,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "action-or-dependent-context",
+        "rationale": "主要义项偏动作、功能或依赖特定语境，单独作为人名用字时语义不稳定。",
+        "requiredCheck": "若不能证明独立人名义项和自然搭配，则维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "笋",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "竹笋、新生",
+          "styleTags": [
+            "清雅",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "sǔn",
+          "tone": 3,
+          "element": "木",
+          "radical": "竹",
+          "strokes": 10,
+          "standardIndex": 1953,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "涧",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "山涧清泉",
+          "styleTags": [
+            "清雅",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "jiàn",
+          "tone": 4,
+          "element": "水",
+          "radical": "氵",
+          "strokes": 10,
+          "standardIndex": 2082,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "retain-for-independent-check",
+        "label": "建议保留进入独立复核",
+        "reasonCode": "plausible-positive-meaning",
+        "rationale": "现有来源释义呈现正向品质、自然意象或较明确的人名用字可能性；仍需独立词典和真实姓名用例支持后才能批准。",
+        "requiredCheck": "核对规范词典义项、常见姓名用例、谐音与双字搭配。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "烹",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "烹饪，煮制",
+          "styleTags": [
+            "沉稳",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "pēng",
+          "tone": 1,
+          "element": "水",
+          "radical": "灬",
+          "strokes": 11,
+          "standardIndex": 2377,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "action-or-dependent-context",
+        "rationale": "主要义项偏动作、功能或依赖特定语境，单独作为人名用字时语义不稳定。",
+        "requiredCheck": "若不能证明独立人名义项和自然搭配，则维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "揽",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "包揽、拥抱",
+          "styleTags": [
+            "刚健",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "lǎn",
+          "tone": 3,
+          "element": "火",
+          "radical": "扌",
+          "strokes": 12,
+          "standardIndex": 2518,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "action-or-dependent-context",
+        "rationale": "主要义项偏动作、功能或依赖特定语境，单独作为人名用字时语义不稳定。",
+        "requiredCheck": "若不能证明独立人名义项和自然搭配，则维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "湃",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "澎湃，激荡",
+          "styleTags": [
+            "刚健",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "pài",
+          "tone": 4,
+          "element": "水",
+          "radical": "氵",
+          "strokes": 12,
+          "standardIndex": 2762,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "needs-disambiguation",
+        "label": "需进一步核验",
+        "reasonCode": "fixed-expression-polysemy-or-cultural-context",
+        "rationale": "可能依赖固定词组、多音多义、地名姓氏或特定文化意象，现有简短释义不足以支持批准或拒绝。",
+        "requiredCheck": "优先核对完整义项、读音、固定搭配来源和真实姓名使用情况。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "酿",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "酿造、酝酿",
+          "styleTags": [
+            "清雅",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "niàng",
+          "tone": 4,
+          "element": "木",
+          "radical": "酉",
+          "strokes": 14,
+          "standardIndex": 3088,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "action-or-dependent-context",
+        "rationale": "主要义项偏动作、功能或依赖特定语境，单独作为人名用字时语义不稳定。",
+        "requiredCheck": "若不能证明独立人名义项和自然搭配，则维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "篱",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "篱笆、田园",
+          "styleTags": [
+            "清雅",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "lí",
+          "tone": 2,
+          "element": "木",
+          "radical": "竹",
+          "strokes": 16,
+          "standardIndex": 3360,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "夙",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "早；平素",
+          "styleTags": [
+            "书卷",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "sù",
+          "tone": 4,
+          "element": "金",
+          "radical": "夕",
+          "strokes": 6,
+          "standardIndex": 3614,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "retain-for-independent-check",
+        "label": "建议保留进入独立复核",
+        "reasonCode": "plausible-positive-meaning",
+        "rationale": "现有来源释义呈现正向品质、自然意象或较明确的人名用字可能性；仍需独立词典和真实姓名用例支持后才能批准。",
+        "requiredCheck": "核对规范词典义项、常见姓名用例、谐音与双字搭配。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "讴",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "歌唱赞美",
+          "styleTags": [
+            "明朗",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "ōu",
+          "tone": 1,
+          "element": "土",
+          "radical": "讠",
+          "strokes": 6,
+          "standardIndex": 3631,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "retain-for-independent-check",
+        "label": "建议保留进入独立复核",
+        "reasonCode": "plausible-positive-meaning",
+        "rationale": "现有来源释义呈现正向品质、自然意象或较明确的人名用字可能性；仍需独立词典和真实姓名用例支持后才能批准。",
+        "requiredCheck": "核对规范词典义项、常见姓名用例、谐音与双字搭配。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "邸",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "府邸尊贵",
+          "styleTags": [
+            "富贵",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "dǐ",
+          "tone": 3,
+          "element": "火",
+          "radical": "阝",
+          "strokes": 7,
+          "standardIndex": 3743,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "诤",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "直言规劝",
+          "styleTags": [
+            "刚健",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "zhèng",
+          "tone": 4,
+          "element": "火",
+          "radical": "讠",
+          "strokes": 8,
+          "standardIndex": 4056,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "retain-for-independent-check",
+        "label": "建议保留进入独立复核",
+        "reasonCode": "plausible-positive-meaning",
+        "rationale": "现有来源释义呈现正向品质、自然意象或较明确的人名用字可能性；仍需独立词典和真实姓名用例支持后才能批准。",
+        "requiredCheck": "核对规范词典义项、常见姓名用例、谐音与双字搭配。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "柢",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "根基，稳固",
+          "styleTags": [
+            "沉稳",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "dǐ",
+          "tone": 3,
+          "element": "木",
+          "radical": "木",
+          "strokes": 9,
+          "standardIndex": 4154,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "retain-for-independent-check",
+        "label": "建议保留进入独立复核",
+        "reasonCode": "plausible-positive-meaning",
+        "rationale": "现有来源释义呈现正向品质、自然意象或较明确的人名用字可能性；仍需独立词典和真实姓名用例支持后才能批准。",
+        "requiredCheck": "核对规范词典义项、常见姓名用例、谐音与双字搭配。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "胄",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "甲胄后代",
+          "styleTags": [
+            "刚健",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "zhòu",
+          "tone": 4,
+          "element": "火",
+          "radical": "月",
+          "strokes": 9,
+          "standardIndex": 4208,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "咤",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "叱咤、怒斥",
+          "styleTags": [
+            "刚健"
+          ]
+        },
+        "facts": {
+          "pinyin": "zhà",
+          "tone": 4,
+          "element": "金",
+          "radical": "口",
+          "strokes": 9,
+          "standardIndex": 4226,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "sound-interjection-or-weak-expression",
+        "rationale": "主要联想是叫声、语气词、怒斥或微弱声态，作为默认推荐人名用字风险较高。",
+        "requiredCheck": "若无明确正向人名义项，维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "皈",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "皈依归向",
+          "styleTags": [
+            "清雅",
+            "仙气"
+          ]
+        },
+        "facts": {
+          "pinyin": "guī",
+          "tone": 1,
+          "element": "木",
+          "radical": "白",
+          "strokes": 9,
+          "standardIndex": 4265,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "action-or-dependent-context",
+        "rationale": "主要义项偏动作、功能或依赖特定语境，单独作为人名用字时语义不稳定。",
+        "requiredCheck": "若不能证明独立人名义项和自然搭配，则维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "矜",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "庄重怜悯",
+          "styleTags": [
+            "书卷",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "jīn",
+          "tone": 1,
+          "element": "木",
+          "radical": "矛",
+          "strokes": 9,
+          "standardIndex": 4392,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "needs-disambiguation",
+        "label": "需进一步核验",
+        "reasonCode": "fixed-expression-polysemy-or-cultural-context",
+        "rationale": "可能依赖固定词组、多音多义、地名姓氏或特定文化意象，现有简短释义不足以支持批准或拒绝。",
+        "requiredCheck": "优先核对完整义项、读音、固定搭配来源和真实姓名使用情况。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "钺",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "古代兵器",
+          "styleTags": [
+            "刚健",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "yuè",
+          "tone": 4,
+          "element": "金",
+          "radical": "钅",
+          "strokes": 10,
+          "standardIndex": 4532,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "颀",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "身材修长",
+          "styleTags": [
+            "清雅",
+            "刚健"
+          ]
+        },
+        "facts": {
+          "pinyin": "qí",
+          "tone": 2,
+          "element": "木",
+          "radical": "页",
+          "strokes": 10,
+          "standardIndex": 4583,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "retain-for-independent-check",
+        "label": "建议保留进入独立复核",
+        "reasonCode": "plausible-positive-meaning",
+        "rationale": "现有来源释义呈现正向品质、自然意象或较明确的人名用字可能性；仍需独立词典和真实姓名用例支持后才能批准。",
+        "requiredCheck": "核对规范词典义项、常见姓名用例、谐音与双字搭配。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "菖",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "菖蒲、驱邪",
+          "styleTags": [
+            "清雅",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "chāng",
+          "tone": 1,
+          "element": "木",
+          "radical": "艹",
+          "strokes": 11,
+          "standardIndex": 4753,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "needs-disambiguation",
+        "label": "需进一步核验",
+        "reasonCode": "fixed-expression-polysemy-or-cultural-context",
+        "rationale": "可能依赖固定词组、多音多义、地名姓氏或特定文化意象，现有简短释义不足以支持批准或拒绝。",
+        "requiredCheck": "优先核对完整义项、读音、固定搭配来源和真实姓名使用情况。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "萏",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "菡萏、荷花",
+          "styleTags": [
+            "清雅",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "dàn",
+          "tone": 4,
+          "element": "木",
+          "radical": "艹",
+          "strokes": 11,
+          "standardIndex": 4760,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "needs-disambiguation",
+        "label": "需进一步核验",
+        "reasonCode": "fixed-expression-polysemy-or-cultural-context",
+        "rationale": "可能依赖固定词组、多音多义、地名姓氏或特定文化意象，现有简短释义不足以支持批准或拒绝。",
+        "requiredCheck": "优先核对完整义项、读音、固定搭配来源和真实姓名使用情况。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "皑",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "洁白明亮",
+          "styleTags": [
+            "清雅",
+            "明朗"
+          ]
+        },
+        "facts": {
+          "pinyin": "ái",
+          "tone": 2,
+          "element": "火",
+          "radical": "白",
+          "strokes": 11,
+          "standardIndex": 4911,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "retain-for-independent-check",
+        "label": "建议保留进入独立复核",
+        "reasonCode": "plausible-positive-meaning",
+        "rationale": "现有来源释义呈现正向品质、自然意象或较明确的人名用字可能性；仍需独立词典和真实姓名用例支持后才能批准。",
+        "requiredCheck": "核对规范词典义项、常见姓名用例、谐音与双字搭配。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "喃",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "喃喃细语",
+          "styleTags": [
+            "温婉",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "nán",
+          "tone": 2,
+          "element": "火",
+          "radical": "口",
+          "strokes": 12,
+          "standardIndex": 5130,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "sound-interjection-or-weak-expression",
+        "rationale": "主要联想是叫声、语气词、怒斥或微弱声态，作为默认推荐人名用字风险较高。",
+        "requiredCheck": "若无明确正向人名义项，维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "嵋",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "峨眉山之秀",
+          "styleTags": [
+            "清雅",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "méi",
+          "tone": 2,
+          "element": "土",
+          "radical": "山",
+          "strokes": 12,
+          "standardIndex": 5176,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "retain-for-independent-check",
+        "label": "建议保留进入独立复核",
+        "reasonCode": "plausible-positive-meaning",
+        "rationale": "现有来源释义呈现正向品质、自然意象或较明确的人名用字可能性；仍需独立词典和真实姓名用例支持后才能批准。",
+        "requiredCheck": "核对规范词典义项、常见姓名用例、谐音与双字搭配。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "腴",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "丰腴肥美",
+          "styleTags": [
+            "清雅",
+            "富贵"
+          ]
+        },
+        "facts": {
+          "pinyin": "yú",
+          "tone": 2,
+          "element": "金",
+          "radical": "月",
+          "strokes": 12,
+          "standardIndex": 5231,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "弼",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "辅佐，辅助",
+          "styleTags": [
+            "刚健",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "bì",
+          "tone": 4,
+          "element": "水",
+          "radical": "弓",
+          "strokes": 12,
+          "standardIndex": 5317,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "retain-for-independent-check",
+        "label": "建议保留进入独立复核",
+        "reasonCode": "plausible-positive-meaning",
+        "rationale": "现有来源释义呈现正向品质、自然意象或较明确的人名用字可能性；仍需独立词典和真实姓名用例支持后才能批准。",
+        "requiredCheck": "核对规范词典义项、常见姓名用例、谐音与双字搭配。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "跹",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "轻盈飞舞",
+          "styleTags": [
+            "灵动",
+            "仙气"
+          ]
+        },
+        "facts": {
+          "pinyin": "xiān",
+          "tone": 1,
+          "element": "金",
+          "radical": "足",
+          "strokes": 13,
+          "standardIndex": 5457,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "needs-disambiguation",
+        "label": "需进一步核验",
+        "reasonCode": "fixed-expression-polysemy-or-cultural-context",
+        "rationale": "可能依赖固定词组、多音多义、地名姓氏或特定文化意象，现有简短释义不足以支持批准或拒绝。",
+        "requiredCheck": "优先核对完整义项、读音、固定搭配来源和真实姓名使用情况。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "馐",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "美食，佳肴",
+          "styleTags": [
+            "清雅",
+            "富贵"
+          ]
+        },
+        "facts": {
+          "pinyin": "xiū",
+          "tone": 1,
+          "element": "金",
+          "radical": "饣",
+          "strokes": 13,
+          "standardIndex": 5537,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "髦",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "英俊、时尚",
+          "styleTags": [
+            "刚健",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "máo",
+          "tone": 2,
+          "element": "水",
+          "radical": "髟",
+          "strokes": 14,
+          "standardIndex": 5630,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "needs-disambiguation",
+        "label": "需进一步核验",
+        "reasonCode": "fixed-expression-polysemy-or-cultural-context",
+        "rationale": "可能依赖固定词组、多音多义、地名姓氏或特定文化意象，现有简短释义不足以支持批准或拒绝。",
+        "requiredCheck": "优先核对完整义项、读音、固定搭配来源和真实姓名使用情况。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "犒",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "犒劳奖赏",
+          "styleTags": [
+            "刚健",
+            "明朗"
+          ]
+        },
+        "facts": {
+          "pinyin": "kào",
+          "tone": 4,
+          "element": "木",
+          "radical": "牜",
+          "strokes": 14,
+          "standardIndex": 5741,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "action-or-dependent-context",
+        "rationale": "主要义项偏动作、功能或依赖特定语境，单独作为人名用字时语义不稳定。",
+        "requiredCheck": "若不能证明独立人名义项和自然搭配，则维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "箐",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "山间竹林",
+          "styleTags": [
+            "清雅",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "qìng",
+          "tone": 4,
+          "element": "木",
+          "radical": "竹",
+          "strokes": 14,
+          "standardIndex": 5742,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "needs-disambiguation",
+        "label": "需进一步核验",
+        "reasonCode": "fixed-expression-polysemy-or-cultural-context",
+        "rationale": "可能依赖固定词组、多音多义、地名姓氏或特定文化意象，现有简短释义不足以支持批准或拒绝。",
+        "requiredCheck": "优先核对完整义项、读音、固定搭配来源和真实姓名使用情况。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "銮",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "皇帝车铃",
+          "styleTags": [
+            "富贵",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "luán",
+          "tone": 2,
+          "element": "金",
+          "radical": "金",
+          "strokes": 14,
+          "standardIndex": 5778,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "needs-disambiguation",
+        "label": "需进一步核验",
+        "reasonCode": "fixed-expression-polysemy-or-cultural-context",
+        "rationale": "可能依赖固定词组、多音多义、地名姓氏或特定文化意象，现有简短释义不足以支持批准或拒绝。",
+        "requiredCheck": "优先核对完整义项、读音、固定搭配来源和真实姓名使用情况。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "踔",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "腾跃、卓异",
+          "styleTags": [
+            "刚健",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "chuō",
+          "tone": 1,
+          "element": "火",
+          "radical": "足",
+          "strokes": 15,
+          "standardIndex": 5911,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "needs-disambiguation",
+        "label": "需进一步核验",
+        "reasonCode": "fixed-expression-polysemy-or-cultural-context",
+        "rationale": "可能依赖固定词组、多音多义、地名姓氏或特定文化意象，现有简短释义不足以支持批准或拒绝。",
+        "requiredCheck": "优先核对完整义项、读音、固定搭配来源和真实姓名使用情况。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "踵",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "脚后跟、继承",
+          "styleTags": [
+            "沉稳",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "zhǒng",
+          "tone": 3,
+          "element": "火",
+          "radical": "足",
+          "strokes": 16,
+          "standardIndex": 6093,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "膳",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "膳食、饮食",
+          "styleTags": [
+            "富贵",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "shàn",
+          "tone": 4,
+          "element": "金",
+          "radical": "月",
+          "strokes": 16,
+          "standardIndex": 6136,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "鹭",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "白鹭，高洁",
+          "styleTags": [
+            "清雅",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "lù",
+          "tone": 4,
+          "element": "火",
+          "radical": "鸟",
+          "strokes": 18,
+          "standardIndex": 6334,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "retain-for-independent-check",
+        "label": "建议保留进入独立复核",
+        "reasonCode": "plausible-positive-meaning",
+        "rationale": "现有来源释义呈现正向品质、自然意象或较明确的人名用字可能性；仍需独立词典和真实姓名用例支持后才能批准。",
+        "requiredCheck": "核对规范词典义项、常见姓名用例、谐音与双字搭配。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "镯",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "手镯，饰品",
+          "styleTags": [
+            "温婉",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "zhuó",
+          "tone": 2,
+          "element": "金",
+          "radical": "钅",
+          "strokes": 18,
+          "standardIndex": 6346,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "鎏",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "金纯美，镀金",
+          "styleTags": [
+            "富贵",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "liú",
+          "tone": 2,
+          "element": "金",
+          "radical": "金",
+          "strokes": 18,
+          "standardIndex": 6362,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "retain-for-independent-check",
+        "label": "建议保留进入独立复核",
+        "reasonCode": "plausible-positive-meaning",
+        "rationale": "现有来源释义呈现正向品质、自然意象或较明确的人名用字可能性；仍需独立词典和真实姓名用例支持后才能批准。",
+        "requiredCheck": "核对规范词典义项、常见姓名用例、谐音与双字搭配。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "鬟",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "环形发",
+          "styleTags": [
+            "温婉",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "huán",
+          "tone": 2,
+          "element": "水",
+          "radical": "髟",
+          "strokes": 23,
+          "standardIndex": 6477,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "衢",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "大路通达",
+          "styleTags": [
+            "清雅",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "qú",
+          "tone": 2,
+          "element": "木",
+          "radical": "行",
+          "strokes": 24,
+          "standardIndex": 6489,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "needs-disambiguation",
+        "label": "需进一步核验",
+        "reasonCode": "fixed-expression-polysemy-or-cultural-context",
+        "rationale": "可能依赖固定词组、多音多义、地名姓氏或特定文化意象，现有简短释义不足以支持批准或拒绝。",
+        "requiredCheck": "优先核对完整义项、读音、固定搭配来源和真实姓名使用情况。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "铖",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "人名用字，兵器",
+          "styleTags": [
+            "刚健",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "chéng",
+          "tone": 2,
+          "element": "金",
+          "radical": "钅",
+          "strokes": 11,
+          "standardIndex": 7181,
+          "standardLevel": 3
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "retain-for-independent-check",
+        "label": "建议保留进入独立复核",
+        "reasonCode": "plausible-positive-meaning",
+        "rationale": "现有来源释义呈现正向品质、自然意象或较明确的人名用字可能性；仍需独立词典和真实姓名用例支持后才能批准。",
+        "requiredCheck": "核对规范词典义项、常见姓名用例、谐音与双字搭配。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "孩",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 0,
+          "meaning": "孩子童真",
+          "styleTags": [
+            "温婉",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "hái",
+          "tone": 2,
+          "element": "水",
+          "radical": "子",
+          "strokes": 9,
+          "standardIndex": 1730,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "恳",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 1,
+          "meaning": "诚恳、恳切",
+          "styleTags": [
+            "质朴",
+            "温婉"
+          ]
+        },
+        "facts": {
+          "pinyin": "kěn",
+          "tone": 3,
+          "element": "木",
+          "radical": "心",
+          "strokes": 10,
+          "standardIndex": 2130,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "retain-for-independent-check",
+        "label": "建议保留进入独立复核",
+        "reasonCode": "plausible-positive-meaning",
+        "rationale": "现有来源释义呈现正向品质、自然意象或较明确的人名用字可能性；仍需独立词典和真实姓名用例支持后才能批准。",
+        "requiredCheck": "核对规范词典义项、常见姓名用例、谐音与双字搭配。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "伙",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "伙伴、合作",
+          "styleTags": [
+            "质朴",
+            "刚健"
+          ]
+        },
+        "facts": {
+          "pinyin": "huǒ",
+          "tone": 3,
+          "element": "火",
+          "radical": "亻",
+          "strokes": 6,
+          "standardIndex": 475,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "苞",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "花苞、含苞",
+          "styleTags": [
+            "灵动",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "bāo",
+          "tone": 1,
+          "element": "木",
+          "radical": "艹",
+          "strokes": 8,
+          "standardIndex": 1009,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "needs-disambiguation",
+        "label": "需进一步核验",
+        "reasonCode": "fixed-expression-polysemy-or-cultural-context",
+        "rationale": "可能依赖固定词组、多音多义、地名姓氏或特定文化意象，现有简短释义不足以支持批准或拒绝。",
+        "requiredCheck": "优先核对完整义项、读音、固定搭配来源和真实姓名使用情况。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "禀",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "承受；禀赋",
+          "styleTags": [
+            "书卷",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "bǐng",
+          "tone": 3,
+          "element": "水",
+          "radical": "示",
+          "strokes": 13,
+          "standardIndex": 2987,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "retain-for-independent-check",
+        "label": "建议保留进入独立复核",
+        "reasonCode": "plausible-positive-meaning",
+        "rationale": "现有来源释义呈现正向品质、自然意象或较明确的人名用字可能性；仍需独立词典和真实姓名用例支持后才能批准。",
+        "requiredCheck": "核对规范词典义项、常见姓名用例、谐音与双字搭配。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "嘹",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "声音响亮清脆",
+          "styleTags": [
+            "明朗",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "liáo",
+          "tone": 2,
+          "element": "火",
+          "radical": "口",
+          "strokes": 15,
+          "standardIndex": 3239,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "sound-interjection-or-weak-expression",
+        "rationale": "主要联想是叫声、语气词、怒斥或微弱声态，作为默认推荐人名用字风险较高。",
+        "requiredCheck": "若无明确正向人名义项，维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "赡",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "富足、充裕",
+          "styleTags": [
+            "富贵",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "shàn",
+          "tone": 4,
+          "element": "火",
+          "radical": "贝",
+          "strokes": 17,
+          "standardIndex": 3414,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "action-or-dependent-context",
+        "rationale": "主要义项偏动作、功能或依赖特定语境，单独作为人名用字时语义不稳定。",
+        "requiredCheck": "若不能证明独立人名义项和自然搭配，则维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "玎",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "玉石声响",
+          "styleTags": [
+            "灵动",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "dīng",
+          "tone": 1,
+          "element": "火",
+          "radical": "王",
+          "strokes": 6,
+          "standardIndex": 3565,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "retain-for-independent-check",
+        "label": "建议保留进入独立复核",
+        "reasonCode": "plausible-positive-meaning",
+        "rationale": "现有来源释义呈现正向品质、自然意象或较明确的人名用字可能性；仍需独立词典和真实姓名用例支持后才能批准。",
+        "requiredCheck": "核对规范词典义项、常见姓名用例、谐音与双字搭配。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "抉",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "抉择、挑选",
+          "styleTags": [
+            "书卷",
+            "刚健"
+          ]
+        },
+        "facts": {
+          "pinyin": "jué",
+          "tone": 2,
+          "element": "火",
+          "radical": "扌",
+          "strokes": 7,
+          "standardIndex": 3657,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "action-or-dependent-context",
+        "rationale": "主要义项偏动作、功能或依赖特定语境，单独作为人名用字时语义不稳定。",
+        "requiredCheck": "若不能证明独立人名义项和自然搭配，则维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "呦",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "鹿鸣声",
+          "styleTags": [
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "yōu",
+          "tone": 1,
+          "element": "土",
+          "radical": "口",
+          "strokes": 8,
+          "standardIndex": 3921,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "sound-interjection-or-weak-expression",
+        "rationale": "主要联想是叫声、语气词、怒斥或微弱声态，作为默认推荐人名用字风险较高。",
+        "requiredCheck": "若无明确正向人名义项，维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "饴",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "甘甜，麦芽糖",
+          "styleTags": [
+            "温婉",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "yí",
+          "tone": 2,
+          "element": "土",
+          "radical": "饣",
+          "strokes": 8,
+          "standardIndex": 3993,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "庖",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "厨房，厨师",
+          "styleTags": [
+            "书卷",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "páo",
+          "tone": 2,
+          "element": "水",
+          "radical": "广",
+          "strokes": 8,
+          "standardIndex": 3996,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "咩",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "羊叫声",
+          "styleTags": [
+            "灵动",
+            "温婉"
+          ]
+        },
+        "facts": {
+          "pinyin": "miē",
+          "tone": 1,
+          "element": "水",
+          "radical": "口",
+          "strokes": 9,
+          "standardIndex": 4225,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "sound-interjection-or-weak-expression",
+        "rationale": "主要联想是叫声、语气词、怒斥或微弱声态，作为默认推荐人名用字风险较高。",
+        "requiredCheck": "若无明确正向人名义项，维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "狩",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "狩猎、征伐",
+          "styleTags": [
+            "刚健",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "shòu",
+          "tone": 4,
+          "element": "金",
+          "radical": "犭",
+          "strokes": 9,
+          "standardIndex": 4294,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "action-or-dependent-context",
+        "rationale": "主要义项偏动作、功能或依赖特定语境，单独作为人名用字时语义不稳定。",
+        "requiredCheck": "若不能证明独立人名义项和自然搭配，则维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "徕",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "招徕、到来",
+          "styleTags": [
+            "清雅",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "lái",
+          "tone": 2,
+          "element": "火",
+          "radical": "彳",
+          "strokes": 10,
+          "standardIndex": 4584,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "needs-disambiguation",
+        "label": "需进一步核验",
+        "reasonCode": "fixed-expression-polysemy-or-cultural-context",
+        "rationale": "可能依赖固定词组、多音多义、地名姓氏或特定文化意象，现有简短释义不足以支持批准或拒绝。",
+        "requiredCheck": "优先核对完整义项、读音、固定搭配来源和真实姓名使用情况。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "胭",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "胭脂红润",
+          "styleTags": [
+            "温婉",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "yān",
+          "tone": 1,
+          "element": "土",
+          "radical": "月",
+          "strokes": 10,
+          "standardIndex": 4592,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "脍",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "细切鱼肉",
+          "styleTags": [
+            "书卷",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "kuài",
+          "tone": 4,
+          "element": "木",
+          "radical": "月",
+          "strokes": 10,
+          "standardIndex": 4593,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "谌",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "真诚可信",
+          "styleTags": [
+            "沉稳",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "chén",
+          "tone": 2,
+          "element": "金",
+          "radical": "讠",
+          "strokes": 11,
+          "standardIndex": 4994,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "retain-for-independent-check",
+        "label": "建议保留进入独立复核",
+        "reasonCode": "plausible-positive-meaning",
+        "rationale": "现有来源释义呈现正向品质、自然意象或较明确的人名用字可能性；仍需独立词典和真实姓名用例支持后才能批准。",
+        "requiredCheck": "核对规范词典义项、常见姓名用例、谐音与双字搭配。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "啾",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "鸟鸣声",
+          "styleTags": [
+            "灵动",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "jiū",
+          "tone": 1,
+          "element": "木",
+          "radical": "口",
+          "strokes": 12,
+          "standardIndex": 5154,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "sound-interjection-or-weak-expression",
+        "rationale": "主要联想是叫声、语气词、怒斥或微弱声态，作为默认推荐人名用字风险较高。",
+        "requiredCheck": "若无明确正向人名义项，维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "犊",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "牛犊、初生",
+          "styleTags": [
+            "质朴",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "dú",
+          "tone": 2,
+          "element": "金",
+          "radical": "牜",
+          "strokes": 12,
+          "standardIndex": 5196,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "飨",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "宴请、祭祀",
+          "styleTags": [
+            "书卷",
+            "富贵"
+          ]
+        },
+        "facts": {
+          "pinyin": "xiǎng",
+          "tone": 3,
+          "element": "水",
+          "radical": "飠",
+          "strokes": 12,
+          "standardIndex": 5338,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "action-or-dependent-context",
+        "rationale": "主要义项偏动作、功能或依赖特定语境，单独作为人名用字时语义不稳定。",
+        "requiredCheck": "若不能证明独立人名义项和自然搭配，则维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "嘤",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "鸟鸣声，细弱貌",
+          "styleTags": [
+            "灵动",
+            "温婉"
+          ]
+        },
+        "facts": {
+          "pinyin": "yīng",
+          "tone": 1,
+          "element": "土",
+          "radical": "口",
+          "strokes": 14,
+          "standardIndex": 5719,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "sound-interjection-or-weak-expression",
+        "rationale": "主要联想是叫声、语气词、怒斥或微弱声态，作为默认推荐人名用字风险较高。",
+        "requiredCheck": "若无明确正向人名义项，维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "嶂",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "直立山峰",
+          "styleTags": [
+            "刚健",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "zhàng",
+          "tone": 4,
+          "element": "土",
+          "radical": "山",
+          "strokes": 14,
+          "standardIndex": 5726,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "needs-disambiguation",
+        "label": "需进一步核验",
+        "reasonCode": "fixed-expression-polysemy-or-cultural-context",
+        "rationale": "可能依赖固定词组、多音多义、地名姓氏或特定文化意象，现有简短释义不足以支持批准或拒绝。",
+        "requiredCheck": "优先核对完整义项、读音、固定搭配来源和真实姓名使用情况。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "箬",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "竹叶，箬竹",
+          "styleTags": [
+            "清雅",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "ruò",
+          "tone": 4,
+          "element": "木",
+          "radical": "竹",
+          "strokes": 14,
+          "standardIndex": 5747,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "needs-disambiguation",
+        "label": "需进一步核验",
+        "reasonCode": "fixed-expression-polysemy-or-cultural-context",
+        "rationale": "可能依赖固定词组、多音多义、地名姓氏或特定文化意象，现有简短释义不足以支持批准或拒绝。",
+        "requiredCheck": "优先核对完整义项、读音、固定搭配来源和真实姓名使用情况。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "箜",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "箜篌，乐器",
+          "styleTags": [
+            "灵动",
+            "仙气"
+          ]
+        },
+        "facts": {
+          "pinyin": "kōng",
+          "tone": 1,
+          "element": "木",
+          "radical": "竹",
+          "strokes": 14,
+          "standardIndex": 5751,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "needs-disambiguation",
+        "label": "需进一步核验",
+        "reasonCode": "fixed-expression-polysemy-or-cultural-context",
+        "rationale": "可能依赖固定词组、多音多义、地名姓氏或特定文化意象，现有简短释义不足以支持批准或拒绝。",
+        "requiredCheck": "优先核对完整义项、读音、固定搭配来源和真实姓名使用情况。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "鲛",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "鲛人，神话",
+          "styleTags": [
+            "灵动",
+            "仙气"
+          ]
+        },
+        "facts": {
+          "pinyin": "jiāo",
+          "tone": 1,
+          "element": "木",
+          "radical": "鱼",
+          "strokes": 14,
+          "standardIndex": 5771,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "needs-disambiguation",
+        "label": "需进一步核验",
+        "reasonCode": "fixed-expression-polysemy-or-cultural-context",
+        "rationale": "可能依赖固定词组、多音多义、地名姓氏或特定文化意象，现有简短释义不足以支持批准或拒绝。",
+        "requiredCheck": "优先核对完整义项、读音、固定搭配来源和真实姓名使用情况。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "蹁",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "轻盈旋转",
+          "styleTags": [
+            "灵动",
+            "仙气"
+          ]
+        },
+        "facts": {
+          "pinyin": "pián",
+          "tone": 2,
+          "element": "水",
+          "radical": "足",
+          "strokes": 16,
+          "standardIndex": 6096,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "needs-disambiguation",
+        "label": "需进一步核验",
+        "reasonCode": "fixed-expression-polysemy-or-cultural-context",
+        "rationale": "可能依赖固定词组、多音多义、地名姓氏或特定文化意象，现有简短释义不足以支持批准或拒绝。",
+        "requiredCheck": "优先核对完整义项、读音、固定搭配来源和真实姓名使用情况。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "篝",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "竹笼，篝火",
+          "styleTags": [
+            "明朗",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "gōu",
+          "tone": 1,
+          "element": "木",
+          "radical": "竹",
+          "strokes": 16,
+          "standardIndex": 6124,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "嬴",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "姓氏；盈余",
+          "styleTags": [
+            "富贵",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "yíng",
+          "tone": 2,
+          "element": "木",
+          "radical": "女",
+          "strokes": 16,
+          "standardIndex": 6164,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "needs-disambiguation",
+        "label": "需进一步核验",
+        "reasonCode": "fixed-expression-polysemy-or-cultural-context",
+        "rationale": "可能依赖固定词组、多音多义、地名姓氏或特定文化意象，现有简短释义不足以支持批准或拒绝。",
+        "requiredCheck": "优先核对完整义项、读音、固定搭配来源和真实姓名使用情况。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "燧",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "钻木取火",
+          "styleTags": [
+            "刚健",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "suì",
+          "tone": 4,
+          "element": "火",
+          "radical": "火",
+          "strokes": 16,
+          "standardIndex": 6173,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "needs-disambiguation",
+        "label": "需进一步核验",
+        "reasonCode": "fixed-expression-polysemy-or-cultural-context",
+        "rationale": "可能依赖固定词组、多音多义、地名姓氏或特定文化意象，现有简短释义不足以支持批准或拒绝。",
+        "requiredCheck": "优先核对完整义项、读音、固定搭配来源和真实姓名使用情况。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "濂",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "清廉濂溪",
+          "styleTags": [
+            "清雅",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "lián",
+          "tone": 2,
+          "element": "水",
+          "radical": "氵",
+          "strokes": 16,
+          "standardIndex": 6181,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "guidance": {
+        "suggestion": "retain-for-independent-check",
+        "label": "建议保留进入独立复核",
+        "reasonCode": "plausible-positive-meaning",
+        "rationale": "现有来源释义呈现正向品质、自然意象或较明确的人名用字可能性；仍需独立词典和真实姓名用例支持后才能批准。",
+        "requiredCheck": "核对规范词典义项、常见姓名用例、谐音与双字搭配。",
+        "finalDecisionWritten": false
+      }
+    },
+    {
+      "char": "鸷",
+      "evidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "凶猛的鸟",
+          "styleTags": [
+            "刚健"
+          ]
+        },
+        "facts": {
+          "pinyin": "zhì",
+          "tone": 4,
+          "element": "火",
+          "radical": "鸟",
+          "strokes": 11,
+          "standardIndex": 4732,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold",
+          "meaning-risk-keyword"
+        ]
+      },
+      "guidance": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "explicit-aggressive-meaning",
+        "rationale": "来源释义直接包含凶猛联想，且已命中含义风险词。",
+        "requiredCheck": "默认拒绝；不得仅因来源 sentiment=positive 而批准。",
+        "finalDecisionWritten": false
+      }
+    }
+  ]
+}

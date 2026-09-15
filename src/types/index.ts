@@ -1,9 +1,13 @@
+export type { BaziRelation, BaziRelationKind } from './relations';
 export type {
   Bazi,
   BaziAnalysis,
   BaziInputValues,
   BaziStrength,
   BaziStrengthAnalysis,
+  BaziStrengthV2,
+  BasicClimate,
+  BasicTiaohouAnalysis,
   CompleteBaziAnalysis,
   EarthlyBranch,
   ElementRelation,
@@ -11,11 +15,15 @@ export type {
   FiveElement,
   FiveElementDistribution,
   HeavenlyStem,
+  HiddenStem,
   HiddenStemDetail,
+  HiddenStemRole,
   Pillar,
   PillarAnalysis,
   PillarKey,
   StrengthBreakdown,
+  StrengthEvidence,
+  StrengthEvidenceType,
   YinYang,
 } from './bazi';
 export type {
@@ -32,6 +40,9 @@ export type {
   CharacterGender,
   CharacterPronunciation,
   NamingCharacter,
+  NamingCharacterV2,
+  StandardCharacterEntry,
+  StandardCharacterLibrary,
 } from './character';
 export type {
   ClassicReference,
@@ -41,11 +52,20 @@ export type {
   GeneratedName,
   Gender,
   HomophoneAssessment,
+  HomophoneMatch,
   InputMode,
   NameScoreBreakdown,
   NameScoreDimension,
   NamingHistoryRecord,
+  NamingPreference,
   NamingRequest,
+  NamingStyle,
   PhoneticAssessment,
   RecentNameViewRecord,
+  SemanticPairAssessment,
 } from './naming';
+export type {
+  BaziRule,
+  RuleReference,
+  RuleSourceType,
+} from './rules';

@@ -1,4 +1,5 @@
 import type { PhoneticAssessment } from '../../types';
+import { PHONETIC_SCORE } from '../../config/namingScore';
 
 const INITIALS = [
   'zh',
@@ -71,15 +72,18 @@ export function assessPhonetics(
   const finals = parts.map(({ final }) => final);
   const plains = parts.map(({ plain }) => plain);
   const notes: string[] = [];
-  let score = 100;
+  let score = PHONETIC_SCORE.base;
 
-  if (tones.length >= 3 && new Set(tones).size === 1) {
-    score -= 24;
+  if (
+    tones.length >= PHONETIC_SCORE.allSameToneMinimumLength &&
+    new Set(tones).size === 1
+  ) {
+    score -= PHONETIC_SCORE.allSameTonePenalty;
     notes.push('姓名连续三个字为同声调，节奏变化较少。');
   } else {
     const repeatedTones = countAdjacentMatches(tones);
     if (repeatedTones) {
-      score -= repeatedTones * 8;
+      score -= repeatedTones * PHONETIC_SCORE.repeatedTonePenalty;
       notes.push(`有 ${repeatedTones} 处相邻同声调，已适度降分。`);
     }
   }
@@ -90,19 +94,19 @@ export function assessPhonetics(
     0,
   );
   if (repeatedInitials) {
-    score -= repeatedInitials * 6;
+    score -= repeatedInitials * PHONETIC_SCORE.repeatedInitialPenalty;
     notes.push(`有 ${repeatedInitials} 处相邻声母重复。`);
   }
 
   const repeatedFinals = countAdjacentMatches(finals);
   if (repeatedFinals) {
-    score -= repeatedFinals * 10;
+    score -= repeatedFinals * PHONETIC_SCORE.repeatedFinalPenalty;
     notes.push(`有 ${repeatedFinals} 处相邻韵母重复。`);
   }
 
   const repeatedSyllables = countAdjacentMatches(plains);
   if (repeatedSyllables) {
-    score -= repeatedSyllables * 12;
+    score -= repeatedSyllables * PHONETIC_SCORE.repeatedSyllablePenalty;
     notes.push('存在相邻同音节，连读辨识度较低。');
   }
 
@@ -111,7 +115,7 @@ export function assessPhonetics(
   }
 
   return {
-    score: Math.max(40, score),
+    score: Math.max(PHONETIC_SCORE.minimum, score),
     initials,
     finals,
     notes,

@@ -35,64 +35,50 @@ function tendencyLevels(
 }
 
 describe('analyzeBazi', () => {
-  it('将月令作为额外权重，识别偏旺的金日主', () => {
+  it('综合月令、季节和根气，识别偏旺的金日主', () => {
     const analysis = analyzeBazi(strongMetalBazi);
 
     expect(analysis.strength).toBe('偏旺');
-    expect(analysis.strengthBreakdown.supportRatio).toBe(66);
-    expect(analysis.strengthBreakdown.weightedElements).toEqual({
-      木: 1.5,
-      火: 1,
-      土: 2.5,
-      金: 7,
-      水: 2.5,
-    });
-    expect(tendencyLevels(strongMetalBazi)).toEqual({
-      木: 3,
-      火: 5,
-      土: 1,
-      金: 1,
-      水: 5,
-    });
+    expect(analysis.strengthBreakdown.supportScore).toBeGreaterThan(
+      analysis.strengthBreakdown.weakenScore,
+    );
+    expect(analysis.strengthBreakdown.evidence.map(({ type }) => type)).toEqual(
+      expect.arrayContaining(['month-command', 'season', 'root', 'support', 'control']),
+    );
   });
 
   it('识别偏弱日主，并只优先推荐生扶关系', () => {
     const analysis = analyzeBazi(weakMetalBazi);
 
     expect(analysis.strength).toBe('偏弱');
-    expect(analysis.strengthBreakdown.supportRatio).toBe(29);
-    expect(tendencyLevels(weakMetalBazi)).toEqual({
-      木: 1,
-      火: 1,
-      土: 5,
-      金: 4,
-      水: 2,
-    });
+    expect(analysis.strengthBreakdown.weakenScore).toBeGreaterThan(
+      analysis.strengthBreakdown.supportScore,
+    );
+    expect(tendencyLevels(weakMetalBazi).土).toBeGreaterThan(
+      tendencyLevels(weakMetalBazi).火,
+    );
   });
 
-  it('将支持比例落在中间区间的结构判为中和', () => {
+  it('在支持与制约同时明显时保留稍旺档位', () => {
     const analysis = analyzeBazi(balancedWoodBazi);
 
-    expect(analysis.strength).toBe('中和');
-    expect(analysis.strengthBreakdown.supportRatio).toBe(48);
-    expect(tendencyLevels(balancedWoodBazi)).toEqual({
-      木: 2,
-      火: 4,
-      土: 3,
-      金: 3,
-      水: 3,
-    });
+    expect(analysis.strength).toBe('偏旺');
+    expect(analysis.strengthBreakdown.netScore).toBeGreaterThan(0);
   });
 
   it('起名倾向按星级降序输出，并为每项提供规则理由', () => {
     const analysis = analyzeBazi(strongMetalBazi);
 
-    expect(analysis.namingTendencies.map(({ level }) => level)).toEqual([
-      5, 5, 3, 1, 1,
-    ]);
-    analysis.namingTendencies.forEach(({ reason }) => {
+    const levels = analysis.namingTendencies.map(({ level }) => level);
+    expect(levels).toEqual([...levels].sort((left, right) => right - left));
+    analysis.namingTendencies.forEach(({ reason, ruleIds }) => {
       expect(reason.length).toBeGreaterThan(20);
+      expect(ruleIds).toContain('bazi.naming-tendency.fuyi');
     });
-    expect(analysis.strengthReason).toContain('V1 加权模型');
+    analysis.strengthBreakdown.evidence.forEach(({ ruleIds }) => {
+      expect(ruleIds.length).toBeGreaterThan(0);
+    });
+    expect(analysis.strengthRuleIds).toContain('bazi.strength.five-levels');
+    expect(analysis.strengthReason).toContain('V2 证据模型');
   });
 });

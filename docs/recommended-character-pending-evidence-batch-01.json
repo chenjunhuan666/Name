@@ -1,0 +1,4855 @@
+{
+  "schemaVersion": 1,
+  "batchId": "positive-below-production-threshold-01",
+  "sources": [
+    {
+      "path": "Unihan_Readings.txt",
+      "sha256": "575e69c9ad85a4737a889a4f94cbd987042a90a1a6cc16dd3f4ed995c715b17c"
+    },
+    {
+      "path": "name-cedict-2026-09-03.txt",
+      "sha256": "c211a1138cdc1194b492532c4ac3eb3a7bb786cbba2165ba885f91d34f266c88"
+    },
+    {
+      "path": "docs/recommended-character-review-batch-01.json",
+      "sha256": "35930f86164b1680fd5d690f7d513d17c5e51597a47556ae8429e3ec483e3807"
+    },
+    {
+      "path": "docs/recommended-character-review.json",
+      "sha256": "64d93b706de5cda4fe979fc32bdd9d5c661b0a929e25b536043b25cadd072846"
+    },
+    {
+      "path": "docs/recommended-character-review-guidance-batch-01.json",
+      "sha256": "60a9e233ca4508c47d2177c325ab4d12eb2bd5447a70653f923e8433a8b151ab"
+    }
+  ],
+  "attribution": {
+    "unihan": "Unicode Unihan 17.0.0; https://www.unicode.org/terms_of_use.html",
+    "cedict": "MDBG CC-CEDICT 2026-09-03; CC BY-SA 4.0; https://www.mdbg.net/chinese/dictionary?page=cc-cedict"
+  },
+  "policy": {
+    "nonBinding": true,
+    "runtimeEffect": "none",
+    "decisionsChanged": 0,
+    "boundary": "Dictionary evidence only; no automatic semantic alignment, naming suitability or exhaustive alternative pronunciation claim"
+  },
+  "counts": {
+    "pending": 81,
+    "excludedApproved": 2,
+    "excludedRejected": 0,
+    "withFlags": 1,
+    "withoutFlags": 80
+  },
+  "entries": [
+    {
+      "char": "懂",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 0,
+          "meaning": "懂事、明白",
+          "styleTags": [
+            "清雅",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "dǒng",
+          "tone": 3,
+          "element": "木",
+          "radical": "忄",
+          "strokes": 15,
+          "standardIndex": 3300,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "understand, comprehend",
+        "readings": [
+          "dǒng"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "懂",
+          "simplified": "懂",
+          "pinyin": "dong3",
+          "definitions": [
+            "to understand",
+            "to comprehend"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "dong3"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "action-or-dependent-context",
+        "rationale": "主要义项偏动作、功能或依赖特定语境，单独作为人名用字时语义不稳定。",
+        "requiredCheck": "若不能证明独立人名义项和自然搭配，则维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "充",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "充实、充满",
+          "styleTags": [
+            "刚健",
+            "明朗"
+          ]
+        },
+        "facts": {
+          "pinyin": "chōng",
+          "tone": 1,
+          "element": "土",
+          "radical": "亠",
+          "strokes": 6,
+          "standardIndex": 525,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "fill, be full, supply",
+        "readings": [
+          "chōng"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "充",
+          "simplified": "充",
+          "pinyin": "chong1",
+          "definitions": [
+            "sufficient; full",
+            "to fill",
+            "to serve as; to act as",
+            "to act falsely as; to pose as"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "chong1"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "retain-for-independent-check",
+        "label": "建议保留进入独立复核",
+        "reasonCode": "plausible-positive-meaning",
+        "rationale": "现有来源释义呈现正向品质、自然意象或较明确的人名用字可能性；仍需独立词典和真实姓名用例支持后才能批准。",
+        "requiredCheck": "核对规范词典义项、常见姓名用例、谐音与双字搭配。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "兔",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "玉兔、敏捷",
+          "styleTags": [
+            "灵动",
+            "温婉"
+          ]
+        },
+        "facts": {
+          "pinyin": "tù",
+          "tone": 4,
+          "element": "金",
+          "radical": "刀",
+          "strokes": 8,
+          "standardIndex": 1195,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "rabbit, hare",
+        "readings": [
+          "tù"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "兎",
+          "simplified": "兔",
+          "pinyin": "tu4",
+          "definitions": [
+            "variant of 兔[tu4]"
+          ]
+        },
+        {
+          "traditional": "兔",
+          "simplified": "兔",
+          "pinyin": "tu4",
+          "definitions": [
+            "rabbit"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "tu4"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "舰",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "军舰巨舰",
+          "styleTags": [
+            "刚健",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "jiàn",
+          "tone": 4,
+          "element": "木",
+          "radical": "舟",
+          "strokes": 10,
+          "standardIndex": 1978,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "warship",
+        "readings": [
+          "jiàn"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "艦",
+          "simplified": "舰",
+          "pinyin": "jian4",
+          "definitions": [
+            "warship"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "jian4"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "谅",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "原谅、体谅",
+          "styleTags": [
+            "沉稳",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "liàng",
+          "tone": 4,
+          "element": "火",
+          "radical": "讠",
+          "strokes": 10,
+          "standardIndex": 2125,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "excuse, forgive; guess, presume",
+        "readings": [
+          "liàng"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "諒",
+          "simplified": "谅",
+          "pinyin": "liang4",
+          "definitions": [
+            "to show understanding",
+            "to excuse",
+            "to presume",
+            "to expect"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "liang4"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "action-or-dependent-context",
+        "rationale": "主要义项偏动作、功能或依赖特定语境，单独作为人名用字时语义不稳定。",
+        "requiredCheck": "若不能证明独立人名义项和自然搭配，则维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "祷",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "祈祷、祷告",
+          "styleTags": [
+            "仙气",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "dǎo",
+          "tone": 3,
+          "element": "金",
+          "radical": "礻",
+          "strokes": 11,
+          "standardIndex": 2464,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "pray; entreat, beg, plead; prayer",
+        "readings": [
+          "dǎo"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "禱",
+          "simplified": "祷",
+          "pinyin": "dao3",
+          "definitions": [
+            "prayer",
+            "pray",
+            "supplication"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "dao3"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "action-or-dependent-context",
+        "rationale": "主要义项偏动作、功能或依赖特定语境，单独作为人名用字时语义不稳定。",
+        "requiredCheck": "若不能证明独立人名义项和自然搭配，则维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "攀",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "攀登，高升",
+          "styleTags": [
+            "刚健",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "pān",
+          "tone": 1,
+          "element": "木",
+          "radical": "手",
+          "strokes": 19,
+          "standardIndex": 3456,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "climb; pull; hang on to",
+        "readings": [
+          "pān"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "攀",
+          "simplified": "攀",
+          "pinyin": "pan1",
+          "definitions": [
+            "to climb (by pulling oneself up)",
+            "to implicate",
+            "to claim connections of higher status"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "pan1"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "retain-for-independent-check",
+        "label": "建议保留进入独立复核",
+        "reasonCode": "plausible-positive-meaning",
+        "rationale": "现有来源释义呈现正向品质、自然意象或较明确的人名用字可能性；仍需独立词典和真实姓名用例支持后才能批准。",
+        "requiredCheck": "核对规范词典义项、常见姓名用例、谐音与双字搭配。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "貂",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 1,
+          "meaning": "华美、珍贵",
+          "styleTags": [
+            "清雅",
+            "富贵"
+          ]
+        },
+        "facts": {
+          "pinyin": "diāo",
+          "tone": 1,
+          "element": "金",
+          "radical": "豸",
+          "strokes": 12,
+          "standardIndex": 5226,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "marten, sable, mink",
+        "readings": [
+          "diāo"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "貂",
+          "simplified": "貂",
+          "pinyin": "diao1",
+          "definitions": [
+            "sable or marten (genus Martes)"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "diao1"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "企",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "企盼、企业",
+          "styleTags": [
+            "刚健",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "qǐ",
+          "tone": 3,
+          "element": "木",
+          "radical": "人",
+          "strokes": 6,
+          "standardIndex": 490,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "plan a project; stand on tiptoe",
+        "readings": [
+          "qǐ"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "企",
+          "simplified": "企",
+          "pinyin": "qi3",
+          "definitions": [
+            "(bound form) to stand on tiptoe and look; to anticipate; to look forward to",
+            "(bound form) company; firm; enterprise; corporation (abbr. for 企業|企业[qi3 ye4])",
+            "Taiwan pr. [qi4]"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "qi3"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "action-or-dependent-context",
+        "rationale": "主要义项偏动作、功能或依赖特定语境，单独作为人名用字时语义不稳定。",
+        "requiredCheck": "若不能证明独立人名义项和自然搭配，则维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "茸",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "初生柔软",
+          "styleTags": [
+            "灵动",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "rōng",
+          "tone": 1,
+          "element": "木",
+          "radical": "艹",
+          "strokes": 9,
+          "standardIndex": 1402,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "soft, downy; buds, sprouts",
+        "readings": [
+          "róng"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "茸",
+          "simplified": "茸",
+          "pinyin": "rong2",
+          "definitions": [
+            "(bound form) (of newly sprouted grass) soft and fine; downy"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "rong2"
+      ],
+      "reviewFlags": [
+        "unihan-reading-mismatch",
+        "cedict-reading-mismatch"
+      ],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "resolve-lexical-or-reading-flags",
+      "decision": "pending"
+    },
+    {
+      "char": "恤",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "体恤、怜悯",
+          "styleTags": [
+            "清雅",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "xù",
+          "tone": 4,
+          "element": "水",
+          "radical": "忄",
+          "strokes": 9,
+          "standardIndex": 1689,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "show pity; relieve, help",
+        "readings": [
+          "xù"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "䘏",
+          "simplified": "恤",
+          "pinyin": "xu4",
+          "definitions": [
+            "variant of 恤[xu4]"
+          ]
+        },
+        {
+          "traditional": "卹",
+          "simplified": "恤",
+          "pinyin": "xu4",
+          "definitions": [
+            "anxiety",
+            "sympathy",
+            "to sympathize",
+            "to give relief",
+            "to compensate"
+          ]
+        },
+        {
+          "traditional": "恤",
+          "simplified": "恤",
+          "pinyin": "xu4",
+          "definitions": [
+            "anxiety",
+            "sympathy",
+            "to sympathize",
+            "to give relief",
+            "to compensate"
+          ]
+        },
+        {
+          "traditional": "賉",
+          "simplified": "恤",
+          "pinyin": "xu4",
+          "definitions": [
+            "variant of 恤[xu4]"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "xu4"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "action-or-dependent-context",
+        "rationale": "主要义项偏动作、功能或依赖特定语境，单独作为人名用字时语义不稳定。",
+        "requiredCheck": "若不能证明独立人名义项和自然搭配，则维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "笋",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "竹笋、新生",
+          "styleTags": [
+            "清雅",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "sǔn",
+          "tone": 3,
+          "element": "木",
+          "radical": "竹",
+          "strokes": 10,
+          "standardIndex": 1953,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "bamboo shoots",
+        "readings": [
+          "sǔn"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "笋",
+          "simplified": "笋",
+          "pinyin": "sun3",
+          "definitions": [
+            "variant of 筍|笋[sun3]"
+          ]
+        },
+        {
+          "traditional": "筍",
+          "simplified": "笋",
+          "pinyin": "sun3",
+          "definitions": [
+            "bamboo shoot"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "sun3"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "涧",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "山涧清泉",
+          "styleTags": [
+            "清雅",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "jiàn",
+          "tone": 4,
+          "element": "水",
+          "radical": "氵",
+          "strokes": 10,
+          "standardIndex": 2082,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "brook, mountain stream",
+        "readings": [
+          "jiàn"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "㵎",
+          "simplified": "涧",
+          "pinyin": "jian4",
+          "definitions": [
+            "variant of 澗|涧[jian4]"
+          ]
+        },
+        {
+          "traditional": "澗",
+          "simplified": "涧",
+          "pinyin": "jian4",
+          "definitions": [
+            "mountain stream"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "jian4"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "retain-for-independent-check",
+        "label": "建议保留进入独立复核",
+        "reasonCode": "plausible-positive-meaning",
+        "rationale": "现有来源释义呈现正向品质、自然意象或较明确的人名用字可能性；仍需独立词典和真实姓名用例支持后才能批准。",
+        "requiredCheck": "核对规范词典义项、常见姓名用例、谐音与双字搭配。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "烹",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "烹饪，煮制",
+          "styleTags": [
+            "沉稳",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "pēng",
+          "tone": 1,
+          "element": "水",
+          "radical": "灬",
+          "strokes": 11,
+          "standardIndex": 2377,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "boil, cook; quick fry, stir fry",
+        "readings": [
+          "pēng"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "烹",
+          "simplified": "烹",
+          "pinyin": "peng1",
+          "definitions": [
+            "to boil; to brew (tea)",
+            "to cook by briefly stir-frying and then mixing in sauce",
+            "(old) to boil to death (judicial punishment in ancient times)"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "peng1"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "action-or-dependent-context",
+        "rationale": "主要义项偏动作、功能或依赖特定语境，单独作为人名用字时语义不稳定。",
+        "requiredCheck": "若不能证明独立人名义项和自然搭配，则维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "揽",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "包揽、拥抱",
+          "styleTags": [
+            "刚健",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "lǎn",
+          "tone": 3,
+          "element": "火",
+          "radical": "扌",
+          "strokes": 12,
+          "standardIndex": 2518,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "grasp, take hold of; monopolize",
+        "readings": [
+          "lǎn"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "攬",
+          "simplified": "揽",
+          "pinyin": "lan3",
+          "definitions": [
+            "to monopolize; to seize",
+            "to take into one's arms; to embrace",
+            "to fasten (with a rope etc)",
+            "to take on (responsibility etc); to canvass"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "lan3"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "action-or-dependent-context",
+        "rationale": "主要义项偏动作、功能或依赖特定语境，单独作为人名用字时语义不稳定。",
+        "requiredCheck": "若不能证明独立人名义项和自然搭配，则维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "湃",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "澎湃，激荡",
+          "styleTags": [
+            "刚健",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "pài",
+          "tone": 4,
+          "element": "水",
+          "radical": "氵",
+          "strokes": 12,
+          "standardIndex": 2762,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "sound of waves; turbulent",
+        "readings": [
+          "pài"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "湃",
+          "simplified": "湃",
+          "pinyin": "pai4",
+          "definitions": [
+            "used in 澎湃[peng2 pai4]"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "pai4"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "needs-disambiguation",
+        "label": "需进一步核验",
+        "reasonCode": "fixed-expression-polysemy-or-cultural-context",
+        "rationale": "可能依赖固定词组、多音多义、地名姓氏或特定文化意象，现有简短释义不足以支持批准或拒绝。",
+        "requiredCheck": "优先核对完整义项、读音、固定搭配来源和真实姓名使用情况。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "酿",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "酿造、酝酿",
+          "styleTags": [
+            "清雅",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "niàng",
+          "tone": 4,
+          "element": "木",
+          "radical": "酉",
+          "strokes": 14,
+          "standardIndex": 3088,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "brew, ferment",
+        "readings": [
+          "niàng"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "釀",
+          "simplified": "酿",
+          "pinyin": "niang4",
+          "definitions": [
+            "to ferment",
+            "to brew",
+            "to make honey (of bees)",
+            "to lead to",
+            "to form gradually",
+            "wine",
+            "stuffed vegetables (cooking method)"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "niang4"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "action-or-dependent-context",
+        "rationale": "主要义项偏动作、功能或依赖特定语境，单独作为人名用字时语义不稳定。",
+        "requiredCheck": "若不能证明独立人名义项和自然搭配，则维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "篱",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "篱笆、田园",
+          "styleTags": [
+            "清雅",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "lí",
+          "tone": 2,
+          "element": "木",
+          "radical": "竹",
+          "strokes": 16,
+          "standardIndex": 3360,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "bamboo or wooden fence; hedge",
+        "readings": [
+          "lí"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "籬",
+          "simplified": "篱",
+          "pinyin": "li2",
+          "definitions": [
+            "a fence"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "li2"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "夙",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "早；平素",
+          "styleTags": [
+            "书卷",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "sù",
+          "tone": 4,
+          "element": "金",
+          "radical": "夕",
+          "strokes": 6,
+          "standardIndex": 3614,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "early in morning, dawn; previous",
+        "readings": [
+          "sù"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "夙",
+          "simplified": "夙",
+          "pinyin": "su4",
+          "definitions": [
+            "morning",
+            "early",
+            "long-held",
+            "long-cherished"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "su4"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "retain-for-independent-check",
+        "label": "建议保留进入独立复核",
+        "reasonCode": "plausible-positive-meaning",
+        "rationale": "现有来源释义呈现正向品质、自然意象或较明确的人名用字可能性；仍需独立词典和真实姓名用例支持后才能批准。",
+        "requiredCheck": "核对规范词典义项、常见姓名用例、谐音与双字搭配。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "讴",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "歌唱赞美",
+          "styleTags": [
+            "明朗",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "ōu",
+          "tone": 1,
+          "element": "土",
+          "radical": "讠",
+          "strokes": 6,
+          "standardIndex": 3631,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "sing; songs",
+        "readings": [
+          "ōu"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "謳",
+          "simplified": "讴",
+          "pinyin": "ou1",
+          "definitions": [
+            "to sing",
+            "ballad",
+            "folk song"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "ou1"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "retain-for-independent-check",
+        "label": "建议保留进入独立复核",
+        "reasonCode": "plausible-positive-meaning",
+        "rationale": "现有来源释义呈现正向品质、自然意象或较明确的人名用字可能性；仍需独立词典和真实姓名用例支持后才能批准。",
+        "requiredCheck": "核对规范词典义项、常见姓名用例、谐音与双字搭配。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "邸",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "府邸尊贵",
+          "styleTags": [
+            "富贵",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "dǐ",
+          "tone": 3,
+          "element": "火",
+          "radical": "阝",
+          "strokes": 7,
+          "standardIndex": 3743,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "official residence, residence of",
+        "readings": [
+          "dǐ"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "邸",
+          "simplified": "邸",
+          "pinyin": "Di3",
+          "definitions": [
+            "surname Di"
+          ]
+        },
+        {
+          "traditional": "邸",
+          "simplified": "邸",
+          "pinyin": "di3",
+          "definitions": [
+            "(bound form) residence of a high-ranking official"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "di3"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "诤",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "直言规劝",
+          "styleTags": [
+            "刚健",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "zhèng",
+          "tone": 4,
+          "element": "火",
+          "radical": "讠",
+          "strokes": 8,
+          "standardIndex": 4056,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "to expostulate; to remonstrate",
+        "readings": [
+          "zhèng"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "諍",
+          "simplified": "诤",
+          "pinyin": "zheng4",
+          "definitions": [
+            "to admonish",
+            "to warn sb of their errors",
+            "to criticize frankly",
+            "Taiwan pr. [zheng1]"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "zheng4"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "retain-for-independent-check",
+        "label": "建议保留进入独立复核",
+        "reasonCode": "plausible-positive-meaning",
+        "rationale": "现有来源释义呈现正向品质、自然意象或较明确的人名用字可能性；仍需独立词典和真实姓名用例支持后才能批准。",
+        "requiredCheck": "核对规范词典义项、常见姓名用例、谐音与双字搭配。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "柢",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "根基，稳固",
+          "styleTags": [
+            "沉稳",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "dǐ",
+          "tone": 3,
+          "element": "木",
+          "radical": "木",
+          "strokes": 9,
+          "standardIndex": 4154,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "root, base; bottom of object",
+        "readings": [
+          "dǐ"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "柢",
+          "simplified": "柢",
+          "pinyin": "di3",
+          "definitions": [
+            "foundation",
+            "root"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "di3"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "retain-for-independent-check",
+        "label": "建议保留进入独立复核",
+        "reasonCode": "plausible-positive-meaning",
+        "rationale": "现有来源释义呈现正向品质、自然意象或较明确的人名用字可能性；仍需独立词典和真实姓名用例支持后才能批准。",
+        "requiredCheck": "核对规范词典义项、常见姓名用例、谐音与双字搭配。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "胄",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "甲胄后代",
+          "styleTags": [
+            "刚健",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "zhòu",
+          "tone": 4,
+          "element": "火",
+          "radical": "月",
+          "strokes": 9,
+          "standardIndex": 4208,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "helmet, headpiece; descendant",
+        "readings": [
+          "zhòu"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "胄",
+          "simplified": "胄",
+          "pinyin": "zhou4",
+          "definitions": [
+            "helmet",
+            "descendants"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "zhou4"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "咤",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "叱咤、怒斥",
+          "styleTags": [
+            "刚健"
+          ]
+        },
+        "facts": {
+          "pinyin": "zhà",
+          "tone": 4,
+          "element": "金",
+          "radical": "口",
+          "strokes": 9,
+          "standardIndex": 4226,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "scold, bellow, shout at, roar",
+        "readings": [
+          "zhà"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "咤",
+          "simplified": "咤",
+          "pinyin": "zha4",
+          "definitions": [
+            "used in 叱咤[chi4 zha4]"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "zha4"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "sound-interjection-or-weak-expression",
+        "rationale": "主要联想是叫声、语气词、怒斥或微弱声态，作为默认推荐人名用字风险较高。",
+        "requiredCheck": "若无明确正向人名义项，维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "皈",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "皈依归向",
+          "styleTags": [
+            "清雅",
+            "仙气"
+          ]
+        },
+        "facts": {
+          "pinyin": "guī",
+          "tone": 1,
+          "element": "木",
+          "radical": "白",
+          "strokes": 9,
+          "standardIndex": 4265,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "follow, comply with",
+        "readings": [
+          "guī"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "皈",
+          "simplified": "皈",
+          "pinyin": "gui1",
+          "definitions": [
+            "to comply with",
+            "to follow"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "gui1"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "action-or-dependent-context",
+        "rationale": "主要义项偏动作、功能或依赖特定语境，单独作为人名用字时语义不稳定。",
+        "requiredCheck": "若不能证明独立人名义项和自然搭配，则维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "矜",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "庄重怜悯",
+          "styleTags": [
+            "书卷",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "jīn",
+          "tone": 1,
+          "element": "木",
+          "radical": "矛",
+          "strokes": 9,
+          "standardIndex": 4392,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "pity, feel sorry for, show sympathy",
+        "readings": [
+          "jīn"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "矜",
+          "simplified": "矜",
+          "pinyin": "jin1",
+          "definitions": [
+            "to boast",
+            "to esteem",
+            "to sympathize"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "jin1"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "needs-disambiguation",
+        "label": "需进一步核验",
+        "reasonCode": "fixed-expression-polysemy-or-cultural-context",
+        "rationale": "可能依赖固定词组、多音多义、地名姓氏或特定文化意象，现有简短释义不足以支持批准或拒绝。",
+        "requiredCheck": "优先核对完整义项、读音、固定搭配来源和真实姓名使用情况。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "钺",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "古代兵器",
+          "styleTags": [
+            "刚健",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "yuè",
+          "tone": 4,
+          "element": "金",
+          "radical": "钅",
+          "strokes": 10,
+          "standardIndex": 4532,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "broad-axe, a battle axe, halberd",
+        "readings": [
+          "yuè"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "鉞",
+          "simplified": "钺",
+          "pinyin": "yue4",
+          "definitions": [
+            "battle-ax"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "yue4"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "菖",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "菖蒲、驱邪",
+          "styleTags": [
+            "清雅",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "chāng",
+          "tone": 1,
+          "element": "木",
+          "radical": "艹",
+          "strokes": 11,
+          "standardIndex": 4753,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "iris, sweet flag, calamus",
+        "readings": [
+          "chāng"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "菖",
+          "simplified": "菖",
+          "pinyin": "chang1",
+          "definitions": [
+            "see 菖蒲[chang1 pu2]"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "chang1"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "needs-disambiguation",
+        "label": "需进一步核验",
+        "reasonCode": "fixed-expression-polysemy-or-cultural-context",
+        "rationale": "可能依赖固定词组、多音多义、地名姓氏或特定文化意象，现有简短释义不足以支持批准或拒绝。",
+        "requiredCheck": "优先核对完整义项、读音、固定搭配来源和真实姓名使用情况。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "萏",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "菡萏、荷花",
+          "styleTags": [
+            "清雅",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "dàn",
+          "tone": 4,
+          "element": "木",
+          "radical": "艹",
+          "strokes": 11,
+          "standardIndex": 4760,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "lotus",
+        "readings": [
+          "dàn"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "萏",
+          "simplified": "萏",
+          "pinyin": "dan4",
+          "definitions": [
+            "lotus"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "dan4"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "needs-disambiguation",
+        "label": "需进一步核验",
+        "reasonCode": "fixed-expression-polysemy-or-cultural-context",
+        "rationale": "可能依赖固定词组、多音多义、地名姓氏或特定文化意象，现有简短释义不足以支持批准或拒绝。",
+        "requiredCheck": "优先核对完整义项、读音、固定搭配来源和真实姓名使用情况。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "皑",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "洁白明亮",
+          "styleTags": [
+            "清雅",
+            "明朗"
+          ]
+        },
+        "facts": {
+          "pinyin": "ái",
+          "tone": 2,
+          "element": "火",
+          "radical": "白",
+          "strokes": 11,
+          "standardIndex": 4911,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "brilliant white",
+        "readings": [
+          "ái"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "皚",
+          "simplified": "皑",
+          "pinyin": "ai2",
+          "definitions": [
+            "(literary) white as snow"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "ai2"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "retain-for-independent-check",
+        "label": "建议保留进入独立复核",
+        "reasonCode": "plausible-positive-meaning",
+        "rationale": "现有来源释义呈现正向品质、自然意象或较明确的人名用字可能性；仍需独立词典和真实姓名用例支持后才能批准。",
+        "requiredCheck": "核对规范词典义项、常见姓名用例、谐音与双字搭配。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "喃",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "喃喃细语",
+          "styleTags": [
+            "温婉",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "nán",
+          "tone": 2,
+          "element": "火",
+          "radical": "口",
+          "strokes": 12,
+          "standardIndex": 5130,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "keep talking, chattering; mumble",
+        "readings": [
+          "nán"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "喃",
+          "simplified": "喃",
+          "pinyin": "nan2",
+          "definitions": [
+            "mumble in repetition"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "nan2"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "sound-interjection-or-weak-expression",
+        "rationale": "主要联想是叫声、语气词、怒斥或微弱声态，作为默认推荐人名用字风险较高。",
+        "requiredCheck": "若无明确正向人名义项，维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "嵋",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "峨眉山之秀",
+          "styleTags": [
+            "清雅",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "méi",
+          "tone": 2,
+          "element": "土",
+          "radical": "山",
+          "strokes": 12,
+          "standardIndex": 5176,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "Omei mountain in Sichuan",
+        "readings": [
+          "méi"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "嵋",
+          "simplified": "嵋",
+          "pinyin": "mei2",
+          "definitions": [
+            "used in 峨嵋[E2 mei2]"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "mei2"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "retain-for-independent-check",
+        "label": "建议保留进入独立复核",
+        "reasonCode": "plausible-positive-meaning",
+        "rationale": "现有来源释义呈现正向品质、自然意象或较明确的人名用字可能性；仍需独立词典和真实姓名用例支持后才能批准。",
+        "requiredCheck": "核对规范词典义项、常见姓名用例、谐音与双字搭配。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "腴",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "丰腴肥美",
+          "styleTags": [
+            "清雅",
+            "富贵"
+          ]
+        },
+        "facts": {
+          "pinyin": "yú",
+          "tone": 2,
+          "element": "金",
+          "radical": "月",
+          "strokes": 12,
+          "standardIndex": 5231,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "fat; fertile, rich; plump, soft",
+        "readings": [
+          "yú"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "腴",
+          "simplified": "腴",
+          "pinyin": "yu2",
+          "definitions": [
+            "fat on belly",
+            "fertile",
+            "rich"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "yu2"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "弼",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "辅佐，辅助",
+          "styleTags": [
+            "刚健",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "bì",
+          "tone": 4,
+          "element": "水",
+          "radical": "弓",
+          "strokes": 12,
+          "standardIndex": 5317,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "aid, assist, help; correct",
+        "readings": [
+          "bì"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "弼",
+          "simplified": "弼",
+          "pinyin": "bi4",
+          "definitions": [
+            "to assist"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "bi4"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "retain-for-independent-check",
+        "label": "建议保留进入独立复核",
+        "reasonCode": "plausible-positive-meaning",
+        "rationale": "现有来源释义呈现正向品质、自然意象或较明确的人名用字可能性；仍需独立词典和真实姓名用例支持后才能批准。",
+        "requiredCheck": "核对规范词典义项、常见姓名用例、谐音与双字搭配。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "跹",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "轻盈飞舞",
+          "styleTags": [
+            "灵动",
+            "仙气"
+          ]
+        },
+        "facts": {
+          "pinyin": "xiān",
+          "tone": 1,
+          "element": "金",
+          "radical": "足",
+          "strokes": 13,
+          "standardIndex": 5457,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "wander about, walk around; revolve",
+        "readings": [
+          "xiān"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "躚",
+          "simplified": "跹",
+          "pinyin": "xian1",
+          "definitions": [
+            "to manner of dancing",
+            "to walk around"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "xian1"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "needs-disambiguation",
+        "label": "需进一步核验",
+        "reasonCode": "fixed-expression-polysemy-or-cultural-context",
+        "rationale": "可能依赖固定词组、多音多义、地名姓氏或特定文化意象，现有简短释义不足以支持批准或拒绝。",
+        "requiredCheck": "优先核对完整义项、读音、固定搭配来源和真实姓名使用情况。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "馐",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "美食，佳肴",
+          "styleTags": [
+            "清雅",
+            "富贵"
+          ]
+        },
+        "facts": {
+          "pinyin": "xiū",
+          "tone": 1,
+          "element": "金",
+          "radical": "饣",
+          "strokes": 13,
+          "standardIndex": 5537,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "food, meal; eat; offer",
+        "readings": [
+          "xiū"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "饈",
+          "simplified": "馐",
+          "pinyin": "xiu1",
+          "definitions": [
+            "delicacies"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "xiu1"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "髦",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "英俊、时尚",
+          "styleTags": [
+            "刚健",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "máo",
+          "tone": 2,
+          "element": "水",
+          "radical": "髟",
+          "strokes": 14,
+          "standardIndex": 5630,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "flowing hair of young child",
+        "readings": [
+          "máo"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "髦",
+          "simplified": "髦",
+          "pinyin": "mao2",
+          "definitions": [
+            "bang (hair)",
+            "fashionable",
+            "mane"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "mao2"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "needs-disambiguation",
+        "label": "需进一步核验",
+        "reasonCode": "fixed-expression-polysemy-or-cultural-context",
+        "rationale": "可能依赖固定词组、多音多义、地名姓氏或特定文化意象，现有简短释义不足以支持批准或拒绝。",
+        "requiredCheck": "优先核对完整义项、读音、固定搭配来源和真实姓名使用情况。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "犒",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "犒劳奖赏",
+          "styleTags": [
+            "刚健",
+            "明朗"
+          ]
+        },
+        "facts": {
+          "pinyin": "kào",
+          "tone": 4,
+          "element": "木",
+          "radical": "牜",
+          "strokes": 14,
+          "standardIndex": 5741,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "entertain victorious soldiers",
+        "readings": [
+          "kào"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "犒",
+          "simplified": "犒",
+          "pinyin": "kao4",
+          "definitions": [
+            "to reward or comfort with presents of food, drink etc"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "kao4"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "action-or-dependent-context",
+        "rationale": "主要义项偏动作、功能或依赖特定语境，单独作为人名用字时语义不稳定。",
+        "requiredCheck": "若不能证明独立人名义项和自然搭配，则维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "箐",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "山间竹林",
+          "styleTags": [
+            "清雅",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "qìng",
+          "tone": 4,
+          "element": "木",
+          "radical": "竹",
+          "strokes": 14,
+          "standardIndex": 5742,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "to draw a bamboo bow or crossbow",
+        "readings": [
+          "qìng"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "箐",
+          "simplified": "箐",
+          "pinyin": "qing4",
+          "definitions": [
+            "to draw a bamboo bow or crossbow"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "qing4"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "needs-disambiguation",
+        "label": "需进一步核验",
+        "reasonCode": "fixed-expression-polysemy-or-cultural-context",
+        "rationale": "可能依赖固定词组、多音多义、地名姓氏或特定文化意象，现有简短释义不足以支持批准或拒绝。",
+        "requiredCheck": "优先核对完整义项、读音、固定搭配来源和真实姓名使用情况。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "銮",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "皇帝车铃",
+          "styleTags": [
+            "富贵",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "luán",
+          "tone": 2,
+          "element": "金",
+          "radical": "金",
+          "strokes": 14,
+          "standardIndex": 5778,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "bells hung on horse; bells hung",
+        "readings": [
+          "luán"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "鑾",
+          "simplified": "銮",
+          "pinyin": "luan2",
+          "definitions": [
+            "imperial"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "luan2"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "needs-disambiguation",
+        "label": "需进一步核验",
+        "reasonCode": "fixed-expression-polysemy-or-cultural-context",
+        "rationale": "可能依赖固定词组、多音多义、地名姓氏或特定文化意象，现有简短释义不足以支持批准或拒绝。",
+        "requiredCheck": "优先核对完整义项、读音、固定搭配来源和真实姓名使用情况。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "踔",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "腾跃、卓异",
+          "styleTags": [
+            "刚健",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "chuō",
+          "tone": 1,
+          "element": "火",
+          "radical": "足",
+          "strokes": 15,
+          "standardIndex": 5911,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "to get ahead; to stride; to excel",
+        "readings": [
+          "chuō"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "踔",
+          "simplified": "踔",
+          "pinyin": "chuo1",
+          "definitions": [
+            "to get ahead",
+            "to stride",
+            "to excel",
+            "Taiwan pr. [zhuo2]"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "chuo1"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "needs-disambiguation",
+        "label": "需进一步核验",
+        "reasonCode": "fixed-expression-polysemy-or-cultural-context",
+        "rationale": "可能依赖固定词组、多音多义、地名姓氏或特定文化意象，现有简短释义不足以支持批准或拒绝。",
+        "requiredCheck": "优先核对完整义项、读音、固定搭配来源和真实姓名使用情况。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "踵",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "脚后跟、继承",
+          "styleTags": [
+            "沉稳",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "zhǒng",
+          "tone": 3,
+          "element": "火",
+          "radical": "足",
+          "strokes": 16,
+          "standardIndex": 6093,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "heel; follow; visit, call on",
+        "readings": [
+          "zhǒng"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "踵",
+          "simplified": "踵",
+          "pinyin": "zhong3",
+          "definitions": [
+            "to arrive",
+            "to follow",
+            "heel"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "zhong3"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "膳",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "膳食、饮食",
+          "styleTags": [
+            "富贵",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "shàn",
+          "tone": 4,
+          "element": "金",
+          "radical": "月",
+          "strokes": 16,
+          "standardIndex": 6136,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "meals, provisions, board",
+        "readings": [
+          "shàn"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "膳",
+          "simplified": "膳",
+          "pinyin": "shan4",
+          "definitions": [
+            "meals"
+          ]
+        },
+        {
+          "traditional": "饍",
+          "simplified": "膳",
+          "pinyin": "shan4",
+          "definitions": [
+            "variant of 膳[shan4]"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "shan4"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "鹭",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "白鹭，高洁",
+          "styleTags": [
+            "清雅",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "lù",
+          "tone": 4,
+          "element": "火",
+          "radical": "鸟",
+          "strokes": 18,
+          "standardIndex": 6334,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "heron, egret; Ardea species (various)",
+        "readings": [
+          "lù"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "鷺",
+          "simplified": "鹭",
+          "pinyin": "lu4",
+          "definitions": [
+            "heron"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "lu4"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "retain-for-independent-check",
+        "label": "建议保留进入独立复核",
+        "reasonCode": "plausible-positive-meaning",
+        "rationale": "现有来源释义呈现正向品质、自然意象或较明确的人名用字可能性；仍需独立词典和真实姓名用例支持后才能批准。",
+        "requiredCheck": "核对规范词典义项、常见姓名用例、谐音与双字搭配。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "镯",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "手镯，饰品",
+          "styleTags": [
+            "温婉",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "zhuó",
+          "tone": 2,
+          "element": "金",
+          "radical": "钅",
+          "strokes": 18,
+          "standardIndex": 6346,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "bracelet, armband; small bell",
+        "readings": [
+          "zhuó"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "鐲",
+          "simplified": "镯",
+          "pinyin": "zhuo2",
+          "definitions": [
+            "bracelet"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "zhuo2"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "鎏",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "金纯美，镀金",
+          "styleTags": [
+            "富贵",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "liú",
+          "tone": 2,
+          "element": "金",
+          "radical": "金",
+          "strokes": 18,
+          "standardIndex": 6362,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "pure gold",
+        "readings": [
+          "liú"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "鎏",
+          "simplified": "鎏",
+          "pinyin": "liu2",
+          "definitions": [
+            "variant of 鎦|镏[liu2]"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "liu2"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "retain-for-independent-check",
+        "label": "建议保留进入独立复核",
+        "reasonCode": "plausible-positive-meaning",
+        "rationale": "现有来源释义呈现正向品质、自然意象或较明确的人名用字可能性；仍需独立词典和真实姓名用例支持后才能批准。",
+        "requiredCheck": "核对规范词典义项、常见姓名用例、谐音与双字搭配。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "鬟",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "环形发",
+          "styleTags": [
+            "温婉",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "huán",
+          "tone": 2,
+          "element": "水",
+          "radical": "髟",
+          "strokes": 23,
+          "standardIndex": 6477,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "dress hair in coiled knot; maid",
+        "readings": [
+          "huán"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "鬟",
+          "simplified": "鬟",
+          "pinyin": "huan2",
+          "definitions": [
+            "a knot of hair on top of head"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "huan2"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "衢",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 35,
+          "rarityLevel": 2,
+          "meaning": "大路通达",
+          "styleTags": [
+            "清雅",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "qú",
+          "tone": 2,
+          "element": "木",
+          "radical": "行",
+          "strokes": 24,
+          "standardIndex": 6489,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "highway; thoroughfare, intersection",
+        "readings": [
+          "qú"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "衢",
+          "simplified": "衢",
+          "pinyin": "qu2",
+          "definitions": [
+            "thoroughfare"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "qu2"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "needs-disambiguation",
+        "label": "需进一步核验",
+        "reasonCode": "fixed-expression-polysemy-or-cultural-context",
+        "rationale": "可能依赖固定词组、多音多义、地名姓氏或特定文化意象，现有简短释义不足以支持批准或拒绝。",
+        "requiredCheck": "优先核对完整义项、读音、固定搭配来源和真实姓名使用情况。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "孩",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 0,
+          "meaning": "孩子童真",
+          "styleTags": [
+            "温婉",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "hái",
+          "tone": 2,
+          "element": "水",
+          "radical": "子",
+          "strokes": 9,
+          "standardIndex": 1730,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "baby, child; children",
+        "readings": [
+          "hái"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "孩",
+          "simplified": "孩",
+          "pinyin": "hai2",
+          "definitions": [
+            "(bound form) child"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "hai2"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "恳",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 1,
+          "meaning": "诚恳、恳切",
+          "styleTags": [
+            "质朴",
+            "温婉"
+          ]
+        },
+        "facts": {
+          "pinyin": "kěn",
+          "tone": 3,
+          "element": "木",
+          "radical": "心",
+          "strokes": 10,
+          "standardIndex": 2130,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "sincere, earnest, cordial",
+        "readings": [
+          "kěn"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "懇",
+          "simplified": "恳",
+          "pinyin": "ken3",
+          "definitions": [
+            "earnest"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "ken3"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "retain-for-independent-check",
+        "label": "建议保留进入独立复核",
+        "reasonCode": "plausible-positive-meaning",
+        "rationale": "现有来源释义呈现正向品质、自然意象或较明确的人名用字可能性；仍需独立词典和真实姓名用例支持后才能批准。",
+        "requiredCheck": "核对规范词典义项、常见姓名用例、谐音与双字搭配。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "伙",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "伙伴、合作",
+          "styleTags": [
+            "质朴",
+            "刚健"
+          ]
+        },
+        "facts": {
+          "pinyin": "huǒ",
+          "tone": 3,
+          "element": "火",
+          "radical": "亻",
+          "strokes": 6,
+          "standardIndex": 475,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "companion, colleague; utensils",
+        "readings": [
+          "huǒ"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "伙",
+          "simplified": "伙",
+          "pinyin": "huo3",
+          "definitions": [
+            "(bound form) meals (as in 伙食[huo3 shi2])",
+            "variant of 夥|伙[huo3]"
+          ]
+        },
+        {
+          "traditional": "夥",
+          "simplified": "伙",
+          "pinyin": "huo3",
+          "definitions": [
+            "companion",
+            "partner",
+            "group",
+            "classifier for groups of people",
+            "to combine",
+            "together"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "huo3"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "苞",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "花苞、含苞",
+          "styleTags": [
+            "灵动",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "bāo",
+          "tone": 1,
+          "element": "木",
+          "radical": "艹",
+          "strokes": 8,
+          "standardIndex": 1009,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "a variety of rush; firm, enduring; to burst forth",
+        "readings": [
+          "bāo"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "苞",
+          "simplified": "苞",
+          "pinyin": "bao1",
+          "definitions": [
+            "bud",
+            "flower calyx",
+            "luxuriant",
+            "profuse"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "bao1"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "needs-disambiguation",
+        "label": "需进一步核验",
+        "reasonCode": "fixed-expression-polysemy-or-cultural-context",
+        "rationale": "可能依赖固定词组、多音多义、地名姓氏或特定文化意象，现有简短释义不足以支持批准或拒绝。",
+        "requiredCheck": "优先核对完整义项、读音、固定搭配来源和真实姓名使用情况。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "禀",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "承受；禀赋",
+          "styleTags": [
+            "书卷",
+            "沉稳"
+          ]
+        },
+        "facts": {
+          "pinyin": "bǐng",
+          "tone": 3,
+          "element": "水",
+          "radical": "示",
+          "strokes": 13,
+          "standardIndex": 2987,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "report to, petition",
+        "readings": [
+          "bǐng"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "稟",
+          "simplified": "禀",
+          "pinyin": "bing3",
+          "definitions": [
+            "to make a report (to a superior)",
+            "to give",
+            "to endow",
+            "to receive",
+            "petition"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "bing3"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "retain-for-independent-check",
+        "label": "建议保留进入独立复核",
+        "reasonCode": "plausible-positive-meaning",
+        "rationale": "现有来源释义呈现正向品质、自然意象或较明确的人名用字可能性；仍需独立词典和真实姓名用例支持后才能批准。",
+        "requiredCheck": "核对规范词典义项、常见姓名用例、谐音与双字搭配。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "嘹",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "声音响亮清脆",
+          "styleTags": [
+            "明朗",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "liáo",
+          "tone": 2,
+          "element": "火",
+          "radical": "口",
+          "strokes": 15,
+          "standardIndex": 3239,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "used describe clarity of voice; resonant",
+        "readings": [
+          "liáo"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "嘹",
+          "simplified": "嘹",
+          "pinyin": "liao2",
+          "definitions": [
+            "used in 嘹亮[liao2 liang4] and 嘹喨[liao2 liang4]"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "liao2"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "sound-interjection-or-weak-expression",
+        "rationale": "主要联想是叫声、语气词、怒斥或微弱声态，作为默认推荐人名用字风险较高。",
+        "requiredCheck": "若无明确正向人名义项，维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "赡",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "富足、充裕",
+          "styleTags": [
+            "富贵",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "shàn",
+          "tone": 4,
+          "element": "火",
+          "radical": "贝",
+          "strokes": 17,
+          "standardIndex": 3414,
+          "standardLevel": 1
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "support, aid; rich, elegant",
+        "readings": [
+          "shàn"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "贍",
+          "simplified": "赡",
+          "pinyin": "shan4",
+          "definitions": [
+            "to support",
+            "to provide for"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "shan4"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "action-or-dependent-context",
+        "rationale": "主要义项偏动作、功能或依赖特定语境，单独作为人名用字时语义不稳定。",
+        "requiredCheck": "若不能证明独立人名义项和自然搭配，则维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "玎",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "玉石声响",
+          "styleTags": [
+            "灵动",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "dīng",
+          "tone": 1,
+          "element": "火",
+          "radical": "王",
+          "strokes": 6,
+          "standardIndex": 3565,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "jingling, tinkling",
+        "readings": [
+          "dīng"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "玎",
+          "simplified": "玎",
+          "pinyin": "ding1",
+          "definitions": [
+            "jingling",
+            "tinkling"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "ding1"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "retain-for-independent-check",
+        "label": "建议保留进入独立复核",
+        "reasonCode": "plausible-positive-meaning",
+        "rationale": "现有来源释义呈现正向品质、自然意象或较明确的人名用字可能性；仍需独立词典和真实姓名用例支持后才能批准。",
+        "requiredCheck": "核对规范词典义项、常见姓名用例、谐音与双字搭配。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "抉",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "抉择、挑选",
+          "styleTags": [
+            "书卷",
+            "刚健"
+          ]
+        },
+        "facts": {
+          "pinyin": "jué",
+          "tone": 2,
+          "element": "火",
+          "radical": "扌",
+          "strokes": 7,
+          "standardIndex": 3657,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "choose, select; gouge, pluck out",
+        "readings": [
+          "jué"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "抉",
+          "simplified": "抉",
+          "pinyin": "jue2",
+          "definitions": [
+            "to pick out",
+            "to single out"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "jue2"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "action-or-dependent-context",
+        "rationale": "主要义项偏动作、功能或依赖特定语境，单独作为人名用字时语义不稳定。",
+        "requiredCheck": "若不能证明独立人名义项和自然搭配，则维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "呦",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "鹿鸣声",
+          "styleTags": [
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "yōu",
+          "tone": 1,
+          "element": "土",
+          "radical": "口",
+          "strokes": 8,
+          "standardIndex": 3921,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "the bleating of the deer",
+        "readings": [
+          "yōu"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "呦",
+          "simplified": "呦",
+          "pinyin": "you1",
+          "definitions": [
+            "Oh! (exclamation of dismay etc)",
+            "used in 呦呦[you1 you1]"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "you1"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "sound-interjection-or-weak-expression",
+        "rationale": "主要联想是叫声、语气词、怒斥或微弱声态，作为默认推荐人名用字风险较高。",
+        "requiredCheck": "若无明确正向人名义项，维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "饴",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "甘甜，麦芽糖",
+          "styleTags": [
+            "温婉",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "yí",
+          "tone": 2,
+          "element": "土",
+          "radical": "饣",
+          "strokes": 8,
+          "standardIndex": 3993,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "sweet-meats; sweet-cakes; syrup",
+        "readings": [
+          "yí"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "飴",
+          "simplified": "饴",
+          "pinyin": "yi2",
+          "definitions": [
+            "maltose syrup"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "yi2"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "庖",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "厨房，厨师",
+          "styleTags": [
+            "书卷",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "páo",
+          "tone": 2,
+          "element": "水",
+          "radical": "广",
+          "strokes": 8,
+          "standardIndex": 3996,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "kitchen; cooking, cuisine",
+        "readings": [
+          "páo"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "庖",
+          "simplified": "庖",
+          "pinyin": "pao2",
+          "definitions": [
+            "kitchen"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "pao2"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "咩",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "羊叫声",
+          "styleTags": [
+            "灵动",
+            "温婉"
+          ]
+        },
+        "facts": {
+          "pinyin": "miē",
+          "tone": 1,
+          "element": "水",
+          "radical": "口",
+          "strokes": 9,
+          "standardIndex": 4225,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "the bleating of sheep; (Cant.) an interrogative particle",
+        "readings": [
+          "miē"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "咩",
+          "simplified": "咩",
+          "pinyin": "mie1",
+          "definitions": [
+            "the bleating of sheep",
+            "final particle which transforms statements into questions that indicate doubt or surprise (Cantonese)"
+          ]
+        },
+        {
+          "traditional": "哶",
+          "simplified": "咩",
+          "pinyin": "mie1",
+          "definitions": [
+            "old variant of 咩[mie1]"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "mie1"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "sound-interjection-or-weak-expression",
+        "rationale": "主要联想是叫声、语气词、怒斥或微弱声态，作为默认推荐人名用字风险较高。",
+        "requiredCheck": "若无明确正向人名义项，维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "狩",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "狩猎、征伐",
+          "styleTags": [
+            "刚健",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "shòu",
+          "tone": 4,
+          "element": "金",
+          "radical": "犭",
+          "strokes": 9,
+          "standardIndex": 4294,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "winter hunting; imperial tour",
+        "readings": [
+          "shòu"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "狩",
+          "simplified": "狩",
+          "pinyin": "shou4",
+          "definitions": [
+            "to hunt",
+            "to go hunting (as winter sport in former times)",
+            "hunting dog",
+            "imperial tour"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "shou4"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "action-or-dependent-context",
+        "rationale": "主要义项偏动作、功能或依赖特定语境，单独作为人名用字时语义不稳定。",
+        "requiredCheck": "若不能证明独立人名义项和自然搭配，则维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "徕",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "招徕、到来",
+          "styleTags": [
+            "清雅",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "lái",
+          "tone": 2,
+          "element": "火",
+          "radical": "彳",
+          "strokes": 10,
+          "standardIndex": 4584,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "induce, encourage to come",
+        "readings": [
+          "lái"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "徠",
+          "simplified": "徕",
+          "pinyin": "lai2",
+          "definitions": [
+            "used in 招徠|招徕[zhao1 lai2]"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "lai2"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "needs-disambiguation",
+        "label": "需进一步核验",
+        "reasonCode": "fixed-expression-polysemy-or-cultural-context",
+        "rationale": "可能依赖固定词组、多音多义、地名姓氏或特定文化意象，现有简短释义不足以支持批准或拒绝。",
+        "requiredCheck": "优先核对完整义项、读音、固定搭配来源和真实姓名使用情况。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "胭",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "胭脂红润",
+          "styleTags": [
+            "温婉",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "yān",
+          "tone": 1,
+          "element": "土",
+          "radical": "月",
+          "strokes": 10,
+          "standardIndex": 4592,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "rouge, cosmetics",
+        "readings": [
+          "yān"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "胭",
+          "simplified": "胭",
+          "pinyin": "yan1",
+          "definitions": [
+            "rouge"
+          ]
+        },
+        {
+          "traditional": "臙",
+          "simplified": "胭",
+          "pinyin": "yan1",
+          "definitions": [
+            "variant of 胭[yan1]"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "yan1"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "脍",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "细切鱼肉",
+          "styleTags": [
+            "书卷",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "kuài",
+          "tone": 4,
+          "element": "木",
+          "radical": "月",
+          "strokes": 10,
+          "standardIndex": 4593,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "minced meat or fish",
+        "readings": [
+          "kuài"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "膾",
+          "simplified": "脍",
+          "pinyin": "kuai4",
+          "definitions": [
+            "chopped meat or fish"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "kuai4"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "谌",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "真诚可信",
+          "styleTags": [
+            "沉稳",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "chén",
+          "tone": 2,
+          "element": "金",
+          "radical": "讠",
+          "strokes": 11,
+          "standardIndex": 4994,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "sincere, faithful; surname",
+        "readings": [
+          "chén"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "諶",
+          "simplified": "谌",
+          "pinyin": "Chen2",
+          "definitions": [
+            "surname Chen"
+          ]
+        },
+        {
+          "traditional": "諶",
+          "simplified": "谌",
+          "pinyin": "chen2",
+          "definitions": [
+            "faithful",
+            "sincere"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "chen2"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "retain-for-independent-check",
+        "label": "建议保留进入独立复核",
+        "reasonCode": "plausible-positive-meaning",
+        "rationale": "现有来源释义呈现正向品质、自然意象或较明确的人名用字可能性；仍需独立词典和真实姓名用例支持后才能批准。",
+        "requiredCheck": "核对规范词典义项、常见姓名用例、谐音与双字搭配。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "啾",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "鸟鸣声",
+          "styleTags": [
+            "灵动",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "jiū",
+          "tone": 1,
+          "element": "木",
+          "radical": "口",
+          "strokes": 12,
+          "standardIndex": 5154,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "wailing of child; chirp",
+        "readings": [
+          "jiū"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "啾",
+          "simplified": "啾",
+          "pinyin": "jiu1",
+          "definitions": [
+            "(onom.) wailing of child",
+            "chirp",
+            "kiss (Tw)"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "jiu1"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "sound-interjection-or-weak-expression",
+        "rationale": "主要联想是叫声、语气词、怒斥或微弱声态，作为默认推荐人名用字风险较高。",
+        "requiredCheck": "若无明确正向人名义项，维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "犊",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "牛犊、初生",
+          "styleTags": [
+            "质朴",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "dú",
+          "tone": 2,
+          "element": "金",
+          "radical": "牜",
+          "strokes": 12,
+          "standardIndex": 5196,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "calf; victim of sacrifice",
+        "readings": [
+          "dú"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "犢",
+          "simplified": "犊",
+          "pinyin": "du2",
+          "definitions": [
+            "calf",
+            "sacrificial victim"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "du2"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "飨",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "宴请、祭祀",
+          "styleTags": [
+            "书卷",
+            "富贵"
+          ]
+        },
+        "facts": {
+          "pinyin": "xiǎng",
+          "tone": 3,
+          "element": "水",
+          "radical": "飠",
+          "strokes": 12,
+          "standardIndex": 5338,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "host banquet; banquet",
+        "readings": [
+          "xiǎng"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "饗",
+          "simplified": "飨",
+          "pinyin": "xiang3",
+          "definitions": [
+            "(literary) to offer food and drinks",
+            "to entertain"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "xiang3"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "action-or-dependent-context",
+        "rationale": "主要义项偏动作、功能或依赖特定语境，单独作为人名用字时语义不稳定。",
+        "requiredCheck": "若不能证明独立人名义项和自然搭配，则维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "嘤",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "鸟鸣声，细弱貌",
+          "styleTags": [
+            "灵动",
+            "温婉"
+          ]
+        },
+        "facts": {
+          "pinyin": "yīng",
+          "tone": 1,
+          "element": "土",
+          "radical": "口",
+          "strokes": 14,
+          "standardIndex": 5719,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "seek friends; also used in onomatopoetic expressions",
+        "readings": [
+          "yīng"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "嚶",
+          "simplified": "嘤",
+          "pinyin": "ying1",
+          "definitions": [
+            "calling of birds"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "ying1"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "sound-interjection-or-weak-expression",
+        "rationale": "主要联想是叫声、语气词、怒斥或微弱声态，作为默认推荐人名用字风险较高。",
+        "requiredCheck": "若无明确正向人名义项，维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "嶂",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "直立山峰",
+          "styleTags": [
+            "刚健",
+            "清雅"
+          ]
+        },
+        "facts": {
+          "pinyin": "zhàng",
+          "tone": 4,
+          "element": "土",
+          "radical": "山",
+          "strokes": 14,
+          "standardIndex": 5726,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "cliff; mountain barrier",
+        "readings": [
+          "zhàng"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "嶂",
+          "simplified": "嶂",
+          "pinyin": "zhang4",
+          "definitions": [
+            "cliff",
+            "range of peaks"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "zhang4"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "needs-disambiguation",
+        "label": "需进一步核验",
+        "reasonCode": "fixed-expression-polysemy-or-cultural-context",
+        "rationale": "可能依赖固定词组、多音多义、地名姓氏或特定文化意象，现有简短释义不足以支持批准或拒绝。",
+        "requiredCheck": "优先核对完整义项、读音、固定搭配来源和真实姓名使用情况。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "箬",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "竹叶，箬竹",
+          "styleTags": [
+            "清雅",
+            "质朴"
+          ]
+        },
+        "facts": {
+          "pinyin": "ruò",
+          "tone": 4,
+          "element": "木",
+          "radical": "竹",
+          "strokes": 14,
+          "standardIndex": 5747,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "the cuticle of the bamboo a broad-leaved bamboo",
+        "readings": [
+          "ruò"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "箬",
+          "simplified": "箬",
+          "pinyin": "ruo4",
+          "definitions": [
+            "(bamboo)",
+            "skin of bamboo"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "ruo4"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "needs-disambiguation",
+        "label": "需进一步核验",
+        "reasonCode": "fixed-expression-polysemy-or-cultural-context",
+        "rationale": "可能依赖固定词组、多音多义、地名姓氏或特定文化意象，现有简短释义不足以支持批准或拒绝。",
+        "requiredCheck": "优先核对完整义项、读音、固定搭配来源和真实姓名使用情况。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "箜",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "箜篌，乐器",
+          "styleTags": [
+            "灵动",
+            "仙气"
+          ]
+        },
+        "facts": {
+          "pinyin": "kōng",
+          "tone": 1,
+          "element": "木",
+          "radical": "竹",
+          "strokes": 14,
+          "standardIndex": 5751,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "ancient string music instrument",
+        "readings": [
+          "kōng"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "箜",
+          "simplified": "箜",
+          "pinyin": "kong1",
+          "definitions": [
+            "used in 箜篌[kong1 hou2]"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "kong1"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "needs-disambiguation",
+        "label": "需进一步核验",
+        "reasonCode": "fixed-expression-polysemy-or-cultural-context",
+        "rationale": "可能依赖固定词组、多音多义、地名姓氏或特定文化意象，现有简短释义不足以支持批准或拒绝。",
+        "requiredCheck": "优先核对完整义项、读音、固定搭配来源和真实姓名使用情况。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "鲛",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "鲛人，神话",
+          "styleTags": [
+            "灵动",
+            "仙气"
+          ]
+        },
+        "facts": {
+          "pinyin": "jiāo",
+          "tone": 1,
+          "element": "木",
+          "radical": "鱼",
+          "strokes": 14,
+          "standardIndex": 5771,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "shark",
+        "readings": [
+          "jiāo"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "鮫",
+          "simplified": "鲛",
+          "pinyin": "jiao1",
+          "definitions": [
+            "(bound form) shark"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "jiao1"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "needs-disambiguation",
+        "label": "需进一步核验",
+        "reasonCode": "fixed-expression-polysemy-or-cultural-context",
+        "rationale": "可能依赖固定词组、多音多义、地名姓氏或特定文化意象，现有简短释义不足以支持批准或拒绝。",
+        "requiredCheck": "优先核对完整义项、读音、固定搭配来源和真实姓名使用情况。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "蹁",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "轻盈旋转",
+          "styleTags": [
+            "灵动",
+            "仙气"
+          ]
+        },
+        "facts": {
+          "pinyin": "pián",
+          "tone": 2,
+          "element": "水",
+          "radical": "足",
+          "strokes": 16,
+          "standardIndex": 6096,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "to walk with a limp",
+        "readings": [
+          "pián"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "蹁",
+          "simplified": "蹁",
+          "pinyin": "pian2",
+          "definitions": [
+            "to limp"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "pian2"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "needs-disambiguation",
+        "label": "需进一步核验",
+        "reasonCode": "fixed-expression-polysemy-or-cultural-context",
+        "rationale": "可能依赖固定词组、多音多义、地名姓氏或特定文化意象，现有简短释义不足以支持批准或拒绝。",
+        "requiredCheck": "优先核对完整义项、读音、固定搭配来源和真实姓名使用情况。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "篝",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "竹笼，篝火",
+          "styleTags": [
+            "明朗",
+            "灵动"
+          ]
+        },
+        "facts": {
+          "pinyin": "gōu",
+          "tone": 1,
+          "element": "木",
+          "radical": "竹",
+          "strokes": 16,
+          "standardIndex": 6124,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "bamboo basket; bamboo frame",
+        "readings": [
+          "gōu"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "篝",
+          "simplified": "篝",
+          "pinyin": "gou1",
+          "definitions": [
+            "bamboo frame for drying clothes",
+            "bamboo cage"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "gou1"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "concrete-object-creature-or-physical-state",
+        "rationale": "主要联想偏具体物件、动物、食物、身体状态或日常称谓，不宜作为默认推荐人名用字。",
+        "requiredCheck": "除非存在稳定、正向且可核验的姓名用例，否则维持拒绝建议。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "嬴",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "姓氏；盈余",
+          "styleTags": [
+            "富贵",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "yíng",
+          "tone": 2,
+          "element": "木",
+          "radical": "女",
+          "strokes": 16,
+          "standardIndex": 6164,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "to win; to have a surplus; surname",
+        "readings": [
+          "yíng"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "嬴",
+          "simplified": "嬴",
+          "pinyin": "Ying2",
+          "definitions": [
+            "surname Ying"
+          ]
+        },
+        {
+          "traditional": "嬴",
+          "simplified": "嬴",
+          "pinyin": "ying2",
+          "definitions": [
+            "old variant of 贏|赢[ying2], to win, to profit",
+            "old variant of 盈[ying2], full"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "ying2"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "needs-disambiguation",
+        "label": "需进一步核验",
+        "reasonCode": "fixed-expression-polysemy-or-cultural-context",
+        "rationale": "可能依赖固定词组、多音多义、地名姓氏或特定文化意象，现有简短释义不足以支持批准或拒绝。",
+        "requiredCheck": "优先核对完整义项、读音、固定搭配来源和真实姓名使用情况。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "燧",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "钻木取火",
+          "styleTags": [
+            "刚健",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "suì",
+          "tone": 4,
+          "element": "火",
+          "radical": "火",
+          "strokes": 16,
+          "standardIndex": 6173,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "flintstone; beacon, signal fire; torch",
+        "readings": [
+          "suì"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "燧",
+          "simplified": "燧",
+          "pinyin": "sui4",
+          "definitions": [
+            "(bound form) material or tool used to light a fire by means of friction or the sun's rays",
+            "(bound form) beacon fire (alarm signal in border regions), esp. one lit during daytime to produce smoke"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "sui4"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "needs-disambiguation",
+        "label": "需进一步核验",
+        "reasonCode": "fixed-expression-polysemy-or-cultural-context",
+        "rationale": "可能依赖固定词组、多音多义、地名姓氏或特定文化意象，现有简短释义不足以支持批准或拒绝。",
+        "requiredCheck": "优先核对完整义项、读音、固定搭配来源和真实姓名使用情况。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "濂",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "清廉濂溪",
+          "styleTags": [
+            "清雅",
+            "书卷"
+          ]
+        },
+        "facts": {
+          "pinyin": "lián",
+          "tone": 2,
+          "element": "水",
+          "radical": "氵",
+          "strokes": 16,
+          "standardIndex": 6181,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold"
+        ]
+      },
+      "unihan": {
+        "definition": "a waterfall; a river in Hunan",
+        "readings": [
+          "lián"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "濂",
+          "simplified": "濂",
+          "pinyin": "lian2",
+          "definitions": [
+            "name of a river in Hunan"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "lian2"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "retain-for-independent-check",
+        "label": "建议保留进入独立复核",
+        "reasonCode": "plausible-positive-meaning",
+        "rationale": "现有来源释义呈现正向品质、自然意象或较明确的人名用字可能性；仍需独立词典和真实姓名用例支持后才能批准。",
+        "requiredCheck": "核对规范词典义项、常见姓名用例、谐音与双字搭配。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    },
+    {
+      "char": "鸷",
+      "sourceEvidence": {
+        "source": {
+          "sentiment": "positive",
+          "namingUsage": 30,
+          "rarityLevel": 2,
+          "meaning": "凶猛的鸟",
+          "styleTags": [
+            "刚健"
+          ]
+        },
+        "facts": {
+          "pinyin": "zhì",
+          "tone": 4,
+          "element": "火",
+          "radical": "鸟",
+          "strokes": 11,
+          "standardIndex": 4732,
+          "standardLevel": 2
+        },
+        "riskFlags": [
+          "below-production-usage-threshold",
+          "meaning-risk-keyword"
+        ]
+      },
+      "unihan": {
+        "definition": "hawk, vulture",
+        "readings": [
+          "zhì"
+        ]
+      },
+      "cedict": [
+        {
+          "traditional": "鷙",
+          "simplified": "鸷",
+          "pinyin": "zhi4",
+          "definitions": [
+            "fierce",
+            "brutal",
+            "bird of prey"
+          ]
+        }
+      ],
+      "dictionaryReadings": [
+        "zhi4"
+      ],
+      "reviewFlags": [],
+      "previousSuggestion": {
+        "suggestion": "likely-reject",
+        "label": "建议拒绝",
+        "reasonCode": "explicit-aggressive-meaning",
+        "rationale": "来源释义直接包含凶猛联想，且已命中含义风险词。",
+        "requiredCheck": "默认拒绝；不得仅因来源 sentiment=positive 而批准。",
+        "finalDecisionWritten": false
+      },
+      "nextAction": "human-meaning-and-naming-review",
+      "decision": "pending"
+    }
+  ]
+}

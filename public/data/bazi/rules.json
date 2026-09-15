@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 1,
+  "rules": [
+    {
+      "id": "bazi.relations.stems",
+      "name": "天干五合与有向生克",
+      "description": "四柱可见天干的五合配对及五行相生相克方向。",
+      "referenceIds": [
+        "oss-bazi-wuxing-tables"
+      ],
+      "schoolDifference": "跨柱配对仅表示结构存在，不判断邻接、得令等合化条件。",
+      "implementationNote": "每组柱位保留一次；生克按施受方向输出；不参与评分。",
+      "documentationPath": "docs/bazi-rules/11-stem-relations.md",
+      "codePaths": [
+        "src/data/baziRelations.ts",
+        "src/core/bazi/relations/index.ts"
+      ],
+      "enabledInV2": true
+    },
+    {
+      "id": "bazi.relations.branches",
+      "name": "地支合冲会刑害结构",
+      "description": "识别六合六冲三合三会、完整刑组、自刑与六害，保留实际柱位。",
+      "referenceIds": [
+        "oss-bazi-wuxing-tables"
+      ],
+      "schoolDifference": "完整三刑采用三支齐见口径，不覆盖两支刑或半合；自刑要求不同柱重复。",
+      "implementationNote": "仅匹配结构，不判合化或吉凶，不改变旺衰与起名倾向。",
+      "documentationPath": "docs/bazi-rules/12-branch-relations.md",
+      "codePaths": [
+        "src/data/baziRelations.ts",
+        "src/core/bazi/relations/index.ts"
+      ],
+      "enabledInV2": true
+    },
+    {
+      "id": "bazi.relations.breaks",
+      "name": "地支六破配对",
+      "description": "采用子酉、丑辰、寅亥、卯午、巳申、未戌六组结构配对。",
+      "referenceIds": [
+        "modern-six-breaks"
+      ],
+      "schoolDifference": "六破的采用及与六合的优先级存在差异；本项目并列记录，不裁决强弱。",
+      "implementationNote": "现代教程配对事实摘要，未取得固定古籍条文，不参与评分。",
+      "documentationPath": "docs/bazi-rules/12-branch-relations.md",
+      "codePaths": [
+        "src/data/baziRelations.ts",
+        "src/core/bazi/relations/index.ts"
+      ],
+      "enabledInV2": true
+    },
+    {
+      "id": "bazi.hidden-stems.roles",
+      "name": "藏干主中余气分层",
+      "description": "地支藏干保留主气、中气、余气的结构差异，后续工程权重单独配置。",
+      "referenceIds": [
+        "oss-bazi-wuxing-tables",
+        "classic-sanming-tonghui"
+      ],
+      "schoolDifference": "个别藏干顺序和力量比例在不同流派中存在差异；Name 只固化角色，不把百分比当作古籍定值。",
+      "implementationNote": "V2.1 将 EarthlyBranchInfo.hiddenStems 改为带 role 的对象数组。",
+      "documentationPath": "docs/bazi-rules/03-hidden-stems.md",
+      "codePaths": [
+        "src/data/earthlyBranches.ts",
+        "src/core/bazi/strength/hiddenStemPower.ts"
+      ],
+      "enabledInV2": true
+    },
+    {
+      "id": "bazi.month-command.priority",
+      "name": "月令优先但不单断",
+      "description": "旺衰判断先看月令和季节之气，再合看通根、透干、生扶与克泄耗。",
+      "referenceIds": [
+        "classic-ziping-month-command",
+        "classic-ditian-sui-strength"
+      ],
+      "schoolDifference": "格局法与旺衰扶抑法对月令的使用方式不完全相同。",
+      "implementationNote": "V2.1 将月令产生独立证据，取代 V1 的单一 +1.5 magic number。",
+      "documentationPath": "docs/bazi-rules/05-month-command.md",
+      "codePaths": [
+        "src/core/bazi/strength/seasonalStrength.ts",
+        "src/core/bazi/strength/evidence.ts"
+      ],
+      "enabledInV2": true
+    },
+    {
+      "id": "bazi.seasonal-strength.phase",
+      "name": "季节旺相休囚死",
+      "description": "按月支所属季节评估五行的时令状态，作为证据而非终局。",
+      "referenceIds": [
+        "classic-sanming-tonghui",
+        "oss-bazi-wuxing-tables"
+      ],
+      "implementationNote": "V2.1 输出 season 类型证据，数值映射明确标记为 Name 项目模型。",
+      "documentationPath": "docs/bazi-rules/06-seasonal-strength.md",
+      "codePaths": [
+        "src/core/bazi/strength/seasonalStrength.ts"
+      ],
+      "enabledInV2": true
+    },
+    {
+      "id": "bazi.rooting.evidence",
+      "name": "通根作为得地证据",
+      "description": "天干在地支藏干中见同五行或同干时形成不同强度的根气证据。",
+      "referenceIds": [
+        "classic-ditian-sui-strength",
+        "oss-bazi-wuxing-tables"
+      ],
+      "schoolDifference": "本气根、中气根、余气根的力量换算并无统一古典数值。",
+      "implementationNote": "V2.1 按藏干角色生成 root 证据，不直接宣称为固定分值。",
+      "documentationPath": "docs/bazi-rules/07-rooting.md",
+      "codePaths": [
+        "src/core/bazi/strength/rooting.ts"
+      ],
+      "enabledInV2": true
+    },
+    {
+      "id": "bazi.support-control.balance",
+      "name": "生扶与克泄耗合看",
+      "description": "比劫、印星形成支持证据；食伤、财星、官杀分别形成泄、耗、克的制约证据。",
+      "referenceIds": [
+        "classic-ditian-sui-strength",
+        "classic-yuanhai-ziping"
+      ],
+      "implementationNote": "V2.1 分别生成 support/control/output/wealth 证据，由 resolver 汇总。",
+      "documentationPath": "docs/bazi-rules/08-support-control.md",
+      "codePaths": [
+        "src/core/bazi/strength/support.ts",
+        "src/core/bazi/strength/control.ts"
+      ],
+      "enabledInV2": true
+    },
+    {
+      "id": "bazi.strength.five-levels",
+      "name": "旺衰五档证据裁决",
+      "description": "将月令、季节、根气、透干、生扶和克泄耗证据汇总为偏弱、稍弱、中和、稍旺、偏旺。",
+      "referenceIds": [
+        "classic-ditian-sui-strength",
+        "project-v2-strength-model"
+      ],
+      "schoolDifference": "五档边界是 Name 为可解释起名而设置的工程模型，不是古籍统一分类。",
+      "implementationNote": "V2.1 strengthResolver 仅消费结构化证据；所有阈值集中配置。",
+      "documentationPath": "docs/bazi-rules/09-strength.md",
+      "codePaths": [
+        "src/core/bazi/strength/strengthResolver.ts",
+        "src/core/bazi/strength/evidence.ts"
+      ],
+      "enabledInV2": true
+    },
+    {
+      "id": "bazi.tiaohou.basic",
+      "name": "寒暖燥湿基础调节",
+      "description": "扶抑判断之外，对明显寒、暖、燥、湿结构增加基础调节方向。",
+      "referenceIds": [
+        "classic-qiongtong-season",
+        "project-v2-strength-model"
+      ],
+      "schoolDifference": "调候、扶抑、格局和病药的优先级在不同体系中有差异。",
+      "implementationNote": "V2.1 按月令输出独立寒暖燥湿结论，只对起名五行倾向最多上调一档，不改变旺衰证据分，也不输出唯一喜用神。",
+      "documentationPath": "docs/bazi-rules/13-tiaohou.md",
+      "codePaths": [
+        "src/core/bazi/strength/tiaohou.ts",
+        "src/core/bazi/strength/namingTendency.ts"
+      ],
+      "enabledInV2": true
+    },
+    {
+      "id": "bazi.naming-tendency.fuyi",
+      "name": "起名五行倾向而非唯一喜用神",
+      "description": "依据旺衰支持与制约证据，输出优先考虑、谨慎增加和调节方向。",
+      "referenceIds": [
+        "classic-ditian-sui-strength",
+        "classic-qiongtong-season",
+        "project-v2-strength-model"
+      ],
+      "implementationNote": "V2.1 以 1-5 级倾向和证据链输出，避免‘缺什么补什么’。",
+      "documentationPath": "docs/bazi-rules/14-naming-tendency.md",
+      "codePaths": [
+        "src/core/bazi/strength/namingTendency.ts"
+      ],
+      "enabledInV2": true
+    }
+  ]
+}

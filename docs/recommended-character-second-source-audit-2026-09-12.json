@@ -1,0 +1,3097 @@
+{
+  "schemaVersion": 1,
+  "auditId": "recommended-character-second-source-2026-09-12",
+  "source": {
+    "project": "wainshine/Chinese-Names-Corpus",
+    "repository": "https://github.com/wainshine/Chinese-Names-Corpus",
+    "commit": "47d4af8d816f6212787ddfc49173cac3b994b58d",
+    "license": "Apache-2.0",
+    "corpusSha256": "30d83f3e682d355ac1d3f18482c14ff5e2bdd0ebe704bff1ef196eabdf93939b",
+    "surnameWorkbookSha256": "c0ec61ece459e1527f692bff9d1bb8d184f49d48966659b1eb3822769e8f28b6",
+    "licenseSha256": "e03ba41d7fab20700769fe4118bab50d800cb74f990353a05d2f5fff1c228363"
+  },
+  "parsing": {
+    "rule": "compound surname first; otherwise remove one leading surname character; accept one or two CJK given-name characters",
+    "compoundSurnameCount": 56,
+    "names": 1144226,
+    "oneCharacterGivenNames": 178696,
+    "twoCharacterGivenNames": 965530,
+    "uniqueGivenCharacters": 2238
+  },
+  "policy": {
+    "previousRuleIdsExactly": [
+      "neutral.score.below-approve-threshold"
+    ],
+    "minimumOccurrences": 5,
+    "evidencePoints": 20,
+    "approveThreshold": 70,
+    "hardRejectionsNeverOverridden": true
+  },
+  "counts": {
+    "approved": 204,
+    "retainedExplicitOrHardReject": 280,
+    "retainedInsufficientEvidence": 334
+  },
+  "entries": [
+    {
+      "char": "瑟",
+      "occurrences": 29,
+      "previousScore": 50,
+      "score": 70,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 1,
+        "female": 24,
+        "unknown": 4
+      }
+    },
+    {
+      "char": "幻",
+      "occurrences": 12,
+      "previousScore": 53,
+      "score": 73,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 0,
+        "female": 12,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "迹",
+      "occurrences": 8,
+      "previousScore": 50,
+      "score": 70,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 0,
+        "female": 0,
+        "unknown": 8
+      }
+    },
+    {
+      "char": "处",
+      "occurrences": 6,
+      "previousScore": 54,
+      "score": 74,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 6,
+        "female": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "当",
+      "occurrences": 35,
+      "previousScore": 54,
+      "score": 74,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 0,
+        "female": 5,
+        "unknown": 30
+      }
+    },
+    {
+      "char": "字",
+      "occurrences": 5,
+      "previousScore": 51,
+      "score": 71,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 3,
+        "female": 0,
+        "unknown": 2
+      }
+    },
+    {
+      "char": "服",
+      "occurrences": 14,
+      "previousScore": 51,
+      "score": 71,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 13,
+        "female": 1,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "芹",
+      "occurrences": 1836,
+      "previousScore": 68,
+      "score": 88,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 1,
+        "female": 1835,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "沫",
+      "occurrences": 54,
+      "previousScore": 68,
+      "score": 88,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 2,
+        "female": 49,
+        "unknown": 3
+      }
+    },
+    {
+      "char": "绅",
+      "occurrences": 12,
+      "previousScore": 68,
+      "score": 88,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 12,
+        "female": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "荧",
+      "occurrences": 20,
+      "previousScore": 68,
+      "score": 88,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 0,
+        "female": 20,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "屏",
+      "occurrences": 265,
+      "previousScore": 68,
+      "score": 88,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 5,
+        "female": 209,
+        "unknown": 51
+      }
+    },
+    {
+      "char": "翁",
+      "occurrences": 16,
+      "previousScore": 68,
+      "score": 88,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 6,
+        "female": 0,
+        "unknown": 10
+      }
+    },
+    {
+      "char": "阅",
+      "occurrences": 25,
+      "previousScore": 68,
+      "score": 88,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 25,
+        "female": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "尉",
+      "occurrences": 61,
+      "previousScore": 68,
+      "score": 88,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 57,
+        "female": 0,
+        "unknown": 4
+      }
+    },
+    {
+      "char": "堪",
+      "occurrences": 12,
+      "previousScore": 68,
+      "score": 88,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 11,
+        "female": 0,
+        "unknown": 1
+      }
+    },
+    {
+      "char": "蜀",
+      "occurrences": 52,
+      "previousScore": 68,
+      "score": 88,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 18,
+        "female": 25,
+        "unknown": 9
+      }
+    },
+    {
+      "char": "泾",
+      "occurrences": 17,
+      "previousScore": 68,
+      "score": 88,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 17,
+        "female": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "轲",
+      "occurrences": 96,
+      "previousScore": 68,
+      "score": 88,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 12,
+        "female": 0,
+        "unknown": 84
+      }
+    },
+    {
+      "char": "浚",
+      "occurrences": 88,
+      "previousScore": 68,
+      "score": 88,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 87,
+        "female": 0,
+        "unknown": 1
+      }
+    },
+    {
+      "char": "渭",
+      "occurrences": 91,
+      "previousScore": 68,
+      "score": 88,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 87,
+        "female": 2,
+        "unknown": 2
+      }
+    },
+    {
+      "char": "是",
+      "occurrences": 13,
+      "previousScore": 52,
+      "score": 72,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 12,
+        "female": 1,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "速",
+      "occurrences": 27,
+      "previousScore": 52,
+      "score": 72,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 24,
+        "female": 2,
+        "unknown": 1
+      }
+    },
+    {
+      "char": "于",
+      "occurrences": 251,
+      "previousScore": 69,
+      "score": 89,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 202,
+        "female": 35,
+        "unknown": 14
+      }
+    },
+    {
+      "char": "凡",
+      "occurrences": 2121,
+      "previousScore": 69,
+      "score": 89,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 1410,
+        "female": 306,
+        "unknown": 405
+      }
+    },
+    {
+      "char": "弓",
+      "occurrences": 14,
+      "previousScore": 69,
+      "score": 89,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 14,
+        "female": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "井",
+      "occurrences": 281,
+      "previousScore": 69,
+      "score": 89,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 238,
+        "female": 25,
+        "unknown": 18
+      }
+    },
+    {
+      "char": "尤",
+      "occurrences": 50,
+      "previousScore": 69,
+      "score": 89,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 36,
+        "female": 7,
+        "unknown": 7
+      }
+    },
+    {
+      "char": "引",
+      "occurrences": 119,
+      "previousScore": 69,
+      "score": 89,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 16,
+        "female": 102,
+        "unknown": 1
+      }
+    },
+    {
+      "char": "付",
+      "occurrences": 477,
+      "previousScore": 69,
+      "score": 89,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 414,
+        "female": 52,
+        "unknown": 11
+      }
+    },
+    {
+      "char": "训",
+      "occurrences": 275,
+      "previousScore": 69,
+      "score": 89,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 271,
+        "female": 4,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "辽",
+      "occurrences": 31,
+      "previousScore": 69,
+      "score": 89,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 29,
+        "female": 1,
+        "unknown": 1
+      }
+    },
+    {
+      "char": "共",
+      "occurrences": 24,
+      "previousScore": 69,
+      "score": 89,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 24,
+        "female": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "列",
+      "occurrences": 109,
+      "previousScore": 69,
+      "score": 89,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 104,
+        "female": 3,
+        "unknown": 2
+      }
+    },
+    {
+      "char": "因",
+      "occurrences": 53,
+      "previousScore": 69,
+      "score": 89,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 44,
+        "female": 8,
+        "unknown": 1
+      }
+    },
+    {
+      "char": "衣",
+      "occurrences": 30,
+      "previousScore": 69,
+      "score": 89,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 19,
+        "female": 7,
+        "unknown": 4
+      }
+    },
+    {
+      "char": "问",
+      "occurrences": 35,
+      "previousScore": 69,
+      "score": 89,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 23,
+        "female": 0,
+        "unknown": 12
+      }
+    },
+    {
+      "char": "异",
+      "occurrences": 94,
+      "previousScore": 69,
+      "score": 89,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 23,
+        "female": 22,
+        "unknown": 49
+      }
+    },
+    {
+      "char": "约",
+      "occurrences": 37,
+      "previousScore": 69,
+      "score": 89,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 22,
+        "female": 1,
+        "unknown": 14
+      }
+    },
+    {
+      "char": "芦",
+      "occurrences": 16,
+      "previousScore": 69,
+      "score": 89,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 4,
+        "female": 0,
+        "unknown": 12
+      }
+    },
+    {
+      "char": "肖",
+      "occurrences": 665,
+      "previousScore": 69,
+      "score": 89,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 100,
+        "female": 543,
+        "unknown": 22
+      }
+    },
+    {
+      "char": "邻",
+      "occurrences": 27,
+      "previousScore": 69,
+      "score": 89,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 16,
+        "female": 9,
+        "unknown": 2
+      }
+    },
+    {
+      "char": "系",
+      "occurrences": 9,
+      "previousScore": 69,
+      "score": 89,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 8,
+        "female": 1,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "改",
+      "occurrences": 277,
+      "previousScore": 69,
+      "score": 89,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 5,
+        "female": 263,
+        "unknown": 9
+      }
+    },
+    {
+      "char": "轮",
+      "occurrences": 16,
+      "previousScore": 69,
+      "score": 89,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 16,
+        "female": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "放",
+      "occurrences": 262,
+      "previousScore": 69,
+      "score": 89,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 260,
+        "female": 1,
+        "unknown": 1
+      }
+    },
+    {
+      "char": "郑",
+      "occurrences": 88,
+      "previousScore": 69,
+      "score": 89,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 83,
+        "female": 4,
+        "unknown": 1
+      }
+    },
+    {
+      "char": "细",
+      "occurrences": 842,
+      "previousScore": 69,
+      "score": 89,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 172,
+        "female": 547,
+        "unknown": 123
+      }
+    },
+    {
+      "char": "胡",
+      "occurrences": 103,
+      "previousScore": 69,
+      "score": 89,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 13,
+        "female": 77,
+        "unknown": 13
+      }
+    },
+    {
+      "char": "染",
+      "occurrences": 12,
+      "previousScore": 69,
+      "score": 89,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 0,
+        "female": 4,
+        "unknown": 8
+      }
+    },
+    {
+      "char": "席",
+      "occurrences": 20,
+      "previousScore": 69,
+      "score": 89,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 15,
+        "female": 5,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "凉",
+      "occurrences": 42,
+      "previousScore": 69,
+      "score": 89,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 2,
+        "female": 5,
+        "unknown": 35
+      }
+    },
+    {
+      "char": "萨",
+      "occurrences": 16,
+      "previousScore": 69,
+      "score": 89,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 1,
+        "female": 15,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "雀",
+      "occurrences": 11,
+      "previousScore": 69,
+      "score": 89,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 0,
+        "female": 11,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "略",
+      "occurrences": 48,
+      "previousScore": 69,
+      "score": 89,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 48,
+        "female": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "停",
+      "occurrences": 43,
+      "previousScore": 69,
+      "score": 89,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 6,
+        "female": 37,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "族",
+      "occurrences": 6,
+      "previousScore": 69,
+      "score": 89,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 6,
+        "female": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "盖",
+      "occurrences": 18,
+      "previousScore": 69,
+      "score": 89,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 17,
+        "female": 0,
+        "unknown": 1
+      }
+    },
+    {
+      "char": "续",
+      "occurrences": 56,
+      "previousScore": 69,
+      "score": 89,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 55,
+        "female": 1,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "棉",
+      "occurrences": 44,
+      "previousScore": 69,
+      "score": 89,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 12,
+        "female": 5,
+        "unknown": 27
+      }
+    },
+    {
+      "char": "掌",
+      "occurrences": 11,
+      "previousScore": 69,
+      "score": 89,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 3,
+        "female": 2,
+        "unknown": 6
+      }
+    },
+    {
+      "char": "稀",
+      "occurrences": 12,
+      "previousScore": 69,
+      "score": 89,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 3,
+        "female": 7,
+        "unknown": 2
+      }
+    },
+    {
+      "char": "醒",
+      "occurrences": 84,
+      "previousScore": 69,
+      "score": 89,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 67,
+        "female": 6,
+        "unknown": 11
+      }
+    },
+    {
+      "char": "戎",
+      "occurrences": 67,
+      "previousScore": 66,
+      "score": 86,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 8,
+        "female": 9,
+        "unknown": 50
+      }
+    },
+    {
+      "char": "阶",
+      "occurrences": 33,
+      "previousScore": 66,
+      "score": 86,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 33,
+        "female": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "纵",
+      "occurrences": 11,
+      "previousScore": 66,
+      "score": 86,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 11,
+        "female": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "茅",
+      "occurrences": 10,
+      "previousScore": 66,
+      "score": 86,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 1,
+        "female": 8,
+        "unknown": 1
+      }
+    },
+    {
+      "char": "荆",
+      "occurrences": 34,
+      "previousScore": 66,
+      "score": 86,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 25,
+        "female": 7,
+        "unknown": 2
+      }
+    },
+    {
+      "char": "盾",
+      "occurrences": 23,
+      "previousScore": 66,
+      "score": 86,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 3,
+        "female": 0,
+        "unknown": 20
+      }
+    },
+    {
+      "char": "骆",
+      "occurrences": 5,
+      "previousScore": 66,
+      "score": 86,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 5,
+        "female": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "耘",
+      "occurrences": 111,
+      "previousScore": 66,
+      "score": 86,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 8,
+        "female": 22,
+        "unknown": 81
+      }
+    },
+    {
+      "char": "崖",
+      "occurrences": 19,
+      "previousScore": 66,
+      "score": 86,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 18,
+        "female": 1,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "衔",
+      "occurrences": 7,
+      "previousScore": 66,
+      "score": 86,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 4,
+        "female": 1,
+        "unknown": 2
+      }
+    },
+    {
+      "char": "渔",
+      "occurrences": 33,
+      "previousScore": 66,
+      "score": 86,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 14,
+        "female": 0,
+        "unknown": 19
+      }
+    },
+    {
+      "char": "综",
+      "occurrences": 9,
+      "previousScore": 66,
+      "score": 86,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 8,
+        "female": 0,
+        "unknown": 1
+      }
+    },
+    {
+      "char": "畴",
+      "occurrences": 16,
+      "previousScore": 66,
+      "score": 86,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 16,
+        "female": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "皖",
+      "occurrences": 18,
+      "previousScore": 66,
+      "score": 86,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 5,
+        "female": 2,
+        "unknown": 11
+      }
+    },
+    {
+      "char": "竣",
+      "occurrences": 33,
+      "previousScore": 66,
+      "score": 86,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 33,
+        "female": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "敷",
+      "occurrences": 8,
+      "previousScore": 66,
+      "score": 86,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 1,
+        "female": 0,
+        "unknown": 7
+      }
+    },
+    {
+      "char": "檬",
+      "occurrences": 10,
+      "previousScore": 66,
+      "score": 86,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 0,
+        "female": 10,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "汶",
+      "occurrences": 119,
+      "previousScore": 66,
+      "score": 86,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 32,
+        "female": 44,
+        "unknown": 43
+      }
+    },
+    {
+      "char": "栎",
+      "occurrences": 14,
+      "previousScore": 66,
+      "score": 86,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 13,
+        "female": 1,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "倪",
+      "occurrences": 26,
+      "previousScore": 66,
+      "score": 86,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 2,
+        "female": 4,
+        "unknown": 20
+      }
+    },
+    {
+      "char": "烽",
+      "occurrences": 124,
+      "previousScore": 66,
+      "score": 86,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 124,
+        "female": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "翟",
+      "occurrences": 7,
+      "previousScore": 66,
+      "score": 86,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 0,
+        "female": 0,
+        "unknown": 7
+      }
+    },
+    {
+      "char": "樵",
+      "occurrences": 37,
+      "previousScore": 66,
+      "score": 86,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 13,
+        "female": 1,
+        "unknown": 23
+      }
+    },
+    {
+      "char": "习",
+      "occurrences": 181,
+      "previousScore": 68,
+      "score": 88,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 130,
+        "female": 10,
+        "unknown": 41
+      }
+    },
+    {
+      "char": "支",
+      "occurrences": 30,
+      "previousScore": 68,
+      "score": 88,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 24,
+        "female": 4,
+        "unknown": 2
+      }
+    },
+    {
+      "char": "目",
+      "occurrences": 15,
+      "previousScore": 68,
+      "score": 88,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 14,
+        "female": 0,
+        "unknown": 1
+      }
+    },
+    {
+      "char": "农",
+      "occurrences": 329,
+      "previousScore": 68,
+      "score": 88,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 323,
+        "female": 2,
+        "unknown": 4
+      }
+    },
+    {
+      "char": "围",
+      "occurrences": 35,
+      "previousScore": 68,
+      "score": 88,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 3,
+        "female": 31,
+        "unknown": 1
+      }
+    },
+    {
+      "char": "委",
+      "occurrences": 70,
+      "previousScore": 68,
+      "score": 88,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 28,
+        "female": 1,
+        "unknown": 41
+      }
+    },
+    {
+      "char": "房",
+      "occurrences": 48,
+      "previousScore": 68,
+      "score": 88,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 48,
+        "female": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "洞",
+      "occurrences": 22,
+      "previousScore": 68,
+      "score": 88,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 22,
+        "female": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "球",
+      "occurrences": 328,
+      "previousScore": 68,
+      "score": 88,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 231,
+        "female": 15,
+        "unknown": 82
+      }
+    },
+    {
+      "char": "左",
+      "occurrences": 42,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 38,
+        "female": 3,
+        "unknown": 1
+      }
+    },
+    {
+      "char": "占",
+      "occurrences": 1555,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 1430,
+        "female": 102,
+        "unknown": 23
+      }
+    },
+    {
+      "char": "由",
+      "occurrences": 57,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 49,
+        "female": 7,
+        "unknown": 1
+      }
+    },
+    {
+      "char": "矛",
+      "occurrences": 17,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 0,
+        "female": 0,
+        "unknown": 17
+      }
+    },
+    {
+      "char": "场",
+      "occurrences": 20,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 2,
+        "female": 0,
+        "unknown": 18
+      }
+    },
+    {
+      "char": "米",
+      "occurrences": 165,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 14,
+        "female": 146,
+        "unknown": 5
+      }
+    },
+    {
+      "char": "论",
+      "occurrences": 17,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 17,
+        "female": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "坊",
+      "occurrences": 36,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 36,
+        "female": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "劳",
+      "occurrences": 9,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 5,
+        "female": 0,
+        "unknown": 4
+      }
+    },
+    {
+      "char": "村",
+      "occurrences": 172,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 151,
+        "female": 10,
+        "unknown": 11
+      }
+    },
+    {
+      "char": "呈",
+      "occurrences": 126,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 120,
+        "female": 4,
+        "unknown": 2
+      }
+    },
+    {
+      "char": "序",
+      "occurrences": 87,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 80,
+        "female": 5,
+        "unknown": 2
+      }
+    },
+    {
+      "char": "夜",
+      "occurrences": 15,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 1,
+        "female": 12,
+        "unknown": 2
+      }
+    },
+    {
+      "char": "总",
+      "occurrences": 18,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 18,
+        "female": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "钻",
+      "occurrences": 8,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 3,
+        "female": 4,
+        "unknown": 1
+      }
+    },
+    {
+      "char": "称",
+      "occurrences": 8,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 7,
+        "female": 0,
+        "unknown": 1
+      }
+    },
+    {
+      "char": "眼",
+      "occurrences": 6,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 3,
+        "female": 0,
+        "unknown": 3
+      }
+    },
+    {
+      "char": "移",
+      "occurrences": 17,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 16,
+        "female": 1,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "腊",
+      "occurrences": 206,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 19,
+        "female": 186,
+        "unknown": 1
+      }
+    },
+    {
+      "char": "频",
+      "occurrences": 63,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 1,
+        "female": 60,
+        "unknown": 2
+      }
+    },
+    {
+      "char": "滩",
+      "occurrences": 15,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 0,
+        "female": 0,
+        "unknown": 15
+      }
+    },
+    {
+      "char": "警",
+      "occurrences": 13,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 0,
+        "female": 13,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "介",
+      "occurrences": 162,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 152,
+        "female": 9,
+        "unknown": 1
+      }
+    },
+    {
+      "char": "巩",
+      "occurrences": 17,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 17,
+        "female": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "译",
+      "occurrences": 78,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 7,
+        "female": 67,
+        "unknown": 4
+      }
+    },
+    {
+      "char": "坪",
+      "occurrences": 103,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 14,
+        "female": 0,
+        "unknown": 89
+      }
+    },
+    {
+      "char": "荫",
+      "occurrences": 115,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 95,
+        "female": 5,
+        "unknown": 15
+      }
+    },
+    {
+      "char": "皆",
+      "occurrences": 11,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 9,
+        "female": 1,
+        "unknown": 1
+      }
+    },
+    {
+      "char": "钥",
+      "occurrences": 18,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 1,
+        "female": 3,
+        "unknown": 14
+      }
+    },
+    {
+      "char": "兹",
+      "occurrences": 12,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 11,
+        "female": 1,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "逊",
+      "occurrences": 86,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 84,
+        "female": 2,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "畔",
+      "occurrences": 22,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 0,
+        "female": 22,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "圃",
+      "occurrences": 16,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 6,
+        "female": 0,
+        "unknown": 10
+      }
+    },
+    {
+      "char": "倚",
+      "occurrences": 18,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 8,
+        "female": 10,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "葱",
+      "occurrences": 13,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 0,
+        "female": 13,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "粟",
+      "occurrences": 32,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 8,
+        "female": 24,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "熔",
+      "occurrences": 27,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 1,
+        "female": 0,
+        "unknown": 26
+      }
+    },
+    {
+      "char": "狄",
+      "occurrences": 71,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 69,
+        "female": 2,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "泮",
+      "occurrences": 15,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 15,
+        "female": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "舸",
+      "occurrences": 36,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 35,
+        "female": 1,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "瑕",
+      "occurrences": 15,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 0,
+        "female": 1,
+        "unknown": 14
+      }
+    },
+    {
+      "char": "漩",
+      "occurrences": 8,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 0,
+        "female": 1,
+        "unknown": 7
+      }
+    },
+    {
+      "char": "缨",
+      "occurrences": 63,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 0,
+        "female": 62,
+        "unknown": 1
+      }
+    },
+    {
+      "char": "木",
+      "occurrences": 1085,
+      "previousScore": 68,
+      "score": 88,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 693,
+        "female": 181,
+        "unknown": 211
+      }
+    },
+    {
+      "char": "毛",
+      "occurrences": 250,
+      "previousScore": 68,
+      "score": 88,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 230,
+        "female": 14,
+        "unknown": 6
+      }
+    },
+    {
+      "char": "早",
+      "occurrences": 39,
+      "previousScore": 68,
+      "score": 88,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 8,
+        "female": 15,
+        "unknown": 16
+      }
+    },
+    {
+      "char": "次",
+      "occurrences": 29,
+      "previousScore": 68,
+      "score": 88,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 15,
+        "female": 5,
+        "unknown": 9
+      }
+    },
+    {
+      "char": "更",
+      "occurrences": 128,
+      "previousScore": 68,
+      "score": 88,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 127,
+        "female": 1,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "豆",
+      "occurrences": 104,
+      "previousScore": 68,
+      "score": 88,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 0,
+        "female": 102,
+        "unknown": 2
+      }
+    },
+    {
+      "char": "里",
+      "occurrences": 404,
+      "previousScore": 68,
+      "score": 88,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 386,
+        "female": 11,
+        "unknown": 7
+      }
+    },
+    {
+      "char": "岗",
+      "occurrences": 407,
+      "previousScore": 68,
+      "score": 88,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 406,
+        "female": 1,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "帮",
+      "occurrences": 330,
+      "previousScore": 68,
+      "score": 88,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 314,
+        "female": 7,
+        "unknown": 9
+      }
+    },
+    {
+      "char": "换",
+      "occurrences": 70,
+      "previousScore": 68,
+      "score": 88,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 6,
+        "female": 58,
+        "unknown": 6
+      }
+    },
+    {
+      "char": "管",
+      "occurrences": 9,
+      "previousScore": 68,
+      "score": 88,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 9,
+        "female": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "乃",
+      "occurrences": 672,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 563,
+        "female": 72,
+        "unknown": 37
+      }
+    },
+    {
+      "char": "及",
+      "occurrences": 10,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 9,
+        "female": 0,
+        "unknown": 1
+      }
+    },
+    {
+      "char": "门",
+      "occurrences": 13,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 12,
+        "female": 1,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "厅",
+      "occurrences": 10,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 10,
+        "female": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "仓",
+      "occurrences": 154,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 154,
+        "female": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "以",
+      "occurrences": 659,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 552,
+        "female": 61,
+        "unknown": 46
+      }
+    },
+    {
+      "char": "臣",
+      "occurrences": 1190,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 1182,
+        "female": 1,
+        "unknown": 7
+      }
+    },
+    {
+      "char": "夺",
+      "occurrences": 10,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 8,
+        "female": 2,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "产",
+      "occurrences": 8,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 8,
+        "female": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "宅",
+      "occurrences": 7,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 7,
+        "female": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "沪",
+      "occurrences": 35,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 32,
+        "female": 3,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "沉",
+      "occurrences": 19,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 0,
+        "female": 19,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "拔",
+      "occurrences": 9,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 8,
+        "female": 1,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "叔",
+      "occurrences": 151,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 99,
+        "female": 24,
+        "unknown": 28
+      }
+    },
+    {
+      "char": "受",
+      "occurrences": 12,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 12,
+        "female": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "查",
+      "occurrences": 7,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 5,
+        "female": 2,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "垒",
+      "occurrences": 125,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 125,
+        "female": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "索",
+      "occurrences": 27,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 5,
+        "female": 20,
+        "unknown": 2
+      }
+    },
+    {
+      "char": "检",
+      "occurrences": 70,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 12,
+        "female": 1,
+        "unknown": 57
+      }
+    },
+    {
+      "char": "野",
+      "occurrences": 347,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 317,
+        "female": 9,
+        "unknown": 21
+      }
+    },
+    {
+      "char": "盘",
+      "occurrences": 29,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 29,
+        "female": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "惊",
+      "occurrences": 28,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 24,
+        "female": 4,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "绳",
+      "occurrences": 21,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 21,
+        "female": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "棱",
+      "occurrences": 14,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 0,
+        "female": 1,
+        "unknown": 13
+      }
+    },
+    {
+      "char": "链",
+      "occurrences": 11,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 11,
+        "female": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "鲁",
+      "occurrences": 546,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 470,
+        "female": 47,
+        "unknown": 29
+      }
+    },
+    {
+      "char": "璃",
+      "occurrences": 9,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 0,
+        "female": 9,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "熊",
+      "occurrences": 115,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 115,
+        "female": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "翻",
+      "occurrences": 10,
+      "previousScore": 65,
+      "score": 85,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 1,
+        "female": 9,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "仑",
+      "occurrences": 86,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 86,
+        "female": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "亢",
+      "occurrences": 19,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 1,
+        "female": 0,
+        "unknown": 18
+      }
+    },
+    {
+      "char": "邑",
+      "occurrences": 12,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 1,
+        "female": 0,
+        "unknown": 11
+      }
+    },
+    {
+      "char": "闽",
+      "occurrences": 114,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 42,
+        "female": 17,
+        "unknown": 55
+      }
+    },
+    {
+      "char": "秧",
+      "occurrences": 9,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 0,
+        "female": 9,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "毫",
+      "occurrences": 15,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 15,
+        "female": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "巢",
+      "occurrences": 8,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 1,
+        "female": 0,
+        "unknown": 7
+      }
+    },
+    {
+      "char": "循",
+      "occurrences": 31,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 30,
+        "female": 0,
+        "unknown": 1
+      }
+    },
+    {
+      "char": "絮",
+      "occurrences": 21,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 0,
+        "female": 21,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "辑",
+      "occurrences": 11,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 11,
+        "female": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "锡",
+      "occurrences": 1522,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 1331,
+        "female": 148,
+        "unknown": 43
+      }
+    },
+    {
+      "char": "溶",
+      "occurrences": 50,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 1,
+        "female": 48,
+        "unknown": 1
+      }
+    },
+    {
+      "char": "兢",
+      "occurrences": 38,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 3,
+        "female": 1,
+        "unknown": 34
+      }
+    },
+    {
+      "char": "漱",
+      "occurrences": 9,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 0,
+        "female": 8,
+        "unknown": 1
+      }
+    },
+    {
+      "char": "弋",
+      "occurrences": 42,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 11,
+        "female": 6,
+        "unknown": 25
+      }
+    },
+    {
+      "char": "讷",
+      "occurrences": 11,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 1,
+        "female": 0,
+        "unknown": 10
+      }
+    },
+    {
+      "char": "邺",
+      "occurrences": 11,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 3,
+        "female": 0,
+        "unknown": 8
+      }
+    },
+    {
+      "char": "汾",
+      "occurrences": 9,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 2,
+        "female": 0,
+        "unknown": 7
+      }
+    },
+    {
+      "char": "垠",
+      "occurrences": 32,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 12,
+        "female": 4,
+        "unknown": 16
+      }
+    },
+    {
+      "char": "郡",
+      "occurrences": 66,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 8,
+        "female": 5,
+        "unknown": 53
+      }
+    },
+    {
+      "char": "胥",
+      "occurrences": 10,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 4,
+        "female": 1,
+        "unknown": 5
+      }
+    },
+    {
+      "char": "皋",
+      "occurrences": 51,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 33,
+        "female": 0,
+        "unknown": 18
+      }
+    },
+    {
+      "char": "舫",
+      "occurrences": 35,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 10,
+        "female": 6,
+        "unknown": 19
+      }
+    },
+    {
+      "char": "娣",
+      "occurrences": 1066,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 0,
+        "female": 1066,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "覃",
+      "occurrences": 14,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 3,
+        "female": 11,
+        "unknown": 0
+      }
+    },
+    {
+      "char": "藜",
+      "occurrences": 14,
+      "previousScore": 62,
+      "score": 82,
+      "ruleIds": [
+        "second-source.corpus-observed",
+        "second-source.score.approve"
+      ],
+      "genderCounts": {
+        "male": 0,
+        "female": 12,
+        "unknown": 2
+      }
+    }
+  ]
+}
