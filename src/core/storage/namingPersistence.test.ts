@@ -1,17 +1,22 @@
 import { describe, expect, it } from 'vitest';
 import { analyzeBazi } from '../bazi/strengthAnalysis';
 import {
+  createFavoriteNameRecord,
   createNamingHistoryRecord,
+  createRecentNameViewRecord,
+  LEGACY_NAMING_STORAGE_KEY,
+  LEGACY_UNVERSIONED,
   loadNamingData,
+  migrateV2ToV3,
   NAMING_STORAGE_KEY,
+  restoreNamingDataFromV1,
   saveNamingData,
 } from './namingPersistence';
 import type {
   Bazi,
   CalendarResult,
-  FavoriteNameRecord,
   GeneratedName,
-  RecentNameViewRecord,
+  NamingRecordVersions,
 } from '../../types';
 
 const bazi: Bazi = {
@@ -116,17 +121,32 @@ function createMemoryStorage() {
   };
 }
 
+function withoutVersions<T extends NamingRecordVersions>(record: T) {
+  const {
+    storageSchemaVersion: _storageSchemaVersion,
+    dataVersion: _dataVersion,
+    ruleVersion: _ruleVersion,
+    namingModelVersion: _namingModelVersion,
+    ...legacy
+  } = record;
+  void _storageSchemaVersion;
+  void _dataVersion;
+  void _ruleVersion;
+  void _namingModelVersion;
+  return legacy;
+}
+
 describe('Phase 9 本地数据持久化', () => {
   it('保存并恢复收藏、最近浏览和自动排盘会话', () => {
     const storage = createMemoryStorage();
-    const favorite: FavoriteNameRecord = {
+    const favorite = createFavoriteNameRecord(
       name,
-      savedAt: '2026-08-20T00:00:00.000Z',
-    };
-    const recentView: RecentNameViewRecord = {
+      '2026-08-20T00:00:00.000Z',
+    );
+    const recentView = createRecentNameViewRecord(
       name,
-      viewedAt: '2026-08-20T00:01:00.000Z',
-    };
+      '2026-08-20T00:01:00.000Z',
+    );
     const history = createNamingHistoryRecord(
       {
         inputMode: 'birth',
@@ -168,11 +188,17 @@ describe('Phase 9 本地数据持久化', () => {
     expect(
       restored.namingHistory[0]?.calendarResult?.solarDate.toISOString(),
     ).toBe('2026-08-17T07:28:00.000Z');
+    expect(restored.favorites[0]).toMatchObject({
+      storageSchemaVersion: 2,
+      dataVersion: '3.0.0',
+      ruleVersion: '3.0.0',
+      namingModelVersion: '3.0.0',
+    });
   });
 
   it('遇到损坏或未知版本数据时返回安全空数据', () => {
     const storage = createMemoryStorage();
-    storage.setItem('traditional-chinese-naming:v1', '{broken');
+    storage.setItem(LEGACY_NAMING_STORAGE_KEY, '{broken');
 
     expect(loadNamingData(storage)).toEqual({
       favorites: [],
@@ -181,7 +207,7 @@ describe('Phase 9 本地数据持久化', () => {
     });
 
     storage.setItem(
-      'traditional-chinese-naming:v1',
+      LEGACY_NAMING_STORAGE_KEY,
       JSON.stringify({ version: 99, favorites: [{ name }] }),
     );
     expect(loadNamingData(storage).favorites).toEqual([]);
@@ -220,5 +246,163 @@ describe('Phase 9 本地数据持久化', () => {
       namingHistory: [],
       recentViews: [],
     });
+  });
+
+  it('把 V1 三类有效记录迁移到 V2，保留原始值与姓名快照并稳定重复执行', () => {
+    const storage = createMemoryStorage();
+    const favorite = createFavoriteNameRecord(
+      name,
+      '2026-08-20T00:00:00.000Z',
+    );
+    const recentView = createRecentNameViewRecord(
+      name,
+      '2026-08-20T00:01:00.000Z',
+    );
+    const history = createNamingHistoryRecord(
+      {
+        inputMode: 'bazi',
+        surname: '陈',
+        gender: 'male',
+        bazi,
+        analysis,
+      },
+      '2026-08-20T00:02:00.000Z',
+    );
+    const legacyPayload = JSON.stringify({
+      version: 1,
+      favorites: [withoutVersions(favorite)],
+      namingHistory: [withoutVersions(history)],
+      recentViews: [withoutVersions(recentView)],
+    });
+    storage.setItem(LEGACY_NAMING_STORAGE_KEY, legacyPayload);
+
+    const first = migrateV2ToV3(storage, '2026-09-15T00:00:00.000Z');
+    const writtenV2 = storage.getItem(NAMING_STORAGE_KEY);
+    const second = migrateV2ToV3(storage, '2026-09-16T00:00:00.000Z');
+
+    expect(first.status).toBe('migrated');
+    expect(first.counts).toEqual({
+      favorites: { source: 1, migrated: 1, skipped: 0 },
+      namingHistory: { source: 1, migrated: 1, skipped: 0 },
+      recentViews: { source: 1, migrated: 1, skipped: 0 },
+    });
+    expect(first.legacyPreserved).toBe(true);
+    expect(storage.getItem(LEGACY_NAMING_STORAGE_KEY)).toBe(legacyPayload);
+    expect(first.data.favorites[0]?.name).toEqual(name);
+    expect(first.data.favorites[0]).toMatchObject({
+      storageSchemaVersion: 1,
+      dataVersion: LEGACY_UNVERSIONED,
+      ruleVersion: LEGACY_UNVERSIONED,
+      namingModelVersion: LEGACY_UNVERSIONED,
+    });
+    expect(second.status).toBe('already-migrated');
+    expect(storage.getItem(NAMING_STORAGE_KEY)).toBe(writtenV2);
+  });
+
+  it('隔离单条损坏记录并在诊断和数量中明确记录', () => {
+    const storage = createMemoryStorage();
+    const favorite = withoutVersions(
+      createFavoriteNameRecord(name, '2026-08-20T00:00:00.000Z'),
+    );
+    const history = withoutVersions(
+      createNamingHistoryRecord(
+        {
+          inputMode: 'bazi',
+          surname: '陈',
+          gender: 'male',
+          bazi,
+          analysis,
+        },
+        '2026-08-20T00:02:00.000Z',
+      ),
+    );
+    const recentView = withoutVersions(
+      createRecentNameViewRecord(name, '2026-08-20T00:01:00.000Z'),
+    );
+    storage.setItem(
+      LEGACY_NAMING_STORAGE_KEY,
+      JSON.stringify({
+        version: 1,
+        favorites: [favorite, { name: { id: 'broken' } }],
+        namingHistory: [history, { id: 'broken' }],
+        recentViews: [recentView, null],
+      }),
+    );
+
+    const result = migrateV2ToV3(storage, '2026-09-15T00:00:00.000Z');
+
+    expect(result.status).toBe('migrated');
+    expect(result.counts).toEqual({
+      favorites: { source: 2, migrated: 1, skipped: 1 },
+      namingHistory: { source: 2, migrated: 1, skipped: 1 },
+      recentViews: { source: 2, migrated: 1, skipped: 1 },
+    });
+    expect(result.diagnostics).toHaveLength(3);
+    expect(result.diagnostics.map(({ code }) => code)).toEqual([
+      'invalid-record',
+      'invalid-record',
+      'invalid-record',
+    ]);
+  });
+
+  it('迁移写入失败时不覆盖 V1，也不让空状态写入 V2', () => {
+    const base = createMemoryStorage();
+    const legacyPayload = JSON.stringify({
+      version: 1,
+      favorites: [],
+      namingHistory: [],
+      recentViews: [],
+    });
+    base.setItem(LEGACY_NAMING_STORAGE_KEY, legacyPayload);
+    const storage = {
+      ...base,
+      setItem(key: string, value: string) {
+        if (key === NAMING_STORAGE_KEY) {
+          throw new Error(`拒绝写入 ${value.length}`);
+        }
+        base.setItem(key, value);
+      },
+    };
+
+    const result = migrateV2ToV3(storage, '2026-09-15T00:00:00.000Z');
+
+    expect(result.status).toBe('failed');
+    expect(result.diagnostics.at(-1)?.code).toBe('write-failed');
+    expect(storage.getItem(LEGACY_NAMING_STORAGE_KEY)).toBe(legacyPayload);
+    expect(storage.getItem(NAMING_STORAGE_KEY)).toBeNull();
+    expect(saveNamingData({ favorites: [], namingHistory: [], recentViews: [] }, storage)).toBe(false);
+    expect(storage.getItem(NAMING_STORAGE_KEY)).toBeNull();
+  });
+
+  it('可从保留的 V1 原始值显式恢复，并在失败时保留原 V2', () => {
+    const storage = createMemoryStorage();
+    const legacyFavorite = withoutVersions(
+      createFavoriteNameRecord(name, '2026-08-20T00:00:00.000Z'),
+    );
+    storage.setItem(
+      LEGACY_NAMING_STORAGE_KEY,
+      JSON.stringify({
+        version: 1,
+        favorites: [legacyFavorite],
+        namingHistory: [],
+        recentViews: [],
+      }),
+    );
+    expect(migrateV2ToV3(storage).status).toBe('migrated');
+    expect(saveNamingData({ favorites: [], namingHistory: [], recentViews: [] }, storage)).toBe(true);
+
+    const restored = restoreNamingDataFromV1(
+      storage,
+      '2026-09-15T00:00:00.000Z',
+    );
+
+    expect(restored.status).toBe('migrated');
+    expect(restored.data.favorites[0]?.name).toEqual(name);
+    expect(loadNamingData(storage).favorites).toHaveLength(1);
+
+    const validV2 = storage.getItem(NAMING_STORAGE_KEY);
+    storage.setItem(LEGACY_NAMING_STORAGE_KEY, '{broken');
+    expect(restoreNamingDataFromV1(storage).status).toBe('failed');
+    expect(storage.getItem(NAMING_STORAGE_KEY)).toBe(validV2);
   });
 });

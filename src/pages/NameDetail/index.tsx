@@ -3,6 +3,10 @@ import { Link, useParams } from 'react-router-dom';
 import { PageIntro } from '../../components/PageIntro';
 import { PhaseNotice } from '../../components/PhaseNotice';
 import { NAMING_SCORE_DIMENSIONS } from '../../config/namingScore';
+import {
+  createFavoriteNameRecord,
+  createRecentNameViewRecord,
+} from '../../core/storage/namingPersistence';
 import { useNaming } from '../../store/useNaming';
 
 export function NameDetailPage() {
@@ -21,7 +25,7 @@ export function NameDetailPage() {
     if (name) {
       dispatch({
         type: 'RECORD_NAME_VIEW',
-        payload: { name, viewedAt: new Date().toISOString() },
+        payload: createRecentNameViewRecord(name),
       });
     }
   }, [dispatch, name]);
@@ -74,10 +78,7 @@ export function NameDetailPage() {
             onClick={() =>
               dispatch({
                 type: 'TOGGLE_FAVORITE',
-                payload: {
-                  name,
-                  savedAt: new Date().toISOString(),
-                },
+                payload: createFavoriteNameRecord(name),
               })
             }
             type="button"

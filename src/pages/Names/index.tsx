@@ -14,6 +14,7 @@ import {
 } from '../../core/characters/characterRepository';
 import { loadClassicLibraryWithDiagnostics } from '../../core/classics/classicRepository';
 import { generateNames } from '../../core/naming/nameGenerator';
+import { createFavoriteNameRecord } from '../../core/storage/namingPersistence';
 import { FIVE_ELEMENTS } from '../../data/fiveElements';
 import { useNaming } from '../../store/useNaming';
 import type {
@@ -505,10 +506,7 @@ export function NamesPage() {
                       onClick={() =>
                         dispatch({
                           type: 'TOGGLE_FAVORITE',
-                          payload: {
-                            name,
-                            savedAt: new Date().toISOString(),
-                          },
+                          payload: createFavoriteNameRecord(name),
                         })
                       }
                       type="button"

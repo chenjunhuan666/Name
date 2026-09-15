@@ -14,6 +14,8 @@
     "preview": "vite preview",
     "notices:sync": "node scripts/sync-third-party-notices.mjs",
     "notices:check": "node scripts/sync-third-party-notices.mjs --check",
+    "data:manifest:v2": "node scripts/build-v2-artifact-manifest.mjs",
+    "data:manifest:v2:check": "node scripts/build-v2-artifact-manifest.mjs --check",
     "data:import:bazi": "node scripts/import-bazi-classics.mjs",
     "data:build:bazi-rules": "node scripts/build-bazi-rules.mjs",
     "data:build:kangxi": "node scripts/build-kangxi-index.mjs",

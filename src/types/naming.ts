@@ -143,17 +143,24 @@ export interface GeneratedName {
   classic?: ClassicReference;
 }
 
-export interface FavoriteNameRecord {
+export interface NamingRecordVersions {
+  storageSchemaVersion: number;
+  dataVersion: string;
+  ruleVersion: string;
+  namingModelVersion: string;
+}
+
+export interface FavoriteNameRecord extends NamingRecordVersions {
   name: GeneratedName;
   savedAt: string;
 }
 
-export interface RecentNameViewRecord {
+export interface RecentNameViewRecord extends NamingRecordVersions {
   name: GeneratedName;
   viewedAt: string;
 }
 
-export interface NamingHistoryRecord {
+export interface NamingHistoryRecord extends NamingRecordVersions {
   id: string;
   createdAt: string;
   inputMode: InputMode;

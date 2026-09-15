@@ -1,3 +1,9 @@
+import {
+  DATA_VERSION,
+  NAMING_MODEL_VERSION,
+  RULE_VERSION,
+  STORAGE_SCHEMA_VERSION,
+} from '../../config/version';
 import type {
   Bazi,
   BaziAnalysis,
@@ -9,11 +15,14 @@ import type {
   InputMode,
   NamingCharacter,
   NamingHistoryRecord,
+  NamingRecordVersions,
   RecentNameViewRecord,
 } from '../../types';
 import { analyzeBazi } from '../bazi/strengthAnalysis';
 
-export const NAMING_STORAGE_KEY = 'traditional-chinese-naming:v1';
+export const LEGACY_NAMING_STORAGE_KEY = 'traditional-chinese-naming:v1';
+export const NAMING_STORAGE_KEY = 'traditional-chinese-naming:v2';
+export const LEGACY_UNVERSIONED = 'legacy-unversioned';
 export const MAX_NAMING_HISTORY = 10;
 export const MAX_RECENT_VIEWS = 12;
 
@@ -39,11 +48,80 @@ interface CreateNamingHistoryInput {
   analysis: BaziAnalysis;
 }
 
+export type NamingMigrationCategory =
+  | 'storage'
+  | 'favorites'
+  | 'namingHistory'
+  | 'recentViews';
+
+export interface NamingMigrationDiagnostic {
+  category: NamingMigrationCategory;
+  code:
+    | 'invalid-json'
+    | 'unsupported-schema'
+    | 'invalid-collection'
+    | 'invalid-record'
+    | 'destination-invalid'
+    | 'write-failed'
+    | 'readback-failed';
+  message: string;
+  index?: number;
+}
+
+export interface NamingMigrationCounts {
+  favorites: { source: number; migrated: number; skipped: number };
+  namingHistory: { source: number; migrated: number; skipped: number };
+  recentViews: { source: number; migrated: number; skipped: number };
+}
+
+export interface NamingMigrationResult {
+  status: 'migrated' | 'already-migrated' | 'no-legacy-data' | 'failed';
+  data: NamingPersistenceData;
+  counts: NamingMigrationCounts;
+  diagnostics: NamingMigrationDiagnostic[];
+  legacyPreserved: boolean;
+}
+
+interface NamingStorageEnvelope extends NamingPersistenceData {
+  storageSchemaVersion: number;
+  dataVersion: string;
+  ruleVersion: string;
+  namingModelVersion: string;
+  migration?: {
+    sourceKey: string;
+    migratedAt: string;
+    counts: NamingMigrationCounts;
+    diagnostics: NamingMigrationDiagnostic[];
+  };
+}
+
 const EMPTY_NAMING_DATA: NamingPersistenceData = {
   favorites: [],
   namingHistory: [],
   recentViews: [],
 };
+
+const CURRENT_RECORD_VERSIONS: NamingRecordVersions = {
+  storageSchemaVersion: STORAGE_SCHEMA_VERSION,
+  dataVersion: DATA_VERSION,
+  ruleVersion: RULE_VERSION,
+  namingModelVersion: NAMING_MODEL_VERSION,
+};
+
+const LEGACY_RECORD_VERSIONS: NamingRecordVersions = {
+  storageSchemaVersion: 1,
+  dataVersion: LEGACY_UNVERSIONED,
+  ruleVersion: LEGACY_UNVERSIONED,
+  namingModelVersion: LEGACY_UNVERSIONED,
+};
+
+function emptyCounts(): NamingMigrationCounts {
+  return {
+    favorites: { source: 0, migrated: 0, skipped: 0 },
+    namingHistory: { source: 0, migrated: 0, skipped: 0 },
+    recentViews: { source: 0, migrated: 0, skipped: 0 },
+  };
+}
 
 function resolveStorage(storage?: StorageLike): StorageLike | undefined {
   if (storage) {
@@ -71,6 +149,10 @@ function isFiniteNumber(value: unknown): value is number {
 
 function isStringArray(value: unknown): value is string[] {
   return Array.isArray(value) && value.every((item) => typeof item === 'string');
+}
+
+function isNonEmptyString(value: unknown): value is string {
+  return typeof value === 'string' && value.length > 0;
 }
 
 const heavenlyStems = new Set([
@@ -213,20 +295,53 @@ function isGeneratedNameRecord(value: unknown): value is GeneratedName {
   );
 }
 
-function isFavoriteRecord(value: unknown): value is FavoriteNameRecord {
+function isRecordVersions(value: unknown): value is NamingRecordVersions {
   return (
     isObject(value) &&
-    typeof value.savedAt === 'string' &&
-    isGeneratedNameRecord(value.name)
+    Number.isInteger(value.storageSchemaVersion) &&
+    Number(value.storageSchemaVersion) > 0 &&
+    isNonEmptyString(value.dataVersion) &&
+    isNonEmptyString(value.ruleVersion) &&
+    isNonEmptyString(value.namingModelVersion)
   );
 }
 
-function isRecentViewRecord(value: unknown): value is RecentNameViewRecord {
-  return (
-    isObject(value) &&
-    typeof value.viewedAt === 'string' &&
-    isGeneratedNameRecord(value.name)
-  );
+function reviveFavoriteRecord(
+  value: unknown,
+  fallbackVersions?: NamingRecordVersions,
+): FavoriteNameRecord | undefined {
+  if (
+    !isObject(value) ||
+    typeof value.savedAt !== 'string' ||
+    !isGeneratedNameRecord(value.name) ||
+    (!fallbackVersions && !isRecordVersions(value))
+  ) {
+    return undefined;
+  }
+
+  return {
+    ...(value as unknown as FavoriteNameRecord),
+    ...(fallbackVersions ?? {}),
+  };
+}
+
+function reviveRecentViewRecord(
+  value: unknown,
+  fallbackVersions?: NamingRecordVersions,
+): RecentNameViewRecord | undefined {
+  if (
+    !isObject(value) ||
+    typeof value.viewedAt !== 'string' ||
+    !isGeneratedNameRecord(value.name) ||
+    (!fallbackVersions && !isRecordVersions(value))
+  ) {
+    return undefined;
+  }
+
+  return {
+    ...(value as unknown as RecentNameViewRecord),
+    ...(fallbackVersions ?? {}),
+  };
 }
 
 function isLunarDate(value: unknown): boolean {
@@ -289,7 +404,10 @@ function reviveCalendarResult(value: unknown): CalendarResult | undefined {
   };
 }
 
-function reviveHistoryRecord(value: unknown): NamingHistoryRecord | undefined {
+function reviveHistoryRecord(
+  value: unknown,
+  fallbackVersions?: NamingRecordVersions,
+): NamingHistoryRecord | undefined {
   if (
     !isObject(value) ||
     typeof value.id !== 'string' ||
@@ -297,17 +415,297 @@ function reviveHistoryRecord(value: unknown): NamingHistoryRecord | undefined {
     (value.inputMode !== 'birth' && value.inputMode !== 'bazi') ||
     typeof value.surname !== 'string' ||
     (value.gender !== 'male' && value.gender !== 'female') ||
-    !isBazi(value.bazi)
+    !isBazi(value.bazi) ||
+    (!fallbackVersions && !isRecordVersions(value))
+  ) {
+    return undefined;
+  }
+
+  const birthInfo = reviveBirthInfo(value.birthInfo);
+  const calendarResult = reviveCalendarResult(value.calendarResult);
+  if (
+    (value.birthInfo !== undefined && !birthInfo) ||
+    (value.calendarResult !== undefined && !calendarResult)
   ) {
     return undefined;
   }
 
   return {
     ...(value as unknown as NamingHistoryRecord),
-    birthInfo: reviveBirthInfo(value.birthInfo),
-    calendarResult: reviveCalendarResult(value.calendarResult),
+    ...(fallbackVersions ?? {}),
+    birthInfo,
+    calendarResult,
     analysis: analyzeBazi(value.bazi),
   };
+}
+
+type RecordCategory = Exclude<NamingMigrationCategory, 'storage'>;
+
+function migrateCollection<T>(
+  parsed: Record<string, unknown>,
+  category: RecordCategory,
+  revive: (value: unknown, versions: NamingRecordVersions) => T | undefined,
+  diagnostics: NamingMigrationDiagnostic[],
+  counts: NamingMigrationCounts,
+): T[] {
+  const source = parsed[category];
+  if (!Array.isArray(source)) {
+    if (source !== undefined) {
+      diagnostics.push({
+        category,
+        code: 'invalid-collection',
+        message: `${category} 不是数组，已隔离该集合。`,
+      });
+    }
+    return [];
+  }
+
+  counts[category].source = source.length;
+  const migrated: T[] = [];
+  source.forEach((value, index) => {
+    const record = revive(value, LEGACY_RECORD_VERSIONS);
+    if (record) {
+      migrated.push(record);
+      return;
+    }
+    diagnostics.push({
+      category,
+      code: 'invalid-record',
+      index,
+      message: `${category}[${index}] 结构损坏，已隔离且未阻断其他记录。`,
+    });
+  });
+  counts[category].migrated = migrated.length;
+  counts[category].skipped = source.length - migrated.length;
+  return migrated;
+}
+
+function parseLegacyEnvelope(raw: string):
+  | {
+      data: NamingPersistenceData;
+      counts: NamingMigrationCounts;
+      diagnostics: NamingMigrationDiagnostic[];
+    }
+  | { error: NamingMigrationDiagnostic } {
+  let parsed: unknown;
+  try {
+    parsed = JSON.parse(raw);
+  } catch {
+    return {
+      error: {
+        category: 'storage',
+        code: 'invalid-json',
+        message: 'V1 原始值不是有效 JSON，未写入 V2。',
+      },
+    };
+  }
+
+  if (!isObject(parsed) || parsed.version !== 1) {
+    return {
+      error: {
+        category: 'storage',
+        code: 'unsupported-schema',
+        message: 'V1 原始值的 schema 版本不受支持，未写入 V2。',
+      },
+    };
+  }
+
+  const diagnostics: NamingMigrationDiagnostic[] = [];
+  const counts = emptyCounts();
+  const favorites = migrateCollection(
+    parsed,
+    'favorites',
+    reviveFavoriteRecord,
+    diagnostics,
+    counts,
+  );
+  const namingHistory = migrateCollection(
+    parsed,
+    'namingHistory',
+    reviveHistoryRecord,
+    diagnostics,
+    counts,
+  );
+  const recentViews = migrateCollection(
+    parsed,
+    'recentViews',
+    reviveRecentViewRecord,
+    diagnostics,
+    counts,
+  );
+
+  return {
+    data: { favorites, namingHistory, recentViews },
+    counts,
+    diagnostics,
+  };
+}
+
+function parseCurrentEnvelope(raw: string): NamingStorageEnvelope | undefined {
+  let parsed: unknown;
+  try {
+    parsed = JSON.parse(raw);
+  } catch {
+    return undefined;
+  }
+
+  if (
+    !isObject(parsed) ||
+    parsed.storageSchemaVersion !== STORAGE_SCHEMA_VERSION ||
+    !isNonEmptyString(parsed.dataVersion) ||
+    !isNonEmptyString(parsed.ruleVersion) ||
+    !isNonEmptyString(parsed.namingModelVersion) ||
+    !Array.isArray(parsed.favorites) ||
+    !Array.isArray(parsed.namingHistory) ||
+    !Array.isArray(parsed.recentViews)
+  ) {
+    return undefined;
+  }
+
+  const favorites = parsed.favorites.map((value) => reviveFavoriteRecord(value));
+  const namingHistory = parsed.namingHistory.map((value) =>
+    reviveHistoryRecord(value),
+  );
+  const recentViews = parsed.recentViews.map((value) =>
+    reviveRecentViewRecord(value),
+  );
+  if (
+    favorites.some((value) => !value) ||
+    namingHistory.some((value) => !value) ||
+    recentViews.some((value) => !value)
+  ) {
+    return undefined;
+  }
+
+  return {
+    ...(parsed as unknown as NamingStorageEnvelope),
+    favorites: favorites as FavoriteNameRecord[],
+    namingHistory: namingHistory as NamingHistoryRecord[],
+    recentViews: recentViews as RecentNameViewRecord[],
+  };
+}
+
+function createEnvelope(
+  data: NamingPersistenceData,
+  migration?: NamingStorageEnvelope['migration'],
+): NamingStorageEnvelope {
+  return {
+    storageSchemaVersion: STORAGE_SCHEMA_VERSION,
+    dataVersion: DATA_VERSION,
+    ruleVersion: RULE_VERSION,
+    namingModelVersion: NAMING_MODEL_VERSION,
+    ...(migration ? { migration } : {}),
+    ...data,
+  };
+}
+
+function restoreDestination(
+  storage: StorageLike,
+  previousRaw: string | null,
+): void {
+  try {
+    if (previousRaw === null) {
+      storage.removeItem(NAMING_STORAGE_KEY);
+    } else {
+      storage.setItem(NAMING_STORAGE_KEY, previousRaw);
+    }
+  } catch {
+    // The caller already receives a failed result; the V1 source remains untouched.
+  }
+}
+
+function commitMigratedEnvelope(
+  storage: StorageLike,
+  legacyRaw: string,
+  previousRaw: string | null,
+  migratedAt: string,
+): NamingMigrationResult {
+  const parsedLegacy = parseLegacyEnvelope(legacyRaw);
+  if ('error' in parsedLegacy) {
+    return {
+      status: 'failed',
+      data: { ...EMPTY_NAMING_DATA },
+      counts: emptyCounts(),
+      diagnostics: [parsedLegacy.error],
+      legacyPreserved: storage.getItem(LEGACY_NAMING_STORAGE_KEY) === legacyRaw,
+    };
+  }
+
+  const envelope = createEnvelope(parsedLegacy.data, {
+    sourceKey: LEGACY_NAMING_STORAGE_KEY,
+    migratedAt,
+    counts: parsedLegacy.counts,
+    diagnostics: parsedLegacy.diagnostics,
+  });
+
+  try {
+    storage.setItem(NAMING_STORAGE_KEY, JSON.stringify(envelope));
+  } catch {
+    return {
+      status: 'failed',
+      data: { ...EMPTY_NAMING_DATA },
+      counts: parsedLegacy.counts,
+      diagnostics: [
+        ...parsedLegacy.diagnostics,
+        {
+          category: 'storage',
+          code: 'write-failed',
+          message: 'V2 写入失败，V1 原始值保持不变。',
+        },
+      ],
+      legacyPreserved: storage.getItem(LEGACY_NAMING_STORAGE_KEY) === legacyRaw,
+    };
+  }
+
+  const readbackRaw = storage.getItem(NAMING_STORAGE_KEY);
+  const readback = readbackRaw ? parseCurrentEnvelope(readbackRaw) : undefined;
+  const countsMatch =
+    readback?.favorites.length === parsedLegacy.counts.favorites.migrated &&
+    readback.namingHistory.length === parsedLegacy.counts.namingHistory.migrated &&
+    readback.recentViews.length === parsedLegacy.counts.recentViews.migrated;
+  if (!readback || !countsMatch) {
+    restoreDestination(storage, previousRaw);
+    return {
+      status: 'failed',
+      data: { ...EMPTY_NAMING_DATA },
+      counts: parsedLegacy.counts,
+      diagnostics: [
+        ...parsedLegacy.diagnostics,
+        {
+          category: 'storage',
+          code: 'readback-failed',
+          message: 'V2 回读或数量核对失败，已恢复迁移前的 V2 值。',
+        },
+      ],
+      legacyPreserved: storage.getItem(LEGACY_NAMING_STORAGE_KEY) === legacyRaw,
+    };
+  }
+
+  return {
+    status: 'migrated',
+    data: {
+      favorites: readback.favorites,
+      namingHistory: readback.namingHistory,
+      recentViews: readback.recentViews,
+    },
+    counts: parsedLegacy.counts,
+    diagnostics: parsedLegacy.diagnostics,
+    legacyPreserved: storage.getItem(LEGACY_NAMING_STORAGE_KEY) === legacyRaw,
+  };
+}
+
+export function createFavoriteNameRecord(
+  name: GeneratedName,
+  savedAt = new Date().toISOString(),
+): FavoriteNameRecord {
+  return { name, savedAt, ...CURRENT_RECORD_VERSIONS };
+}
+
+export function createRecentNameViewRecord(
+  name: GeneratedName,
+  viewedAt = new Date().toISOString(),
+): RecentNameViewRecord {
+  return { name, viewedAt, ...CURRENT_RECORD_VERSIONS };
 }
 
 export function createNamingHistoryRecord(
@@ -322,44 +720,162 @@ export function createNamingHistoryRecord(
     ...input,
     id: `${createdAt}-${input.surname}-${pillarKey}`,
     createdAt,
+    ...CURRENT_RECORD_VERSIONS,
   };
 }
 
-export function loadNamingData(
+export function migrateV2ToV3(
   storage?: StorageLike,
-): NamingPersistenceData {
+  migratedAt = new Date().toISOString(),
+): NamingMigrationResult {
+  const targetStorage = resolveStorage(storage);
+  if (!targetStorage) {
+    return {
+      status: 'failed',
+      data: { ...EMPTY_NAMING_DATA },
+      counts: emptyCounts(),
+      diagnostics: [
+        {
+          category: 'storage',
+          code: 'write-failed',
+          message: '浏览器存储不可用，未执行迁移。',
+        },
+      ],
+      legacyPreserved: false,
+    };
+  }
+
+  try {
+    const currentRaw = targetStorage.getItem(NAMING_STORAGE_KEY);
+    if (currentRaw) {
+      const current = parseCurrentEnvelope(currentRaw);
+      if (!current) {
+        return {
+          status: 'failed',
+          data: { ...EMPTY_NAMING_DATA },
+          counts: emptyCounts(),
+          diagnostics: [
+            {
+              category: 'storage',
+              code: 'destination-invalid',
+              message: '现有 V2 值无法校验，自动迁移不会覆盖它。',
+            },
+          ],
+          legacyPreserved: true,
+        };
+      }
+      return {
+        status: 'already-migrated',
+        data: {
+          favorites: current.favorites,
+          namingHistory: current.namingHistory,
+          recentViews: current.recentViews,
+        },
+        counts: current.migration?.counts ?? emptyCounts(),
+        diagnostics: current.migration?.diagnostics ?? [],
+        legacyPreserved: true,
+      };
+    }
+
+    const legacyRaw = targetStorage.getItem(LEGACY_NAMING_STORAGE_KEY);
+    if (!legacyRaw) {
+      return {
+        status: 'no-legacy-data',
+        data: { ...EMPTY_NAMING_DATA },
+        counts: emptyCounts(),
+        diagnostics: [],
+        legacyPreserved: true,
+      };
+    }
+
+    return commitMigratedEnvelope(
+      targetStorage,
+      legacyRaw,
+      currentRaw,
+      migratedAt,
+    );
+  } catch {
+    return {
+      status: 'failed',
+      data: { ...EMPTY_NAMING_DATA },
+      counts: emptyCounts(),
+      diagnostics: [
+        {
+          category: 'storage',
+          code: 'write-failed',
+          message: '浏览器存储访问失败，未执行迁移。',
+        },
+      ],
+      legacyPreserved: false,
+    };
+  }
+}
+
+export function restoreNamingDataFromV1(
+  storage?: StorageLike,
+  migratedAt = new Date().toISOString(),
+): NamingMigrationResult {
+  const targetStorage = resolveStorage(storage);
+  if (!targetStorage) {
+    return migrateV2ToV3(storage, migratedAt);
+  }
+  try {
+    const legacyRaw = targetStorage.getItem(LEGACY_NAMING_STORAGE_KEY);
+    if (!legacyRaw) {
+      return {
+        status: 'no-legacy-data',
+        data: { ...EMPTY_NAMING_DATA },
+        counts: emptyCounts(),
+        diagnostics: [],
+        legacyPreserved: true,
+      };
+    }
+    return commitMigratedEnvelope(
+      targetStorage,
+      legacyRaw,
+      targetStorage.getItem(NAMING_STORAGE_KEY),
+      migratedAt,
+    );
+  } catch {
+    return {
+      status: 'failed',
+      data: { ...EMPTY_NAMING_DATA },
+      counts: emptyCounts(),
+      diagnostics: [
+        {
+          category: 'storage',
+          code: 'write-failed',
+          message: '浏览器存储访问失败，未执行恢复。',
+        },
+      ],
+      legacyPreserved: false,
+    };
+  }
+}
+
+export function loadNamingData(storage?: StorageLike): NamingPersistenceData {
   const targetStorage = resolveStorage(storage);
   if (!targetStorage) {
     return { ...EMPTY_NAMING_DATA };
   }
 
   try {
-    const raw = targetStorage.getItem(NAMING_STORAGE_KEY);
-    if (!raw) {
-      return { ...EMPTY_NAMING_DATA };
+    const currentRaw = targetStorage.getItem(NAMING_STORAGE_KEY);
+    if (currentRaw) {
+      const current = parseCurrentEnvelope(currentRaw);
+      return current
+        ? {
+            favorites: current.favorites,
+            namingHistory: current.namingHistory,
+            recentViews: current.recentViews,
+          }
+        : { ...EMPTY_NAMING_DATA };
     }
 
-    const parsed: unknown = JSON.parse(raw);
-    if (!isObject(parsed) || parsed.version !== 1) {
-      return { ...EMPTY_NAMING_DATA };
-    }
-
-    const favorites = Array.isArray(parsed.favorites)
-      ? parsed.favorites.filter(isFavoriteRecord)
-      : [];
-    const recentViews = Array.isArray(parsed.recentViews)
-      ? parsed.recentViews
-          .filter(isRecentViewRecord)
-          .slice(0, MAX_RECENT_VIEWS)
-      : [];
-    const namingHistory = Array.isArray(parsed.namingHistory)
-      ? parsed.namingHistory
-          .map(reviveHistoryRecord)
-          .filter((record): record is NamingHistoryRecord => Boolean(record))
-          .slice(0, MAX_NAMING_HISTORY)
-      : [];
-
-    return { favorites, namingHistory, recentViews };
+    const migration = migrateV2ToV3(targetStorage);
+    return migration.status === 'migrated' || migration.status === 'already-migrated'
+      ? migration.data
+      : { ...EMPTY_NAMING_DATA };
   } catch {
     return { ...EMPTY_NAMING_DATA };
   }
@@ -375,10 +891,35 @@ export function saveNamingData(
   }
 
   try {
-    targetStorage.setItem(
-      NAMING_STORAGE_KEY,
-      JSON.stringify({ version: 1, ...data }),
-    );
+    let currentRaw = targetStorage.getItem(NAMING_STORAGE_KEY);
+    let current = currentRaw ? parseCurrentEnvelope(currentRaw) : undefined;
+    if (currentRaw && !current) {
+      return false;
+    }
+
+    if (!currentRaw && targetStorage.getItem(LEGACY_NAMING_STORAGE_KEY)) {
+      const migration = migrateV2ToV3(targetStorage);
+      if (migration.status !== 'migrated' && migration.status !== 'already-migrated') {
+        return false;
+      }
+      currentRaw = targetStorage.getItem(NAMING_STORAGE_KEY);
+      current = currentRaw ? parseCurrentEnvelope(currentRaw) : undefined;
+    }
+
+    const envelope = createEnvelope(data, current?.migration);
+    const serialized = JSON.stringify(envelope);
+    targetStorage.setItem(NAMING_STORAGE_KEY, serialized);
+
+    const readbackRaw = targetStorage.getItem(NAMING_STORAGE_KEY);
+    const readback = readbackRaw ? parseCurrentEnvelope(readbackRaw) : undefined;
+    const valid =
+      readback?.favorites.length === data.favorites.length &&
+      readback.namingHistory.length === data.namingHistory.length &&
+      readback.recentViews.length === data.recentViews.length;
+    if (!readback || !valid) {
+      restoreDestination(targetStorage, currentRaw);
+      return false;
+    }
     return true;
   } catch {
     return false;

@@ -3,7 +3,9 @@ import { analyzeBazi } from '../core/bazi/strengthAnalysis';
 import {
   MAX_NAMING_HISTORY,
   MAX_RECENT_VIEWS,
+  createFavoriteNameRecord,
   createNamingHistoryRecord,
+  createRecentNameViewRecord,
 } from '../core/storage/namingPersistence';
 import type { Bazi, GeneratedName } from '../types';
 import { initialNamingState, namingReducer } from './namingStore';
@@ -28,16 +30,16 @@ describe('Phase 9 命名状态', () => {
   it('按姓名标识切换收藏，并保存完整姓名快照', () => {
     const saved = namingReducer(initialNamingState, {
       type: 'TOGGLE_FAVORITE',
-      payload: { name, savedAt: '2026-08-20T00:00:00.000Z' },
+      payload: createFavoriteNameRecord(name, '2026-08-20T00:00:00.000Z'),
     });
 
     expect(saved.favorites).toEqual([
-      { name, savedAt: '2026-08-20T00:00:00.000Z' },
+      createFavoriteNameRecord(name, '2026-08-20T00:00:00.000Z'),
     ]);
     expect(
       namingReducer(saved, {
         type: 'TOGGLE_FAVORITE',
-        payload: { name, savedAt: '2026-08-20T00:01:00.000Z' },
+        payload: createFavoriteNameRecord(name, '2026-08-20T00:01:00.000Z'),
       }).favorites,
     ).toEqual([]);
   });
@@ -52,10 +54,10 @@ describe('Phase 9 命名状态', () => {
       (current, currentName, index) =>
         namingReducer(current, {
           type: 'RECORD_NAME_VIEW',
-          payload: {
-            name: currentName,
-            viewedAt: `2026-08-20T00:${String(index).padStart(2, '0')}:00.000Z`,
-          },
+          payload: createRecentNameViewRecord(
+            currentName,
+            `2026-08-20T00:${String(index).padStart(2, '0')}:00.000Z`,
+          ),
         }),
       initialNamingState,
     );
@@ -67,10 +69,10 @@ describe('Phase 9 命名状态', () => {
 
     const revisited = namingReducer(state, {
       type: 'RECORD_NAME_VIEW',
-      payload: {
-        name: names[3]!,
-        viewedAt: '2026-08-20T01:00:00.000Z',
-      },
+      payload: createRecentNameViewRecord(
+        names[3]!,
+        '2026-08-20T01:00:00.000Z',
+      ),
     });
     expect(revisited.recentViews[0]?.name.id).toBe('name-3');
     expect(
@@ -102,7 +104,7 @@ describe('Phase 9 命名状态', () => {
       {
         ...initialNamingState,
         favorites: [
-          { name, savedAt: '2026-08-20T00:00:00.000Z' },
+          createFavoriteNameRecord(name, '2026-08-20T00:00:00.000Z'),
         ],
       },
     );

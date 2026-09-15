@@ -57,6 +57,7 @@ export type {
   NameScoreBreakdown,
   NameScoreDimension,
   NamingHistoryRecord,
+  NamingRecordVersions,
   NamingPreference,
   NamingRequest,
   NamingStyle,

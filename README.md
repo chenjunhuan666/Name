@@ -6,7 +6,7 @@
 
 自动排盘使用 `lunar-typescript@1.8.6` 在浏览器本地完成农历转公历、节气区间和四柱计算，支持 1901～2100 年、闰月、00:00～23:59 与十二时辰。计算默认采用中国标准时间和公历自然日换日，真太阳时关闭；出生地点只作记录。节气交接、23 时换日或真太阳时存在流派差异时，应在结果确认页核对，并可切换到手动四柱修正。
 
-本地记录使用版本化 `localStorage` 保存完整收藏姓名快照、最近 10 次起名会话和最近 12 个浏览姓名。刷新页面后可恢复最近一次起名信息，也可从“本地记录”页重新打开收藏、恢复历史排盘或分类清空记录。数据不会上传；清理站点数据、使用无痕窗口或更换设备会导致记录不可用，V1 不提供账号或云同步。
+本地记录使用版本化 `localStorage` 保存完整收藏姓名快照、最近 10 次起名会话和最近 12 个浏览姓名。V3.0 的存储 schema 使用 `traditional-chinese-naming:v2`；首次读取会从旧 `traditional-chinese-naming:v1` 逐条迁移、回读核对，自动迁移不会删除或覆盖 V1 原始值。损坏单条会被隔离并写入迁移诊断，整体迁移失败时不会用空状态覆盖旧数据；显式恢复可通过 `restoreNamingDataFromV1()` 重新从保留值生成 V2。新记录保存 storage/data/rule/model 四类版本，旧快照标记为 `legacy-unversioned`，不会伪造历史模型版本或静默重算收藏分数。数据不会上传；清理站点数据、使用无痕窗口或更换设备仍会导致记录不可用，当前不提供账号或云同步。
 
 V1 曾采用表层、藏干和月令固定权重；当前 V2 已改为月令、季节、通根、透干、生扶与克泄耗的结构化证据，并输出偏弱至偏旺五档结果。基础调候按月令另行给出寒暖燥湿方向，只在起名倾向中最多上调一档，不改变旺衰证据分。该工程模型不代表完整命理定论，也不会把“五行缺失”直接等同于“必须补入姓名”。
 
@@ -28,7 +28,11 @@ pnpm run test
 pnpm run lint
 pnpm run typecheck
 pnpm run build
+pnpm run notices:check
+pnpm run data:manifest:v2:check
 ```
+
+V2 冻结结果见 [`docs/releases/v2-baseline.md`](docs/releases/v2-baseline.md)，完整发布 JSON 清单由 `pnpm run data:manifest:v2` 稳定生成到 [`docs/releases/v2-artifact-manifest.json`](docs/releases/v2-artifact-manifest.json)。
 
 ## 重建汉字库与读音索引
 

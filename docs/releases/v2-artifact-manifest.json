@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "baseline": "Name V2",
+  "artifactCount": 25,
+  "artifacts": [
+    {
+      "path": "public/data/bazi/classical/di-tian-sui.json",
+      "bytes": 11093,
+      "sha256": "2b0f3d97fcaa18ae7dcc56510a994afcd59be343c17ab868ab30f6f4d7880516"
+    },
+    {
+      "path": "public/data/bazi/classical/index.json",
+      "bytes": 1490,
+      "sha256": "d34cbced70ff1f6fbc8b06b6d2d10b491d69a0d196527b0b6f4867342a4430b2"
+    },
+    {
+      "path": "public/data/bazi/classical/qiongtong-baojian.json",
+      "bytes": 45232,
+      "sha256": "39cb025bb3bdf5bd1074bea6c118ca67d173c2bcb0cc0707326e80c54e16aeac"
+    },
+    {
+      "path": "public/data/bazi/classical/sanming-tonghui.json",
+      "bytes": 9841,
+      "sha256": "cb457f862be68f9ba85c8de056139a9fb24c556c6de13e52e39463905b20a89d"
+    },
+    {
+      "path": "public/data/bazi/classical/yuanhai-ziping.json",
+      "bytes": 308355,
+      "sha256": "6a9e20d25bfd851e4d362f77679a6b73b158f7b707781560d358264824ca4f88"
+    },
+    {
+      "path": "public/data/bazi/classical/ziping-zhenquan.json",
+      "bytes": 11653,
+      "sha256": "4d56640fffc80b1e324bfd331a3199122e236ecd358f97a5ba15a4086a40c0c3"
+    },
+    {
+      "path": "public/data/bazi/references.json",
+      "bytes": 3259,
+      "sha256": "742836ecaaad70e1c3db99addf7236b90f197d2871b37e6710a221c7b1ec9941"
+    },
+    {
+      "path": "public/data/bazi/rules.json",
+      "bytes": 7825,
+      "sha256": "4a5a1b818b47fc2dd30de9959f5da3e4d8c13c643070597faec5873b5a273710"
+    },
+    {
+      "path": "public/data/characters/basic.json",
+      "bytes": 567802,
+      "sha256": "bd961a177645660c88cdf627766ad15c8f2fc5cb99cc003fb3eced8f5ab2c278"
+    },
+    {
+      "path": "public/data/characters/kangxi-index.json",
+      "bytes": 1098142,
+      "sha256": "300a3b20adc3093e39ee5b097414d8b77c39c0a9229c037ba5be0d3b8f1c8fa4"
+    },
+    {
+      "path": "public/data/characters/pronunciations.json",
+      "bytes": 557528,
+      "sha256": "e8cd5ba7d943f00c0d5053c8a6bf4ec6153b3f6ca9ac59354da9229a4d31c216"
+    },
+    {
+      "path": "public/data/characters/recommended-v2.json",
+      "bytes": 1822114,
+      "sha256": "e9a89e3821f04ca7686066f501696237b9d07bccad89035a4bc0dfb104d2fc90"
+    },
+    {
+      "path": "public/data/characters/standard.json",
+      "bytes": 583682,
+      "sha256": "7e4e38e385e4e14d3904753994746a2b8a8727f92483c60e126045d447b1e8e1"
+    },
+    {
+      "path": "public/data/classics/basic.json",
+      "bytes": 559212,
+      "sha256": "943926e40c9abe35773ca68cf72f723c0cfa93f9bba017d58ff4ecff8eca9cbc"
+    },
+    {
+      "path": "public/data/classics/core/chuci.json",
+      "bytes": 130943,
+      "sha256": "0f041872965acda1d91dec0401901bacf1ad0eb3420361123a5acbf9d927c30d"
+    },
+    {
+      "path": "public/data/classics/core/lunyu.json",
+      "bytes": 73427,
+      "sha256": "46b8b04c61c1a86d9b7a5891902a49054ee32304141f27568f6c11e8ed22cd39"
+    },
+    {
+      "path": "public/data/classics/core/mengzi.json",
+      "bytes": 144280,
+      "sha256": "6a9d5bd8b868bc3262a8ad9a38702d5fab98fcbc867431699a45e592b615eb18"
+    },
+    {
+      "path": "public/data/classics/core/shijing.json",
+      "bytes": 198468,
+      "sha256": "f87988fb5933f6a53363b563e3f53bb904114fb327fdcb7029e130070513d6b4"
+    },
+    {
+      "path": "public/data/classics/core/zhouyi.json",
+      "bytes": 136135,
+      "sha256": "e9ed11a7ccaf152a28236e52b9c62a2ab8165be62893ac3ad4a61ec951c369c6"
+    },
+    {
+      "path": "public/data/classics/core/zhuangzi.json",
+      "bytes": 294163,
+      "sha256": "842bc29e8256c12019943d5354cf688debd782d24da2223cd1c0cc0b443c3d23"
+    },
+    {
+      "path": "public/data/classics/index.json",
+      "bytes": 2167,
+      "sha256": "c22217aad639089d0e168a17f43c1da3f0b6c928d0165ed15765bbb19e250db4"
+    },
+    {
+      "path": "public/data/classics/manual-imagery.json",
+      "bytes": 735,
+      "sha256": "ad08dae9aef23236bfe620b5cb00e291a63b2e1f80fdcb931c1871f961797f49"
+    },
+    {
+      "path": "public/data/classics/song/songci.json",
+      "bytes": 169361,
+      "sha256": "84db423b4378a25bb22b1969109454428ef59a22bac3b4103bd1b001db349743"
+    },
+    {
+      "path": "public/data/classics/tang/tang.json",
+      "bytes": 60449,
+      "sha256": "cb69493da9465f81224d1741871ae74ef69606b9af7931e663be05d2abe801ed"
+    },
+    {
+      "path": "src/data/bazi/rules.json",
+      "bytes": 10571,
+      "sha256": "264475c75d9490f76216b60f758f901f580b00b6a6cb9dc626348d56e4fc292e"
+    }
+  ]
+}
