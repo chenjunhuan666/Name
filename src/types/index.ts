@@ -24,6 +24,8 @@ export type {
   StrengthBreakdown,
   StrengthEvidence,
   StrengthEvidenceType,
+  TenGod,
+  TenGodOccurrence,
   YinYang,
 } from './bazi';
 export type {

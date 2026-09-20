@@ -25,4 +25,5 @@ export interface BaziRule {
   documentationPath: string;
   codePaths: string[];
   enabledInV2: boolean;
+  enabledInV3?: boolean;
 }

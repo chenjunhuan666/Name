@@ -7,6 +7,7 @@
 - 每例直接录入年、月、日、时四柱，不经过历法换算；历法边界由 `calendarBoundaries.test.ts` 独立覆盖。
 - 基础结构固定日主、月令、表层五行、藏干五行和每柱藏干角色。
 - 干支关系固定全部命中项的 `id`、类别和 `ruleId`，但均为 `structural-only`：不判合化、吉凶、优先级或固定增减分数。
+- 十神固定年/月/时干及四柱藏干的逐项输出、顺序和 `ruleId`；日干只作基准，不额外输出自身比肩，十神不进入旺衰或姓名评分。
 - 旺衰固定总支持/制约/净分、五档输出和关键证据签名。证据等级、阈值和五档是 Name 项目模型，不被表述为古籍统一数值。
 - 每个运行时 `ruleId` 必须可解析为规则目录及 `RuleReference`；其他项目的结论最多用于人工对照，不能替代该基准。
 
@@ -24,8 +25,9 @@
 
 1. 原始八字与日主、月令、表层/藏干五行、四柱藏干主中余角色。
 2. 全部命中的干支关系（关系 ID、种类、规则 ID）。
-3. 旺衰档位、支持/制约/净分，以及月令、季节、通根、生扶或克泄耗等关键证据的类型、五行、方向、等级、规则 ID。
-4. 从运行输出收集的全部规则 ID，及其展开后的全部参考来源 ID。
+3. 十神序列，包含柱位、显干/藏干位置、藏干角色、目标干和十神标签。
+4. 旺衰档位、支持/制约/净分，以及月令、季节、通根、生扶或克泄耗等关键证据的类型、五行、方向、等级、规则 ID。
+5. 从运行输出收集的全部规则 ID，及其展开后的全部参考来源 ID。
 
 这使任何规则、来源或算法改动都会在同一次测试中暴露其对基础结构、关系、证据或可追溯链的影响。
 
@@ -39,6 +41,8 @@
 | 旺衰与起名倾向 | `bazi.strength.five-levels`、`bazi.naming-tendency.fuyi` | `classic-ditian-sui-strength`、`classic-qiongtong-season`、`project-v2-strength-model` |
 | 天干、地支结构 | `bazi.relations.stems`、`bazi.relations.branches` | `oss-bazi-wuxing-tables` |
 | 六破（仅第二例） | `bazi.relations.breaks` | `modern-six-breaks` |
+| 十神五行关系 | `bazi.ten-gods.relation.peer/output/wealth/officer/resource` | `classic-yuanhai-ziping`、`oss-bazi-wuxing-tables` |
+| 十神阴阳映射 | `bazi.ten-gods.polarity.same/opposite` | `classic-yuanhai-ziping`、`oss-bazi-wuxing-tables` |
 
 来源的题名、作品、章节、URL、许可说明及项目建模边界在 `src/data/bazi/rules.json` 中维护，并经 `findBaziRule()` 在测试中实际解析；不在本文件复制原典正文。
 

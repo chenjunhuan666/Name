@@ -13,7 +13,7 @@
 | manifest schema | `1` |
 | manifest 条目 | `25`（24 个 `public/data/**/*.json` + `src/data/bazi/rules.json`） |
 
-完整机器可读清单见 [`v2-artifact-manifest.json`](./v2-artifact-manifest.json)，由 `scripts/build-v2-artifact-manifest.mjs` 生成；清单不含生成时间，因此相同文件可稳定重跑。
+完整机器可读清单见 [`v2-artifact-manifest.json`](./v2-artifact-manifest.json)，由 `scripts/build-v2-artifact-manifest.mjs` 从冻结 commit `9d0b9fc30758f537e1aa16869daeb2427b27ea09` 读取并生成；清单不含生成时间，因此后续工作树进入 V3 后仍可稳定复核 V2 工件。
 
 ## 2. 发布数据 SHA-256
 

@@ -53,6 +53,7 @@ export interface BaziGoldenCase {
       favoredElements: readonly ('木' | '火' | '土' | '金' | '水')[];
       adjustment: 0 | 1;
     };
+    tenGods: readonly string[];
     ruleIds: readonly string[];
     referenceIds: readonly string[];
   };
@@ -79,6 +80,13 @@ const allCoreRuleIds = [
   'bazi.strength.five-levels',
   'bazi.support-control.balance',
   'bazi.tiaohou.basic',
+  'bazi.ten-gods.polarity.opposite',
+  'bazi.ten-gods.polarity.same',
+  'bazi.ten-gods.relation.officer',
+  'bazi.ten-gods.relation.output',
+  'bazi.ten-gods.relation.peer',
+  'bazi.ten-gods.relation.resource',
+  'bazi.ten-gods.relation.wealth',
 ] as const;
 
 /** Deterministic V2 regression fixtures, not final命理 verdicts. */
@@ -125,6 +133,21 @@ export const BAZI_GOLDEN_CASES: readonly BaziGoldenCase[] = [
         ],
       },
       tiaohou: { climate: '偏燥', favoredElements: ['水'], adjustment: 1 },
+      tenGods: [
+        'year:stem:-:甲:正财',
+        'year:hidden-stem:main:戊:正印',
+        'year:hidden-stem:middle:乙:偏财',
+        'year:hidden-stem:residual:癸:食神',
+        'month:stem:-:壬:伤官',
+        'month:hidden-stem:main:庚:劫财',
+        'month:hidden-stem:middle:壬:伤官',
+        'month:hidden-stem:residual:戊:正印',
+        'day:hidden-stem:main:辛:比肩',
+        'hour:stem:-:丙:正官',
+        'hour:hidden-stem:main:庚:劫财',
+        'hour:hidden-stem:middle:壬:伤官',
+        'hour:hidden-stem:residual:戊:正印',
+      ],
       ruleIds: allCoreRuleIds, referenceIds: allCoreReferences,
     },
   },
@@ -171,6 +194,20 @@ export const BAZI_GOLDEN_CASES: readonly BaziGoldenCase[] = [
         ],
       },
       tiaohou: { climate: '平和', favoredElements: [], adjustment: 0 },
+      tenGods: [
+        'year:stem:-:甲:偏财',
+        'year:hidden-stem:main:甲:偏财',
+        'year:hidden-stem:middle:丙:七杀',
+        'year:hidden-stem:residual:戊:偏印',
+        'month:stem:-:乙:正财',
+        'month:hidden-stem:main:乙:正财',
+        'day:hidden-stem:main:庚:比肩',
+        'day:hidden-stem:middle:壬:食神',
+        'day:hidden-stem:residual:戊:偏印',
+        'hour:stem:-:丙:七杀',
+        'hour:hidden-stem:main:丁:正官',
+        'hour:hidden-stem:middle:己:正印',
+      ],
       ruleIds: [...allCoreRuleIds, 'bazi.relations.breaks'],
       referenceIds: [...allCoreReferences, 'modern-six-breaks'],
     },
@@ -218,6 +255,21 @@ export const BAZI_GOLDEN_CASES: readonly BaziGoldenCase[] = [
         ],
       },
       tiaohou: { climate: '平和', favoredElements: [], adjustment: 0 },
+      tenGods: [
+        'year:stem:-:戊:偏财',
+        'year:hidden-stem:main:戊:偏财',
+        'year:hidden-stem:middle:乙:劫财',
+        'year:hidden-stem:residual:癸:正印',
+        'month:stem:-:丙:食神',
+        'month:hidden-stem:main:甲:比肩',
+        'month:hidden-stem:middle:丙:食神',
+        'month:hidden-stem:residual:戊:偏财',
+        'day:hidden-stem:main:癸:正印',
+        'hour:stem:-:庚:七杀',
+        'hour:hidden-stem:main:庚:七杀',
+        'hour:hidden-stem:middle:壬:偏印',
+        'hour:hidden-stem:residual:戊:偏财',
+      ],
       ruleIds: allCoreRuleIds, referenceIds: allCoreReferences,
     },
   },

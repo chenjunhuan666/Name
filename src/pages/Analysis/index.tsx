@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import { PageIntro } from '../../components/PageIntro';
 import { PhaseNotice } from '../../components/PhaseNotice';
+import { FEATURES } from '../../config/featureFlags';
+import { explainTenGodOccurrence } from '../../core/bazi/tenGods';
 import { FIVE_ELEMENTS } from '../../data/fiveElements';
 import { findBaziRule } from '../../data/baziRules';
 import { formatPillar } from '../../core/bazi/ganzhi';
@@ -14,6 +16,12 @@ const pillars: { key: PillarKey; label: string }[] = [
   { key: 'day', label: '日柱' },
   { key: 'hour', label: '时柱' },
 ];
+const hiddenRoleLabels = {
+  main: '主气',
+  middle: '中气',
+  residual: '余气',
+} as const;
+
 export function AnalysisPage() {
   const { state, dispatch } = useNaming();
   const { analysis, bazi, birthInfo, calendarResult } = state;
@@ -265,6 +273,46 @@ export function AnalysisPage() {
         </section>
       </div>
 
+      {FEATURES.tenGods && analysis?.tenGods?.length ? (
+        <details className="contentCard ruleEvidencePanel">
+          <summary>
+            十神结构
+            <span>{analysis.tenGods.length} 项传统关系 · 只读解释</span>
+          </summary>
+          <div className="ruleEvidenceList">
+            {analysis.tenGods.map((occurrence, index) => (
+              <article
+                key={`${occurrence.pillar}-${occurrence.location}-${occurrence.hiddenRole ?? 'stem'}-${occurrence.stem}-${index}`}
+              >
+                <header>
+                  <strong>
+                    {occurrence.tenGod} · {occurrence.stem}
+                  </strong>
+                  <span>
+                    {pillars.find(({ key }) => key === occurrence.pillar)?.label}
+                    {occurrence.location === 'stem'
+                      ? '天干'
+                      : `地支${hiddenRoleLabels[occurrence.hiddenRole ?? 'main']}`}
+                  </span>
+                </header>
+                <p>{explainTenGodOccurrence(occurrence)}</p>
+                <ul>
+                  {occurrence.ruleIds.map((ruleId) => (
+                    <li key={ruleId}>
+                      <code>{ruleId}</code>
+                      <span>{findBaziRule(ruleId)?.name ?? '规则说明待补充'}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+          <p className="modelDisclaimer">
+            十神只用于解释命局结构，不改变旺衰、起名五行倾向、候选排序或姓名分数。
+          </p>
+        </details>
+      ) : null}
+
       {analysis?.strength && strengthBreakdown ? (
         <section className="contentCard tendencyCard">
           <div className="cardTitleRow">
@@ -372,10 +420,22 @@ export function AnalysisPage() {
       ) : null}
 
       <PhaseNotice
-        eyebrow={analysis?.strength ? 'V2.1 规则引擎' : analysis ? 'Phase 4' : bazi ? 'Phase 3' : 'Phase 2'}
+        eyebrow={
+          FEATURES.tenGods && analysis?.tenGods
+            ? 'V3.1 十神运行时'
+            : analysis?.strength
+              ? 'V2.1 规则引擎'
+              : analysis
+                ? 'Phase 4'
+                : bazi
+                  ? 'Phase 3'
+                  : 'Phase 2'
+        }
         title={
-          analysis?.strength
-            ? 'V2 旺衰证据已进入起名链路'
+          FEATURES.tenGods && analysis?.tenGods
+            ? '十神结构已进入专业解释链路'
+            : analysis?.strength
+              ? 'V2 旺衰证据已进入起名链路'
             : analysis
               ? '基础结构已解析，等待旺衰判断'
             : bazi
@@ -383,8 +443,10 @@ export function AnalysisPage() {
               : '请先录入已知八字'
         }
         description={
-          analysis?.strength
-            ? '月令、季节、通根、透干、生扶与克泄耗已转为可追溯证据；基础调候只修正起名五档倾向，不输出唯一喜用神。'
+          FEATURES.tenGods && analysis?.tenGods
+            ? '年、月、时干和四柱藏干已按日主映射十神并关联规则来源；该结果只作结构解释，不改变旺衰、起名倾向或姓名评分。'
+            : analysis?.strength
+              ? '月令、季节、通根、透干、生扶与克泄耗已转为可追溯证据；基础调候只修正起名五档倾向，不输出唯一喜用神。'
             : analysis
               ? '日主、月令、阴阳、表层五行与藏干五行已经由本地确定性规则生成；下一阶段将加入五行生克、月令影响与基础旺衰。'
             : bazi

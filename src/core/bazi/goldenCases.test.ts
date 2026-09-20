@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { findBaziRule } from '../../data/baziRules';
+import { FEATURES } from '../../config/featureFlags';
 import type { PillarKey } from '../../types';
 import { analyzeBazi } from './strengthAnalysis';
 import { BAZI_GOLDEN_CASES, type GoldenEvidenceExpectation } from './goldenCases';
@@ -30,7 +31,7 @@ function hasEvidence(
 
 describe('八字 Golden Cases', () => {
   it.each(BAZI_GOLDEN_CASES)('$id 固定基础结构、关系、旺衰证据与来源链', ({ expected, bazi }) => {
-    const analysis = analyzeBazi(bazi);
+    const analysis = analyzeBazi(bazi, { ...FEATURES, tenGods: true });
 
     expect(analysis.dayMaster).toEqual(expected.structure.dayMaster);
     expect(analysis.monthCommand).toBe(expected.structure.monthCommand);
@@ -56,6 +57,12 @@ describe('八字 Golden Cases', () => {
     }
     expect(analysis.tiaohou).toMatchObject(expected.tiaohou);
     expect(analysis.tiaohou.monthCommand).toBe(expected.structure.monthCommand);
+    expect(
+      analysis.tenGods?.map(
+        ({ pillar, location, hiddenRole, stem, tenGod }) =>
+          `${pillar}:${location}:${hiddenRole ?? '-'}:${stem}:${tenGod}`,
+      ),
+    ).toEqual(expected.tenGods);
 
     const emittedRuleIds = new Set([
       ...analysis.strengthRuleIds,
@@ -63,6 +70,7 @@ describe('八字 Golden Cases', () => {
       ...analysis.namingTendencies.flatMap(({ ruleIds = [] }) => ruleIds),
       ...analysis.tiaohou.ruleIds,
       ...(analysis.relations ?? []).map(({ ruleId }) => ruleId),
+      ...(analysis.tenGods ?? []).flatMap(({ ruleIds }) => ruleIds),
     ]);
     expect(sorted([...emittedRuleIds])).toEqual(sorted(expected.ruleIds));
 

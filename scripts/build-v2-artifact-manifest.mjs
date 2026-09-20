@@ -1,11 +1,12 @@
 import { createHash } from 'node:crypto';
-import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises';
+import { execFileSync } from 'node:child_process';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import process from 'node:process';
 import { fileURLToPath } from 'node:url';
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const publicDataRoot = path.join(projectRoot, 'public', 'data');
+const baselineCommit = '9d0b9fc30758f537e1aa16869daeb2427b27ea09';
 const outputPath = path.join(
   projectRoot,
   'docs',
@@ -13,39 +14,37 @@ const outputPath = path.join(
   'v2-artifact-manifest.json',
 );
 
-async function collectJsonFiles(directory) {
-  const entries = await readdir(directory, { withFileTypes: true });
-  const nested = await Promise.all(
-    entries.map(async (entry) => {
-      const entryPath = path.join(directory, entry.name);
-      if (entry.isDirectory()) {
-        return collectJsonFiles(entryPath);
-      }
-      return entry.isFile() && entry.name.endsWith('.json') ? [entryPath] : [];
-    }),
+function describeArtifact(filePath) {
+  const content = execFileSync(
+    'git',
+    ['show', `${baselineCommit}:${filePath}`],
+    { cwd: projectRoot, encoding: 'buffer', maxBuffer: 10 * 1024 * 1024 },
   );
-  return nested.flat();
-}
-
-function toProjectPath(filePath) {
-  return path.relative(projectRoot, filePath).split(path.sep).join('/');
-}
-
-async function describeArtifact(filePath) {
-  const content = await readFile(filePath);
   return {
-    path: toProjectPath(filePath),
+    path: filePath,
     bytes: content.byteLength,
     sha256: createHash('sha256').update(content).digest('hex'),
   };
 }
 
-const publicJsonFiles = await collectJsonFiles(publicDataRoot);
-const artifactPaths = [
-  ...publicJsonFiles,
-  path.join(projectRoot, 'src', 'data', 'bazi', 'rules.json'),
-].sort((left, right) => toProjectPath(left).localeCompare(toProjectPath(right)));
-const artifacts = await Promise.all(artifactPaths.map(describeArtifact));
+const artifactPaths = execFileSync(
+  'git',
+  [
+    'ls-tree',
+    '-r',
+    '--name-only',
+    baselineCommit,
+    '--',
+    'public/data',
+    'src/data/bazi/rules.json',
+  ],
+  { cwd: projectRoot, encoding: 'utf8' },
+)
+  .trim()
+  .split(/\r?\n/)
+  .filter((filePath) => filePath.endsWith('.json'))
+  .sort((left, right) => left.localeCompare(right));
+const artifacts = artifactPaths.map(describeArtifact);
 const manifest = `${JSON.stringify(
   {
     schemaVersion: 1,

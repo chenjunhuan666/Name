@@ -32,6 +32,18 @@ export type YinYang = '阴' | '阳';
 
 export type HiddenStemRole = 'main' | 'middle' | 'residual';
 
+export type TenGod =
+  | '比肩'
+  | '劫财'
+  | '食神'
+  | '伤官'
+  | '偏财'
+  | '正财'
+  | '七杀'
+  | '正官'
+  | '偏印'
+  | '正印';
+
 export interface HiddenStem {
   stem: HeavenlyStem;
   role: HiddenStemRole;
@@ -50,6 +62,15 @@ export interface Bazi {
 }
 
 export type PillarKey = keyof Bazi;
+
+export interface TenGodOccurrence {
+  tenGod: TenGod;
+  stem: HeavenlyStem;
+  pillar: PillarKey;
+  location: 'stem' | 'hidden-stem';
+  hiddenRole?: HiddenStemRole;
+  ruleIds: string[];
+}
 
 export type BaziInputValues = Record<PillarKey, string>;
 
@@ -154,6 +175,7 @@ export interface BaziAnalysis {
   tiaohou?: BasicTiaohouAnalysis;
   namingTendencies?: ElementTendency[];
   relations?: BaziRelation[];
+  tenGods?: TenGodOccurrence[];
 }
 
 export type CompleteBaziAnalysis = Omit<

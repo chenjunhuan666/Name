@@ -5,8 +5,10 @@ import type {
   CompleteBaziAnalysis,
   StrengthEvidence,
 } from '../../../types';
+import { FEATURES, type FeatureFlags } from '../../../config/featureFlags';
 import { analyzeBasicBazi } from '../basicAnalysis';
 import { analyzeBaziRelations } from '../relations';
+import { analyzeTenGods } from '../tenGods';
 import { createConstraintEvidence } from './control';
 import { createNamingTendencies } from './namingTendency';
 import { createRootingEvidence } from './rooting';
@@ -63,12 +65,16 @@ export function analyzeStrength(
   };
 }
 
-export function analyzeBazi(bazi: Bazi): CompleteBaziAnalysis {
+export function analyzeBazi(
+  bazi: Bazi,
+  features: Readonly<FeatureFlags> = FEATURES,
+): CompleteBaziAnalysis {
   const basicAnalysis = analyzeBasicBazi(bazi);
 
   return {
     ...basicAnalysis,
     ...analyzeStrength(bazi, basicAnalysis),
     relations: analyzeBaziRelations(bazi),
+    ...(features.tenGods ? { tenGods: analyzeTenGods(bazi) } : {}),
   };
 }
