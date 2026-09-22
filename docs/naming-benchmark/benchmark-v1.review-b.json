@@ -1,0 +1,6271 @@
+{
+  "schemaVersion": 1,
+  "benchmarkVersion": "1.0.0",
+  "status": "source-packet-frozen",
+  "reviewerSlot": "B",
+  "evidenceBoundary": "本文件是一个独立 AI 审查输入包；审查时不得查看另一包结果、算法分数或排名。",
+  "scenarios": [
+    {
+      "id": "balanced-chen",
+      "benchmarkVersion": "1.0.0",
+      "surname": "陈",
+      "fixedTendencies": [
+        {
+          "element": "木",
+          "level": 5,
+          "relation": "日主所生",
+          "weightedPresence": 0,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "火",
+          "level": 4,
+          "relation": "日主所生",
+          "weightedPresence": 1,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "土",
+          "level": 3,
+          "relation": "日主所生",
+          "weightedPresence": 2,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "金",
+          "level": 2,
+          "relation": "日主所生",
+          "weightedPresence": 3,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "水",
+          "level": 1,
+          "relation": "日主所生",
+          "weightedPresence": 4,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        }
+      ],
+      "preference": {
+        "styles": [
+          "清雅"
+        ],
+        "rarityPreference": "balanced",
+        "genderExpression": "neutral"
+      },
+      "resultLimit": 20,
+      "dataVersion": "3.0.0",
+      "ruleVersion": "3.0.0"
+    },
+    {
+      "id": "scholarly-li",
+      "benchmarkVersion": "1.0.0",
+      "surname": "李",
+      "fixedTendencies": [
+        {
+          "element": "木",
+          "level": 5,
+          "relation": "日主所生",
+          "weightedPresence": 0,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "火",
+          "level": 4,
+          "relation": "日主所生",
+          "weightedPresence": 1,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "土",
+          "level": 3,
+          "relation": "日主所生",
+          "weightedPresence": 2,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "金",
+          "level": 2,
+          "relation": "日主所生",
+          "weightedPresence": 3,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "水",
+          "level": 1,
+          "relation": "日主所生",
+          "weightedPresence": 4,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        }
+      ],
+      "preference": {
+        "styles": [
+          "书卷"
+        ],
+        "rarityPreference": "common",
+        "genderExpression": "neutral"
+      },
+      "resultLimit": 20,
+      "dataVersion": "3.0.0",
+      "ruleVersion": "3.0.0"
+    },
+    {
+      "id": "warm-wang",
+      "benchmarkVersion": "1.0.0",
+      "surname": "王",
+      "fixedTendencies": [
+        {
+          "element": "木",
+          "level": 5,
+          "relation": "日主所生",
+          "weightedPresence": 0,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "火",
+          "level": 4,
+          "relation": "日主所生",
+          "weightedPresence": 1,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "土",
+          "level": 3,
+          "relation": "日主所生",
+          "weightedPresence": 2,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "金",
+          "level": 2,
+          "relation": "日主所生",
+          "weightedPresence": 3,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "水",
+          "level": 1,
+          "relation": "日主所生",
+          "weightedPresence": 4,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        }
+      ],
+      "preference": {
+        "styles": [
+          "温润"
+        ],
+        "rarityPreference": "balanced",
+        "genderExpression": "feminine"
+      },
+      "resultLimit": 20,
+      "dataVersion": "3.0.0",
+      "ruleVersion": "3.0.0"
+    },
+    {
+      "id": "classic-zhang",
+      "benchmarkVersion": "1.0.0",
+      "surname": "张",
+      "fixedTendencies": [
+        {
+          "element": "木",
+          "level": 5,
+          "relation": "日主所生",
+          "weightedPresence": 0,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "火",
+          "level": 4,
+          "relation": "日主所生",
+          "weightedPresence": 1,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "土",
+          "level": 3,
+          "relation": "日主所生",
+          "weightedPresence": 2,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "金",
+          "level": 2,
+          "relation": "日主所生",
+          "weightedPresence": 3,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "水",
+          "level": 1,
+          "relation": "日主所生",
+          "weightedPresence": 4,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        }
+      ],
+      "preference": {
+        "styles": [
+          "古典"
+        ],
+        "rarityPreference": "distinctive",
+        "genderExpression": "masculine"
+      },
+      "resultLimit": 20,
+      "dataVersion": "3.0.0",
+      "ruleVersion": "3.0.0"
+    },
+    {
+      "id": "minimal-lin",
+      "benchmarkVersion": "1.0.0",
+      "surname": "林",
+      "fixedTendencies": [
+        {
+          "element": "木",
+          "level": 5,
+          "relation": "日主所生",
+          "weightedPresence": 0,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "火",
+          "level": 4,
+          "relation": "日主所生",
+          "weightedPresence": 1,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "土",
+          "level": 3,
+          "relation": "日主所生",
+          "weightedPresence": 2,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "金",
+          "level": 2,
+          "relation": "日主所生",
+          "weightedPresence": 3,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "水",
+          "level": 1,
+          "relation": "日主所生",
+          "weightedPresence": 4,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        }
+      ],
+      "preference": {
+        "styles": [
+          "简约"
+        ],
+        "rarityPreference": "balanced",
+        "genderExpression": "neutral"
+      },
+      "resultLimit": 20,
+      "dataVersion": "3.0.0",
+      "ruleVersion": "3.0.0"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "benchmark-v1-review-001",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "辉文",
+      "leakageGroupId": "文辉",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "辉",
+        "文"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-002",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "寒涵",
+      "leakageGroupId": "寒涵",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "寒",
+        "涵"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-003",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "恩忠",
+      "leakageGroupId": "忠恩",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "恩",
+        "忠"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-004",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "乐涛",
+      "leakageGroupId": "乐涛",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "乐",
+        "涛"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-005",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "月宁",
+      "leakageGroupId": "宁月",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "月",
+        "宁"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-006",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "妍矩",
+      "leakageGroupId": "妍矩",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "妍",
+        "矩"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-007",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "瑜铭",
+      "leakageGroupId": "瑜铭",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "瑜",
+        "铭"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-008",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "花昭",
+      "leakageGroupId": "昭花",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "花",
+        "昭"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-009",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "思垣",
+      "leakageGroupId": "垣思",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "思",
+        "垣"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-010",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "函川",
+      "leakageGroupId": "函川",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "函",
+        "川"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-011",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "乙首",
+      "leakageGroupId": "乙首",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "乙",
+        "首"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-012",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "铭道",
+      "leakageGroupId": "道铭",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "铭",
+        "道"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-013",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "信鸣",
+      "leakageGroupId": "信鸣",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "信",
+        "鸣"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-014",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "璠扬",
+      "leakageGroupId": "扬璠",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "璠",
+        "扬"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-015",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "暹禅",
+      "leakageGroupId": "暹禅",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "暹",
+        "禅"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-016",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "立千",
+      "leakageGroupId": "千立",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "立",
+        "千"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-017",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "承馥",
+      "leakageGroupId": "承馥",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "承",
+        "馥"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-018",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "暖绮",
+      "leakageGroupId": "暖绮",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "暖",
+        "绮"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-019",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "素悠",
+      "leakageGroupId": "悠素",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "素",
+        "悠"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-020",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "周卯",
+      "leakageGroupId": "卯周",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "周",
+        "卯"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-021",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "弘瑚",
+      "leakageGroupId": "弘瑚",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "弘",
+        "瑚"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-022",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "璐寅",
+      "leakageGroupId": "寅璐",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "璐",
+        "寅"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-023",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "若乐",
+      "leakageGroupId": "乐若",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "若",
+        "乐"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-024",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "遥仁",
+      "leakageGroupId": "仁遥",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "遥",
+        "仁"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-025",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "鲲丰",
+      "leakageGroupId": "丰鲲",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "鲲",
+        "丰"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-026",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "璞雄",
+      "leakageGroupId": "璞雄",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "璞",
+        "雄"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-027",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "进咸",
+      "leakageGroupId": "咸进",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "进",
+        "咸"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-028",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "双腾",
+      "leakageGroupId": "双腾",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "双",
+        "腾"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-029",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "芙寰",
+      "leakageGroupId": "寰芙",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "芙",
+        "寰"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-030",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "魁飞",
+      "leakageGroupId": "飞魁",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "魁",
+        "飞"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-031",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "权可",
+      "leakageGroupId": "可权",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "权",
+        "可"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-032",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "娅兴",
+      "leakageGroupId": "兴娅",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "娅",
+        "兴"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-033",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "昀泓",
+      "leakageGroupId": "昀泓",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "昀",
+        "泓"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-034",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "炬俏",
+      "leakageGroupId": "俏炬",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "炬",
+        "俏"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-035",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "粤治",
+      "leakageGroupId": "治粤",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "粤",
+        "治"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-036",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "汲才",
+      "leakageGroupId": "才汲",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "汲",
+        "才"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-037",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "婷势",
+      "leakageGroupId": "势婷",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "婷",
+        "势"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-038",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "聪姣",
+      "leakageGroupId": "姣聪",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "聪",
+        "姣"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-039",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "吉坦",
+      "leakageGroupId": "吉坦",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "吉",
+        "坦"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-040",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "祥昀",
+      "leakageGroupId": "昀祥",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "祥",
+        "昀"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-041",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "仁也",
+      "leakageGroupId": "也仁",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "仁",
+        "也"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-042",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "敏福",
+      "leakageGroupId": "敏福",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "敏",
+        "福"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-043",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "冠龙",
+      "leakageGroupId": "冠龙",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "冠",
+        "龙"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-044",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "秋瑞",
+      "leakageGroupId": "瑞秋",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "秋",
+        "瑞"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-045",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "丙林",
+      "leakageGroupId": "丙林",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "丙",
+        "林"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-046",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "枚恒",
+      "leakageGroupId": "恒枚",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "枚",
+        "恒"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-047",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "凯正",
+      "leakageGroupId": "凯正",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "凯",
+        "正"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-048",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "霞昊",
+      "leakageGroupId": "昊霞",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "霞",
+        "昊"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-049",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "昭旭",
+      "leakageGroupId": "旭昭",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "昭",
+        "旭"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-050",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "旻鼐",
+      "leakageGroupId": "旻鼐",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "旻",
+        "鼐"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-051",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "凰堂",
+      "leakageGroupId": "凰堂",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "凰",
+        "堂"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-052",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "钟亲",
+      "leakageGroupId": "亲钟",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "钟",
+        "亲"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-053",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "礼章",
+      "leakageGroupId": "礼章",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "礼",
+        "章"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-054",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "识洁",
+      "leakageGroupId": "洁识",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "识",
+        "洁"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-055",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "语硕",
+      "leakageGroupId": "硕语",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "语",
+        "硕"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-056",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "端鲲",
+      "leakageGroupId": "端鲲",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "端",
+        "鲲"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-057",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "恺会",
+      "leakageGroupId": "会恺",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "恺",
+        "会"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-058",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "乔宣",
+      "leakageGroupId": "乔宣",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "乔",
+        "宣"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-059",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "萧莉",
+      "leakageGroupId": "莉萧",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "萧",
+        "莉"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-060",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "嫒孝",
+      "leakageGroupId": "嫒孝",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "嫒",
+        "孝"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-061",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "绵草",
+      "leakageGroupId": "绵草",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "绵",
+        "草"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-062",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "会玢",
+      "leakageGroupId": "会玢",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "会",
+        "玢"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-063",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "升天",
+      "leakageGroupId": "升天",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "升",
+        "天"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-064",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "超贵",
+      "leakageGroupId": "贵超",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "超",
+        "贵"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-065",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "菁哲",
+      "leakageGroupId": "哲菁",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "菁",
+        "哲"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-066",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "麒琪",
+      "leakageGroupId": "琪麒",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "麒",
+        "琪"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-067",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "惜丽",
+      "leakageGroupId": "丽惜",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "惜",
+        "丽"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-068",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "誉竟",
+      "leakageGroupId": "竟誉",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "誉",
+        "竟"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-069",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "葛玲",
+      "leakageGroupId": "玲葛",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "葛",
+        "玲"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-070",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "也悦",
+      "leakageGroupId": "也悦",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "也",
+        "悦"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-071",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "肱彝",
+      "leakageGroupId": "彝肱",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "肱",
+        "彝"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-072",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "惠承",
+      "leakageGroupId": "惠承",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "惠",
+        "承"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-073",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "芝识",
+      "leakageGroupId": "芝识",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "芝",
+        "识"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-074",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "桂楚",
+      "leakageGroupId": "桂楚",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "桂",
+        "楚"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-075",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "荣萌",
+      "leakageGroupId": "荣萌",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "荣",
+        "萌"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-076",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "焕昕",
+      "leakageGroupId": "昕焕",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "焕",
+        "昕"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-077",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "知显",
+      "leakageGroupId": "显知",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "知",
+        "显"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-078",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "丰娜",
+      "leakageGroupId": "丰娜",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "丰",
+        "娜"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-079",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "磊奋",
+      "leakageGroupId": "奋磊",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "磊",
+        "奋"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-080",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "英穆",
+      "leakageGroupId": "穆英",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "英",
+        "穆"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-081",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "聚莹",
+      "leakageGroupId": "聚莹",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "聚",
+        "莹"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-082",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "皓廓",
+      "leakageGroupId": "廓皓",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "皓",
+        "廓"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-083",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "淑沆",
+      "leakageGroupId": "沆淑",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "淑",
+        "沆"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-084",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "颖菊",
+      "leakageGroupId": "菊颖",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "颖",
+        "菊"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-085",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "锴静",
+      "leakageGroupId": "锴静",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "锴",
+        "静"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-086",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "垣兰",
+      "leakageGroupId": "兰垣",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "垣",
+        "兰"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-087",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "蕊诚",
+      "leakageGroupId": "蕊诚",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "蕊",
+        "诚"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-088",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "功思",
+      "leakageGroupId": "功思",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "功",
+        "思"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-089",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "深枚",
+      "leakageGroupId": "枚深",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "深",
+        "枚"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-090",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "杨淑",
+      "leakageGroupId": "杨淑",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "杨",
+        "淑"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-091",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "楚淦",
+      "leakageGroupId": "楚淦",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "楚",
+        "淦"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-092",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "蕙瑶",
+      "leakageGroupId": "瑶蕙",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "蕙",
+        "瑶"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-093",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "楠基",
+      "leakageGroupId": "基楠",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "楠",
+        "基"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-094",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "婉喜",
+      "leakageGroupId": "喜婉",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "婉",
+        "喜"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-095",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "缘贺",
+      "leakageGroupId": "缘贺",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "缘",
+        "贺"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-096",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "挚倩",
+      "leakageGroupId": "倩挚",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "挚",
+        "倩"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-097",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "方元",
+      "leakageGroupId": "元方",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "方",
+        "元"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-098",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "强檀",
+      "leakageGroupId": "强檀",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "强",
+        "檀"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-099",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "宣声",
+      "leakageGroupId": "声宣",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "宣",
+        "声"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-100",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "画徽",
+      "leakageGroupId": "徽画",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "画",
+        "徽"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-101",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "庄楷",
+      "leakageGroupId": "庄楷",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "庄",
+        "楷"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-102",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "淇百",
+      "leakageGroupId": "淇百",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "淇",
+        "百"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-103",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "渊藏",
+      "leakageGroupId": "渊藏",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "渊",
+        "藏"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-104",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "归时",
+      "leakageGroupId": "归时",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "归",
+        "时"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-105",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "彪晟",
+      "leakageGroupId": "彪晟",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "彪",
+        "晟"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-106",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "侯茂",
+      "leakageGroupId": "侯茂",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "侯",
+        "茂"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-107",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "士笑",
+      "leakageGroupId": "士笑",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "士",
+        "笑"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-108",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "云力",
+      "leakageGroupId": "云力",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "云",
+        "力"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-109",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "枫李",
+      "leakageGroupId": "李枫",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "枫",
+        "李"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-110",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "恪梵",
+      "leakageGroupId": "恪梵",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "恪",
+        "梵"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-111",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "俏眸",
+      "leakageGroupId": "俏眸",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "俏",
+        "眸"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-112",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "笑樱",
+      "leakageGroupId": "樱笑",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "笑",
+        "樱"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-113",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "宸炬",
+      "leakageGroupId": "宸炬",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "宸",
+        "炬"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-114",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "韧肱",
+      "leakageGroupId": "肱韧",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "韧",
+        "肱"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-115",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "纪兮",
+      "leakageGroupId": "兮纪",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "纪",
+        "兮"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-116",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "声卉",
+      "leakageGroupId": "卉声",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "声",
+        "卉"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-117",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "丹好",
+      "leakageGroupId": "丹好",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "丹",
+        "好"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-118",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "敬澄",
+      "leakageGroupId": "敬澄",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "敬",
+        "澄"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-119",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "绮诺",
+      "leakageGroupId": "绮诺",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "绮",
+        "诺"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-120",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "仙巍",
+      "leakageGroupId": "仙巍",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "仙",
+        "巍"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-121",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "原煜",
+      "leakageGroupId": "原煜",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "原",
+        "煜"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-122",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "工恕",
+      "leakageGroupId": "工恕",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "工",
+        "恕"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-123",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "冶归",
+      "leakageGroupId": "冶归",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "冶",
+        "归"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-124",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "沆菲",
+      "leakageGroupId": "沆菲",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "沆",
+        "菲"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-125",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "邈武",
+      "leakageGroupId": "武邈",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "邈",
+        "武"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-126",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "铉荷",
+      "leakageGroupId": "荷铉",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "铉",
+        "荷"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-127",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "璧茜",
+      "leakageGroupId": "璧茜",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "璧",
+        "茜"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-128",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "汐裕",
+      "leakageGroupId": "汐裕",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "汐",
+        "裕"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-129",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "观璞",
+      "leakageGroupId": "璞观",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "观",
+        "璞"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-130",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "想升",
+      "leakageGroupId": "升想",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "想",
+        "升"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-131",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "黛画",
+      "leakageGroupId": "画黛",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "黛",
+        "画"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-132",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "久始",
+      "leakageGroupId": "久始",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "久",
+        "始"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-133",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "钦岳",
+      "leakageGroupId": "岳钦",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "钦",
+        "岳"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-134",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "提授",
+      "leakageGroupId": "授提",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "提",
+        "授"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-135",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "暄琚",
+      "leakageGroupId": "暄琚",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "暄",
+        "琚"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-136",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "跃佾",
+      "leakageGroupId": "佾跃",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "跃",
+        "佾"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-137",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "爵曙",
+      "leakageGroupId": "曙爵",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "爵",
+        "曙"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-138",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "晏满",
+      "leakageGroupId": "晏满",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "晏",
+        "满"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-139",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "波帆",
+      "leakageGroupId": "帆波",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "波",
+        "帆"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-140",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "许钦",
+      "leakageGroupId": "许钦",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "许",
+        "钦"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-141",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "菲献",
+      "leakageGroupId": "献菲",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "菲",
+        "献"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-142",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "境紫",
+      "leakageGroupId": "境紫",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "境",
+        "紫"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-143",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "义羿",
+      "leakageGroupId": "义羿",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "义",
+        "羿"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-144",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "辞为",
+      "leakageGroupId": "为辞",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "辞",
+        "为"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-145",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "获唤",
+      "leakageGroupId": "唤获",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "获",
+        "唤"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-146",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "品语",
+      "leakageGroupId": "品语",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "品",
+        "语"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-147",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "温蕙",
+      "leakageGroupId": "温蕙",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "温",
+        "蕙"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-148",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "治师",
+      "leakageGroupId": "师治",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "治",
+        "师"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-149",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "力鹤",
+      "leakageGroupId": "力鹤",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "力",
+        "鹤"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-150",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "公红",
+      "leakageGroupId": "公红",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "公",
+        "红"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-151",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "全象",
+      "leakageGroupId": "全象",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "全",
+        "象"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-152",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "优蔻",
+      "leakageGroupId": "优蔻",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "优",
+        "蔻"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-153",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "徽希",
+      "leakageGroupId": "希徽",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "徽",
+        "希"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-154",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "茗变",
+      "leakageGroupId": "变茗",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "茗",
+        "变"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-155",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "闻浙",
+      "leakageGroupId": "浙闻",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "闻",
+        "浙"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-156",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "悠邈",
+      "leakageGroupId": "悠邈",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "悠",
+        "邈"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-157",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "柄韫",
+      "leakageGroupId": "柄韫",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "柄",
+        "韫"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-158",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "壬烈",
+      "leakageGroupId": "壬烈",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "壬",
+        "烈"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-159",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "黻徐",
+      "leakageGroupId": "徐黻",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "黻",
+        "徐"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-160",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "燎谨",
+      "leakageGroupId": "燎谨",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "燎",
+        "谨"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-161",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "晞誓",
+      "leakageGroupId": "晞誓",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "晞",
+        "誓"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-162",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "韫依",
+      "leakageGroupId": "依韫",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "韫",
+        "依"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-163",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "翎婕",
+      "leakageGroupId": "婕翎",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "翎",
+        "婕"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-164",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "琬仲",
+      "leakageGroupId": "仲琬",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "琬",
+        "仲"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-165",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "史秉",
+      "leakageGroupId": "史秉",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "史",
+        "秉"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-166",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "澈娟",
+      "leakageGroupId": "娟澈",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "澈",
+        "娟"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-167",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "简昌",
+      "leakageGroupId": "昌简",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "简",
+        "昌"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-168",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "泊凌",
+      "leakageGroupId": "凌泊",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "泊",
+        "凌"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-169",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "烁骁",
+      "leakageGroupId": "烁骁",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "烁",
+        "骁"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-170",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "献彦",
+      "leakageGroupId": "彦献",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "献",
+        "彦"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-171",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "予精",
+      "leakageGroupId": "予精",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "予",
+        "精"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-172",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "璀丹",
+      "leakageGroupId": "丹璀",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "璀",
+        "丹"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-173",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "恬茗",
+      "leakageGroupId": "恬茗",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "恬",
+        "茗"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-174",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "茁弈",
+      "leakageGroupId": "弈茁",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "茁",
+        "弈"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-175",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "开柬",
+      "leakageGroupId": "开柬",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "开",
+        "柬"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-176",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "淡阜",
+      "leakageGroupId": "淡阜",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "淡",
+        "阜"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-177",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "鉴圩",
+      "leakageGroupId": "圩鉴",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "鉴",
+        "圩"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-178",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "武笃",
+      "leakageGroupId": "武笃",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "武",
+        "笃"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-179",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "伯歌",
+      "leakageGroupId": "伯歌",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "伯",
+        "歌"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-180",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "皇潮",
+      "leakageGroupId": "潮皇",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "皇",
+        "潮"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-181",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "梦睦",
+      "leakageGroupId": "梦睦",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "梦",
+        "睦"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-182",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "守亭",
+      "leakageGroupId": "亭守",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "守",
+        "亭"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-183",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "羽育",
+      "leakageGroupId": "羽育",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "羽",
+        "育"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-184",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "棠笙",
+      "leakageGroupId": "棠笙",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "棠",
+        "笙"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-185",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "才关",
+      "leakageGroupId": "关才",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "才",
+        "关"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-186",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "李妃",
+      "leakageGroupId": "妃李",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "李",
+        "妃"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-187",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "相望",
+      "leakageGroupId": "望相",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "相",
+        "望"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-188",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "晗枫",
+      "leakageGroupId": "晗枫",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "晗",
+        "枫"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-189",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "令品",
+      "leakageGroupId": "令品",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "令",
+        "品"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-190",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "释羽",
+      "leakageGroupId": "羽释",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "释",
+        "羽"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-191",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "弈醇",
+      "leakageGroupId": "弈醇",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "弈",
+        "醇"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-192",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "至山",
+      "leakageGroupId": "山至",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "至",
+        "山"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-193",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "卯厚",
+      "leakageGroupId": "卯厚",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "卯",
+        "厚"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-194",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "汴权",
+      "leakageGroupId": "权汴",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "汴",
+        "权"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-195",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "迥誉",
+      "leakageGroupId": "誉迥",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "迥",
+        "誉"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-196",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "荪黔",
+      "leakageGroupId": "荪黔",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "荪",
+        "黔"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-197",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "墉儆",
+      "leakageGroupId": "儆墉",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "墉",
+        "儆"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-198",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "骥旸",
+      "leakageGroupId": "旸骥",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "骥",
+        "旸"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-199",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "烈鸾",
+      "leakageGroupId": "烈鸾",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "烈",
+        "鸾"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-200",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "兼经",
+      "leakageGroupId": "兼经",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "兼",
+        "经"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-201",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "犀域",
+      "leakageGroupId": "域犀",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "犀",
+        "域"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-202",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "苑赜",
+      "leakageGroupId": "苑赜",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "苑",
+        "赜"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-203",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "况发",
+      "leakageGroupId": "况发",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "况",
+        "发"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-204",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "灯丘",
+      "leakageGroupId": "丘灯",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "灯",
+        "丘"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-205",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "雏枝",
+      "leakageGroupId": "枝雏",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "雏",
+        "枝"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-206",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "就泾",
+      "leakageGroupId": "就泾",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "就",
+        "泾"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-207",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "赛祁",
+      "leakageGroupId": "祁赛",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "赛",
+        "祁"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-208",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "烟朵",
+      "leakageGroupId": "朵烟",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "烟",
+        "朵"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-209",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "遨迈",
+      "leakageGroupId": "迈遨",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "遨",
+        "迈"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-210",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "罕肃",
+      "leakageGroupId": "罕肃",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "罕",
+        "肃"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-211",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "洌溢",
+      "leakageGroupId": "洌溢",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "洌",
+        "溢"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-212",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "祁岑",
+      "leakageGroupId": "岑祁",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "祁",
+        "岑"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-213",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "搏珈",
+      "leakageGroupId": "搏珈",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "搏",
+        "珈"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-214",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "府鹊",
+      "leakageGroupId": "府鹊",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "府",
+        "鹊"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-215",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "廉忻",
+      "leakageGroupId": "廉忻",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "廉",
+        "忻"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-216",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "柠斋",
+      "leakageGroupId": "斋柠",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "柠",
+        "斋"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-217",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "示裁",
+      "leakageGroupId": "示裁",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "示",
+        "裁"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-218",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "协秘",
+      "leakageGroupId": "协秘",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "协",
+        "秘"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-219",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "游娱",
+      "leakageGroupId": "娱游",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "游",
+        "娱"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-220",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "准珏",
+      "leakageGroupId": "准珏",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "准",
+        "珏"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-221",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "荻汀",
+      "leakageGroupId": "汀荻",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "荻",
+        "汀"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-222",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "玑榛",
+      "leakageGroupId": "榛玑",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "玑",
+        "榛"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-223",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "鹂灯",
+      "leakageGroupId": "灯鹂",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "鹂",
+        "灯"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-224",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "苒践",
+      "leakageGroupId": "苒践",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "苒",
+        "践"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-225",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "瞳坛",
+      "leakageGroupId": "坛瞳",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "瞳",
+        "坛"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-226",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "俨瓣",
+      "leakageGroupId": "俨瓣",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "俨",
+        "瓣"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-227",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "御荔",
+      "leakageGroupId": "御荔",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "御",
+        "荔"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-228",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "财诠",
+      "leakageGroupId": "诠财",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "财",
+        "诠"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-229",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "岸憨",
+      "leakageGroupId": "岸憨",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "岸",
+        "憨"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-230",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "俭牧",
+      "leakageGroupId": "俭牧",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "俭",
+        "牧"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-231",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "鸥慰",
+      "leakageGroupId": "慰鸥",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "鸥",
+        "慰"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-232",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "效簪",
+      "leakageGroupId": "效簪",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "效",
+        "簪"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-233",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "谙谛",
+      "leakageGroupId": "谙谛",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "谙",
+        "谛"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-234",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "玖奎",
+      "leakageGroupId": "奎玖",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "玖",
+        "奎"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-235",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "缪抒",
+      "leakageGroupId": "抒缪",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "缪",
+        "抒"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-236",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "绾滟",
+      "leakageGroupId": "滟绾",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "绾",
+        "滟"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-237",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "驭报",
+      "leakageGroupId": "报驭",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "驭",
+        "报"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-238",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "奏干",
+      "leakageGroupId": "奏干",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "奏",
+        "干"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-239",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "冲谱",
+      "leakageGroupId": "冲谱",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "冲",
+        "谱"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-240",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "尝谙",
+      "leakageGroupId": "尝谙",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "尝",
+        "谙"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-241",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "践弥",
+      "leakageGroupId": "弥践",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "践",
+        "弥"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-242",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "密玺",
+      "leakageGroupId": "密玺",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "密",
+        "玺"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-243",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "湾构",
+      "leakageGroupId": "构湾",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "湾",
+        "构"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-244",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "妆整",
+      "leakageGroupId": "妆整",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "妆",
+        "整"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-245",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "钿览",
+      "leakageGroupId": "览钿",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "钿",
+        "览"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-246",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "轲亚",
+      "leakageGroupId": "亚轲",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "轲",
+        "亚"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-247",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "茑涤",
+      "leakageGroupId": "涤茑",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "茑",
+        "涤"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-248",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "绅蔓",
+      "leakageGroupId": "绅蔓",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "绅",
+        "蔓"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-249",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "朵材",
+      "leakageGroupId": "朵材",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "朵",
+        "材"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-250",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "竞觉",
+      "leakageGroupId": "竞觉",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "竞",
+        "觉"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-251",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "蒙倾",
+      "leakageGroupId": "倾蒙",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "蒙",
+        "倾"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-252",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "纱绪",
+      "leakageGroupId": "纱绪",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "纱",
+        "绪"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-253",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "魏筑",
+      "leakageGroupId": "筑魏",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "魏",
+        "筑"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-254",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "亿罡",
+      "leakageGroupId": "亿罡",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "亿",
+        "罡"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-255",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "州纶",
+      "leakageGroupId": "州纶",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "州",
+        "纶"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-256",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "丞瞳",
+      "leakageGroupId": "丞瞳",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "丞",
+        "瞳"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-257",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "鹄颍",
+      "leakageGroupId": "颍鹄",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "鹄",
+        "颍"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-258",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "炅孔",
+      "leakageGroupId": "孔炅",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "炅",
+        "孔"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-259",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "憩靓",
+      "leakageGroupId": "憩靓",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "憩",
+        "靓"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-260",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "溯苇",
+      "leakageGroupId": "溯苇",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "溯",
+        "苇"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-261",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "炘杲",
+      "leakageGroupId": "杲炘",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "炘",
+        "杲"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-262",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "颍菩",
+      "leakageGroupId": "菩颍",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "颍",
+        "菩"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-263",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "炙胤",
+      "leakageGroupId": "炙胤",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "炙",
+        "胤"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-264",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "少驷",
+      "leakageGroupId": "少驷",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "少",
+        "驷"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-265",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "固丛",
+      "leakageGroupId": "丛固",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "固",
+        "丛"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-266",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "盟纳",
+      "leakageGroupId": "盟纳",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "盟",
+        "纳"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-267",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "潼造",
+      "leakageGroupId": "潼造",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "潼",
+        "造"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-268",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "召稼",
+      "leakageGroupId": "召稼",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "召",
+        "稼"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-269",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "珩屏",
+      "leakageGroupId": "屏珩",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "珩",
+        "屏"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-270",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "弥蒂",
+      "leakageGroupId": "弥蒂",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "弥",
+        "蒂"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-271",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "戍禄",
+      "leakageGroupId": "戍禄",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "戍",
+        "禄"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-272",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "岫示",
+      "leakageGroupId": "岫示",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "岫",
+        "示"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-273",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "昼亿",
+      "leakageGroupId": "亿昼",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "昼",
+        "亿"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-274",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "甬礴",
+      "leakageGroupId": "甬礴",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "甬",
+        "礴"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-275",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "小霁",
+      "leakageGroupId": "小霁",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "小",
+        "霁"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-276",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "贡擎",
+      "leakageGroupId": "擎贡",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "贡",
+        "擎"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-277",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "梁逍",
+      "leakageGroupId": "梁逍",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "梁",
+        "逍"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-278",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "坛沅",
+      "leakageGroupId": "坛沅",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "坛",
+        "沅"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-279",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "与桉",
+      "leakageGroupId": "与桉",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "与",
+        "桉"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-280",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "炽麦",
+      "leakageGroupId": "炽麦",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "炽",
+        "麦"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-281",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "径印",
+      "leakageGroupId": "印径",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "径",
+        "印"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-282",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "岷鹃",
+      "leakageGroupId": "岷鹃",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "岷",
+        "鹃"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-283",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "磬淞",
+      "leakageGroupId": "淞磬",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "磬",
+        "淞"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-284",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "垂桢",
+      "leakageGroupId": "垂桢",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "垂",
+        "桢"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-285",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "匠当",
+      "leakageGroupId": "匠当",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "匠",
+        "当"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-286",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "迈激",
+      "leakageGroupId": "激迈",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "迈",
+        "激"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-287",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "恰踏",
+      "leakageGroupId": "恰踏",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "恰",
+        "踏"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-288",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "挺遨",
+      "leakageGroupId": "挺遨",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "挺",
+        "遨"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-289",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "宴轲",
+      "leakageGroupId": "宴轲",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "宴",
+        "轲"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-290",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "择磬",
+      "leakageGroupId": "择磬",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "择",
+        "磬"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-291",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "礴感",
+      "leakageGroupId": "感礴",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "礴",
+        "感"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-292",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "孚孟",
+      "leakageGroupId": "孚孟",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "孚",
+        "孟"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-293",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "佼途",
+      "leakageGroupId": "佼途",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "佼",
+        "途"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-294",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "缈圆",
+      "leakageGroupId": "圆缈",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "缈",
+        "圆"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-295",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "狮澹",
+      "leakageGroupId": "澹狮",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "狮",
+        "澹"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-296",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "襄靖",
+      "leakageGroupId": "襄靖",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "襄",
+        "靖"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-297",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "薏劭",
+      "leakageGroupId": "劭薏",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "薏",
+        "劭"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-298",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "瞻衍",
+      "leakageGroupId": "瞻衍",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "瞻",
+        "衍"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-299",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "孔孜",
+      "leakageGroupId": "孔孜",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "孔",
+        "孜"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    },
+    {
+      "id": "benchmark-v1-review-300",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "杜伏",
+      "leakageGroupId": "伏杜",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "杜",
+        "伏"
+      ],
+      "review": {
+        "reviewerId": null,
+        "expectedClass": null,
+        "tags": [],
+        "reasons": [],
+        "shouldPassHardFilter": null,
+        "reviewedAt": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "benchmarkVersion": "1.1.0",
+  "reviewProtocol": "ai-only-v1",
+  "sourceReviewSha256": "576a1df940046279e45bd08a4e96230d9653edaafd55ca5cc7c9370eb87ba4c7",
+  "evaluatedPath": "V2 production filters and scorer on fixed candidates; full top-240x240 retrieval space before output limit/diversity",
+  "evidenceBoundary": "AI-only 标签是代理指标；59 条事实缺口按无明确硬风险暂不拦截的测试约定处理。该报告不能证明中文姓名事实、安全、登记适用性或 V3 优于 V2。",
+  "scenarioDiagnostics": [
+    {
+      "id": "balanced-chen",
+      "productionResultCount": 6,
+      "requestedResultCount": 20,
+      "fullCandidateSpace": "240x240 ranked character pool before output limit/diversity"
+    },
+    {
+      "id": "scholarly-li",
+      "productionResultCount": 6,
+      "requestedResultCount": 20,
+      "fullCandidateSpace": "240x240 ranked character pool before output limit/diversity"
+    },
+    {
+      "id": "warm-wang",
+      "productionResultCount": 6,
+      "requestedResultCount": 20,
+      "fullCandidateSpace": "240x240 ranked character pool before output limit/diversity"
+    },
+    {
+      "id": "classic-zhang",
+      "productionResultCount": 6,
+      "requestedResultCount": 20,
+      "fullCandidateSpace": "240x240 ranked character pool before output limit/diversity"
+    },
+    {
+      "id": "minimal-lin",
+      "productionResultCount": 6,
+      "requestedResultCount": 20,
+      "fullCandidateSpace": "240x240 ranked character pool before output limit/diversity"
+    }
+  ],
+  "runs": {
+    "train": {
+      "benchmarkVersion": "1.1.0",
+      "evaluatedNamingModelVersion": "V2-production",
+      "dataVersion": "3.0.0",
+      "ruleVersion": "3.0.0",
+      "splits": [
+        "train"
+      ],
+      "scenarioCount": 5,
+      "candidateCount": 180,
+      "metrics": {
+        "top20Precision": 0.19,
+        "top20Recall": 0,
+        "ndcg20": 0.6362,
+        "rejectRecall": 0,
+        "rejectPrecision": 0,
+        "pairwiseAccuracy": 0.577,
+        "diversityScore": 0.6
+      },
+      "outputHash": "6911bb642cd60a9eba8ba7b823222dea6b876ca7254369f05d445aad8047e0ed"
+    },
+    "validation": {
+      "benchmarkVersion": "1.1.0",
+      "evaluatedNamingModelVersion": "V2-production",
+      "dataVersion": "3.0.0",
+      "ruleVersion": "3.0.0",
+      "splits": [
+        "validation"
+      ],
+      "scenarioCount": 5,
+      "candidateCount": 60,
+      "metrics": {
+        "top20Precision": 0.1333,
+        "top20Recall": 0,
+        "ndcg20": 0.8284,
+        "rejectRecall": 0,
+        "rejectPrecision": 0,
+        "pairwiseAccuracy": 0.5274,
+        "diversityScore": 0
+      },
+      "outputHash": "95d579a03bf7d6b184508d0a67439ed2a5e1fb429476a108008944e87b09e897"
+    },
+    "holdout": {
+      "benchmarkVersion": "1.1.0",
+      "evaluatedNamingModelVersion": "V2-production",
+      "dataVersion": "3.0.0",
+      "ruleVersion": "3.0.0",
+      "splits": [
+        "holdout"
+      ],
+      "scenarioCount": 5,
+      "candidateCount": 60,
+      "metrics": {
+        "top20Precision": 0.15,
+        "top20Recall": 0,
+        "ndcg20": 0.7749,
+        "rejectRecall": 0,
+        "rejectPrecision": 0,
+        "pairwiseAccuracy": 0.5736,
+        "diversityScore": 0.2
+      },
+      "outputHash": "d16cf2c1f6ec24bc22516138de46440bba4bc9a2dc9003c7dfa231ea2cb984fc"
+    }
+  }
+}

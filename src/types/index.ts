@@ -1,5 +1,15 @@
 export type { BaziRelation, BaziRelationKind } from './relations';
 export type {
+  NameBenchmarkClass,
+  NameBenchmarkDataset,
+  NameBenchmarkJudgement,
+  NameBenchmarkScenario,
+  NameBenchmarkSplit,
+  NamingBenchmarkCandidateResult,
+  NamingBenchmarkMetrics,
+  NamingBenchmarkRun,
+} from './benchmark';
+export type {
   Bazi,
   BaziAnalysis,
   BaziInputValues,

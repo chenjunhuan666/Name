@@ -46,4 +46,29 @@
 | 启用门禁 | `FEATURES.tenGods = true` 后，34 个测试文件、163 项测试通过；lint、typecheck、build、notices:check 均通过；Analysis 页面以默认折叠的只读区块展示。 |
 | V2 冻结复验 | manifest 脚本改为直接读取冻结提交 `9d0b9fc`，当前 V3 数据变化下仍成功校验 25 个 V2 工件，冻结基线未被重算。 |
 
-结论：Phase 1 已完成并启用；Phase 2 尚未开始，十神不参与旺衰、起名倾向、候选排序或姓名评分。
+结论：Phase 1 已完成并启用；十神不参与旺衰、起名倾向、候选排序或姓名评分。Phase 2 的后续执行结果见下节。
+
+## Phase 2：姓名质量基准
+
+| 项目 | 必填内容 |
+|---|---|
+| 新增文件 | `src/types/benchmark.ts`：冻结场景、审查来源、运行结果与指标契约；`src/core/naming/benchmark.ts`：数据门禁、跨集合泄漏检查和指标计算；`src/core/naming/benchmark.test.ts`：指标与失败边界测试；`src/config/namingBenchmark.ts`：集中保存版本、规模和 Top-K 常量；`docs/naming-benchmark/`：规则、AI 审查来源、三个冻结数据切分及机器可读报告；三个脚本分别生成原始候选、冻结 AI-only 数据和运行 V2 质量基线。 |
+| 修改文件 | `src/types/index.ts` 导出 Benchmark 类型；`src/core/naming/nameGenerator.ts` 导出既有确定性字符排序供基线脚本复用，不改变生产调用；`package.json` 增加生成、冻结与校验命令；`README.md` 说明数据边界；本文件记录 Phase 2 的真实完成状态。Phase 2 不切换生成器、scorer、hard filter 或生产页面。 |
+| 数据契约 | 固定场景使用 `benchmarkVersion / surname / fixedTendencies / preference / resultLimit / dataVersion / ruleVersion / candidates`；冻结候选包含五档标签、理由、标签、hard-filter 期望、两个独立 AI 来源、最终 AI 裁决和事实缺口。来源 ID 使用 `ai-*`，禁止冒充人工身份。 |
+| 兼容策略 | `FEATURES.benchmarkModel` 保持 `false`；V2 生成、检索、评分和页面行为不变。train 只用于后续调参，validation 只用于选型，holdout 在冻结前不可验收、冻结后不可用于循环调参。 |
+| 验收 | 自动验证 schema、两份独立 AI 来源、最终裁决、五档覆盖、300 条、180/60/60 划分、来源摘要、姓名及语义组跨集合泄漏；输出 Top-20 Precision/Recall、NDCG@20、Reject Recall/Precision、Pairwise Accuracy、Diversity Score 和稳定 hash。V2 holdout 生成相对门槛，后续模型所有指标不得退化且至少一个核心指标严格改善。 |
+| 回退 | 删除未被运行时引用的 Benchmark 工具与文档即可；生产路径未切换，无用户数据迁移。冻结数据和报告可由来源建议确定性重建；`FEATURES.benchmarkModel` 仍保持关闭。 |
+
+### Phase 2 执行进度（2026-09-22）
+
+| 验收项 | 结果 |
+|---|---|
+| Schema 与指标 | 已实现五档 judgement、固定场景、三类数据集和机器运行类型；Top-20 Precision/Recall、NDCG@20、Reject Recall/Precision、场景内 Pairwise Accuracy、Diversity Score 与稳定 SHA-256 输出均有测试。 |
+| 数据门禁 | 已实现 300 条、两份独立 AI 来源、最终 AI 裁决、标签理由、180/60/60 数量、来源 SHA-256、完整姓名及 `leakageGroupId` 跨集合泄漏检查；跨场景绝对分数不会互相比较。 |
+| AI-only 审查与冻结 | A、B 各完成 300 条独立建议，第三个 AI 上下文复核全部候选并裁决 66 条分类分歧；TypeSafe 实际辅助 36 条。59 条外部事实缺口按“无明确硬风险则暂不拦截”处理并保留 `factGap`。五个场景各按 36/12/12 分入 train/validation/holdout，总量 180/60/60。 |
+| 自动化门禁 | 35 个测试文件、172 项测试通过；Benchmark 专项 9 项测试通过。lint、typecheck、build、notices:check、V2 manifest 25 工件、V2 生成 hash、来源队列、冻结切分、质量 baseline 和正式门槛的确定性检查均通过。 |
+| V2 生成基线 | 五个固定场景连续三次输出一致，确定性 hash 为 `5522be82495cb33be2e1cc093410ce50507e146cb307d0f7c30a0c83c0fdca5b`；每个场景当前只返回 6/20 个结果，作为 Phase 3 前的真实 V2 基线保留，不解释为质量达标。 |
+| V2 质量 baseline | 已在冻结候选上复用 V2 生产过滤、字符排序和 scorer 计算 train/validation/holdout 指标；holdout `outputHash` 为 `d16cf2c1f6ec24bc22516138de46440bba4bc9a2dc9003c7dfa231ea2cb984fc`。 |
+| 正式门槛 | 已绑定 V2 holdout：七项指标不得低于 V2；六项核心指标中至少一项严格改善 `0.0001`。基线为 0 不代表质量达标。 |
+
+结论：Phase 2 已按用户确认的 AI-only 口径完成并冻结。该结论只表示项目内部代理 Benchmark、V2 质量 baseline 与相对门槛可重复；不表示人工审美共识、现实姓名安全或登记适用性已经验证。`benchmarkModel` 仍关闭，生产路径没有切换；可进入 Phase 3 候选检索实施。

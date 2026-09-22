@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "benchmarkVersion": "1.1.0",
+  "status": "frozen",
+  "reviewProtocol": "ai-only-v1",
+  "basedOnModel": "V2-production",
+  "basedOnHoldoutOutputHash": "d16cf2c1f6ec24bc22516138de46440bba4bc9a2dc9003c7dfa231ea2cb984fc",
+  "minimums": {
+    "top20Precision": 0.15,
+    "top20Recall": 0,
+    "ndcg20": 0.7749,
+    "rejectRecall": 0,
+    "rejectPrecision": 0,
+    "pairwiseAccuracy": 0.5736,
+    "diversityScore": 0.2
+  },
+  "noRegressionMetrics": [
+    "top20Precision",
+    "top20Recall",
+    "ndcg20",
+    "rejectRecall",
+    "rejectPrecision",
+    "pairwiseAccuracy",
+    "diversityScore"
+  ],
+  "mustImproveOneOf": [
+    "top20Precision",
+    "top20Recall",
+    "ndcg20",
+    "rejectRecall",
+    "rejectPrecision",
+    "pairwiseAccuracy"
+  ],
+  "strictImprovementDelta": 0.0001,
+  "evidenceBoundary": "正式门槛是相对 V2 的 AI-only 代理门槛。基线为 0 的指标仍要求不退化，但 0 不代表质量达标；后续模型还必须至少改善一个预声明核心指标。"
+}

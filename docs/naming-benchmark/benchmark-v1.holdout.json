@@ -1,0 +1,1676 @@
+{
+  "schemaVersion": 1,
+  "benchmarkVersion": "1.1.0",
+  "reviewProtocol": "ai-only-v1",
+  "sourceReviewSha256": "576a1df940046279e45bd08a4e96230d9653edaafd55ca5cc7c9370eb87ba4c7",
+  "split": "holdout",
+  "status": "frozen",
+  "frozenAt": "2026-09-22T00:00:00.000Z",
+  "scenarios": [
+    {
+      "id": "balanced-chen",
+      "benchmarkVersion": "1.1.0",
+      "surname": "陈",
+      "fixedTendencies": [
+        {
+          "element": "木",
+          "level": 5,
+          "relation": "日主所生",
+          "weightedPresence": 0,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "火",
+          "level": 4,
+          "relation": "日主所生",
+          "weightedPresence": 1,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "土",
+          "level": 3,
+          "relation": "日主所生",
+          "weightedPresence": 2,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "金",
+          "level": 2,
+          "relation": "日主所生",
+          "weightedPresence": 3,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "水",
+          "level": 1,
+          "relation": "日主所生",
+          "weightedPresence": 4,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        }
+      ],
+      "preference": {
+        "styles": [
+          "清雅"
+        ],
+        "rarityPreference": "balanced",
+        "genderExpression": "neutral"
+      },
+      "resultLimit": 20,
+      "dataVersion": "3.0.0",
+      "ruleVersion": "3.0.0",
+      "candidates": [
+        {
+          "givenName": "礴感",
+          "expectedClass": "poor",
+          "tags": [
+            "截词拼接",
+            "语义不自然",
+            "读音需核"
+          ],
+          "reasons": [
+            "陈礴感像从磅礴与感受截字拼成，语义不完整。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-291",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "conservative-no-clear-risk",
+          "factGap": "“礴”的单字义项与实际识读成本未核验。",
+          "leakageGroupId": "感礴"
+        },
+        {
+          "givenName": "贡擎",
+          "expectedClass": "poor",
+          "tags": [
+            "动词拼接",
+            "风格偏硬",
+            "动词感",
+            "风格冲突"
+          ],
+          "reasons": [
+            "陈贡擎的贡与擎都偏动作或承举，读音有力但清雅度低。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-276",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "擎贡"
+        },
+        {
+          "givenName": "辉文",
+          "expectedClass": "good",
+          "tags": [
+            "顺口",
+            "语义正向",
+            "意涵常见"
+          ],
+          "reasons": [
+            "陈辉文读起来平顺，辉与文构成明朗文雅的意象，但风格较常见。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-001",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "文辉"
+        },
+        {
+          "givenName": "践弥",
+          "expectedClass": "poor",
+          "tags": [
+            "动作词拼接",
+            "动词堆叠"
+          ],
+          "reasons": [
+            "陈践弥的践偏践行或踩踏，弥偏充满或更加，组合像未完短语。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-241",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "弥践"
+        },
+        {
+          "givenName": "径印",
+          "expectedClass": "poor",
+          "tags": [
+            "抽象拼接",
+            "物件词义"
+          ],
+          "reasons": [
+            "陈径印的道路与印章意象关系不清，组合偏硬。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-281",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "印径"
+        },
+        {
+          "givenName": "轲亚",
+          "expectedClass": "acceptable",
+          "tags": [
+            "古风",
+            "语义较散",
+            "语义松散"
+          ],
+          "reasons": [
+            "陈轲亚有古人名用字与亚字，音节尚顺，但缺乏连贯清雅意象。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-246",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "亚轲"
+        },
+        {
+          "givenName": "李妃",
+          "expectedClass": "poor",
+          "tags": [
+            "复姓误读风险",
+            "称谓联想",
+            "双姓错觉",
+            "称谓感"
+          ],
+          "reasons": [
+            "陈李妃含另一常见姓李与妃的身份称谓，姓名结构和语义均较别扭。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-186",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "妃李"
+        },
+        {
+          "givenName": "迈激",
+          "expectedClass": "poor",
+          "tags": [
+            "词义重复",
+            "口号感",
+            "动词堆叠"
+          ],
+          "reasons": [
+            "陈迈激的迈进与激励都偏强行动词，组合像口号。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-286",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "激迈"
+        },
+        {
+          "givenName": "枚恒",
+          "expectedClass": "acceptable",
+          "tags": [
+            "自然意象",
+            "搭配稍松",
+            "语义松散"
+          ],
+          "reasons": [
+            "陈枚恒的枚有树木量词联想，恒表恒久，组合可用但意象较松。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-046",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "恒枚"
+        },
+        {
+          "givenName": "绵草",
+          "expectedClass": "poor",
+          "tags": [
+            "字面联想偏弱",
+            "口语物象"
+          ],
+          "reasons": [
+            "陈绵草容易形成绵软草叶的直白画面，姓名气质较弱。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-061",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "绵草"
+        },
+        {
+          "givenName": "全象",
+          "expectedClass": "poor",
+          "tags": [
+            "词义抽象",
+            "搭配生硬",
+            "语义不完整"
+          ],
+          "reasons": [
+            "陈全象像全体形象的缩写，缺少具体姓名意象。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-151",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "全象"
+        },
+        {
+          "givenName": "跃佾",
+          "expectedClass": "poor",
+          "tags": [
+            "罕用字",
+            "需人工核读",
+            "生僻字",
+            "风格割裂"
+          ],
+          "reasons": [
+            "陈跃佾的跃有动感，佾较少见且字义较专门，读写门槛尚待事实核验。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-136",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "conservative-no-clear-risk",
+          "factGap": "“佾”的字典读音、专门字义与日常识读成本未核验。",
+          "leakageGroupId": "佾跃"
+        }
+      ]
+    },
+    {
+      "id": "scholarly-li",
+      "benchmarkVersion": "1.1.0",
+      "surname": "李",
+      "fixedTendencies": [
+        {
+          "element": "木",
+          "level": 5,
+          "relation": "日主所生",
+          "weightedPresence": 0,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "火",
+          "level": 4,
+          "relation": "日主所生",
+          "weightedPresence": 1,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "土",
+          "level": 3,
+          "relation": "日主所生",
+          "weightedPresence": 2,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "金",
+          "level": 2,
+          "relation": "日主所生",
+          "weightedPresence": 3,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "水",
+          "level": 1,
+          "relation": "日主所生",
+          "weightedPresence": 4,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        }
+      ],
+      "preference": {
+        "styles": [
+          "书卷"
+        ],
+        "rarityPreference": "common",
+        "genderExpression": "neutral"
+      },
+      "resultLimit": 20,
+      "dataVersion": "3.0.0",
+      "ruleVersion": "3.0.0",
+      "candidates": [
+        {
+          "givenName": "丹好",
+          "expectedClass": "poor",
+          "tags": [
+            "句式感",
+            "不自然",
+            "口语词感"
+          ],
+          "reasons": [
+            "李丹好像对丹字作好坏评价的短句，名字语义未成形。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-117",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "丹好"
+        },
+        {
+          "givenName": "方元",
+          "expectedClass": "good",
+          "tags": [
+            "简洁",
+            "书卷",
+            "顺口"
+          ],
+          "reasons": [
+            "李方元音节明晰，方正与本源的抽象意象协调，较稳妥。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-097",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "元方"
+        },
+        {
+          "givenName": "鹄颍",
+          "expectedClass": "poor",
+          "tags": [
+            "动物字",
+            "地名用字",
+            "读音需核",
+            "语义割裂"
+          ],
+          "reasons": [
+            "李鹄颍的鹄与颍水意象跨度较大，二字读写熟悉度尚待事实核验。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-257",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "conservative-no-clear-risk",
+          "factGap": "“鹄”“颍”的选定读法及普通读者识读成本未核验。",
+          "leakageGroupId": "颍鹄"
+        },
+        {
+          "givenName": "寒涵",
+          "expectedClass": "poor",
+          "tags": [
+            "近音重复",
+            "语义偏冷",
+            "叠音",
+            "音律弱"
+          ],
+          "reasons": [
+            "李寒涵的寒、涵同韵近音，连续读辨识度偏低；寒字也使整体偏冷。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-002",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "寒涵"
+        },
+        {
+          "givenName": "简昌",
+          "expectedClass": "good",
+          "tags": [
+            "简洁",
+            "文雅",
+            "语义积极"
+          ],
+          "reasons": [
+            "李简昌有简净与昌明之意，读音清楚，书卷感较稳。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-167",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "昌简"
+        },
+        {
+          "givenName": "梁逍",
+          "expectedClass": "acceptable",
+          "tags": [
+            "姓氏歧义",
+            "古雅",
+            "双姓错觉"
+          ],
+          "reasons": [
+            "李梁逍的梁也常作姓，逍有逍遥意象，整体可用但分段感明显。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-277",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "梁逍"
+        },
+        {
+          "givenName": "璐寅",
+          "expectedClass": "poor",
+          "tags": [
+            "搭配生硬",
+            "语义割裂"
+          ],
+          "reasons": [
+            "李璐寅将玉字与地支字相接，意象跨度较大，作为姓名略显拼接。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-022",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "寅璐"
+        },
+        {
+          "givenName": "岷鹃",
+          "expectedClass": "acceptable",
+          "tags": [
+            "山鸟意象",
+            "地名联想",
+            "读音需核"
+          ],
+          "reasons": [
+            "李岷鹃有山地与杜鹃意象，但岷有地名色彩且读音需确认。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-282",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "conservative-no-clear-risk",
+          "factGap": "“岷”的字典读音及实际识读成本未核验。",
+          "leakageGroupId": "岷鹃"
+        },
+        {
+          "givenName": "赛祁",
+          "expectedClass": "acceptable",
+          "tags": [
+            "姓氏用字",
+            "语义松散"
+          ],
+          "reasons": [
+            "李赛祁读音明快，但赛与祁没有明确的书卷语义联系。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-207",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "祁赛"
+        },
+        {
+          "givenName": "士笑",
+          "expectedClass": "poor",
+          "tags": [
+            "口语化",
+            "搭配生硬",
+            "搭配不自然"
+          ],
+          "reasons": [
+            "李士笑的士偏身份、笑偏行为，像短句而非凝练姓名。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-107",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "士笑"
+        },
+        {
+          "givenName": "婷势",
+          "expectedClass": "poor",
+          "tags": [
+            "抽象名词",
+            "搭配生硬",
+            "负面词义",
+            "语义不自然"
+          ],
+          "reasons": [
+            "李婷势的婷通常形容姿态，势为力量或形势，二字搭配不协调。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-037",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "势婷"
+        },
+        {
+          "givenName": "颍菩",
+          "expectedClass": "poor",
+          "tags": [
+            "宗教词",
+            "地名用字",
+            "读音需核",
+            "语义松散"
+          ],
+          "reasons": [
+            "李颍菩把水名与菩字相接，语义突兀，菩字还带宗教联想。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-262",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "conservative-no-clear-risk",
+          "factGap": "“颍”的字典读音及实际识读成本未核验。",
+          "leakageGroupId": "菩颍"
+        }
+      ]
+    },
+    {
+      "id": "warm-wang",
+      "benchmarkVersion": "1.1.0",
+      "surname": "王",
+      "fixedTendencies": [
+        {
+          "element": "木",
+          "level": 5,
+          "relation": "日主所生",
+          "weightedPresence": 0,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "火",
+          "level": 4,
+          "relation": "日主所生",
+          "weightedPresence": 1,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "土",
+          "level": 3,
+          "relation": "日主所生",
+          "weightedPresence": 2,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "金",
+          "level": 2,
+          "relation": "日主所生",
+          "weightedPresence": 3,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "水",
+          "level": 1,
+          "relation": "日主所生",
+          "weightedPresence": 4,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        }
+      ],
+      "preference": {
+        "styles": [
+          "温润"
+        ],
+        "rarityPreference": "balanced",
+        "genderExpression": "feminine"
+      },
+      "resultLimit": 20,
+      "dataVersion": "3.0.0",
+      "ruleVersion": "3.0.0",
+      "candidates": [
+        {
+          "givenName": "财诠",
+          "expectedClass": "poor",
+          "tags": [
+            "功利词",
+            "抽象拼接",
+            "物质化",
+            "动词感"
+          ],
+          "reasons": [
+            "王财诠将财富与诠释相接，语义不完整且偏功利。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-228",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "诠财"
+        },
+        {
+          "givenName": "功思",
+          "expectedClass": "poor",
+          "tags": [
+            "动宾歧义",
+            "语义不自然"
+          ],
+          "reasons": [
+            "王功思像功绩与思考的短语缩写，温润姓名感偏弱。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-088",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "功思"
+        },
+        {
+          "givenName": "花昭",
+          "expectedClass": "poor",
+          "tags": [
+            "词序不自然",
+            "搭配不自然"
+          ],
+          "reasons": [
+            "王花昭可读但花昭的组合不如昭花自然，姓名整体有拼接感。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-008",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "昭花"
+        },
+        {
+          "givenName": "礼章",
+          "expectedClass": "good",
+          "tags": [
+            "传统",
+            "语义连贯",
+            "语义端正",
+            "顺口"
+          ],
+          "reasons": [
+            "王礼章可理解为礼仪文章，音节分明，有较稳的书卷气。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-053",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "礼章"
+        },
+        {
+          "givenName": "磬淞",
+          "expectedClass": "poor",
+          "tags": [
+            "罕用字",
+            "用字不协调",
+            "生僻字",
+            "读音需核"
+          ],
+          "reasons": [
+            "王磬淞把石磬与江水相接，读写门槛较高，温润感不稳定。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-283",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "conservative-no-clear-risk",
+          "factGap": "“磬”“淞”的字典读音与实际识读成本未核验。",
+          "leakageGroupId": "淞磬"
+        },
+        {
+          "givenName": "若乐",
+          "expectedClass": "good",
+          "tags": [
+            "顺口",
+            "多音需确认",
+            "语义积极"
+          ],
+          "reasons": [
+            "王若乐简洁且有愉悦意味；乐的预期读音需由使用者确认。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-023",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "conservative-no-clear-risk",
+          "factGap": "“乐”的预期读音尚未由命名者指定。",
+          "leakageGroupId": "乐若"
+        },
+        {
+          "givenName": "升天",
+          "expectedClass": "reject",
+          "tags": [
+            "负面固定词联想",
+            "负面固定词",
+            "硬风险待核"
+          ],
+          "reasons": [
+            "王升天中的升天在现代普通话常指去世，负面联想明确，应判为硬拒绝。"
+          ],
+          "shouldPassHardFilter": false,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-063",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "explicit-risk",
+          "leakageGroupId": "升天"
+        },
+        {
+          "givenName": "双腾",
+          "expectedClass": "poor",
+          "tags": [
+            "动感",
+            "搭配普通",
+            "语义不自然"
+          ],
+          "reasons": [
+            "双像数量修饰，双腾不是自然搭配，姓名感偏弱。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-028",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "双腾"
+        },
+        {
+          "givenName": "协秘",
+          "expectedClass": "poor",
+          "tags": [
+            "行政词联想",
+            "负面联想"
+          ],
+          "reasons": [
+            "王协秘像协助秘书或协作机密的缩写，语义与温润人名不符。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-218",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "协秘"
+        },
+        {
+          "givenName": "烟朵",
+          "expectedClass": "acceptable",
+          "tags": [
+            "轻灵",
+            "自然意象",
+            "意象柔和",
+            "歧义需核"
+          ],
+          "reasons": [
+            "烟朵画面柔软，但烟亦有烟草联想，风格偏活泼；可用但不稳健。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-208",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "朵烟"
+        },
+        {
+          "givenName": "瞻衍",
+          "expectedClass": "acceptable",
+          "tags": [
+            "抽象德目",
+            "风格偏重",
+            "书面风格"
+          ],
+          "reasons": [
+            "王瞻衍有远望与延展之意，语义可解释，但读音和笔画较厚重。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-298",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "瞻衍"
+        },
+        {
+          "givenName": "炙胤",
+          "expectedClass": "poor",
+          "tags": [
+            "负面灼烧联想",
+            "场景不合",
+            "负面字义"
+          ],
+          "reasons": [
+            "王炙胤中的炙常指灼烤，和胤字相接略生硬，不符温润取向。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-263",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "炙胤"
+        }
+      ]
+    },
+    {
+      "id": "classic-zhang",
+      "benchmarkVersion": "1.1.0",
+      "surname": "张",
+      "fixedTendencies": [
+        {
+          "element": "木",
+          "level": 5,
+          "relation": "日主所生",
+          "weightedPresence": 0,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "火",
+          "level": 4,
+          "relation": "日主所生",
+          "weightedPresence": 1,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "土",
+          "level": 3,
+          "relation": "日主所生",
+          "weightedPresence": 2,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "金",
+          "level": 2,
+          "relation": "日主所生",
+          "weightedPresence": 3,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "水",
+          "level": 1,
+          "relation": "日主所生",
+          "weightedPresence": 4,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        }
+      ],
+      "preference": {
+        "styles": [
+          "古典"
+        ],
+        "rarityPreference": "distinctive",
+        "genderExpression": "masculine"
+      },
+      "resultLimit": 20,
+      "dataVersion": "3.0.0",
+      "ruleVersion": "3.0.0",
+      "candidates": [
+        {
+          "givenName": "府鹊",
+          "expectedClass": "poor",
+          "tags": [
+            "行政建筑词",
+            "动物字",
+            "物象不自然"
+          ],
+          "reasons": [
+            "张府鹊把府第与喜鹊相接，像场景碎片而非完整名字。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-214",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "府鹊"
+        },
+        {
+          "givenName": "观璞",
+          "expectedClass": "good",
+          "tags": [
+            "古雅",
+            "语义正向",
+            "语义清雅",
+            "顺口"
+          ],
+          "reasons": [
+            "张观璞可理解为观照未经雕琢之玉，古典意象较完整，但略抽象。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-129",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "璞观"
+        },
+        {
+          "givenName": "吉坦",
+          "expectedClass": "poor",
+          "tags": [
+            "词义不连贯",
+            "词义歧义"
+          ],
+          "reasons": [
+            "张吉坦的吉祥和坦然各自正向，但组合不像自然的名字词组。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-039",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "吉坦"
+        },
+        {
+          "givenName": "玖奎",
+          "expectedClass": "acceptable",
+          "tags": [
+            "玉字",
+            "古风",
+            "字形需核"
+          ],
+          "reasons": [
+            "张玖奎有玉字与星宿、魁首联想，音节清楚，但意象联系偏松。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-234",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "奎玖"
+        },
+        {
+          "givenName": "乐涛",
+          "expectedClass": "good",
+          "tags": [
+            "顺口",
+            "意象开阔",
+            "语义松散",
+            "多音需核"
+          ],
+          "reasons": [
+            "乐与涛有欢悦、波涛的连贯意象；乐的预期读音未定，属于读音核验而非明显质量降档。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-004",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "conservative-no-clear-risk",
+          "factGap": "“乐”的预期读音尚未由命名者指定；需核对实际连读。",
+          "leakageGroupId": "乐涛"
+        },
+        {
+          "givenName": "识洁",
+          "expectedClass": "poor",
+          "tags": [
+            "动宾组合",
+            "不自然",
+            "语义不自然"
+          ],
+          "reasons": [
+            "张识洁像识别洁净的动宾省略表达，不像完整自然姓名。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-054",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "洁识"
+        },
+        {
+          "givenName": "棠笙",
+          "expectedClass": "excellent",
+          "tags": [
+            "自然",
+            "古雅",
+            "清雅意象",
+            "顺口"
+          ],
+          "reasons": [
+            "海棠与笙乐形成完整古雅画面，音义协调且辨识度好。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-184",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "棠笙"
+        },
+        {
+          "givenName": "婉喜",
+          "expectedClass": "acceptable",
+          "tags": [
+            "温和",
+            "直白",
+            "语义直白"
+          ],
+          "reasons": [
+            "张婉喜有柔婉和喜悦之意，但喜字较直白，古典感一般。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-094",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "喜婉"
+        },
+        {
+          "givenName": "宣声",
+          "expectedClass": "poor",
+          "tags": [
+            "语义重复",
+            "组合偏怪",
+            "词组感"
+          ],
+          "reasons": [
+            "张宣声两个字都带公开发声意味，叠义却不够自然。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-099",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "声宣"
+        },
+        {
+          "givenName": "颖菊",
+          "expectedClass": "acceptable",
+          "tags": [
+            "自然意象",
+            "普通",
+            "风格传统"
+          ],
+          "reasons": [
+            "张颖菊有聪颖和菊花意象，词义正向但组合稍显旧式。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-084",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "菊颖"
+        },
+        {
+          "givenName": "与桉",
+          "expectedClass": "acceptable",
+          "tags": [
+            "自然意象",
+            "虚词",
+            "虚词感",
+            "意象清简"
+          ],
+          "reasons": [
+            "张与桉有与树同行的含蓄感，但与字作名偏虚，古典感一般。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-279",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "与桉"
+        },
+        {
+          "givenName": "茁弈",
+          "expectedClass": "acceptable",
+          "tags": [
+            "成长意象",
+            "搭配略生",
+            "语义松散"
+          ],
+          "reasons": [
+            "张茁弈有成长与棋弈之意，气质积极但意象衔接松散。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-174",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "弈茁"
+        }
+      ]
+    },
+    {
+      "id": "minimal-lin",
+      "benchmarkVersion": "1.1.0",
+      "surname": "林",
+      "fixedTendencies": [
+        {
+          "element": "木",
+          "level": 5,
+          "relation": "日主所生",
+          "weightedPresence": 0,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "火",
+          "level": 4,
+          "relation": "日主所生",
+          "weightedPresence": 1,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "土",
+          "level": 3,
+          "relation": "日主所生",
+          "weightedPresence": 2,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "金",
+          "level": 2,
+          "relation": "日主所生",
+          "weightedPresence": 3,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "水",
+          "level": 1,
+          "relation": "日主所生",
+          "weightedPresence": 4,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        }
+      ],
+      "preference": {
+        "styles": [
+          "简约"
+        ],
+        "rarityPreference": "balanced",
+        "genderExpression": "neutral"
+      },
+      "resultLimit": 20,
+      "dataVersion": "3.0.0",
+      "ruleVersion": "3.0.0",
+      "candidates": [
+        {
+          "givenName": "彪晟",
+          "expectedClass": "acceptable",
+          "tags": [
+            "雄健",
+            "风格偏旧",
+            "风格强烈"
+          ],
+          "reasons": [
+            "林彪晟都有强盛明亮意向，组合偏雄健，不太简约。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-105",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "彪晟"
+        },
+        {
+          "givenName": "雏枝",
+          "expectedClass": "poor",
+          "tags": [
+            "负面年龄联想",
+            "负面联想"
+          ],
+          "reasons": [
+            "林雏枝的雏字容易给人幼弱未长成的感觉，简约名字气质偏弱。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-205",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "枝雏"
+        },
+        {
+          "givenName": "公红",
+          "expectedClass": "poor",
+          "tags": [
+            "身份词联想",
+            "身份称谓感"
+          ],
+          "reasons": [
+            "林公红的公有称谓或公共含义，与红色连用较像短语而非人名。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-150",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "公红"
+        },
+        {
+          "givenName": "函川",
+          "expectedClass": "acceptable",
+          "tags": [
+            "简洁",
+            "搭配偏抽象",
+            "意象清简",
+            "语义松散"
+          ],
+          "reasons": [
+            "林函川音节简洁，川的山水意象明确，但函与川的语义关联偏弱。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-010",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "函川"
+        },
+        {
+          "givenName": "兼经",
+          "expectedClass": "poor",
+          "tags": [
+            "近音重复",
+            "词义不清",
+            "语义不自然"
+          ],
+          "reasons": [
+            "林兼经普通话发音接近，且兼与经组合缺少明确人名意象。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-200",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "兼经"
+        },
+        {
+          "givenName": "竞觉",
+          "expectedClass": "poor",
+          "tags": [
+            "动词拼接",
+            "多音需确认",
+            "多音需核",
+            "语义不完整"
+          ],
+          "reasons": [
+            "林竞觉的竞争与觉察并列，像概念口号；觉的预期读音尚待事实核验。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-250",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "conservative-no-clear-risk",
+          "factGap": "“觉”的预期读音尚未由命名者指定。",
+          "leakageGroupId": "竞觉"
+        },
+        {
+          "givenName": "开柬",
+          "expectedClass": "poor",
+          "tags": [
+            "公文词联想",
+            "物件词义"
+          ],
+          "reasons": [
+            "林开柬的柬常见于信柬，开柬像拆信动作，不像自然姓名。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-175",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "开柬"
+        },
+        {
+          "givenName": "恪梵",
+          "expectedClass": "acceptable",
+          "tags": [
+            "古雅",
+            "需核词义",
+            "风格清冷",
+            "读音需核"
+          ],
+          "reasons": [
+            "林恪梵有严谨与清静意象，但梵带宗教联想，是否合适需个人确认。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-110",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "恪梵"
+        },
+        {
+          "givenName": "邈武",
+          "expectedClass": "poor",
+          "tags": [
+            "风格冲突"
+          ],
+          "reasons": [
+            "林邈武的邈偏悠远、武偏刚烈，二字气质割裂，不够简约。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-125",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "武邈"
+        },
+        {
+          "givenName": "狮澹",
+          "expectedClass": "poor",
+          "tags": [
+            "动物字",
+            "多音需确认",
+            "物象冲突",
+            "读音需核"
+          ],
+          "reasons": [
+            "林狮澹把狮子与澹泊相接，风格冲突；澹的读音尚待事实确认。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-295",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "conservative-no-clear-risk",
+          "factGap": "“澹”的预期读音与日常识读成本未核验。",
+          "leakageGroupId": "澹狮"
+        },
+        {
+          "givenName": "祥昀",
+          "expectedClass": "good",
+          "tags": [
+            "顺口",
+            "明朗",
+            "语义普通"
+          ],
+          "reasons": [
+            "祥和与日光意象协调，发音顺畅；普通但可靠。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-040",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "昀祥"
+        },
+        {
+          "givenName": "周卯",
+          "expectedClass": "poor",
+          "tags": [
+            "搭配生硬",
+            "时间词",
+            "语义不自然"
+          ],
+          "reasons": [
+            "林周卯像姓氏与时间词的拼接，作为完整姓名较难形成自然意象。"
+          ],
+          "shouldPassHardFilter": true,
+          "reviewProtocol": "ai-only-v1",
+          "sourceCandidateId": "benchmark-v1-review-020",
+          "reviewerIds": [
+            "ai-review-a",
+            "ai-review-b"
+          ],
+          "adjudicated": true,
+          "adjudicatedBy": "ai-review-final",
+          "hardFilterEvidence": "ai-reviewed-no-risk",
+          "leakageGroupId": "卯周"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "phase": "V3.2",
+  "status": "complete",
+  "reasonCode": "ai-only-benchmark-frozen",
+  "benchmarkVersion": "1.1.0",
+  "reviewProtocol": "ai-only-v1",
+  "requiredCandidateCount": 300,
+  "reviewQueueCount": 300,
+  "independentAiReviewCount": 2,
+  "adjudicatedCandidateCount": 300,
+  "typeSafeCheckedCandidateCount": 36,
+  "factGapCandidateCount": 59,
+  "automatedInfrastructureReady": true,
+  "automatedGateStatus": "passed",
+  "datasetsFrozen": true,
+  "splitCounts": {
+    "train": 180,
+    "validation": 60,
+    "holdout": 60
+  },
+  "v2GenerationBaselineAvailable": true,
+  "v2GenerationDeterministicHash": "5522be82495cb33be2e1cc093410ce50507e146cb307d0f7c30a0c83c0fdca5b",
+  "v2BaselineAvailable": true,
+  "v2HoldoutOutputHash": "d16cf2c1f6ec24bc22516138de46440bba4bc9a2dc9003c7dfa231ea2cb984fc",
+  "thresholdsFrozen": true,
+  "recordedAt": "2026-09-22",
+  "evidenceBoundary": "Phase 2 已完成项目内部 AI-only 基准建设。59 条事实缺口采用无明确硬风险则暂不拦截的测试约定；完成状态不代表人工审美共识、现实姓名安全或登记适用性验证。",
+  "message": "300 条 AI-only 标签已裁决并按 180/60/60 冻结；V2 质量基线与相对准入门槛已生成，生产路径未切换。"
+}

@@ -43,7 +43,7 @@ function primaryElements(character: NamingCharacter) {
     : [character.element];
 }
 
-function rankCharacters(
+export function rankNamingCharacters(
   characters: readonly NamingCharacter[],
   tendencies?: ElementTendency[],
   preference?: NamingPreference,
@@ -159,7 +159,7 @@ export function generateNames({
     .map(({ strokes }) => strokes)
     .filter((value): value is number => typeof value === 'number');
   const eligibleCharacters = filterCharacterPool(characters, preference);
-  const rankedCharacters = rankCharacters(
+  const rankedCharacters = rankNamingCharacters(
     eligibleCharacters,
     tendencies,
     preference,

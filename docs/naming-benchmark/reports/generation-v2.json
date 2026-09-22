@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 1,
+  "benchmarkVersion": "1.0.0",
+  "evaluatedPath": "V2 production generator retained for Name V3 Phase 2",
+  "dataVersion": "3.0.0",
+  "ruleVersion": "3.0.0",
+  "runtime": {
+    "node": "v22.22.3",
+    "platform": "win32",
+    "architecture": "x64"
+  },
+  "evidenceBoundary": "该报告只记录固定场景的生成耗时、确定性与输出 hash；人工标签冻结前不计算质量 baseline 或正式阈值。",
+  "scenarioReports": [
+    {
+      "id": "balanced-chen",
+      "surname": "陈",
+      "resultLimit": 20,
+      "runCount": 3,
+      "candidateCount": 6,
+      "fulfilledResultLimit": false,
+      "medianMs": 818.15,
+      "p95Ms": 821.96,
+      "outputHash": "e6ef7cf1bd063f1d5bb500f79be5d9417ed359d8838d39fb38b60fb272f3facb",
+      "deterministic": true,
+      "top20": [
+        {
+          "givenName": "高林",
+          "score": 99.6
+        },
+        {
+          "givenName": "桂花",
+          "score": 99.6
+        },
+        {
+          "givenName": "桂可",
+          "score": 99.6
+        },
+        {
+          "givenName": "桂林",
+          "score": 99.6
+        },
+        {
+          "givenName": "花未",
+          "score": 99.6
+        },
+        {
+          "givenName": "花月",
+          "score": 99.6
+        }
+      ]
+    },
+    {
+      "id": "scholarly-li",
+      "surname": "李",
+      "resultLimit": 20,
+      "runCount": 3,
+      "candidateCount": 6,
+      "fulfilledResultLimit": false,
+      "medianMs": 798.62,
+      "p95Ms": 798.91,
+      "outputHash": "c24eb7fa662c42768f777e7adb15581c7947bcf28b98b29bc8a444e428296d3a",
+      "deterministic": true,
+      "top20": [
+        {
+          "givenName": "高林",
+          "score": 99.6
+        },
+        {
+          "givenName": "更东",
+          "score": 99.6
+        },
+        {
+          "givenName": "更肯",
+          "score": 99.6
+        },
+        {
+          "givenName": "官牛",
+          "score": 99.6
+        },
+        {
+          "givenName": "归孔",
+          "score": 99.6
+        },
+        {
+          "givenName": "桂花",
+          "score": 99.6
+        }
+      ]
+    },
+    {
+      "id": "warm-wang",
+      "surname": "王",
+      "resultLimit": 20,
+      "runCount": 3,
+      "candidateCount": 6,
+      "fulfilledResultLimit": false,
+      "medianMs": 830.62,
+      "p95Ms": 840.71,
+      "outputHash": "fd88e6d24435b8f6ab18513e752d8826e08b2b50390fa622a747071f7fa60a3c",
+      "deterministic": true,
+      "top20": [
+        {
+          "givenName": "更东",
+          "score": 99.6
+        },
+        {
+          "givenName": "更肯",
+          "score": 99.6
+        },
+        {
+          "givenName": "官牛",
+          "score": 99.6
+        },
+        {
+          "givenName": "广开",
+          "score": 99.6
+        },
+        {
+          "givenName": "归孔",
+          "score": 99.6
+        },
+        {
+          "givenName": "花寄",
+          "score": 99.6
+        }
+      ]
+    },
+    {
+      "id": "classic-zhang",
+      "surname": "张",
+      "resultLimit": 20,
+      "runCount": 3,
+      "candidateCount": 6,
+      "fulfilledResultLimit": false,
+      "medianMs": 807.73,
+      "p95Ms": 834.57,
+      "outputHash": "3138579e3f564dc73c8d35cd6d7213c77e7ca88ce51967e0424f7a9c896c68bf",
+      "deterministic": true,
+      "top20": [
+        {
+          "givenName": "更东",
+          "score": 99.6
+        },
+        {
+          "givenName": "更肯",
+          "score": 99.6
+        },
+        {
+          "givenName": "广开",
+          "score": 99.6
+        },
+        {
+          "givenName": "寄相",
+          "score": 99.6
+        },
+        {
+          "givenName": "见东",
+          "score": 99.6
+        },
+        {
+          "givenName": "见开",
+          "score": 99.6
+        }
+      ]
+    },
+    {
+      "id": "minimal-lin",
+      "surname": "林",
+      "resultLimit": 20,
+      "runCount": 3,
+      "candidateCount": 6,
+      "fulfilledResultLimit": false,
+      "medianMs": 799.01,
+      "p95Ms": 803.21,
+      "outputHash": "d1a10831ba8f2a69686343399f206e4b8860cef45c47f3a3681e72de305d2fc2",
+      "deterministic": true,
+      "top20": [
+        {
+          "givenName": "高林",
+          "score": 99.6
+        },
+        {
+          "givenName": "更东",
+          "score": 99.6
+        },
+        {
+          "givenName": "更肯",
+          "score": 99.6
+        },
+        {
+          "givenName": "官牛",
+          "score": 99.6
+        },
+        {
+          "givenName": "广开",
+          "score": 99.6
+        },
+        {
+          "givenName": "归孔",
+          "score": 99.6
+        }
+      ]
+    }
+  ],
+  "deterministicOutputHash": "5522be82495cb33be2e1cc093410ce50507e146cb307d0f7c30a0c83c0fdca5b"
+}
