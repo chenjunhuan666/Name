@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "phase": 3,
+  "status": "implemented-gate-rejected",
+  "implemented": {
+    "retrievalModules": true,
+    "multiLabelSelection": true,
+    "deterministicFill": true,
+    "hardConstraintBeforeBeam": true,
+    "beamBeforeFullScore": true,
+    "v2FallbackRetained": true,
+    "featureFlagPresent": true,
+    "shadowBenchmark": true
+  },
+  "development": {
+    "qualityNoRegression": true,
+    "performancePassed": true,
+    "deterministic": true,
+    "v2MedianTotalMs": 4715.8,
+    "v3MedianTotalMs": 2906.73,
+    "maxScoreRegret": 0,
+    "maximumV2PeakHeapDeltaBytes": 146360616,
+    "maximumV3PeakHeapDeltaBytes": 92059816
+  },
+  "holdout": {
+    "evaluatedOnce": true,
+    "qualityNoRegression": true,
+    "strictCoreImprovement": false,
+    "performancePassed": true,
+    "deterministic": true,
+    "v2MedianTotalMs": 5330.01,
+    "v3MedianTotalMs": 3099.31,
+    "maxScoreRegret": 0
+  },
+  "defaultSwitchAllowed": false,
+  "dynamicRetrievalEnabled": false,
+  "productionPath": "V2",
+  "evidenceBoundary": "Phase 3 implementation and admission evaluation are complete, but the frozen AI-only holdout requires at least one core metric to improve by 0.0001. No core metric improved, so V3 retrieval remains shadow-only. Runtime timings and heap deltas apply only to this local Node benchmark."
+}

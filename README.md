@@ -14,6 +14,8 @@ V3.1 已加入十神运行时：以日干为基准，按五行关系及阴阳同
 
 V3.2 姓名质量 Benchmark 已按用户确认的 `ai-only-v1` 口径完成：两份相互隔离的 AI 建议和第三次全量 AI 复核覆盖 300 条候选，TypeSafe 对 36 条语义边界提供概率辅助；数据按 180/60/60 冻结为 train / validation / holdout，V2 质量 baseline 和相对准入门槛均已生成。59 条姓名仍保留字音、识读或地域读法等事实缺口，并采用“没有明确硬风险证据则暂不拦截”的测试约定；这套代理标签不等价于人工审美共识、姓名安全或登记适用性。`FEATURES.benchmarkModel` 继续关闭，Phase 2 不切换生产生成或评分路径。
 
+V3.3 候选检索已完成影子实现：字符 hard filter 与 include/exclude 强约束后，按五行、风格、性别倾向、常用度、典籍和探索标签确定性选取 320 字，保留 V2 Top-240 作为候选空间下限，再以每个第一字 Top-30 Beam 进入完整评分与多样性重排。开发集七项指标无退化，当前机器五场景总中位耗时由 `4715.80ms` 降至 `2906.73ms`，max-score regret 为 `0`，结果哈希稳定；正式 holdout 七项指标同样无退化，耗时由 `5330.01ms` 降至 `3099.31ms`，但六项核心质量指标没有达到冻结门槛要求的 `+0.0001` 严格改善。因此 `FEATURES.dynamicRetrieval` 继续为 `false`，生产仍走 V2；不得把性能改善解释为 V3 已获默认准入。
+
 汉字数据分为《通用规范汉字表》8105 字标准层和 `ai-chinese-naming` 转换得到的推荐层，并为可定位字头关联康熙索引。初始推荐层采用正向语义、起名适用度不低于 40、生僻等级不高于 2 且核心字段完整的记录；后续扩容必须经过固定证据、明确决策和受控导入。第二来源 `Chinese-Names-Corpus` 只为未命中硬拒绝的中性候选补充观察到的姓名使用证据，不覆盖语义、读音或同音风险；非规范字不进入运行候选。典籍库分包包含《诗经》《楚辞》《论语》《孟子》《周易》《庄子》、基础唐诗和宋词；来源分别登记 MIT、CC0-1.0 或 CC-BY-SA-4.0 许可。历法计算依赖 MIT 许可的 `lunar-typescript`。完整来源与许可见 `THIRD_PARTY_NOTICES.md`。
 
 综合分权重集中在 `src/config/namingScore.ts`：五行方向 25%、字义与组合语义 20%、音律 15%、文化出处 15%、谐音安全 10%、现代审美 10%、字形与生僻度合计 5%。典籍关联分为 A 级原文连续、B 级同一分句按原顺序分别出现，以及只接受人工登记的 C 级同篇意象化用；不跨标点、不调换顺序、不自动编造 C 级出处。分数仅用于候选排序，不代表命运或吉凶。谐音检查覆盖完整姓名、名字两字、姓与首字的精确匹配，部分普通话近音作为软提示降分，常见网络负面词精确命中则进入硬过滤；不等同于方言或全部语境审查。
@@ -38,6 +40,7 @@ pnpm run data:check:naming-review-queue
 pnpm run data:check:naming-benchmark
 pnpm run benchmark:naming
 pnpm run benchmark:v2:quality:check
+pnpm run benchmark:v3:retrieval:check
 ```
 
 V2 冻结结果见 [`docs/releases/v2-baseline.md`](docs/releases/v2-baseline.md)，完整发布 JSON 清单由 `pnpm run data:manifest:v2` 稳定生成到 [`docs/releases/v2-artifact-manifest.json`](docs/releases/v2-artifact-manifest.json)。

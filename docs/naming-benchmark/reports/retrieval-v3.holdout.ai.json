@@ -1,0 +1,1738 @@
+{
+  "schemaVersion": 1,
+  "benchmarkVersion": "1.1.0",
+  "mode": "final-holdout",
+  "evaluatedPath": "V3 dynamic multi-label retrieval -> deterministic fill -> per-first Top-30 beam -> full score -> diversity; V2 retained for shadow comparison. Recall uses the same pre-full-score candidate-space boundary as the frozen V2 baseline.",
+  "evidenceBoundary": "质量指标来自 AI-only 代理标签；耗时只代表当前机器 Node 进程。候选空间 Recall 与 Beam 截断分开计算；max-score regret 比较最终候选最高分，不等同人工审美差异。",
+  "scenarioDiagnostics": [
+    {
+      "id": "balanced-chen",
+      "selectedCharacterCount": 320,
+      "consideredPairCount": 102400,
+      "fullScoreCandidateCount": 9600,
+      "v2ResultCount": 6,
+      "v3ResultCount": 6,
+      "v2MedianMs": 770.3,
+      "v3MedianMs": 497.47,
+      "maxScoreRegret": 0,
+      "top20Overlap": 6,
+      "v2OutputHash": "e6ef7cf1bd063f1d5bb500f79be5d9417ed359d8838d39fb38b60fb272f3facb",
+      "v3OutputHash": "e6ef7cf1bd063f1d5bb500f79be5d9417ed359d8838d39fb38b60fb272f3facb",
+      "retrievalSignature": "47e211473f0f3cd1fc0a460bdc47d011cb8f133f80ffedf120e61942e748b766",
+      "deterministic": true,
+      "labelledRetrievalComparison": {
+        "v2": [
+          "麒琪"
+        ],
+        "v3CandidateSpace": [
+          "麒琪"
+        ],
+        "v3Beam": []
+      },
+      "labelledBeamRanks": {
+        "澈娟": {
+          "firstSelected": false,
+          "secondSelected": true,
+          "rank": null
+        },
+        "丞瞳": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "楚淦": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "黛画": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "淡阜": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "荻汀": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "端鲲": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "肱彝": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "弘瑚": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "凰堂": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "汲才": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "就泾": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "聚莹": {
+          "firstSelected": false,
+          "secondSelected": true,
+          "rank": null
+        },
+        "洌溢": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "盟纳": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "蒙倾": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "梦睦": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "鸥慰": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "麒琪": {
+          "firstSelected": true,
+          "secondSelected": true,
+          "rank": 200
+        },
+        "俏眸": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "权可": {
+          "firstSelected": false,
+          "secondSelected": true,
+          "rank": null
+        },
+        "仁也": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "声卉": {
+          "firstSelected": false,
+          "secondSelected": true,
+          "rank": null
+        },
+        "戍禄": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "荪黔": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "绾滟": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "襄靖": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "炘杲": {
+          "firstSelected": false,
+          "secondSelected": true,
+          "rank": null
+        },
+        "铉荷": {
+          "firstSelected": false,
+          "secondSelected": true,
+          "rank": null
+        },
+        "妍矩": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "俨瓣": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "乙首": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "悠邈": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "予精": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "垣兰": {
+          "firstSelected": false,
+          "secondSelected": true,
+          "rank": null
+        },
+        "庄楷": {
+          "firstSelected": false,
+          "secondSelected": true,
+          "rank": null
+        },
+        "菲献": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "侯茂": {
+          "firstSelected": false,
+          "secondSelected": true,
+          "rank": null
+        },
+        "焕昕": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "立千": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "柠斋": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "品语": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "璞雄": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "晞誓": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "犀域": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "弈醇": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "原煜": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "挚倩": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "礴感": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "贡擎": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "辉文": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "践弥": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "径印": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "轲亚": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "李妃": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "迈激": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "枚恒": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "绵草": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "全象": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "跃佾": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        }
+      }
+    },
+    {
+      "id": "scholarly-li",
+      "selectedCharacterCount": 320,
+      "consideredPairCount": 102400,
+      "fullScoreCandidateCount": 9600,
+      "v2ResultCount": 6,
+      "v3ResultCount": 6,
+      "v2MedianMs": 1095.59,
+      "v3MedianMs": 499.49,
+      "maxScoreRegret": 0,
+      "top20Overlap": 1,
+      "v2OutputHash": "c24eb7fa662c42768f777e7adb15581c7947bcf28b98b29bc8a444e428296d3a",
+      "v3OutputHash": "2728391108d8db9292ef82f9125d734956a388c82a9d9db91585b4a356443fc6",
+      "retrievalSignature": "0d1a009eb7417142a681af7b8f6e6802f71b44b1265c26a2bcc0f2a42eda2725",
+      "deterministic": true,
+      "labelledRetrievalComparison": {
+        "v2": [],
+        "v3CandidateSpace": [],
+        "v3Beam": []
+      },
+      "labelledBeamRanks": {
+        "璧茜": {
+          "firstSelected": false,
+          "secondSelected": true,
+          "rank": null
+        },
+        "柄韫": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "承馥": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "皓廓": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "会玢": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "惠承": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "蕙瑶": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "玑榛": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "进咸": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "境紫": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "久始": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "爵曙": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "凯正": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "恺会": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "密玺": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "敏福": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "铭道": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "茑涤": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "祁岑": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "蕊诚": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "纱绪": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "示裁": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "守亭": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "潼造": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "惜丽": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "相望": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "效簪": {
+          "firstSelected": false,
+          "secondSelected": true,
+          "rank": null
+        },
+        "笑樱": {
+          "firstSelected": false,
+          "secondSelected": true,
+          "rank": null
+        },
+        "娅兴": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "瑜铭": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "御荔": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "苑赜": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "韫依": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "知显": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "至山": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "钟亲": {
+          "firstSelected": false,
+          "secondSelected": true,
+          "rank": null
+        },
+        "璀丹": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "孚孟": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "工恕": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "鉴圩": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "淇百": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "恰踏": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "温蕙": {
+          "firstSelected": false,
+          "secondSelected": true,
+          "rank": null
+        },
+        "岫示": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "薏劭": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "墉儆": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "优蔻": {
+          "firstSelected": false,
+          "secondSelected": true,
+          "rank": null
+        },
+        "驭报": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "丹好": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "方元": {
+          "firstSelected": false,
+          "secondSelected": true,
+          "rank": null
+        },
+        "鹄颍": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "寒涵": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "简昌": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "梁逍": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "璐寅": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "岷鹃": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "赛祁": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "士笑": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "婷势": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "颍菩": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        }
+      }
+    },
+    {
+      "id": "warm-wang",
+      "selectedCharacterCount": 320,
+      "consideredPairCount": 102400,
+      "fullScoreCandidateCount": 9600,
+      "v2ResultCount": 6,
+      "v3ResultCount": 11,
+      "v2MedianMs": 1565.04,
+      "v3MedianMs": 866.51,
+      "maxScoreRegret": 0,
+      "top20Overlap": 4,
+      "v2OutputHash": "fd88e6d24435b8f6ab18513e752d8826e08b2b50390fa622a747071f7fa60a3c",
+      "v3OutputHash": "9c7d4f867129e6cf4d61bebeae8b948b43dacf5a99e0521717084984a1ded499",
+      "retrievalSignature": "9078890a78b99497c558860bfa48c85791e92bbf8e0275b739277db661148dca",
+      "deterministic": true,
+      "labelledRetrievalComparison": {
+        "v2": [],
+        "v3CandidateSpace": [],
+        "v3Beam": []
+      },
+      "labelledBeamRanks": {
+        "谙谛": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "搏珈": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "宸炬": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "聪姣": {
+          "firstSelected": false,
+          "secondSelected": true,
+          "rank": null
+        },
+        "丰娜": {
+          "firstSelected": false,
+          "secondSelected": true,
+          "rank": null
+        },
+        "冠龙": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "徽希": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "骥旸": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "佼途": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "敬澄": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "炅孔": {
+          "firstSelected": false,
+          "secondSelected": true,
+          "rank": null
+        },
+        "况发": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "鹂灯": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "翎婕": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "暖绮": {
+          "firstSelected": false,
+          "secondSelected": true,
+          "rank": null
+        },
+        "泊凌": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "强檀": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "钦岳": {
+          "firstSelected": false,
+          "secondSelected": true,
+          "rank": null
+        },
+        "绅蔓": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "淑沆": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "坛沅": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "恬茗": {
+          "firstSelected": false,
+          "secondSelected": true,
+          "rank": null
+        },
+        "挺遨": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "湾构": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "武笃": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "汐裕": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "霞昊": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "冶归": {
+          "firstSelected": false,
+          "secondSelected": true,
+          "rank": null
+        },
+        "义羿": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "誉竟": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "渊藏": {
+          "firstSelected": false,
+          "secondSelected": true,
+          "rank": null
+        },
+        "云力": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "昀泓": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "芝识": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "治师": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "奏干": {
+          "firstSelected": false,
+          "secondSelected": true,
+          "rank": null
+        },
+        "恩忠": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "晗枫": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "卯厚": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "楠基": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "乔宣": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "壬烈": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "魏筑": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "信鸣": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "晏满": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "羽育": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "召稼": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "昼亿": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "财诠": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "功思": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "花昭": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "礼章": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "磬淞": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "若乐": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "升天": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "双腾": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "协秘": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "烟朵": {
+          "firstSelected": false,
+          "secondSelected": true,
+          "rank": null
+        },
+        "瞻衍": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "炙胤": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        }
+      }
+    },
+    {
+      "id": "classic-zhang",
+      "selectedCharacterCount": 320,
+      "consideredPairCount": 102400,
+      "fullScoreCandidateCount": 9600,
+      "v2ResultCount": 6,
+      "v3ResultCount": 12,
+      "v2MedianMs": 1117.62,
+      "v3MedianMs": 750.65,
+      "maxScoreRegret": 0,
+      "top20Overlap": 5,
+      "v2OutputHash": "3138579e3f564dc73c8d35cd6d7213c77e7ca88ce51967e0424f7a9c896c68bf",
+      "v3OutputHash": "bad45bf005e2baa28ee3f62d27c180d9e2528c4d5f6fb416f7550d30796a64ab",
+      "retrievalSignature": "87812ad93ebf53c20e0e0c2278322582650cbe27c06e29a2e2194e458724b7e1",
+      "deterministic": true,
+      "labelledRetrievalComparison": {
+        "v2": [
+          "朵材",
+          "枫李"
+        ],
+        "v3CandidateSpace": [
+          "朵材",
+          "枫李"
+        ],
+        "v3Beam": [
+          "枫李"
+        ]
+      },
+      "labelledBeamRanks": {
+        "岸憨": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "遨迈": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "汴权": {
+          "firstSelected": false,
+          "secondSelected": true,
+          "rank": null
+        },
+        "伯歌": {
+          "firstSelected": false,
+          "secondSelected": true,
+          "rank": null
+        },
+        "超贵": {
+          "firstSelected": false,
+          "secondSelected": true,
+          "rank": null
+        },
+        "冲谱": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "垂桢": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "辞为": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "灯丘": {
+          "firstSelected": false,
+          "secondSelected": true,
+          "rank": null
+        },
+        "朵材": {
+          "firstSelected": true,
+          "secondSelected": true,
+          "rank": 199
+        },
+        "枫李": {
+          "firstSelected": true,
+          "secondSelected": true,
+          "rank": 24
+        },
+        "芙寰": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "归时": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "沆菲": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "珩屏": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "炬俏": {
+          "firstSelected": false,
+          "secondSelected": true,
+          "rank": null
+        },
+        "孔孜": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "磊奋": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "力鹤": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "令品": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "茗变": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "秋瑞": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "苒践": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "少驷": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "深枚": {
+          "firstSelected": false,
+          "secondSelected": true,
+          "rank": null
+        },
+        "烁骁": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "思垣": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "素悠": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "提授": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "琬仲": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "宴轲": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "遥仁": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "亿罡": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "游娱": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "昭旭": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "妆整": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "波帆": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "璠扬": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "黻徐": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "葛玲": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "桂楚": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "烈鸾": {
+          "firstSelected": false,
+          "secondSelected": true,
+          "rank": null
+        },
+        "缈圆": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "绮诺": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "憩靓": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "韧肱": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "萧莉": {
+          "firstSelected": false,
+          "secondSelected": true,
+          "rank": null
+        },
+        "甬礴": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "府鹊": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "观璞": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "吉坦": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "玖奎": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "乐涛": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "识洁": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "棠笙": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "婉喜": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "宣声": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "颖菊": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "与桉": {
+          "firstSelected": false,
+          "secondSelected": true,
+          "rank": null
+        },
+        "茁弈": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        }
+      }
+    },
+    {
+      "id": "minimal-lin",
+      "selectedCharacterCount": 320,
+      "consideredPairCount": 102400,
+      "fullScoreCandidateCount": 9600,
+      "v2ResultCount": 6,
+      "v3ResultCount": 18,
+      "v2MedianMs": 781.46,
+      "v3MedianMs": 485.19,
+      "maxScoreRegret": 0,
+      "top20Overlap": 5,
+      "v2OutputHash": "d1a10831ba8f2a69686343399f206e4b8860cef45c47f3a3681e72de305d2fc2",
+      "v3OutputHash": "f60b54ac3df49210486f6044d32ff6ee72000937a9426ec2cc45e3d23d48c5f4",
+      "retrievalSignature": "db5989b6e7018aa4a99d011bf33bad646c6d8f9128a764448c19b14df327fc37",
+      "deterministic": true,
+      "labelledRetrievalComparison": {
+        "v2": [
+          "荣萌",
+          "兼经",
+          "竞觉",
+          "恪梵"
+        ],
+        "v3CandidateSpace": [
+          "荣萌",
+          "固丛",
+          "兼经",
+          "竞觉",
+          "恪梵"
+        ],
+        "v3Beam": []
+      },
+      "labelledBeamRanks": {
+        "嫒孝": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "丙林": {
+          "firstSelected": false,
+          "secondSelected": true,
+          "rank": null
+        },
+        "才关": {
+          "firstSelected": false,
+          "secondSelected": true,
+          "rank": null
+        },
+        "尝谙": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "钿览": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "杜伏": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "罕肃": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "画徽": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "获唤": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "纪兮": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "俭牧": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "匠当": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "菁哲": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "迥誉": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "锴静": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "魁飞": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "鲲丰": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "廉忻": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "缪抒": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "荣萌": {
+          "firstSelected": true,
+          "secondSelected": true,
+          "rank": 139
+        },
+        "史秉": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "溯苇": {
+          "firstSelected": false,
+          "secondSelected": true,
+          "rank": null
+        },
+        "瞳坛": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "暹禅": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "献彦": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "想升": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "小霁": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "许钦": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "暄琚": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "杨淑": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "也悦": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "英穆": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "语硕": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "月宁": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "择磬": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "准珏": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "炽麦": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "固丛": {
+          "firstSelected": true,
+          "secondSelected": true,
+          "rank": 302
+        },
+        "皇潮": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "燎谨": {
+          "firstSelected": false,
+          "secondSelected": true,
+          "rank": null
+        },
+        "弥蒂": {
+          "firstSelected": false,
+          "secondSelected": true,
+          "rank": null
+        },
+        "旻鼐": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "释羽": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "闻浙": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "仙巍": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "缘贺": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "粤治": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "州纶": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "彪晟": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "雏枝": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "公红": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "函川": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "兼经": {
+          "firstSelected": true,
+          "secondSelected": true,
+          "rank": 129
+        },
+        "竞觉": {
+          "firstSelected": true,
+          "secondSelected": true,
+          "rank": 81
+        },
+        "开柬": {
+          "firstSelected": true,
+          "secondSelected": false,
+          "rank": null
+        },
+        "恪梵": {
+          "firstSelected": true,
+          "secondSelected": true,
+          "rank": 276
+        },
+        "邈武": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "狮澹": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "祥昀": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        },
+        "周卯": {
+          "firstSelected": false,
+          "secondSelected": false,
+          "rank": null
+        }
+      }
+    }
+  ],
+  "runs": {
+    "train": {
+      "benchmarkVersion": "1.1.0",
+      "evaluatedNamingModelVersion": "V3-retrieval-shadow",
+      "dataVersion": "3.0.0",
+      "ruleVersion": "3.0.0",
+      "splits": [
+        "train"
+      ],
+      "scenarioCount": 5,
+      "candidateCount": 180,
+      "metrics": {
+        "top20Precision": 0.19,
+        "top20Recall": 0,
+        "ndcg20": 0.6362,
+        "rejectRecall": 0,
+        "rejectPrecision": 0,
+        "pairwiseAccuracy": 0.577,
+        "diversityScore": 0.6
+      },
+      "outputHash": "37cde8383cf4a85b208437cf2b867120f76a3e21ea1502c2ccce043ee02fc66a"
+    },
+    "validation": {
+      "benchmarkVersion": "1.1.0",
+      "evaluatedNamingModelVersion": "V3-retrieval-shadow",
+      "dataVersion": "3.0.0",
+      "ruleVersion": "3.0.0",
+      "splits": [
+        "validation"
+      ],
+      "scenarioCount": 5,
+      "candidateCount": 60,
+      "metrics": {
+        "top20Precision": 0.1333,
+        "top20Recall": 0,
+        "ndcg20": 0.8284,
+        "rejectRecall": 0,
+        "rejectPrecision": 0,
+        "pairwiseAccuracy": 0.5274,
+        "diversityScore": 0.2
+      },
+      "outputHash": "7e997e5db09c04db20f71447b3bd1f6de606a95125b312f55e6cb45796745a5c"
+    },
+    "holdout": {
+      "benchmarkVersion": "1.1.0",
+      "evaluatedNamingModelVersion": "V3-retrieval-shadow",
+      "dataVersion": "3.0.0",
+      "ruleVersion": "3.0.0",
+      "splits": [
+        "holdout"
+      ],
+      "scenarioCount": 5,
+      "candidateCount": 60,
+      "metrics": {
+        "top20Precision": 0.15,
+        "top20Recall": 0,
+        "ndcg20": 0.7749,
+        "rejectRecall": 0,
+        "rejectPrecision": 0,
+        "pairwiseAccuracy": 0.5736,
+        "diversityScore": 0.2
+      },
+      "outputHash": "5eed74bda2d22a590767760ee6dae976d31d5c074a6b6ac649fcefca5bc3846e"
+    }
+  },
+  "gates": {
+    "train": {
+      "passed": false,
+      "regressions": [],
+      "improvements": []
+    },
+    "validation": {
+      "passed": false,
+      "regressions": [],
+      "improvements": []
+    },
+    "holdout": {
+      "passed": false,
+      "regressions": [],
+      "improvements": []
+    }
+  },
+  "summary": {
+    "qualityPassed": false,
+    "performancePassed": true,
+    "deterministicPassed": true,
+    "v2MedianTotalMs": 5330.01,
+    "v3MedianTotalMs": 3099.31,
+    "maxScoreRegret": 0,
+    "defaultSwitchAllowed": false
+  }
+}

@@ -7,10 +7,8 @@ import type {
   NamingCharacter,
   NamingPreference,
 } from '../../types';
-import {
-  CHARACTER_RANK_SCORE,
-  GENERATOR_LIMITS,
-} from '../../config/namingScore';
+import { FEATURES } from '../../config/featureFlags';
+import { GENERATOR_LIMITS } from '../../config/namingScore';
 import { createClassicPhraseIndex } from '../classics/classicRepository';
 import { rerankForDiversity } from './diversity';
 import { filterCharacterPool } from './filters/characterFilter';
@@ -20,6 +18,10 @@ import { assessHomophone } from './homophone';
 import { assessPhonetics } from './phonetic';
 import { scoreName } from './scorer';
 import { assessSemanticPair } from './semanticPair';
+import { rankNamingCharacters } from './retrieval/buckets';
+import { generateNamesV3 } from './retrieval';
+
+export { rankNamingCharacters } from './retrieval/buckets';
 
 export interface GenerateNamesOptions {
   surname: string;
@@ -41,56 +43,6 @@ function primaryElements(character: NamingCharacter) {
   return Array.isArray(character.element)
     ? character.element
     : [character.element];
-}
-
-export function rankNamingCharacters(
-  characters: readonly NamingCharacter[],
-  tendencies?: ElementTendency[],
-  preference?: NamingPreference,
-): NamingCharacter[] {
-  const tendencyMap = new Map(
-    tendencies?.map(({ element, level }) => [element, level]) ?? [],
-  );
-  const preferredStyles = new Set(preference?.styles ?? []);
-  const included = new Set(preference?.includeCharacters ?? []);
-
-  function score(character: NamingCharacter): number {
-    const elementScore = Math.max(
-      ...primaryElements(character).map(
-        (element) =>
-          tendencyMap.get(element) ?? CHARACTER_RANK_SCORE.defaultElementLevel,
-      ),
-    );
-    const styleScore = character.styleTags.filter((style) =>
-      preferredStyles.has(style as NamingPreference['styles'][number]),
-    ).length;
-    const genderScore =
-      !preference ||
-      preference.genderExpression === 'neutral' ||
-      character.gender === 'neutral' ||
-      (preference.genderExpression === 'masculine' &&
-        character.gender === 'male') ||
-      (preference.genderExpression === 'feminine' &&
-        character.gender === 'female')
-        ? 1
-        : 0;
-
-    return (
-      elementScore * CHARACTER_RANK_SCORE.elementMultiplier +
-      styleScore * CHARACTER_RANK_SCORE.styleMatchBonus +
-      genderScore * CHARACTER_RANK_SCORE.genderMatchBonus +
-      (included.has(character.char)
-        ? CHARACTER_RANK_SCORE.includedCharacterBonus
-        : 0) -
-      character.rarity * CHARACTER_RANK_SCORE.rarityPenaltyMultiplier
-    );
-  }
-
-  return [...characters].sort(
-    (left, right) =>
-      score(right) - score(left) ||
-      left.char.localeCompare(right.char, 'zh-CN'),
-  );
 }
 
 function compareNames(left: GeneratedName, right: GeneratedName): number {
@@ -127,7 +79,7 @@ function matchesClassicPreference(
   return sourceGroups[preference].includes(classic.source);
 }
 
-export function generateNames({
+export function generateNamesV2({
   surname,
   characters,
   tendencies,
@@ -274,4 +226,10 @@ export function generateNames({
 
   const sorted = generated.sort(compareNames).slice(0, retainedCapacity);
   return rerankForDiversity(sorted, limit);
+}
+
+export function generateNames(options: GenerateNamesOptions): GeneratedName[] {
+  return FEATURES.dynamicRetrieval
+    ? generateNamesV3(options)
+    : generateNamesV2(options);
 }

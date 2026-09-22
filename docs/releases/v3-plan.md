@@ -72,3 +72,26 @@
 | 正式门槛 | 已绑定 V2 holdout：七项指标不得低于 V2；六项核心指标中至少一项严格改善 `0.0001`。基线为 0 不代表质量达标。 |
 
 结论：Phase 2 已按用户确认的 AI-only 口径完成并冻结。该结论只表示项目内部代理 Benchmark、V2 质量 baseline 与相对门槛可重复；不表示人工审美共识、现实姓名安全或登记适用性已经验证。`benchmarkModel` 仍关闭，生产路径没有切换；可进入 Phase 3 候选检索实施。
+
+## Phase 3：候选检索
+
+| 项目 | 必填内容 |
+|---|---|
+| 新增文件 | `src/config/namingRetrieval.ts`：固定 320 字候选、V2 Top-240 下限、每第一字 Top-30 Beam 与多标签配额；`src/core/naming/retrieval/`：字符排名、多标签候选选择、确定性补位、组合预估、Beam 和完整评分；`scripts/run-naming-retrieval-v3.mjs`：V2/V3 影子质量与性能门禁；两份 V3 报告和 Phase 3 状态文件。 |
+| 修改文件 | `nameGenerator.ts` 明确保留 `generateNamesV2()`，公开入口仅在 `FEATURES.dynamicRetrieval` 开启时调用 V3；`package.json` 增加开发与 holdout 基准命令；README 与 Benchmark 文档记录边界。scorer、权重和持久化版本不变。 |
+| 数据契约 | 字符先经过 negative、exclude character/style、rarity 等 hard filter；include 字不可用时整体拒绝。候选标签覆盖五行、风格、性别倾向、常用度、典籍、用户包含字和探索；归属、去重、补位及中文 tie-break 固定。Recall 使用与 V2 baseline 一致的完整评分前候选空间；Beam 截断另以完整评分数、Top20 overlap 与 max-score regret 评价。 |
+| 兼容策略 | V2 Top-240 是 V3 320 字候选池的下限；V2 生成器不删除。`dynamicRetrieval=false` 时页面、API 与持久化仍走原 V2。影子脚本同时执行两条路径，不把 V3 报告写入用户记录。 |
+| 验收 | train/validation 七项指标不得退化；正式 holdout 七项不得退化且六项核心指标至少一项改善 `0.0001`；V3 总耗时不高于 V2；同输入重复输出和诊断 hash 一致；max-score regret、内存、候选规模可机读；完整 test/lint/typecheck/build/notices/data/baseline 门禁通过。 |
+| 回退 | 保持 `FEATURES.dynamicRetrieval=false` 即使用 V2。删除 V3 影子模块和报告即可完全回退，不涉及用户数据迁移；在正式质量门槛通过前禁止删除 V2。 |
+
+### Phase 3 执行结果（2026-09-22）
+
+| 验收项 | 结果 |
+|---|---|
+| 检索实现 | 已完成 hard filter → 强约束 → 多标签候选与去重 → 确定性补位 → 低成本组合预估 → 每第一字 Top-30 Beam → 完整评分 → 固定 tie-break → 多样性重排。默认 320 字候选包含 V2 Top-240 下限；合成测试验证输入逆序仍得相同结果。 |
+| V2/V3 双轨 | `generateNamesV2()` 保留；公开 `generateNames()` 由 `FEATURES.dynamicRetrieval` 控制。当前开关保持 `false`，V2 baseline 复验仍为 train 180 / validation 60 / holdout 60。 |
+| 开发门禁 | train 与 validation 七项指标均未退化，validation `diversityScore` 从 `0` 提升到 `0.2`；五场景总中位耗时 V2 `4715.80ms`、V3 `2906.73ms`；max-score regret `0`；重复输出和诊断 hash 一致。进程内峰值 heap delta 观测中，V2 最大 `146360616` bytes，V3 最大 `92059816` bytes；该数值仅代表当前 Node 进程，不是浏览器内存保证。 |
+| 正式 holdout | 只在开发门禁通过后执行最终评估。七项指标与 V2 完全相同，无退化；五场景总中位耗时 V2 `5330.01ms`、V3 `3099.31ms`；max-score regret `0`；确定性通过。但六项核心指标均未改善 `0.0001`，正式质量门禁失败。 |
+| 工程门禁 | 36 个测试文件、175 项测试通过；lint、typecheck、生产 build、notices、V2 manifest 25 工件、冻结 Benchmark 180/60/60 与 V2 质量 baseline 复验通过。 |
+
+结论：Phase 3 的代码、影子对比和一次性正式准入评估均已执行完毕，但默认切换被正式门槛拒绝。`FEATURES.dynamicRetrieval` 必须继续为 `false`，V2 不得删除。后续 Phase 4 只能使用 train 调整评分、用 validation 选型，不能根据已查看的本次 holdout 逐项反向调参；新的默认准入必须按新版本协议重新冻结独立 holdout。
