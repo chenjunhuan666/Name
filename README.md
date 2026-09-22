@@ -16,6 +16,8 @@ V3.2 姓名质量 Benchmark 已按用户确认的 `ai-only-v1` 口径完成：�
 
 V3.3 候选检索已完成影子实现：字符 hard filter 与 include/exclude 强约束后，按五行、风格、性别倾向、常用度、典籍和探索标签确定性选取 320 字，保留 V2 Top-240 作为候选空间下限，再以每个第一字 Top-30 Beam 进入完整评分与多样性重排。开发集七项指标无退化，当前机器五场景总中位耗时由 `4715.80ms` 降至 `2906.73ms`，max-score regret 为 `0`，结果哈希稳定；正式 holdout 七项指标同样无退化，耗时由 `5330.01ms` 降至 `3099.31ms`，但六项核心质量指标没有达到冻结门槛要求的 `+0.0001` 严格改善。因此 `FEATURES.dynamicRetrieval` 继续为 `false`，生产仍走 V2；不得把性能改善解释为 V3 已获默认准入。
 
+V3.4 排名质量阶段已完成语义角色、组合关系软信号、scorer 校准、多样性重排和确定性测试。train 仅用于尺度调参，validation 选择的方案使 NDCG@20 提升 `0.0071`、Pairwise Accuracy 提升 `0.0397`；随后另行冻结了与 V1 全部切分零姓名/语义组重叠的 60 条 `ai-only-v2` 独立 holdout，并只执行一次正式验收。正式结果的 Top-20 Recall 提升 `0.0666`，五场景总中位耗时由 V2 `4090.01ms` 降至 V4 `2847.81ms`，确定性通过；但 NDCG@20 下降 `0.0066`、Pairwise Accuracy 下降 `0.0231`，违反七项指标不得退化的门槛。因此 Phase 4 实施与验收已完成，但默认准入被拒绝；`FEATURES.benchmarkModel` 与 `FEATURES.dynamicRetrieval` 均继续为 `false`，生产仍走 V2，且不得再依据该 holdout 调参。
+
 汉字数据分为《通用规范汉字表》8105 字标准层和 `ai-chinese-naming` 转换得到的推荐层，并为可定位字头关联康熙索引。初始推荐层采用正向语义、起名适用度不低于 40、生僻等级不高于 2 且核心字段完整的记录；后续扩容必须经过固定证据、明确决策和受控导入。第二来源 `Chinese-Names-Corpus` 只为未命中硬拒绝的中性候选补充观察到的姓名使用证据，不覆盖语义、读音或同音风险；非规范字不进入运行候选。典籍库分包包含《诗经》《楚辞》《论语》《孟子》《周易》《庄子》、基础唐诗和宋词；来源分别登记 MIT、CC0-1.0 或 CC-BY-SA-4.0 许可。历法计算依赖 MIT 许可的 `lunar-typescript`。完整来源与许可见 `THIRD_PARTY_NOTICES.md`。
 
 综合分权重集中在 `src/config/namingScore.ts`：五行方向 25%、字义与组合语义 20%、音律 15%、文化出处 15%、谐音安全 10%、现代审美 10%、字形与生僻度合计 5%。典籍关联分为 A 级原文连续、B 级同一分句按原顺序分别出现，以及只接受人工登记的 C 级同篇意象化用；不跨标点、不调换顺序、不自动编造 C 级出处。分数仅用于候选排序，不代表命运或吉凶。谐音检查覆盖完整姓名、名字两字、姓与首字的精确匹配，部分普通话近音作为软提示降分，常见网络负面词精确命中则进入硬过滤；不等同于方言或全部语境审查。
@@ -41,6 +43,10 @@ pnpm run data:check:naming-benchmark
 pnpm run benchmark:naming
 pnpm run benchmark:v2:quality:check
 pnpm run benchmark:v3:retrieval:check
+pnpm run benchmark:v4:ranking:check
+pnpm run data:check:naming-holdout-v2
+pnpm run data:check:naming-holdout-v2-frozen
+pnpm run benchmark:v4:ranking:holdout:check
 ```
 
 V2 冻结结果见 [`docs/releases/v2-baseline.md`](docs/releases/v2-baseline.md)，完整发布 JSON 清单由 `pnpm run data:manifest:v2` 稳定生成到 [`docs/releases/v2-artifact-manifest.json`](docs/releases/v2-artifact-manifest.json)。

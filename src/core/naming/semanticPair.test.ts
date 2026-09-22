@@ -5,7 +5,7 @@ import {
 } from '../../data/namingConstraints';
 import type { NamingCharacter } from '../../types';
 import { passesSemanticFilter } from './filters/semanticFilter';
-import { assessSemanticPair } from './semanticPair';
+import { assessSemanticPair, assessSemanticPairV3 } from './semanticPair';
 
 function character(
   char: string,
@@ -77,6 +77,36 @@ describe('assessSemanticPair', () => {
 
     expect(assessment.natural).toBe(false);
     expect(assessment.score).toBeLessThan(50);
+  });
+
+  it('用语义角色区分完整自然意象、动作残句和冲突气质，但只作软排序', () => {
+    const coherent = assessSemanticPairV3(
+      character('荻', '多年生草本植物，生于水边', ['自然', '清雅']),
+      character('汀', '水边平地', ['自然', '清雅']),
+    );
+    const fragment = assessSemanticPairV3(
+      character('立', '站立，建立', ['大气']),
+      character('千', '数量，一千', ['简约']),
+    );
+    const conflicting = assessSemanticPairV3(
+      character('燎', '猛烈燃烧的火势', ['大气']),
+      character('谨', '谨慎收敛', ['温润']),
+    );
+
+    expect(coherent.semanticRoles?.[0]).toContain('plant');
+    expect(coherent.semanticRoles?.[1]).toContain('water');
+    expect(coherent.roleRelation).toBe('coherent');
+    expect(fragment.semanticRoles).toEqual([
+      expect.arrayContaining(['action']),
+      expect.arrayContaining(['number']),
+    ]);
+    expect(fragment.roleRelation).toBe('fragment');
+    expect(conflicting.roleRelation).toBe('conflicting');
+    expect(coherent.score).toBeGreaterThan(fragment.score);
+    expect(fragment.natural).toBe(true);
+    expect(conflicting.natural).toBe(true);
+    expect(passesSemanticFilter(fragment)).toBe(true);
+    expect(passesSemanticFilter(conflicting)).toBe(true);
   });
 
   it('对签署前复核发现的十五个具体谐音组合执行字符级硬拦截', () => {

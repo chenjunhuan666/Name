@@ -1,0 +1,1174 @@
+{
+  "schemaVersion": 1,
+  "benchmarkVersion": "2.0.0",
+  "status": "ai-advisory-only",
+  "sourcePacket": "B",
+  "reviewerSlot": "B",
+  "nonHuman": true,
+  "evidenceBoundary": "独立 AI-only B 包盲审。仅依据 benchmark-v2.holdout.review-b.json 中的姓名、场景偏好与 benchmark-review.md 五档口径判断；未查看 A 包、旧或新审校报告、train/validation/holdout 标签、算法分数或排名。TypeSafe 仅阅读了本地 skill 以确认不确定性处理原则，未调用模型；官方 confidence 文档访问失败，因此不能补足字典、方言、登记适用性或真实读者样本。只有明确普通话负面谐音、禁忌、负面实体或可确认的词典/音韵硬风险才建议 hard-filter=true；事实不足时为 null 并保留 factGap。",
+  "entries": [
+    {
+      "id": "benchmark-v2-holdout-001",
+      "name": "陈晓元",
+      "proposedClass": "good",
+      "class": "自然可用",
+      "tags": [
+        "natural",
+        "clearMeaning",
+        "balancedStyle"
+      ],
+      "reason": "“晓”与“元”均为正向常用意象，组合读写顺畅；语义连接略宽泛，但不影响自然使用。",
+      "reasons": [
+        "“晓”与“元”均为正向常用意象，组合读写顺畅；语义连接略宽泛，但不影响自然使用。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.9,
+      "scenarioId": "balanced-chen"
+    },
+    {
+      "id": "benchmark-v2-holdout-002",
+      "name": "李柔建",
+      "proposedClass": "poor",
+      "class": "不自然",
+      "tags": [
+        "semanticTension",
+        "awkwardOrder",
+        "weakStyleFit"
+      ],
+      "reason": "“柔”与偏动作性的“建”衔接生硬，词序不像稳定的人名表达，书卷气也较弱；属于软性组合问题。",
+      "reasons": [
+        "“柔”与偏动作性的“建”衔接生硬，词序不像稳定的人名表达，书卷气也较弱；属于软性组合问题。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.9,
+      "scenarioId": "scholarly-li"
+    },
+    {
+      "id": "benchmark-v2-holdout-003",
+      "name": "王律画",
+      "proposedClass": "acceptable",
+      "class": "勉强可用",
+      "tags": [
+        "artisticImagery",
+        "uncommonCombination",
+        "weakWarmthFit"
+      ],
+      "reason": "“律”与“画”都可承载艺术意象，但并列关系偏概念化，整体可理解却不像成熟常见的人名组合。",
+      "reasons": [
+        "“律”与“画”都可承载艺术意象，但并列关系偏概念化，整体可理解却不像成熟常见的人名组合。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.84,
+      "scenarioId": "warm-wang"
+    },
+    {
+      "id": "benchmark-v2-holdout-004",
+      "name": "张淑薰",
+      "proposedClass": "acceptable",
+      "class": "勉强可用",
+      "tags": [
+        "gentleMeaning",
+        "uncommonCharacter",
+        "genderStyleMismatch"
+      ],
+      "reason": "“淑”与“薰”能形成柔和雅致的意象，读感尚可；但整体偏柔美，与古典男性场景不够契合。",
+      "reasons": [
+        "“淑”与“薰”能形成柔和雅致的意象，读感尚可；但整体偏柔美，与古典男性场景不够契合。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.84,
+      "scenarioId": "classic-zhang"
+    },
+    {
+      "id": "benchmark-v2-holdout-005",
+      "name": "林寰壬",
+      "proposedClass": "poor",
+      "class": "不自然",
+      "tags": [
+        "semanticDisconnection",
+        "technicalAssociation",
+        "factGap"
+      ],
+      "reason": "“寰”与“壬”的意象关系不清，且“壬”容易呈现干支符号感，组合较难形成简约完整的姓名语义。",
+      "reasons": [
+        "“寰”与“壬”的意象关系不清，且“壬”容易呈现干支符号感，组合较难形成简约完整的姓名语义。"
+      ],
+      "proposedHardFilter": null,
+      "hardFilter": null,
+      "factGap": "未用权威字典核验“壬”的全部姓名义项、读音边界及登记使用情况，不能据一般联想认定硬风险。",
+      "confidence": 0.75,
+      "scenarioId": "minimal-lin"
+    },
+    {
+      "id": "benchmark-v2-holdout-006",
+      "name": "陈任婷",
+      "proposedClass": "acceptable",
+      "class": "勉强可用",
+      "tags": [
+        "readable",
+        "feminineExpression",
+        "styleMismatch"
+      ],
+      "reason": "整体读写顺畅，“婷”提供清晰柔美意象；“任”与“婷”的语义连接较弱，且性别表达比场景要求更偏女性。",
+      "reasons": [
+        "整体读写顺畅，“婷”提供清晰柔美意象；“任”与“婷”的语义连接较弱，且性别表达比场景要求更偏女性。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.86,
+      "scenarioId": "balanced-chen"
+    },
+    {
+      "id": "benchmark-v2-holdout-007",
+      "name": "李良青",
+      "proposedClass": "good",
+      "class": "自然可用",
+      "tags": [
+        "natural",
+        "positiveMeaning",
+        "restrainedStyle"
+      ],
+      "reason": "“良”与“青”简洁清朗，正向含义明确，读感自然；书卷感不强烈但整体可靠。",
+      "reasons": [
+        "“良”与“青”简洁清朗，正向含义明确，读感自然；书卷感不强烈但整体可靠。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.91,
+      "scenarioId": "scholarly-li"
+    },
+    {
+      "id": "benchmark-v2-holdout-008",
+      "name": "王语琪",
+      "proposedClass": "excellent",
+      "class": "自然推荐",
+      "tags": [
+        "natural",
+        "warmStyle",
+        "feminineExpression",
+        "clearMeaning"
+      ],
+      "reason": "读音流畅，“语”与“琪”组合文雅温润，女性表达清晰，语义与场景匹配度高。",
+      "reasons": [
+        "读音流畅，“语”与“琪”组合文雅温润，女性表达清晰，语义与场景匹配度高。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.96,
+      "scenarioId": "warm-wang"
+    },
+    {
+      "id": "benchmark-v2-holdout-009",
+      "name": "张皎意",
+      "proposedClass": "good",
+      "class": "自然可用",
+      "tags": [
+        "classicalImagery",
+        "distinctive",
+        "genderStyleMismatch"
+      ],
+      "reason": "“皎”与“意”形成明净含蓄的古典意象，辨识度较好；气质偏中性清雅，男性表达略弱。",
+      "reasons": [
+        "“皎”与“意”形成明净含蓄的古典意象，辨识度较好；气质偏中性清雅，男性表达略弱。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.89,
+      "scenarioId": "classic-zhang"
+    },
+    {
+      "id": "benchmark-v2-holdout-010",
+      "name": "林泰朗",
+      "proposedClass": "excellent",
+      "class": "自然推荐",
+      "tags": [
+        "natural",
+        "clearMeaning",
+        "conciseStyle"
+      ],
+      "reason": "“泰朗”语义正向开阔，音节利落，结构简洁，作为姓名自然且具有良好辨识度。",
+      "reasons": [
+        "“泰朗”语义正向开阔，音节利落，结构简洁，作为姓名自然且具有良好辨识度。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.95,
+      "scenarioId": "minimal-lin"
+    },
+    {
+      "id": "benchmark-v2-holdout-011",
+      "name": "陈棠楫",
+      "proposedClass": "acceptable",
+      "class": "勉强可用",
+      "tags": [
+        "literaryImagery",
+        "uncommonCombination",
+        "distinctive"
+      ],
+      "reason": "“棠”与“楫”都有古雅物象，能形成文学化联想；但两个具体物象的联系不够直接，日常姓名感偏弱。",
+      "reasons": [
+        "“棠”与“楫”都有古雅物象，能形成文学化联想；但两个具体物象的联系不够直接，日常姓名感偏弱。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.81,
+      "scenarioId": "balanced-chen"
+    },
+    {
+      "id": "benchmark-v2-holdout-012",
+      "name": "李进霄",
+      "proposedClass": "good",
+      "class": "自然可用",
+      "tags": [
+        "aspirational",
+        "clearImagery",
+        "weakScholarlyFit"
+      ],
+      "reason": "“进霄”有向上凌云的完整动势，读感清楚有力；气质更偏进取豪迈，书卷风格稍弱。",
+      "reasons": [
+        "“进霄”有向上凌云的完整动势，读感清楚有力；气质更偏进取豪迈，书卷风格稍弱。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.89,
+      "scenarioId": "scholarly-li"
+    },
+    {
+      "id": "benchmark-v2-holdout-013",
+      "name": "王雕杨",
+      "proposedClass": "poor",
+      "class": "不自然",
+      "tags": [
+        "semanticDisconnection",
+        "hardImagery",
+        "styleMismatch"
+      ],
+      "reason": "“雕”与“杨”组合关系含混，容易呈现雕刻动作或猛禽与树木的生硬拼接，缺少温润女性气质。",
+      "reasons": [
+        "“雕”与“杨”组合关系含混，容易呈现雕刻动作或猛禽与树木的生硬拼接，缺少温润女性气质。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.91,
+      "scenarioId": "warm-wang"
+    },
+    {
+      "id": "benchmark-v2-holdout-014",
+      "name": "张穆凌",
+      "proposedClass": "excellent",
+      "class": "自然推荐",
+      "tags": [
+        "classicalStyle",
+        "masculineExpression",
+        "natural",
+        "distinctive"
+      ],
+      "reason": "“穆”沉静端肃，“凌”有昂扬动势，组合古典且有层次，读感自然并符合男性表达。",
+      "reasons": [
+        "“穆”沉静端肃，“凌”有昂扬动势，组合古典且有层次，读感自然并符合男性表达。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.95,
+      "scenarioId": "classic-zhang"
+    },
+    {
+      "id": "benchmark-v2-holdout-015",
+      "name": "林悠治",
+      "proposedClass": "acceptable",
+      "class": "勉强可用",
+      "tags": [
+        "positiveMeaning",
+        "semanticTension",
+        "conciseForm"
+      ],
+      "reason": "字形和音节简洁，“悠”有从容感；“治”偏治理或治事语义，与“悠”的组合略显牵强。",
+      "reasons": [
+        "字形和音节简洁，“悠”有从容感；“治”偏治理或治事语义，与“悠”的组合略显牵强。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.85,
+      "scenarioId": "minimal-lin"
+    },
+    {
+      "id": "benchmark-v2-holdout-016",
+      "name": "陈耐进",
+      "proposedClass": "poor",
+      "class": "不自然",
+      "tags": [
+        "instructionalTone",
+        "awkwardCombination",
+        "weakNameLikeQuality"
+      ],
+      "reason": "“耐进”更像对坚持进取的概念化要求，语气偏训诫或口号，缺少自然的人名意象。",
+      "reasons": [
+        "“耐进”更像对坚持进取的概念化要求，语气偏训诫或口号，缺少自然的人名意象。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.9,
+      "scenarioId": "balanced-chen"
+    },
+    {
+      "id": "benchmark-v2-holdout-017",
+      "name": "李儆绩",
+      "proposedClass": "poor",
+      "class": "不自然",
+      "tags": [
+        "uncommonCharacter",
+        "performanceAssociation",
+        "factGap"
+      ],
+      "reason": "“儆”与“绩”组合带有警戒、绩效式的抽象事务感，读写负担较高，不像自然的书卷型姓名。",
+      "reasons": [
+        "“儆”与“绩”组合带有警戒、绩效式的抽象事务感，读写负担较高，不像自然的书卷型姓名。"
+      ],
+      "proposedHardFilter": null,
+      "hardFilter": null,
+      "factGap": "未用权威字典核验“儆”的完整义项、姓名传统及方言音感，不能据陌生程度判为硬风险。",
+      "confidence": 0.78,
+      "scenarioId": "scholarly-li"
+    },
+    {
+      "id": "benchmark-v2-holdout-018",
+      "name": "王春言",
+      "proposedClass": "good",
+      "class": "自然可用",
+      "tags": [
+        "warmImagery",
+        "gentleTone",
+        "neutralExpression"
+      ],
+      "reason": "“春言”具有温暖、明朗和善意表达的联想，音节自然；女性倾向不强但整体温润可用。",
+      "reasons": [
+        "“春言”具有温暖、明朗和善意表达的联想，音节自然；女性倾向不强但整体温润可用。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.89,
+      "scenarioId": "warm-wang"
+    },
+    {
+      "id": "benchmark-v2-holdout-019",
+      "name": "张容庶",
+      "proposedClass": "poor",
+      "class": "不自然",
+      "tags": [
+        "semanticAmbiguity",
+        "socialAssociation",
+        "factGap"
+      ],
+      "reason": "“容庶”的语义关系不够清晰，“庶”容易带出身份或群体称谓联想，使姓名表达显得生硬。",
+      "reasons": [
+        "“容庶”的语义关系不够清晰，“庶”容易带出身份或群体称谓联想，使姓名表达显得生硬。"
+      ],
+      "proposedHardFilter": null,
+      "hardFilter": null,
+      "factGap": "“庶”的历史身份含义、其他正向义项及其作为名字的实际接受度未经过词典和读者样本核验。",
+      "confidence": 0.77,
+      "scenarioId": "classic-zhang"
+    },
+    {
+      "id": "benchmark-v2-holdout-020",
+      "name": "林润玉",
+      "proposedClass": "excellent",
+      "class": "自然推荐",
+      "tags": [
+        "natural",
+        "completeMeaning",
+        "elegant",
+        "conciseStyle"
+      ],
+      "reason": "“润玉”语义完整温雅，容易联想到温润如玉，读写流畅且结构简洁。",
+      "reasons": [
+        "“润玉”语义完整温雅，容易联想到温润如玉，读写流畅且结构简洁。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.97,
+      "scenarioId": "minimal-lin"
+    },
+    {
+      "id": "benchmark-v2-holdout-021",
+      "name": "陈韧璐",
+      "proposedClass": "acceptable",
+      "class": "勉强可用",
+      "tags": [
+        "positiveMeaning",
+        "semanticContrast",
+        "feminineExpression"
+      ],
+      "reason": "“韧”体现坚毅，“璐”体现美玉，均为正向含义；刚硬与柔美并置略显刻意，整体仍可使用。",
+      "reasons": [
+        "“韧”体现坚毅，“璐”体现美玉，均为正向含义；刚硬与柔美并置略显刻意，整体仍可使用。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.86,
+      "scenarioId": "balanced-chen"
+    },
+    {
+      "id": "benchmark-v2-holdout-022",
+      "name": "李山朱",
+      "proposedClass": "poor",
+      "class": "不自然",
+      "tags": [
+        "surnameLikeSequence",
+        "semanticDisconnection",
+        "weakStyleFit"
+      ],
+      "reason": "“山”与常作姓氏的“朱”并列，容易产生连续姓氏或名词堆叠感，语义与书卷风格都不够完整。",
+      "reasons": [
+        "“山”与常作姓氏的“朱”并列，容易产生连续姓氏或名词堆叠感，语义与书卷风格都不够完整。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.9,
+      "scenarioId": "scholarly-li"
+    },
+    {
+      "id": "benchmark-v2-holdout-023",
+      "name": "王画精",
+      "proposedClass": "poor",
+      "class": "不自然",
+      "tags": [
+        "awkwardCombination",
+        "colloquialAmbiguity",
+        "factGap"
+      ],
+      "reason": "“画精”不像稳定的人名表达，既可能被理解为绘画精熟，也可能产生口语化歧义，整体不够温润自然。",
+      "reasons": [
+        "“画精”不像稳定的人名表达，既可能被理解为绘画精熟，也可能产生口语化歧义，整体不够温润自然。"
+      ],
+      "proposedHardFilter": null,
+      "hardFilter": null,
+      "factGap": "未以普通话语料、方言样本或词典核验“画精”的实际歧义强度，不能将潜在联想升级为明确负面谐音。",
+      "confidence": 0.78,
+      "scenarioId": "warm-wang"
+    },
+    {
+      "id": "benchmark-v2-holdout-024",
+      "name": "张寿姣",
+      "proposedClass": "poor",
+      "class": "不自然",
+      "tags": [
+        "semanticTension",
+        "genderStyleMismatch",
+        "datedTone"
+      ],
+      "reason": "“寿”与“姣”各自含义可取，但并置显得年代感较重且组合生硬，与古典男性表达明显不符。",
+      "reasons": [
+        "“寿”与“姣”各自含义可取，但并置显得年代感较重且组合生硬，与古典男性表达明显不符。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.9,
+      "scenarioId": "classic-zhang"
+    },
+    {
+      "id": "benchmark-v2-holdout-025",
+      "name": "林彰艺",
+      "proposedClass": "good",
+      "class": "自然可用",
+      "tags": [
+        "positiveMeaning",
+        "clearStructure",
+        "slightlyFormal"
+      ],
+      "reason": "“彰艺”可理解为彰显才艺，语义明确且读感顺畅；表达稍显书面和目的性，但整体自然可用。",
+      "reasons": [
+        "“彰艺”可理解为彰显才艺，语义明确且读感顺畅；表达稍显书面和目的性，但整体自然可用。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.88,
+      "scenarioId": "minimal-lin"
+    },
+    {
+      "id": "benchmark-v2-holdout-026",
+      "name": "陈右巳",
+      "proposedClass": "poor",
+      "class": "不自然",
+      "tags": [
+        "symbolicAssociation",
+        "semanticDisconnection",
+        "factGap"
+      ],
+      "reason": "“右”与“巳”更像方位字和干支符号的并列，难以形成清晰稳定的人名语义。",
+      "reasons": [
+        "“右”与“巳”更像方位字和干支符号的并列，难以形成清晰稳定的人名语义。"
+      ],
+      "proposedHardFilter": null,
+      "hardFilter": null,
+      "factGap": "未用权威字典和姓名语料核验“右巳”的专名、古义或音韵事实，不能据符号感认定硬风险。",
+      "confidence": 0.77,
+      "scenarioId": "balanced-chen"
+    },
+    {
+      "id": "benchmark-v2-holdout-027",
+      "name": "李沔荪",
+      "proposedClass": "acceptable",
+      "class": "勉强可用",
+      "tags": [
+        "literaryTone",
+        "rareCharacters",
+        "factGap"
+      ],
+      "reason": "两个字都带有古雅、草木或水域式联想，能形成书卷气；但识读门槛和组合陌生度较高。",
+      "reasons": [
+        "两个字都带有古雅、草木或水域式联想，能形成书卷气；但识读门槛和组合陌生度较高。"
+      ],
+      "proposedHardFilter": null,
+      "hardFilter": null,
+      "factGap": "“沔”“荪”的确切字义、标准读音范围与登记适用性未通过权威字典核验，评价仅限组合直觉。",
+      "confidence": 0.68,
+      "scenarioId": "scholarly-li"
+    },
+    {
+      "id": "benchmark-v2-holdout-028",
+      "name": "王漳彤",
+      "proposedClass": "acceptable",
+      "class": "勉强可用",
+      "tags": [
+        "warmColorImagery",
+        "placeLikeAssociation",
+        "uncommonCombination"
+      ],
+      "reason": "“彤”提供明暖女性意象，“漳”使组合带有较强河名或地名感；整体可读，但温润姓名感稍弱。",
+      "reasons": [
+        "“彤”提供明暖女性意象，“漳”使组合带有较强河名或地名感；整体可读，但温润姓名感稍弱。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.83,
+      "scenarioId": "warm-wang"
+    },
+    {
+      "id": "benchmark-v2-holdout-029",
+      "name": "张鲜灿",
+      "proposedClass": "acceptable",
+      "class": "勉强可用",
+      "tags": [
+        "brightImagery",
+        "uncommonCombination",
+        "factGap"
+      ],
+      "reason": "“鲜”与“灿”均可表达鲜明灿烂，正向语义清楚；修饰意义有所叠加，且整体偏现代明艳而非古典男性风格。",
+      "reasons": [
+        "“鲜”与“灿”均可表达鲜明灿烂，正向语义清楚；修饰意义有所叠加，且整体偏现代明艳而非古典男性风格。"
+      ],
+      "proposedHardFilter": null,
+      "hardFilter": null,
+      "factGap": "“鲜”存在读音和姓氏用法边界，本次未以权威词典核验该具体姓名中的标准读法及音韵联想。",
+      "confidence": 0.76,
+      "scenarioId": "classic-zhang"
+    },
+    {
+      "id": "benchmark-v2-holdout-030",
+      "name": "林采钦",
+      "proposedClass": "good",
+      "class": "自然可用",
+      "tags": [
+        "natural",
+        "positiveMeaning",
+        "conciseForm"
+      ],
+      "reason": "“采”有风采之感，“钦”有敬重意味，组合简洁端正；语义连接略松，但读感自然。",
+      "reasons": [
+        "“采”有风采之感，“钦”有敬重意味，组合简洁端正；语义连接略松，但读感自然。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.88,
+      "scenarioId": "minimal-lin"
+    },
+    {
+      "id": "benchmark-v2-holdout-031",
+      "name": "陈露盈",
+      "proposedClass": "good",
+      "class": "自然可用",
+      "tags": [
+        "gentleImagery",
+        "natural",
+        "feminineExpression"
+      ],
+      "reason": "“露盈”具有清润丰盈的画面感，音节柔和自然；风格偏女性，但整体质量较好。",
+      "reasons": [
+        "“露盈”具有清润丰盈的画面感，音节柔和自然；风格偏女性，但整体质量较好。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.91,
+      "scenarioId": "balanced-chen"
+    },
+    {
+      "id": "benchmark-v2-holdout-032",
+      "name": "李亭晔",
+      "proposedClass": "good",
+      "class": "自然可用",
+      "tags": [
+        "elegant",
+        "brightMeaning",
+        "scholarlyTone"
+      ],
+      "reason": "“亭”有端正清雅感，“晔”有明盛光彩之意，组合文雅且辨识度较好，虽不常见仍自然可用。",
+      "reasons": [
+        "“亭”有端正清雅感，“晔”有明盛光彩之意，组合文雅且辨识度较好，虽不常见仍自然可用。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.9,
+      "scenarioId": "scholarly-li"
+    },
+    {
+      "id": "benchmark-v2-holdout-033",
+      "name": "王煜驰",
+      "proposedClass": "good",
+      "class": "自然可用",
+      "tags": [
+        "energetic",
+        "brightMeaning",
+        "genderStyleMismatch"
+      ],
+      "reason": "“煜驰”光明而有动势，读感有力，是自然的进取型姓名；但明显偏男性和昂扬，与温润女性场景不符。",
+      "reasons": [
+        "“煜驰”光明而有动势，读感有力，是自然的进取型姓名；但明显偏男性和昂扬，与温润女性场景不符。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.92,
+      "scenarioId": "warm-wang"
+    },
+    {
+      "id": "benchmark-v2-holdout-034",
+      "name": "张恬永",
+      "proposedClass": "acceptable",
+      "class": "勉强可用",
+      "tags": [
+        "calmMeaning",
+        "awkwardOrder",
+        "genderStyleMismatch"
+      ],
+      "reason": "“恬”与“永”都带有安静恒久的正向联想，但“恬永”词序略生硬，整体也偏柔和，男性古典气质不足。",
+      "reasons": [
+        "“恬”与“永”都带有安静恒久的正向联想，但“恬永”词序略生硬，整体也偏柔和，男性古典气质不足。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.85,
+      "scenarioId": "classic-zhang"
+    },
+    {
+      "id": "benchmark-v2-holdout-035",
+      "name": "林季萌",
+      "proposedClass": "good",
+      "class": "自然可用",
+      "tags": [
+        "freshImagery",
+        "readable",
+        "slightlyCute"
+      ],
+      "reason": "“季萌”可产生时序与萌发的清新联想，简洁易读；风格略显可爱和年轻化，但整体自然。",
+      "reasons": [
+        "“季萌”可产生时序与萌发的清新联想，简洁易读；风格略显可爱和年轻化，但整体自然。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.88,
+      "scenarioId": "minimal-lin"
+    },
+    {
+      "id": "benchmark-v2-holdout-036",
+      "name": "陈蝴梓",
+      "proposedClass": "poor",
+      "class": "不自然",
+      "tags": [
+        "boundMorphemeLike",
+        "awkwardCombination",
+        "weakNameLikeQuality"
+      ],
+      "reason": "“蝴”通常让人期待与“蝶”组成完整词，与“梓”连接后产生截断和拼接感，姓名整体明显不自然。",
+      "reasons": [
+        "“蝴”通常让人期待与“蝶”组成完整词，与“梓”连接后产生截断和拼接感，姓名整体明显不自然。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.94,
+      "scenarioId": "balanced-chen"
+    },
+    {
+      "id": "benchmark-v2-holdout-037",
+      "name": "李勇李",
+      "proposedClass": "poor",
+      "class": "不自然",
+      "tags": [
+        "surnameRepetition",
+        "awkwardFullName",
+        "weakStyleFit"
+      ],
+      "reason": "全名首尾重复“李”，且名字末字本身强烈呈现姓氏感，形成机械重复，书卷气和自然度都较弱。",
+      "reasons": [
+        "全名首尾重复“李”，且名字末字本身强烈呈现姓氏感，形成机械重复，书卷气和自然度都较弱。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.95,
+      "scenarioId": "scholarly-li"
+    },
+    {
+      "id": "benchmark-v2-holdout-038",
+      "name": "王获菁",
+      "proposedClass": "poor",
+      "class": "不自然",
+      "tags": [
+        "verbObjectFeel",
+        "awkwardCombination",
+        "weakWarmthFit"
+      ],
+      "reason": "“获”带有明显动作性，与“菁”连接容易形成不完整的动宾结构，温润女性姓名感不足。",
+      "reasons": [
+        "“获”带有明显动作性，与“菁”连接容易形成不完整的动宾结构，温润女性姓名感不足。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.9,
+      "scenarioId": "warm-wang"
+    },
+    {
+      "id": "benchmark-v2-holdout-039",
+      "name": "张硕益",
+      "proposedClass": "good",
+      "class": "自然可用",
+      "tags": [
+        "positiveMeaning",
+        "masculineExpression",
+        "slightlyModern"
+      ],
+      "reason": "“硕益”有丰硕增益的正向含义，读感端正并偏男性；表达略现代和功能化，但整体可用。",
+      "reasons": [
+        "“硕益”有丰硕增益的正向含义，读感端正并偏男性；表达略现代和功能化，但整体可用。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.89,
+      "scenarioId": "classic-zhang"
+    },
+    {
+      "id": "benchmark-v2-holdout-040",
+      "name": "林姝冶",
+      "proposedClass": "good",
+      "class": "自然可用",
+      "tags": [
+        "classicalExpression",
+        "feminineExpression",
+        "distinctive"
+      ],
+      "reason": "“姝冶”整体呈现美好柔丽的古典女性气质，音节简洁且有辨识度；风格比“简约”稍偏古雅。",
+      "reasons": [
+        "“姝冶”整体呈现美好柔丽的古典女性气质，音节简洁且有辨识度；风格比“简约”稍偏古雅。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.84,
+      "scenarioId": "minimal-lin"
+    },
+    {
+      "id": "benchmark-v2-holdout-041",
+      "name": "陈谛闪",
+      "proposedClass": "poor",
+      "class": "不自然",
+      "tags": [
+        "semanticDisconnection",
+        "abruptTone",
+        "weakNameLikeQuality"
+      ],
+      "reason": "“谛”的审思感与“闪”的瞬时动作感相互割裂，后字口语动作色彩较强，组合突兀。",
+      "reasons": [
+        "“谛”的审思感与“闪”的瞬时动作感相互割裂，后字口语动作色彩较强，组合突兀。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.91,
+      "scenarioId": "balanced-chen"
+    },
+    {
+      "id": "benchmark-v2-holdout-042",
+      "name": "李琅戬",
+      "proposedClass": "acceptable",
+      "class": "勉强可用",
+      "tags": [
+        "classicalTone",
+        "rareCharacter",
+        "factGap"
+      ],
+      "reason": "“琅”有玉石和清越联想，“戬”带来强烈古字感，整体有书卷辨识度，但识读与确切语义门槛高。",
+      "reasons": [
+        "“琅”有玉石和清越联想，“戬”带来强烈古字感，整体有书卷辨识度，但识读与确切语义门槛高。"
+      ],
+      "proposedHardFilter": null,
+      "hardFilter": null,
+      "factGap": "未以权威字典核验“戬”的完整义项、标准读音和姓名适用性，不能仅因生僻建议过滤。",
+      "confidence": 0.69,
+      "scenarioId": "scholarly-li"
+    },
+    {
+      "id": "benchmark-v2-holdout-043",
+      "name": "王溯遐",
+      "proposedClass": "good",
+      "class": "自然可用",
+      "tags": [
+        "classicalImagery",
+        "semanticCoherence",
+        "styleMismatch"
+      ],
+      "reason": "“溯遐”可理解为追溯高远，意象连贯且古雅有辨识度；整体偏清峻中性，不够温润女性化。",
+      "reasons": [
+        "“溯遐”可理解为追溯高远，意象连贯且古雅有辨识度；整体偏清峻中性，不够温润女性化。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.86,
+      "scenarioId": "warm-wang"
+    },
+    {
+      "id": "benchmark-v2-holdout-044",
+      "name": "张吟冲",
+      "proposedClass": "acceptable",
+      "class": "勉强可用",
+      "tags": [
+        "classicalAction",
+        "phonologyUncertain",
+        "factGap"
+      ],
+      "reason": "“吟”有古典文气，“冲”有进取或高远动势，但两者衔接偏跳跃，具体读法也会影响整体音感。",
+      "reasons": [
+        "“吟”有古典文气，“冲”有进取或高远动势，但两者衔接偏跳跃，具体读法也会影响整体音感。"
+      ],
+      "proposedHardFilter": null,
+      "hardFilter": null,
+      "factGap": "“冲”在该姓名语境中的读音和义项未经过权威词典核验，无法据未确认读法判断音韵硬风险。",
+      "confidence": 0.71,
+      "scenarioId": "classic-zhang"
+    },
+    {
+      "id": "benchmark-v2-holdout-045",
+      "name": "林价览",
+      "proposedClass": "poor",
+      "class": "不自然",
+      "tags": [
+        "commercialAssociation",
+        "awkwardCombination",
+        "weakNameLikeQuality"
+      ],
+      "reason": "“价览”容易被理解为价格与浏览等功能词的拼接，事务性和商业界面感强，缺少姓名语义。",
+      "reasons": [
+        "“价览”容易被理解为价格与浏览等功能词的拼接，事务性和商业界面感强，缺少姓名语义。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.93,
+      "scenarioId": "minimal-lin"
+    },
+    {
+      "id": "benchmark-v2-holdout-046",
+      "name": "陈镜字",
+      "proposedClass": "poor",
+      "class": "不自然",
+      "tags": [
+        "objectPhrase",
+        "awkwardCombination",
+        "weakNameLikeQuality"
+      ],
+      "reason": "“镜字”更像关于镜面文字的名词短语，具体物件感较强，作为名字缺少完整的人格或意境表达。",
+      "reasons": [
+        "“镜字”更像关于镜面文字的名词短语，具体物件感较强，作为名字缺少完整的人格或意境表达。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.91,
+      "scenarioId": "balanced-chen"
+    },
+    {
+      "id": "benchmark-v2-holdout-047",
+      "name": "李效峦",
+      "proposedClass": "poor",
+      "class": "不自然",
+      "tags": [
+        "verbNounTension",
+        "semanticDisconnection",
+        "weakStyleFit"
+      ],
+      "reason": "“效”偏动作或效用，“峦”是山形物象，二者连接缺少明确关系，形成生硬的动词与名词拼接。",
+      "reasons": [
+        "“效”偏动作或效用，“峦”是山形物象，二者连接缺少明确关系，形成生硬的动词与名词拼接。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.92,
+      "scenarioId": "scholarly-li"
+    },
+    {
+      "id": "benchmark-v2-holdout-048",
+      "name": "王籍纷",
+      "proposedClass": "poor",
+      "class": "不自然",
+      "tags": [
+        "bureaucraticAssociation",
+        "chaoticImagery",
+        "factGap"
+      ],
+      "reason": "“籍”容易带出书籍或户籍等事务性联想，“纷”又有纷杂感，组合缺少温润正向的完整意境。",
+      "reasons": [
+        "“籍”容易带出书籍或户籍等事务性联想，“纷”又有纷杂感，组合缺少温润正向的完整意境。"
+      ],
+      "proposedHardFilter": null,
+      "hardFilter": null,
+      "factGap": "“籍纷”是否存在固定词义或特定负面实体未经过词典与语料核验，不能把一般联想当作硬风险。",
+      "confidence": 0.79,
+      "scenarioId": "warm-wang"
+    },
+    {
+      "id": "benchmark-v2-holdout-049",
+      "name": "张疏器",
+      "proposedClass": "poor",
+      "class": "不自然",
+      "tags": [
+        "objectAssociation",
+        "awkwardCombination",
+        "weakNameLikeQuality"
+      ],
+      "reason": "“疏器”容易被理解为对器物的描述或专业术语片段，缺乏自然的人名意象，古典感也未形成完整表达。",
+      "reasons": [
+        "“疏器”容易被理解为对器物的描述或专业术语片段，缺乏自然的人名意象，古典感也未形成完整表达。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.91,
+      "scenarioId": "classic-zhang"
+    },
+    {
+      "id": "benchmark-v2-holdout-050",
+      "name": "林桢鹰",
+      "proposedClass": "acceptable",
+      "class": "勉强可用",
+      "tags": [
+        "strongImagery",
+        "distinctive",
+        "styleMismatch"
+      ],
+      "reason": "“桢”有坚实支撑感，“鹰”有锐意形象，组合鲜明并可理解；整体较硬朗繁复，与简约中性场景不够贴合。",
+      "reasons": [
+        "“桢”有坚实支撑感，“鹰”有锐意形象，组合鲜明并可理解；整体较硬朗繁复，与简约中性场景不够贴合。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.83,
+      "scenarioId": "minimal-lin"
+    },
+    {
+      "id": "benchmark-v2-holdout-051",
+      "name": "陈灯孚",
+      "proposedClass": "poor",
+      "class": "不自然",
+      "tags": [
+        "semanticDisconnection",
+        "objectAssociation",
+        "uncommonCombination"
+      ],
+      "reason": "“灯”的具体物件感与“孚”的抽象诚信意味连接较弱，组合陌生且不易形成自然姓名意境。",
+      "reasons": [
+        "“灯”的具体物件感与“孚”的抽象诚信意味连接较弱，组合陌生且不易形成自然姓名意境。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.87,
+      "scenarioId": "balanced-chen"
+    },
+    {
+      "id": "benchmark-v2-holdout-052",
+      "name": "李骄鹊",
+      "proposedClass": "poor",
+      "class": "不自然",
+      "tags": [
+        "prideAssociation",
+        "animalImagery",
+        "semanticTension"
+      ],
+      "reason": "“骄”容易呈现骄傲自满联想，与“鹊”的吉祥鸟意象结合仍显突兀，书卷姓名感不足。",
+      "reasons": [
+        "“骄”容易呈现骄傲自满联想，与“鹊”的吉祥鸟意象结合仍显突兀，书卷姓名感不足。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.89,
+      "scenarioId": "scholarly-li"
+    },
+    {
+      "id": "benchmark-v2-holdout-053",
+      "name": "王托殷",
+      "proposedClass": "poor",
+      "class": "不自然",
+      "tags": [
+        "verbObjectFeel",
+        "phonologyUncertain",
+        "factGap"
+      ],
+      "reason": "“托”带有明显动作或委托意味，与“殷”连接关系含混，整体不像温润女性姓名；“殷”的读法还会改变音感。",
+      "reasons": [
+        "“托”带有明显动作或委托意味，与“殷”连接关系含混，整体不像温润女性姓名；“殷”的读法还会改变音感。"
+      ],
+      "proposedHardFilter": null,
+      "hardFilter": null,
+      "factGap": "“殷”在该姓名中的标准读音和义项未由权威字典确认，也未核验可能的方言联想。",
+      "confidence": 0.74,
+      "scenarioId": "warm-wang"
+    },
+    {
+      "id": "benchmark-v2-holdout-054",
+      "name": "张憧岸",
+      "proposedClass": "poor",
+      "class": "不自然",
+      "tags": [
+        "boundMorphemeLike",
+        "semanticDisconnection",
+        "factGap"
+      ],
+      "reason": "“憧”单独使用时语义不够完整，与“岸”的景物意象缺少清晰连接，组合有截断和拼接感。",
+      "reasons": [
+        "“憧”单独使用时语义不够完整，与“岸”的景物意象缺少清晰连接，组合有截断和拼接感。"
+      ],
+      "proposedHardFilter": null,
+      "hardFilter": null,
+      "factGap": "未以权威词典确认“憧”的独立义项、古典用例和姓名适用性，不能仅凭现代常见搭配认定硬风险。",
+      "confidence": 0.75,
+      "scenarioId": "classic-zhang"
+    },
+    {
+      "id": "benchmark-v2-holdout-055",
+      "name": "林峦伸",
+      "proposedClass": "poor",
+      "class": "不自然",
+      "tags": [
+        "awkwardOrder",
+        "verbNounTension",
+        "weakNameLikeQuality"
+      ],
+      "reason": "“峦”与动作性的“伸”词序生硬，像对山形伸展的残缺描述，不具备简洁完整的姓名表达。",
+      "reasons": [
+        "“峦”与动作性的“伸”词序生硬，像对山形伸展的残缺描述，不具备简洁完整的姓名表达。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.92,
+      "scenarioId": "minimal-lin"
+    },
+    {
+      "id": "benchmark-v2-holdout-056",
+      "name": "陈参鹃",
+      "proposedClass": "poor",
+      "class": "不自然",
+      "tags": [
+        "semanticDisconnection",
+        "phonologyUncertain",
+        "factGap"
+      ],
+      "reason": "“参”与“鹃”的关系难以形成稳定意境，且“参”的不同读法会显著改变音感，整体偏生硬。",
+      "reasons": [
+        "“参”与“鹃”的关系难以形成稳定意境，且“参”的不同读法会显著改变音感，整体偏生硬。"
+      ],
+      "proposedHardFilter": null,
+      "hardFilter": null,
+      "factGap": "“参”在该姓名语境中的读音与义项未由权威字典确认，亦无普通话或方言样本支持硬风险判断。",
+      "confidence": 0.72,
+      "scenarioId": "balanced-chen"
+    },
+    {
+      "id": "benchmark-v2-holdout-057",
+      "name": "李俐榭",
+      "proposedClass": "acceptable",
+      "class": "勉强可用",
+      "tags": [
+        "elegantImagery",
+        "uncommonCombination",
+        "feminineExpression"
+      ],
+      "reason": "“俐”有聪敏感，“榭”有园林书卷意象，组合可理解且有辨识度；两字连接稍弱，并偏女性化。",
+      "reasons": [
+        "“俐”有聪敏感，“榭”有园林书卷意象，组合可理解且有辨识度；两字连接稍弱，并偏女性化。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.81,
+      "scenarioId": "scholarly-li"
+    },
+    {
+      "id": "benchmark-v2-holdout-058",
+      "name": "王杉闯",
+      "proposedClass": "poor",
+      "class": "不自然",
+      "tags": [
+        "semanticTension",
+        "aggressiveAction",
+        "genderStyleMismatch"
+      ],
+      "reason": "“杉”的自然物象与“闯”的强动作感连接突兀，后字带冒进色彩，明显不符合温润女性场景。",
+      "reasons": [
+        "“杉”的自然物象与“闯”的强动作感连接突兀，后字带冒进色彩，明显不符合温润女性场景。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.93,
+      "scenarioId": "warm-wang"
+    },
+    {
+      "id": "benchmark-v2-holdout-059",
+      "name": "张姚雷",
+      "proposedClass": "poor",
+      "class": "不自然",
+      "tags": [
+        "surnameLikeSequence",
+        "semanticDisconnection",
+        "weakClassicalFit"
+      ],
+      "reason": "“姚”强烈呈现姓氏感，与“雷”并列后像连续姓氏加单名，组合语义松散，古典姓名感不足。",
+      "reasons": [
+        "“姚”强烈呈现姓氏感，与“雷”并列后像连续姓氏加单名，组合语义松散，古典姓名感不足。"
+      ],
+      "proposedHardFilter": false,
+      "hardFilter": false,
+      "confidence": 0.9,
+      "scenarioId": "classic-zhang"
+    },
+    {
+      "id": "benchmark-v2-holdout-060",
+      "name": "林礴霭",
+      "proposedClass": "acceptable",
+      "class": "勉强可用",
+      "tags": [
+        "atmosphericImagery",
+        "rareCharacters",
+        "factGap"
+      ],
+      "reason": "“礴”与“霭”可共同营造宏阔云气意象，具有辨识度；但“礴”单用的完整性、识读负担及音义边界不确定。",
+      "reasons": [
+        "“礴”与“霭”可共同营造宏阔云气意象，具有辨识度；但“礴”单用的完整性、识读负担及音义边界不确定。"
+      ],
+      "proposedHardFilter": null,
+      "hardFilter": null,
+      "factGap": "未以权威字典核验“礴”的独立义项、与“霭”的固定搭配及姓名登记适用性，不能因生僻直接拒绝。",
+      "confidence": 0.67,
+      "scenarioId": "minimal-lin"
+    }
+  ],
+  "typeSafe": {
+    "actuallyCalled": false,
+    "skillRead": true,
+    "liveDocsAccessible": false,
+    "limitation": "未调用 TypeSafe 模型；官方 confidence 文档不可访问，未用其补足字典、方言、登记或读者事实。"
+  }
+}

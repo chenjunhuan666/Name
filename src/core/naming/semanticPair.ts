@@ -6,7 +6,12 @@ import {
   WEB_NOVEL_STYLE_GIVEN_NAMES,
 } from '../../data/namingConstraints';
 import { SEMANTIC_PAIR_SCORE } from '../../config/namingScore';
+import { SEMANTIC_ROLE_CALIBRATION } from '../../config/namingScore';
 import type { NamingCharacter, SemanticPairAssessment } from '../../types';
+import {
+  assessSemanticRoleRelation,
+  inferSemanticRoles,
+} from '../../data/semanticRoles';
 
 function normalizedMeaning(meaning: string): string {
   return meaning.replace(/[\s，。；、]/g, '');
@@ -87,5 +92,49 @@ export function assessSemanticPair(
     overlyWebNovel,
     nameLike,
     notes,
+  };
+}
+
+export function assessSemanticPairV3(
+  first: NamingCharacter,
+  second: NamingCharacter,
+  roleScale = SEMANTIC_ROLE_CALIBRATION.roleScale,
+): SemanticPairAssessment {
+  const legacy = assessSemanticPair(first, second);
+  const semanticRoles: [
+    ReturnType<typeof inferSemanticRoles>,
+    ReturnType<typeof inferSemanticRoles>,
+  ] = [inferSemanticRoles(first), inferSemanticRoles(second)];
+  const roleRelation = assessSemanticRoleRelation(
+    semanticRoles[0],
+    semanticRoles[1],
+  );
+  const adjustment =
+    roleRelation === 'coherent'
+      ? SEMANTIC_PAIR_SCORE.coherentRoleBonus
+      : roleRelation === 'repetitive'
+        ? -SEMANTIC_PAIR_SCORE.repetitiveRolePenalty
+        : roleRelation === 'fragment'
+          ? -SEMANTIC_PAIR_SCORE.fragmentRolePenalty
+          : roleRelation === 'conflicting'
+            ? -SEMANTIC_PAIR_SCORE.conflictingRolePenalty
+            : 0;
+  const relationNotes = {
+    coherent: '语义角色形成可解释的完整关系',
+    neutral: '语义角色未形成明确加分或冲突',
+    repetitive: '两字语义角色接近，轻度降低区分度',
+    fragment: '语义角色更像数量、称谓或动作残句，仅作软降分',
+    conflicting: '语义角色存在明显气质或物象冲突，仅作软降分',
+  } as const;
+
+  return {
+    ...legacy,
+    score: Math.max(
+      legacy.natural ? SEMANTIC_PAIR_SCORE.filterMinimum : SEMANTIC_PAIR_SCORE.minimum,
+      Math.min(100, legacy.score + adjustment * roleScale),
+    ),
+    semanticRoles,
+    roleRelation,
+    notes: [...legacy.notes, relationNotes[roleRelation]],
   };
 }

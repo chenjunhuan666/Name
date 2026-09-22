@@ -1,0 +1,992 @@
+{
+  "schemaVersion": 1,
+  "benchmarkVersion": "2.0.0",
+  "status": "source-queue-frozen",
+  "generatedFrom": "public/data/characters/recommended-v2.json",
+  "excludedBenchmarkVersion": "1.0.0",
+  "evidenceBoundary": "60 条候选与 Benchmark V1 的姓名和无序双字 leakageGroupId 均不重叠；只用于 Phase 4 一次性最终 holdout。",
+  "scenarios": [
+    {
+      "id": "balanced-chen",
+      "benchmarkVersion": "2.0.0",
+      "surname": "陈",
+      "fixedTendencies": [
+        {
+          "element": "木",
+          "level": 5,
+          "relation": "日主所生",
+          "weightedPresence": 0,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "火",
+          "level": 4,
+          "relation": "日主所生",
+          "weightedPresence": 1,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "土",
+          "level": 3,
+          "relation": "日主所生",
+          "weightedPresence": 2,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "金",
+          "level": 2,
+          "relation": "日主所生",
+          "weightedPresence": 3,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "水",
+          "level": 1,
+          "relation": "日主所生",
+          "weightedPresence": 4,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        }
+      ],
+      "preference": {
+        "styles": [
+          "清雅"
+        ],
+        "rarityPreference": "balanced",
+        "genderExpression": "neutral"
+      },
+      "resultLimit": 20,
+      "dataVersion": "3.0.0",
+      "ruleVersion": "3.0.0"
+    },
+    {
+      "id": "scholarly-li",
+      "benchmarkVersion": "2.0.0",
+      "surname": "李",
+      "fixedTendencies": [
+        {
+          "element": "木",
+          "level": 5,
+          "relation": "日主所生",
+          "weightedPresence": 0,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "火",
+          "level": 4,
+          "relation": "日主所生",
+          "weightedPresence": 1,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "土",
+          "level": 3,
+          "relation": "日主所生",
+          "weightedPresence": 2,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "金",
+          "level": 2,
+          "relation": "日主所生",
+          "weightedPresence": 3,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "水",
+          "level": 1,
+          "relation": "日主所生",
+          "weightedPresence": 4,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        }
+      ],
+      "preference": {
+        "styles": [
+          "书卷"
+        ],
+        "rarityPreference": "common",
+        "genderExpression": "neutral"
+      },
+      "resultLimit": 20,
+      "dataVersion": "3.0.0",
+      "ruleVersion": "3.0.0"
+    },
+    {
+      "id": "warm-wang",
+      "benchmarkVersion": "2.0.0",
+      "surname": "王",
+      "fixedTendencies": [
+        {
+          "element": "木",
+          "level": 5,
+          "relation": "日主所生",
+          "weightedPresence": 0,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "火",
+          "level": 4,
+          "relation": "日主所生",
+          "weightedPresence": 1,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "土",
+          "level": 3,
+          "relation": "日主所生",
+          "weightedPresence": 2,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "金",
+          "level": 2,
+          "relation": "日主所生",
+          "weightedPresence": 3,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "水",
+          "level": 1,
+          "relation": "日主所生",
+          "weightedPresence": 4,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        }
+      ],
+      "preference": {
+        "styles": [
+          "温润"
+        ],
+        "rarityPreference": "balanced",
+        "genderExpression": "feminine"
+      },
+      "resultLimit": 20,
+      "dataVersion": "3.0.0",
+      "ruleVersion": "3.0.0"
+    },
+    {
+      "id": "classic-zhang",
+      "benchmarkVersion": "2.0.0",
+      "surname": "张",
+      "fixedTendencies": [
+        {
+          "element": "木",
+          "level": 5,
+          "relation": "日主所生",
+          "weightedPresence": 0,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "火",
+          "level": 4,
+          "relation": "日主所生",
+          "weightedPresence": 1,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "土",
+          "level": 3,
+          "relation": "日主所生",
+          "weightedPresence": 2,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "金",
+          "level": 2,
+          "relation": "日主所生",
+          "weightedPresence": 3,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "水",
+          "level": 1,
+          "relation": "日主所生",
+          "weightedPresence": 4,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        }
+      ],
+      "preference": {
+        "styles": [
+          "古典"
+        ],
+        "rarityPreference": "distinctive",
+        "genderExpression": "masculine"
+      },
+      "resultLimit": 20,
+      "dataVersion": "3.0.0",
+      "ruleVersion": "3.0.0"
+    },
+    {
+      "id": "minimal-lin",
+      "benchmarkVersion": "2.0.0",
+      "surname": "林",
+      "fixedTendencies": [
+        {
+          "element": "木",
+          "level": 5,
+          "relation": "日主所生",
+          "weightedPresence": 0,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "火",
+          "level": 4,
+          "relation": "日主所生",
+          "weightedPresence": 1,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "土",
+          "level": 3,
+          "relation": "日主所生",
+          "weightedPresence": 2,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "金",
+          "level": 2,
+          "relation": "日主所生",
+          "weightedPresence": 3,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        },
+        {
+          "element": "水",
+          "level": 1,
+          "relation": "日主所生",
+          "weightedPresence": 4,
+          "reason": "隔离历法与八字算法，仅用于姓名质量审校"
+        }
+      ],
+      "preference": {
+        "styles": [
+          "简约"
+        ],
+        "rarityPreference": "balanced",
+        "genderExpression": "neutral"
+      },
+      "resultLimit": 20,
+      "dataVersion": "3.0.0",
+      "ruleVersion": "3.0.0"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "benchmark-v2-holdout-001",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "晓元",
+      "leakageGroupId": "元晓",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "晓",
+        "元"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-002",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "柔建",
+      "leakageGroupId": "建柔",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "柔",
+        "建"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-003",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "律画",
+      "leakageGroupId": "律画",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "律",
+        "画"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-004",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "淑薰",
+      "leakageGroupId": "淑薰",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "淑",
+        "薰"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-005",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "寰壬",
+      "leakageGroupId": "壬寰",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "寰",
+        "壬"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-006",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "任婷",
+      "leakageGroupId": "任婷",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "任",
+        "婷"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-007",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "良青",
+      "leakageGroupId": "良青",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "良",
+        "青"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-008",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "语琪",
+      "leakageGroupId": "琪语",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "语",
+        "琪"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-009",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "皎意",
+      "leakageGroupId": "意皎",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "皎",
+        "意"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-010",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "泰朗",
+      "leakageGroupId": "朗泰",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "泰",
+        "朗"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-011",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "棠楫",
+      "leakageGroupId": "棠楫",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "棠",
+        "楫"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-012",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "进霄",
+      "leakageGroupId": "进霄",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "进",
+        "霄"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-013",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "雕杨",
+      "leakageGroupId": "杨雕",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "雕",
+        "杨"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-014",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "穆凌",
+      "leakageGroupId": "凌穆",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "穆",
+        "凌"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-015",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "悠治",
+      "leakageGroupId": "悠治",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "悠",
+        "治"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-016",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "耐进",
+      "leakageGroupId": "耐进",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "耐",
+        "进"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-017",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "儆绩",
+      "leakageGroupId": "儆绩",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "儆",
+        "绩"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-018",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "春言",
+      "leakageGroupId": "春言",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "春",
+        "言"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-019",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "容庶",
+      "leakageGroupId": "容庶",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "容",
+        "庶"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-020",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "润玉",
+      "leakageGroupId": "润玉",
+      "samplingStratum": "common",
+      "sourceCharacterIds": [
+        "润",
+        "玉"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-021",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "韧璐",
+      "leakageGroupId": "璐韧",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "韧",
+        "璐"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-022",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "山朱",
+      "leakageGroupId": "山朱",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "山",
+        "朱"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-023",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "画精",
+      "leakageGroupId": "画精",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "画",
+        "精"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-024",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "寿姣",
+      "leakageGroupId": "姣寿",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "寿",
+        "姣"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-025",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "彰艺",
+      "leakageGroupId": "彰艺",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "彰",
+        "艺"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-026",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "右巳",
+      "leakageGroupId": "右巳",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "右",
+        "巳"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-027",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "沔荪",
+      "leakageGroupId": "沔荪",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "沔",
+        "荪"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-028",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "漳彤",
+      "leakageGroupId": "彤漳",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "漳",
+        "彤"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-029",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "鲜灿",
+      "leakageGroupId": "灿鲜",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "鲜",
+        "灿"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-030",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "采钦",
+      "leakageGroupId": "采钦",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "采",
+        "钦"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-031",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "露盈",
+      "leakageGroupId": "盈露",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "露",
+        "盈"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-032",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "亭晔",
+      "leakageGroupId": "亭晔",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "亭",
+        "晔"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-033",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "煜驰",
+      "leakageGroupId": "煜驰",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "煜",
+        "驰"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-034",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "恬永",
+      "leakageGroupId": "恬永",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "恬",
+        "永"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-035",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "季萌",
+      "leakageGroupId": "季萌",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "季",
+        "萌"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-036",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "蝴梓",
+      "leakageGroupId": "梓蝴",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "蝴",
+        "梓"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-037",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "勇李",
+      "leakageGroupId": "勇李",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "勇",
+        "李"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-038",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "获菁",
+      "leakageGroupId": "获菁",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "获",
+        "菁"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-039",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "硕益",
+      "leakageGroupId": "益硕",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "硕",
+        "益"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-040",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "姝冶",
+      "leakageGroupId": "冶姝",
+      "samplingStratum": "balanced",
+      "sourceCharacterIds": [
+        "姝",
+        "冶"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-041",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "谛闪",
+      "leakageGroupId": "谛闪",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "谛",
+        "闪"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-042",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "琅戬",
+      "leakageGroupId": "戬琅",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "琅",
+        "戬"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-043",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "溯遐",
+      "leakageGroupId": "溯遐",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "溯",
+        "遐"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-044",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "吟冲",
+      "leakageGroupId": "冲吟",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "吟",
+        "冲"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-045",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "价览",
+      "leakageGroupId": "价览",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "价",
+        "览"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-046",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "镜字",
+      "leakageGroupId": "字镜",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "镜",
+        "字"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-047",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "效峦",
+      "leakageGroupId": "峦效",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "效",
+        "峦"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-048",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "籍纷",
+      "leakageGroupId": "籍纷",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "籍",
+        "纷"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-049",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "疏器",
+      "leakageGroupId": "器疏",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "疏",
+        "器"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-050",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "桢鹰",
+      "leakageGroupId": "桢鹰",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "桢",
+        "鹰"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-051",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "灯孚",
+      "leakageGroupId": "孚灯",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "灯",
+        "孚"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-052",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "骄鹊",
+      "leakageGroupId": "骄鹊",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "骄",
+        "鹊"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-053",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "托殷",
+      "leakageGroupId": "托殷",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "托",
+        "殷"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-054",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "憧岸",
+      "leakageGroupId": "岸憧",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "憧",
+        "岸"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-055",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "峦伸",
+      "leakageGroupId": "伸峦",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "峦",
+        "伸"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-056",
+      "scenarioId": "balanced-chen",
+      "surname": "陈",
+      "givenName": "参鹃",
+      "leakageGroupId": "参鹃",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "参",
+        "鹃"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-057",
+      "scenarioId": "scholarly-li",
+      "surname": "李",
+      "givenName": "俐榭",
+      "leakageGroupId": "俐榭",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "俐",
+        "榭"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-058",
+      "scenarioId": "warm-wang",
+      "surname": "王",
+      "givenName": "杉闯",
+      "leakageGroupId": "杉闯",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "杉",
+        "闯"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-059",
+      "scenarioId": "classic-zhang",
+      "surname": "张",
+      "givenName": "姚雷",
+      "leakageGroupId": "姚雷",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "姚",
+        "雷"
+      ]
+    },
+    {
+      "id": "benchmark-v2-holdout-060",
+      "scenarioId": "minimal-lin",
+      "surname": "林",
+      "givenName": "礴霭",
+      "leakageGroupId": "礴霭",
+      "samplingStratum": "distinctive",
+      "sourceCharacterIds": [
+        "礴",
+        "霭"
+      ]
+    }
+  ]
+}

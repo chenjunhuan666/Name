@@ -76,6 +76,8 @@ export type {
   PhoneticAssessment,
   RecentNameViewRecord,
   SemanticPairAssessment,
+  SemanticRole,
+  SemanticRoleRelation,
 } from './naming';
 export type {
   BaziRule,

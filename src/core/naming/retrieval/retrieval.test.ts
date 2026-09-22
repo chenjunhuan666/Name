@@ -145,4 +145,35 @@ describe('V3 姓名候选检索', () => {
     );
     expect(first.diagnostics.resultSignature).toMatch(/^[a-f0-9]{64}$/);
   });
+
+  it('V3 排名模型在放宽单一元素对上限后稳定补足二十个多样候选', () => {
+    const characters = Array.from({ length: 40 }, (_, index) => character(index));
+    const options = {
+      surname: '陈',
+      characters,
+      tendencies,
+      pronunciations,
+      preference,
+      limit: 20,
+    };
+    const first = generateNamesV3WithDiagnostics(options, {
+      targetCharacterCount: 36,
+      legacyFloorCount: 20,
+      beamWidthPerFirst: 10,
+      rankingModel: 'v3',
+    });
+    const second = generateNamesV3WithDiagnostics(options, {
+      targetCharacterCount: 36,
+      legacyFloorCount: 20,
+      beamWidthPerFirst: 10,
+      rankingModel: 'v3',
+    });
+
+    expect(first.names).toHaveLength(20);
+    expect(first).toEqual(second);
+    expect(new Set(first.names.map(({ givenName }) => [...givenName][0])).size)
+      .toBeGreaterThanOrEqual(6);
+    expect(new Set(first.names.map(({ givenName }) => [...givenName][1])).size)
+      .toBeGreaterThanOrEqual(6);
+  });
 });

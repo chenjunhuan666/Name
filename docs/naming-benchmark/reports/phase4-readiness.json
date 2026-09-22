@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "phase": 4,
+  "status": "implemented-gate-rejected",
+  "implemented": {
+    "semanticRoles": true,
+    "semanticConflictRules": true,
+    "trainOnlyCalibration": true,
+    "validationSelection": true,
+    "rankingAndHardFilterTests": true,
+    "diversityRecalibration": true,
+    "independentHoldoutFrozen": true,
+    "holdoutEvaluatedOnce": true,
+    "v2FallbackRetained": true
+  },
+  "development": {
+    "selectedRoleScale": 1,
+    "validationQualityNoRegression": true,
+    "validationNdcg20Delta": 0.0071,
+    "validationPairwiseAccuracyDelta": 0.0397,
+    "trainRejectMetricsNoRegression": true,
+    "allScenariosFulfilled": true,
+    "deterministic": true
+  },
+  "holdout": {
+    "benchmarkVersion": "2.0.0",
+    "reviewProtocol": "ai-only-v2",
+    "candidateCount": 60,
+    "evaluatedOnce": true,
+    "qualityNoRegression": false,
+    "strictCoreImprovement": true,
+    "top20RecallDelta": 0.0666,
+    "ndcg20Delta": -0.0066,
+    "pairwiseAccuracyDelta": -0.0231,
+    "performancePassed": true,
+    "deterministic": true,
+    "v2MedianTotalMs": 4090.01,
+    "v4MedianTotalMs": 2847.81
+  },
+  "defaultSwitchAllowed": false,
+  "benchmarkModelEnabled": false,
+  "dynamicRetrievalEnabled": false,
+  "productionPath": "V2",
+  "evidenceBoundary": "Phase 4 implementation and one-time independent AI-only holdout evaluation are complete. Recall and local Node performance improved, but NDCG@20 and Pairwise Accuracy regressed, so the no-regression admission gate rejected the production switch. The holdout must not be used for further tuning."
+}

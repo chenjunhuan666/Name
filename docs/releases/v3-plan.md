@@ -95,3 +95,27 @@
 | 工程门禁 | 36 个测试文件、175 项测试通过；lint、typecheck、生产 build、notices、V2 manifest 25 工件、冻结 Benchmark 180/60/60 与 V2 质量 baseline 复验通过。 |
 
 结论：Phase 3 的代码、影子对比和一次性正式准入评估均已执行完毕，但默认切换被正式门槛拒绝。`FEATURES.dynamicRetrieval` 必须继续为 `false`，V2 不得删除。后续 Phase 4 只能使用 train 调整评分、用 validation 选型，不能根据已查看的本次 holdout 逐项反向调参；新的默认准入必须按新版本协议重新冻结独立 holdout。
+
+## Phase 4：排名质量
+
+| 项目 | 必填内容 |
+|---|---|
+| 新增文件 | `src/data/semanticRoles.ts`：从显式字表、字义和风格推断语义角色并判断协调、重复、残句和冲突；`scripts/run-naming-ranking-v4.mjs`：只读 train/validation 的校准与选择；`scripts/build-naming-holdout-v2.mjs`、`freeze-naming-holdout-v2.mjs`：构造、双盲审、终审并冻结独立留出集；`scripts/run-naming-ranking-v4-holdout.mjs`：唯一一次正式准入评估和只读完整性检查；Phase 4 开发、holdout、审查和状态报告。 |
+| 修改文件 | `semanticPair.ts`、`scorer.ts` 新增 V3.4 软信号路径并完整保留 V2 函数；`retrieval/pairSearch.ts`、`index.ts` 支持影子排名模型；`namingScore.ts` 固定 role scale 与 V3 多样性上限；类型、测试、README、命令和本执行表同步更新。 |
+| 数据契约 | 语义角色只从项目内显式规则与已有字义推断；`fragment/conflicting` 仅软降分，不新增未经事实验证的硬过滤。train 只调 `roleScale`，validation 选择方案。新 `ai-only-v2` holdout 为 60 条、五场景各 12 条，并排除 V1 train/validation/holdout 的完整姓名和无序 `leakageGroupId`。 |
+| 兼容策略 | `scoreName()`、`assessSemanticPair()`、V2 生成器和 V2 多样性参数保持不变；只有 `benchmarkModel=true` 才使用 V3.4 排名，只有 `dynamicRetrieval=true` 才进入动态检索。正式门禁失败时两个开关均不得开启。 |
+| 验收 | train 的 Reject Recall/Precision 不退化；validation 七项不退化且至少一项核心指标提升；新 holdout 七项相对 V2 不退化且至少一项核心指标提升；五场景均返回 20 条、重复运行 hash 一致、V4 总耗时不高于 V2；完整 test/lint/typecheck/build/notices/data/baseline 门禁。 |
+| 回退 | 当前生产未切换，保持两个开关为 `false` 即继续使用 V2。V3.4 影子模块和报告可独立移除，不迁移或重算用户数据；不得删除 V2 scorer、检索器和多样性实现。 |
+
+### Phase 4 执行结果（2026-09-22）
+
+| 验收项 | 结果 |
+|---|---|
+| 语义与排名实现 | 新增 nature、virtue、aspiration、time、space、light、water、plant、jade、action 等语义角色及协调/重复/残句/冲突关系；角色只影响组合语义与现代审美软分。V2 评分权重、函数和硬过滤边界保持不变。 |
+| train / validation | 在 train 比较 `0.25/0.5/0.75/1` 四个固定尺度，以 validation 选择 `roleScale=1`。validation 七项无退化，NDCG@20 `+0.0071`、Pairwise Accuracy `+0.0397`；train 的 Reject Recall/Precision 无退化。五个场景均返回 20/20，首尾字各有 13～18 个唯一值，重复签名一致。 |
+| 独立 AI-only holdout | A、B 两个隔离子代理各审查 60 条，第三个子代理全量终审；最终为 excellent 3、good 12、acceptable 17、poor 26、reject 2，另有 14 条 `factGap`。TypeSafe 未调用，因为现有证据足以完成语义裁决，且外部字典/方言/登记事实不能由模型补造。冻结集与 V1 全部切分零完整姓名和语义组重叠。 |
+| 唯一一次正式 holdout | V4 相对 V2：Top-20 Recall `+0.0666`；Top-20 Precision、Reject Recall/Precision、Diversity 不变；NDCG@20 `-0.0066`、Pairwise Accuracy `-0.0231`。因此七项无退化门槛失败。 |
+| 性能与确定性 | 当前机器五场景总中位耗时 V2 `4090.01ms`、V4 `2847.81ms`；每场景均返回 20 条，重复输出 hash 与诊断签名一致。该耗时只代表本地 Node 进程。 |
+| 默认切换 | 正式质量门禁拒绝；`FEATURES.benchmarkModel=false`、`FEATURES.dynamicRetrieval=false`，`NAMING_MODEL_VERSION` 不变，生产继续使用 V2。holdout 报告检查命令只验证 SHA-256 和结论，不会重新执行评估。 |
+
+结论：Phase 4 的 Step 26～31 已全部执行，代码、独立审查、冻结与唯一一次正式验收均已完成；但默认切换未获准。不得依据已查看的 `benchmark-v2.holdout.json` 和 `ranking-v4.holdout.ai.json` 回调参数。未来如需继续争取准入，应进入新的开发轮次并按新版本协议建立新的独立 holdout。

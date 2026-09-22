@@ -17,6 +17,7 @@ import {
   NAMING_SCORE_WEIGHTS,
   RARITY_SCORE,
   SCORE_ROUNDING_FACTOR,
+  SEMANTIC_ROLE_CALIBRATION,
   SHAPE_SCORE,
 } from '../../config/namingScore';
 
@@ -140,11 +141,26 @@ function calculateClassicScore(classic?: ClassicReference): number {
         : 0;
 }
 
-function calculateModernScore(semantic?: SemanticPairAssessment): number {
+function calculateModernScore(
+  semantic?: SemanticPairAssessment,
+  useSemanticRoles = false,
+  roleScale = 1,
+): number {
   if (!semantic) {
     return MODERN_AESTHETIC_SCORE.base;
   }
 
+  const roleAdjustment = (!useSemanticRoles
+    ? 0
+    : semantic.roleRelation === 'coherent'
+      ? MODERN_AESTHETIC_SCORE.coherentRoleBonus
+      : semantic.roleRelation === 'repetitive'
+        ? -MODERN_AESTHETIC_SCORE.repetitiveRolePenalty
+        : semantic.roleRelation === 'fragment'
+          ? -MODERN_AESTHETIC_SCORE.fragmentRolePenalty
+          : semantic.roleRelation === 'conflicting'
+            ? -MODERN_AESTHETIC_SCORE.conflictingRolePenalty
+            : 0) * roleScale;
   const score =
     MODERN_AESTHETIC_SCORE.base +
     (semantic.natural ? MODERN_AESTHETIC_SCORE.naturalBonus : 0) +
@@ -157,7 +173,8 @@ function calculateModernScore(semantic?: SemanticPairAssessment): number {
       : 0) -
     (semantic.overlyWebNovel
       ? MODERN_AESTHETIC_SCORE.overlyWebNovelPenalty
-      : 0);
+      : 0) +
+    roleAdjustment;
 
   return Math.min(
     MODERN_AESTHETIC_SCORE.maximum,
@@ -165,7 +182,7 @@ function calculateModernScore(semantic?: SemanticPairAssessment): number {
   );
 }
 
-export function scoreName({
+function scoreNameInternal({
   characters,
   tendencies,
   phonetic,
@@ -173,7 +190,7 @@ export function scoreName({
   surnameStrokes,
   classic,
   semantic,
-}: ScoreNameOptions): NameScoringResult {
+}: ScoreNameOptions, useSemanticRoles: boolean, roleScale: number): NameScoringResult {
   const element = calculateElementScore(characters, tendencies);
   const meaning = calculateMeaningScore(characters, semantic);
   const knownStrokes = [
@@ -188,7 +205,7 @@ export function scoreName({
     phonetic: phonetic.score,
     classic: calculateClassicScore(classic),
     homophone: homophone.score,
-    modern: calculateModernScore(semantic),
+    modern: calculateModernScore(semantic, useSemanticRoles, roleScale),
     shape,
     rarity,
   };
@@ -227,4 +244,15 @@ export function scoreName({
       rarity: `两字生僻度为 ${characters.map(({ rarity: value }) => value).join('、')}。`,
     },
   };
+}
+
+export function scoreName(options: ScoreNameOptions): NameScoringResult {
+  return scoreNameInternal(options, false, 0);
+}
+
+export function scoreNameV3(
+  options: ScoreNameOptions,
+  roleScale = SEMANTIC_ROLE_CALIBRATION.roleScale,
+): NameScoringResult {
+  return scoreNameInternal(options, true, roleScale);
 }

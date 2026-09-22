@@ -119,7 +119,38 @@ export interface SemanticPairAssessment {
   overlyWebNovel: boolean;
   nameLike: boolean;
   notes: string[];
+  semanticRoles?: [SemanticRole[], SemanticRole[]];
+  roleRelation?: SemanticRoleRelation;
 }
+
+export type SemanticRole =
+  | 'nature'
+  | 'virtue'
+  | 'aspiration'
+  | 'time'
+  | 'space'
+  | 'light'
+  | 'water'
+  | 'plant'
+  | 'jade'
+  | 'action'
+  | 'abstract'
+  | 'number'
+  | 'geography'
+  | 'title'
+  | 'body'
+  | 'animal'
+  | 'fire'
+  | 'art'
+  | 'sound'
+  | 'agriculture';
+
+export type SemanticRoleRelation =
+  | 'coherent'
+  | 'neutral'
+  | 'repetitive'
+  | 'fragment'
+  | 'conflicting';
 
 export interface GeneratedName {
   id: string;

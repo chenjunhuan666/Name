@@ -36,6 +36,10 @@ export const MODERN_AESTHETIC_SCORE = {
   styleConsistencyBonus: 5,
   overlyPopularPenalty: 25,
   overlyWebNovelPenalty: 20,
+  coherentRoleBonus: 5,
+  repetitiveRolePenalty: 5,
+  fragmentRolePenalty: 15,
+  conflictingRolePenalty: 20,
   minimum: 30,
   maximum: 100,
 } as const;
@@ -47,10 +51,18 @@ export const SEMANTIC_PAIR_SCORE = {
   repeatedMeaningPenalty: 20,
   overlyPopularPenalty: 10,
   overlyWebNovelPenalty: 15,
+  coherentRoleBonus: 10,
+  repetitiveRolePenalty: 8,
+  fragmentRolePenalty: 25,
+  conflictingRolePenalty: 30,
   unnaturalPenalty: 70,
   minimum: 0,
   filterMinimum: 50,
   minimumMeaningLength: 2,
+} as const;
+
+export const SEMANTIC_ROLE_CALIBRATION = {
+  roleScale: 1,
 } as const;
 
 export const PHONETIC_SCORE = {
@@ -87,6 +99,13 @@ export const DIVERSITY_LIMITS = {
   secondCharacter: 4,
   elementPair: 6,
   classicSource: 6,
+} as const;
+
+export const V3_DIVERSITY_LIMITS = {
+  firstCharacterLimit: 6,
+  secondCharacterLimit: 6,
+  elementPairLimit: 20,
+  classicSourceLimit: 10,
 } as const;
 
 export const RARITY_LIMITS = {

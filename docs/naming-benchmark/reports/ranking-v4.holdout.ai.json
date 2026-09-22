@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "benchmarkVersion": "2.0.0",
+  "mode": "final-independent-holdout",
+  "holdoutEvaluationCount": 1,
+  "evaluatedModel": "V3.4-semantic-roles",
+  "reviewProtocol": "ai-only-v2",
+  "sourceReviewSha256": "957c3ecbf1a8e31c6991889c185a73ddb4509b5829013e9c4378d4dabab3ea73",
+  "inputHashes": {
+    "holdoutSha256": "b37bdafff2759634f6553a71eebf8b8dec6a12de90e67408a183144a491cab64",
+    "implementationSha256": "f43ecd5ef34a064da656e4d2404f4f137501a92ebd03f7e91775f8ba2b37bca2"
+  },
+  "evidenceBoundary": "只读取新冻结的 60 条独立 AI-only holdout；这是一次性相对 V2 准入评估，不等价于人工审美、现实姓名安全、登记适用性或跨机器性能结论。",
+  "v2Run": {
+    "benchmarkVersion": "2.0.0",
+    "evaluatedNamingModelVersion": "V2-production",
+    "dataVersion": "3.0.0",
+    "ruleVersion": "3.0.0",
+    "splits": [
+      "holdout"
+    ],
+    "scenarioCount": 5,
+    "candidateCount": 60,
+    "metrics": {
+      "top20Precision": 0.25,
+      "top20Recall": 0.0667,
+      "ndcg20": 0.8058,
+      "rejectRecall": 0,
+      "rejectPrecision": 0,
+      "pairwiseAccuracy": 0.5921,
+      "diversityScore": 0.4
+    },
+    "outputHash": "27fc40b1737b95ee62f97ea5bb1fd4307950ff8236e35756eadd4e7c1952a389"
+  },
+  "v4Run": {
+    "benchmarkVersion": "2.0.0",
+    "evaluatedNamingModelVersion": "V3.4-semantic-roles",
+    "dataVersion": "3.0.0",
+    "ruleVersion": "3.0.0",
+    "splits": [
+      "holdout"
+    ],
+    "scenarioCount": 5,
+    "candidateCount": 60,
+    "metrics": {
+      "top20Precision": 0.25,
+      "top20Recall": 0.1333,
+      "ndcg20": 0.7992,
+      "rejectRecall": 0,
+      "rejectPrecision": 0,
+      "pairwiseAccuracy": 0.569,
+      "diversityScore": 0.4
+    },
+    "outputHash": "90a13fe893e3c04e7ad9df4a89ca5ae6955d250ca32bd3075f730340bc0d2a7f"
+  },
+  "metricDeltas": {
+    "top20Precision": 0,
+    "top20Recall": 0.0666,
+    "ndcg20": -0.0066,
+    "rejectRecall": 0,
+    "rejectPrecision": 0,
+    "pairwiseAccuracy": -0.0231,
+    "diversityScore": 0
+  },
+  "qualityGate": {
+    "passed": false,
+    "regressions": [
+      "ndcg20",
+      "pairwiseAccuracy"
+    ],
+    "improvements": [
+      "top20Recall"
+    ]
+  },
+  "generationDiagnostics": [
+    {
+      "id": "balanced-chen",
+      "requestedResultCount": 20,
+      "v4ResultCount": 20,
+      "fulfilledResultLimit": true,
+      "v2MedianMs": 853.9,
+      "v4MedianMs": 600.03,
+      "v2OutputHash": "e6ef7cf1bd063f1d5bb500f79be5d9417ed359d8838d39fb38b60fb272f3facb",
+      "v4OutputHash": "2723fb88fe5a379ee099549092d12db2593213b7371bedf5c33e33e1eeb437ab",
+      "resultSignature": "1e45e27a892008bfb9f36d2e23a774ff19a034a944b10edf9d485bdb5335f054",
+      "deterministic": true
+    },
+    {
+      "id": "scholarly-li",
+      "requestedResultCount": 20,
+      "v4ResultCount": 20,
+      "fulfilledResultLimit": true,
+      "v2MedianMs": 783.65,
+      "v4MedianMs": 486.77,
+      "v2OutputHash": "c24eb7fa662c42768f777e7adb15581c7947bcf28b98b29bc8a444e428296d3a",
+      "v4OutputHash": "cbc5b5b3df9d976a5c0e2c22298a7767c1f4c01b130cb155635892702d214424",
+      "resultSignature": "570a7343c60a611121c897943af8f451576c2c37bb87dbb18af8056a9a86fda2",
+      "deterministic": true
+    },
+    {
+      "id": "warm-wang",
+      "requestedResultCount": 20,
+      "v4ResultCount": 20,
+      "fulfilledResultLimit": true,
+      "v2MedianMs": 882.23,
+      "v4MedianMs": 598.49,
+      "v2OutputHash": "fd88e6d24435b8f6ab18513e752d8826e08b2b50390fa622a747071f7fa60a3c",
+      "v4OutputHash": "5cb7c1b6cef2043ae5a691aafd5682c8c52153cbf8885954350956a3073b4713",
+      "resultSignature": "d388621b0113ec7af6b1d8c61880f1ba7c4dd77021c3519afe5be9a65a036cdd",
+      "deterministic": true
+    },
+    {
+      "id": "classic-zhang",
+      "requestedResultCount": 20,
+      "v4ResultCount": 20,
+      "fulfilledResultLimit": true,
+      "v2MedianMs": 764.44,
+      "v4MedianMs": 579.41,
+      "v2OutputHash": "3138579e3f564dc73c8d35cd6d7213c77e7ca88ce51967e0424f7a9c896c68bf",
+      "v4OutputHash": "1e79a2ba0c9c0640c7e9a6c3483134fa724c6919b40863c672c0b0250686da2d",
+      "resultSignature": "6ac8ee86d0cd1006e9742fe9305160c6d1287e227252a8263f2340a8633050f3",
+      "deterministic": true
+    },
+    {
+      "id": "minimal-lin",
+      "requestedResultCount": 20,
+      "v4ResultCount": 20,
+      "fulfilledResultLimit": true,
+      "v2MedianMs": 805.79,
+      "v4MedianMs": 583.11,
+      "v2OutputHash": "d1a10831ba8f2a69686343399f206e4b8860cef45c47f3a3681e72de305d2fc2",
+      "v4OutputHash": "7a526f477b15c86009facdf88941acdc415adffb480bb242b59a5304eee5cfdb",
+      "resultSignature": "406bba8b48d62af5424fd1c65508d1b5514d5c273a3bb0156cc0b633695e91a4",
+      "deterministic": true
+    }
+  ],
+  "summary": {
+    "qualityPassed": false,
+    "performancePassed": true,
+    "deterministicPassed": true,
+    "v2MedianTotalMs": 4090.01,
+    "v4MedianTotalMs": 2847.81,
+    "defaultSwitchAllowed": false
+  },
+  "evaluationPayloadSha256": "c960efb75619adb5c16bfd089d04420700835033e9fe1be9b61a022798f9b267"
+}

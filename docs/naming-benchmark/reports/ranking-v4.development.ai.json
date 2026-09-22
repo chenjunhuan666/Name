@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "benchmarkVersion": "1.1.0",
+  "evaluatedModel": "V3.4-semantic-roles",
+  "roleScale": 1,
+  "evaluatedSplits": [
+    "train",
+    "validation"
+  ],
+  "holdoutRead": false,
+  "evidenceBoundary": "仅使用 train 调整并以 validation 选择方案；本脚本不读取 holdout。语义角色来自项目内字义和显式规则，只作排序软信号，不能替代人工审美或现实姓名安全判断。",
+  "semanticRoleRelationCounts": {
+    "coherent": 61,
+    "conflicting": 4,
+    "fragment": 14,
+    "neutral": 139,
+    "repetitive": 22
+  },
+  "averageScoresByClass": {
+    "acceptable": 75.3021,
+    "excellent": 79.4,
+    "good": 78.0265,
+    "poor": 75.1917
+  },
+  "runs": {
+    "train": {
+      "benchmarkVersion": "1.1.0",
+      "evaluatedNamingModelVersion": "V3.4-semantic-roles",
+      "dataVersion": "3.0.0",
+      "ruleVersion": "3.0.0",
+      "splits": [
+        "train"
+      ],
+      "scenarioCount": 5,
+      "candidateCount": 180,
+      "metrics": {
+        "top20Precision": 0.2,
+        "top20Recall": 0,
+        "ndcg20": 0.6269,
+        "rejectRecall": 0,
+        "rejectPrecision": 0,
+        "pairwiseAccuracy": 0.59,
+        "diversityScore": 0.6
+      },
+      "outputHash": "6cfc3bd34b99c872fb95fb84530847e882902fc89caa97070d15dfe148d2b1ef"
+    },
+    "validation": {
+      "benchmarkVersion": "1.1.0",
+      "evaluatedNamingModelVersion": "V3.4-semantic-roles",
+      "dataVersion": "3.0.0",
+      "ruleVersion": "3.0.0",
+      "splits": [
+        "validation"
+      ],
+      "scenarioCount": 5,
+      "candidateCount": 60,
+      "metrics": {
+        "top20Precision": 0.1333,
+        "top20Recall": 0,
+        "ndcg20": 0.8355,
+        "rejectRecall": 0,
+        "rejectPrecision": 0,
+        "pairwiseAccuracy": 0.5671,
+        "diversityScore": 0.2
+      },
+      "outputHash": "7f0dade5e37debd2242f70672388c24947fa56260f5e58b5986db16d7e48532d"
+    }
+  },
+  "metricDeltasFromPhase3": {
+    "train": {
+      "top20Precision": 0.01,
+      "top20Recall": 0,
+      "ndcg20": -0.0093,
+      "rejectRecall": 0,
+      "rejectPrecision": 0,
+      "pairwiseAccuracy": 0.013,
+      "diversityScore": 0
+    },
+    "validation": {
+      "top20Precision": 0,
+      "top20Recall": 0,
+      "ndcg20": 0.0071,
+      "rejectRecall": 0,
+      "rejectPrecision": 0,
+      "pairwiseAccuracy": 0.0397,
+      "diversityScore": 0
+    }
+  },
+  "gates": {
+    "train": {
+      "passed": false,
+      "regressions": [
+        "ndcg20"
+      ],
+      "improvements": [
+        "top20Precision",
+        "pairwiseAccuracy"
+      ]
+    },
+    "validation": {
+      "passed": true,
+      "regressions": [],
+      "improvements": [
+        "ndcg20",
+        "pairwiseAccuracy"
+      ]
+    }
+  },
+  "selectionPolicy": "train 用于尺度调参；validation 七项不退化且至少一项核心指标改善；train 的 Reject Recall/Precision 不得退化。",
+  "trainSafetyRegressions": [],
+  "generationDiagnostics": [
+    {
+      "id": "balanced-chen",
+      "resultCount": 20,
+      "requestedResultCount": 20,
+      "fulfilledResultLimit": true,
+      "uniqueFirstCharacterCount": 16,
+      "uniqueSecondCharacterCount": 13,
+      "uniqueElementPairCount": 1,
+      "resultSignature": "1e45e27a892008bfb9f36d2e23a774ff19a034a944b10edf9d485bdb5335f054",
+      "deterministic": true,
+      "phase3ResultCount": 6
+    },
+    {
+      "id": "scholarly-li",
+      "resultCount": 20,
+      "requestedResultCount": 20,
+      "fulfilledResultLimit": true,
+      "uniqueFirstCharacterCount": 18,
+      "uniqueSecondCharacterCount": 15,
+      "uniqueElementPairCount": 1,
+      "resultSignature": "570a7343c60a611121c897943af8f451576c2c37bb87dbb18af8056a9a86fda2",
+      "deterministic": true,
+      "phase3ResultCount": 6
+    },
+    {
+      "id": "warm-wang",
+      "resultCount": 20,
+      "requestedResultCount": 20,
+      "fulfilledResultLimit": true,
+      "uniqueFirstCharacterCount": 17,
+      "uniqueSecondCharacterCount": 13,
+      "uniqueElementPairCount": 1,
+      "resultSignature": "d388621b0113ec7af6b1d8c61880f1ba7c4dd77021c3519afe5be9a65a036cdd",
+      "deterministic": true,
+      "phase3ResultCount": 11
+    },
+    {
+      "id": "classic-zhang",
+      "resultCount": 20,
+      "requestedResultCount": 20,
+      "fulfilledResultLimit": true,
+      "uniqueFirstCharacterCount": 18,
+      "uniqueSecondCharacterCount": 15,
+      "uniqueElementPairCount": 1,
+      "resultSignature": "6ac8ee86d0cd1006e9742fe9305160c6d1287e227252a8263f2340a8633050f3",
+      "deterministic": true,
+      "phase3ResultCount": 12
+    },
+    {
+      "id": "minimal-lin",
+      "resultCount": 20,
+      "requestedResultCount": 20,
+      "fulfilledResultLimit": true,
+      "uniqueFirstCharacterCount": 15,
+      "uniqueSecondCharacterCount": 18,
+      "uniqueElementPairCount": 1,
+      "resultSignature": "406bba8b48d62af5424fd1c65508d1b5514d5c273a3bb0156cc0b633695e91a4",
+      "deterministic": true,
+      "phase3ResultCount": 18
+    }
+  ],
+  "generationGatePassed": true,
+  "selected": true
+}

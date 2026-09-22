@@ -1,4 +1,5 @@
 import { NAMING_RETRIEVAL } from '../../../config/namingRetrieval';
+import { FEATURES } from '../../../config/featureFlags';
 import { GENERATOR_LIMITS } from '../../../config/namingScore';
 import type { ClassicWork } from '../../../types';
 import type { GenerateNamesOptions } from '../nameGenerator';
@@ -9,6 +10,7 @@ export interface NamingRetrievalConfig {
   targetCharacterCount?: number;
   legacyFloorCount?: number;
   beamWidthPerFirst?: number;
+  rankingModel?: 'v2' | 'v3';
 }
 
 export interface NamingRetrievalDiagnostics {
@@ -123,6 +125,7 @@ export function generateNamesV3WithDiagnostics(
     limit,
     beamWidthPerFirst:
       config.beamWidthPerFirst ?? NAMING_RETRIEVAL.beamWidthPerFirst,
+    rankingModel: config.rankingModel ?? 'v2',
   });
 
   return {
@@ -145,5 +148,7 @@ export function generateNamesV3WithDiagnostics(
 }
 
 export function generateNamesV3(options: GenerateNamesOptions) {
-  return generateNamesV3WithDiagnostics(options).names;
+  return generateNamesV3WithDiagnostics(options, {
+    rankingModel: FEATURES.benchmarkModel ? 'v3' : 'v2',
+  }).names;
 }

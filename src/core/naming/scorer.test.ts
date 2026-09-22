@@ -5,9 +5,10 @@ import type {
   HomophoneAssessment,
   NamingCharacter,
   PhoneticAssessment,
+  SemanticPairAssessment,
 } from '../../types';
 import { NAMING_SCORE_WEIGHTS } from '../../config/namingScore';
-import { scoreName } from './scorer';
+import { scoreName, scoreNameV3 } from './scorer';
 
 const characters: [NamingCharacter, NamingCharacter] = [
   {
@@ -129,5 +130,41 @@ describe('scoreName', () => {
     expect(withClassic.scoreBreakdown.classic).toBe(100);
     expect(withClassic.score - withoutClassic.score).toBe(15);
     expect(withClassic.scoreExplanations.classic).toContain(classic.display);
+  });
+
+  it('V3 在保持总权重不变时把语义角色关系计入现代审美', () => {
+    const semanticBase: SemanticPairAssessment = {
+      score: 80,
+      natural: true,
+      completeImage: true,
+      styleConsistency: true,
+      overlyPopular: false,
+      overlyWebNovel: false,
+      nameLike: true,
+      notes: ['测试语义角色。'],
+      semanticRoles: [['plant'], ['water']],
+    };
+    const coherent = scoreNameV3({
+      characters,
+      tendencies,
+      phonetic,
+      homophone,
+      surnameStrokes: [7],
+      semantic: { ...semanticBase, roleRelation: 'coherent' },
+    });
+    const fragment = scoreNameV3({
+      characters,
+      tendencies,
+      phonetic,
+      homophone,
+      surnameStrokes: [7],
+      semantic: { ...semanticBase, roleRelation: 'fragment' },
+    });
+
+    expect(coherent.scoreBreakdown.modern).toBeGreaterThan(
+      fragment.scoreBreakdown.modern ?? 0,
+    );
+    expect(coherent.score).toBeGreaterThan(fragment.score);
+    expect(Object.values(NAMING_SCORE_WEIGHTS).reduce((sum, value) => sum + value, 0)).toBe(1);
   });
 });

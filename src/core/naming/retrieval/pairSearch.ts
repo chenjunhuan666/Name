@@ -1,4 +1,7 @@
-import { GENERATOR_LIMITS } from '../../../config/namingScore';
+import {
+  GENERATOR_LIMITS,
+  V3_DIVERSITY_LIMITS,
+} from '../../../config/namingScore';
 import type {
   CharacterPronunciation,
   ClassicReference,
@@ -14,8 +17,8 @@ import { passesHomophoneFilter } from '../filters/homophoneFilter';
 import { passesPairFilter } from '../filters/pairFilter';
 import { assessHomophone } from '../homophone';
 import { assessPhonetics } from '../phonetic';
-import { scoreName } from '../scorer';
-import { assessSemanticPair } from '../semanticPair';
+import { scoreName, scoreNameV3 } from '../scorer';
+import { assessSemanticPair, assessSemanticPairV3 } from '../semanticPair';
 import { scoreNamingCharacter } from './buckets';
 
 export interface PairSearchOptions {
@@ -27,6 +30,7 @@ export interface PairSearchOptions {
   preference?: NamingPreference;
   limit: number;
   beamWidthPerFirst: number;
+  rankingModel?: 'v2' | 'v3';
 }
 
 export interface PairSearchResult {
@@ -118,10 +122,13 @@ function buildGeneratedName(
     surnameStrokes: number[];
     hasCompleteSurnamePronunciation: boolean;
     tendencies?: ElementTendency[];
+    rankingModel: 'v2' | 'v3';
   },
 ): GeneratedName | undefined {
   const { first, second, classic } = candidate;
-  const semanticAssessment = assessSemanticPair(first, second);
+  const semanticAssessment = context.rankingModel === 'v3'
+    ? assessSemanticPairV3(first, second)
+    : assessSemanticPair(first, second);
   const givenName = first.char + second.char;
   const givenPinyin = [first.pinyin, second.pinyin];
   const homophoneAssessment = assessHomophone(
@@ -144,7 +151,7 @@ function buildGeneratedName(
       '姓氏读音未完整收录，音律分仅基于已知读音与名字两字。',
     );
   }
-  const scoring = scoreName({
+  const scoring = (context.rankingModel === 'v3' ? scoreNameV3 : scoreName)({
     characters: [first, second],
     tendencies: context.tendencies,
     phonetic: phoneticAssessment,
@@ -197,6 +204,7 @@ export function searchNamePairs({
   preference,
   limit,
   beamWidthPerFirst,
+  rankingModel = 'v2',
 }: PairSearchOptions): PairSearchResult {
   const normalizedSurname = surname.trim();
   const safeBeamWidth = Math.max(1, Math.floor(beamWidthPerFirst));
@@ -220,7 +228,9 @@ export function searchNamePairs({
     const perFirst: BeamCandidate[] = [];
     for (const second of characters) {
       consideredPairCount += 1;
-      const semantic = assessSemanticPair(first, second);
+      const semantic = rankingModel === 'v3'
+        ? assessSemanticPairV3(first, second)
+        : assessSemanticPair(first, second);
       if (!passesPairFilter(first, second, semantic, preference)) {
         continue;
       }
@@ -265,6 +275,7 @@ export function searchNamePairs({
       surnameStrokes,
       hasCompleteSurnamePronunciation,
       tendencies,
+      rankingModel,
     });
     if (name) {
       generated.push(name);
@@ -279,7 +290,11 @@ export function searchNamePairs({
 
   const sorted = generated.sort(compareNames).slice(0, retainedCapacity);
   return {
-    names: rerankForDiversity(sorted, limit),
+    names: rerankForDiversity(
+      sorted,
+      limit,
+      rankingModel === 'v3' ? V3_DIVERSITY_LIMITS : undefined,
+    ),
     consideredPairCount,
     beamCandidateCount: beam.length,
     fullScoreCandidateCount: beam.length,
