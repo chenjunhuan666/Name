@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "phase": "Phase 6",
+  "admission": {
+    "newExternalSources": 0,
+    "newCandidates": 0,
+    "approved": 0,
+    "rejected": 0,
+    "pending": 0,
+    "note": "本轮没有引入新来源或候选；目标规模是方向性目标，不以配额降低门槛。"
+  },
+  "licenseRegistry": {
+    "path": "docs/releases/phase6-source-license-registry.json",
+    "sha256": "e4ccf0b87e5cebc758017be6897c6d2cdbd8b6b225bd133e51376abbd7039632",
+    "runtimeSourceCount": 8,
+    "excludedSourceCount": 1
+  },
+  "reviewClosures": [
+    {
+      "path": "docs/recommended-character-review-batch-01.json",
+      "total": 83,
+      "approved": 20,
+      "rejected": 63,
+      "pending": 0
+    },
+    {
+      "path": "docs/recommended-character-review-batch-02-neutral.json",
+      "total": 988,
+      "approved": 170,
+      "rejected": 818,
+      "pending": 0
+    },
+    {
+      "path": "docs/recommended-character-review-batch-03-second-source.json",
+      "total": 204,
+      "approved": 204,
+      "rejected": 0,
+      "pending": 0
+    },
+    {
+      "path": "docs/recommended-character-third-source-audit-2026-09-12.json",
+      "total": 846,
+      "approved": 175,
+      "rejected": 671,
+      "pending": 0
+    },
+    {
+      "path": "docs/recommended-character-third-source-supplement-2026-09-13.json",
+      "total": 426,
+      "approved": 158,
+      "rejected": 268,
+      "pending": 0
+    }
+  ],
+  "characters": {
+    "artifact": {
+      "path": "public/data/characters/recommended-v2.json",
+      "sha256": "b4cd2246b659796c3e1e7f8c78de7daad0d87c4077b219070c7c87316b1fc92b"
+    },
+    "totalRecords": 2161,
+    "suitable": 2160,
+    "unsuitable": 1,
+    "recommendationTiers": {
+      "core": 492,
+      "extended": 1029,
+      "distinctive": 639
+    },
+    "duplicateCharacters": 0,
+    "protectedRejectOverlaps": 0
+  },
+  "classics": {
+    "works": 962,
+    "taggedWorks": 962,
+    "packageArtifacts": [
+      {
+        "path": "public/data/classics/core/shijing.json",
+        "sha256": "29878045952b9a557ad282fd86f7deff5f52292336d367525104a2fc08d33ba3"
+      },
+      {
+        "path": "public/data/classics/core/chuci.json",
+        "sha256": "088adbff46a86ad755ae832d31178781374468e310532da380f1c0b8e9894576"
+      },
+      {
+        "path": "public/data/classics/core/lunyu.json",
+        "sha256": "75b9a0e256a30e64f20435a32150340c370a65fb8d5492bd407a179404709b9e"
+      },
+      {
+        "path": "public/data/classics/core/mengzi.json",
+        "sha256": "65cc9c24d5d766247908755901cc89829e545916e2dd19c0cd1b133d9bb34eb7"
+      },
+      {
+        "path": "public/data/classics/core/zhouyi.json",
+        "sha256": "c054fe69e2e329389883c2ecdba0facb8210d6e7f45abfcc8d052c0a0725f327"
+      },
+      {
+        "path": "public/data/classics/core/zhuangzi.json",
+        "sha256": "d311ff89c19d30dd651fd0bc2834cd69482a51e8258acd3b90da1e4253b6b293"
+      },
+      {
+        "path": "public/data/classics/tang/tang.json",
+        "sha256": "7324c85e02405be3cee11ea29a5c3e99ebbc19cb6fca499edb147db23717a499"
+      },
+      {
+        "path": "public/data/classics/song/songci.json",
+        "sha256": "c713cc9e32cf0131ab48932a9bf1fb92d5d5e9047a837d064a217a76bda70c9d"
+      }
+    ],
+    "legacyBasicArtifact": {
+      "path": "public/data/classics/basic.json",
+      "sha256": "66bb17aa3c4ed3f2ae52e9ee1fc0de8fe7a47fa082c3e910be3de2cd3b27924c"
+    },
+    "indexArtifact": {
+      "path": "public/data/classics/index.json",
+      "sha256": "f0afff166febac838e4ed5d8a2be42b767d98ff0be7a47e84e61a0534d391dc1"
+    },
+    "characterSourceArtifact": {
+      "path": "public/data/classics/character-sources.json",
+      "sha256": "3ed6bacd998a7435e9f454f35d35f635991532cc752f83e96b5c180457cc56c1"
+    },
+    "characterSourceEntries": 1879,
+    "uncoveredSuitableCharacters": 281,
+    "abcReferenceLevelsUnchanged": true,
+    "dLevelWholeNameClaimAllowed": false
+  }
+}

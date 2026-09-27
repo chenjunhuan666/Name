@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "phase": "Phase 6",
+  "policy": {
+    "newExternalSources": 0,
+    "runtimeRequiresVerifiedDerivativePublication": true,
+    "reviewOnlyDataMustNotBeCopiedIntoRuntime": true,
+    "noncommercialDataMustNotBePublishedOrUsedAtRuntime": true
+  },
+  "sources": [
+    {
+      "id": "standard-chars-lqfeng",
+      "project": "lqfeng/ChineseCharacters",
+      "usage": "runtime",
+      "license": "Apache-2.0",
+      "licenseClass": "permissive",
+      "derivativePublication": "allowed",
+      "obligations": ["retain-license", "retain-notices", "mark-changes"]
+    },
+    {
+      "id": "standard-chars-jaywcjlove",
+      "project": "jaywcjlove/table-of-general-standard-chinese-characters",
+      "usage": "runtime",
+      "license": "MIT",
+      "licenseClass": "permissive",
+      "derivativePublication": "allowed",
+      "obligations": ["retain-license", "retain-copyright"]
+    },
+    {
+      "id": "ai-chinese-naming",
+      "project": "SpriteSix/ai-chinese-naming",
+      "usage": "runtime",
+      "license": "MIT",
+      "licenseClass": "permissive",
+      "derivativePublication": "allowed",
+      "obligations": ["retain-license", "retain-copyright"]
+    },
+    {
+      "id": "chinese-names-corpus",
+      "project": "wainshine/Chinese-Names-Corpus",
+      "commit": "47d4af8d816f6212787ddfc49173cac3b994b58d",
+      "usage": "derived-runtime-evidence",
+      "license": "Apache-2.0",
+      "licenseClass": "permissive",
+      "derivativePublication": "allowed",
+      "obligations": ["retain-license", "retain-notices", "mark-changes"]
+    },
+    {
+      "id": "kangxi-mcp",
+      "project": "shunshi-ai/kangxi-mcp",
+      "commit": "fad0bdf7c34b0ec555edbb2af91db737825a4beb",
+      "usage": "derived-runtime-evidence",
+      "license": "MIT",
+      "licenseClass": "permissive",
+      "derivativePublication": "allowed",
+      "obligations": ["retain-license", "retain-copyright"]
+    },
+    {
+      "id": "chinese-poetry",
+      "project": "chinese-poetry/chinese-poetry",
+      "commit": "b8594f81a89752241442f2ce267d6f66f96704ee",
+      "usage": "runtime",
+      "license": "MIT",
+      "licenseClass": "permissive",
+      "derivativePublication": "allowed",
+      "obligations": ["retain-license", "retain-copyright"]
+    },
+    {
+      "id": "chinese-classical-corpus-output",
+      "project": "gujilab/chinese-classical-corpus",
+      "commit": "09a6873e46760f20027e20bf48814f5c5cc05d66",
+      "usage": "runtime",
+      "license": "CC0-1.0",
+      "licenseClass": "public-domain-dedication",
+      "derivativePublication": "allowed",
+      "obligations": []
+    },
+    {
+      "id": "kanripo-zhuangzi",
+      "project": "kanripo/KR5c0126",
+      "commit": "abb9cd323dfd9520894b56b3b8ba2ec0ea50554f",
+      "usage": "runtime",
+      "license": "CC-BY-SA-4.0",
+      "licenseClass": "copyleft-content",
+      "derivativePublication": "allowed-with-share-alike",
+      "obligations": ["attribution", "link-license", "indicate-changes", "share-alike"]
+    },
+    {
+      "id": "unicode-unihan",
+      "project": "Unicode Unihan 17.0.0",
+      "usage": "review-only",
+      "license": "Unicode-3.0",
+      "licenseClass": "review-only",
+      "derivativePublication": "not-copied",
+      "obligations": ["do-not-copy-review-material"]
+    },
+    {
+      "id": "cc-cedict",
+      "project": "CC-CEDICT",
+      "usage": "review-only",
+      "license": "CC-BY-SA-4.0",
+      "licenseClass": "review-only",
+      "derivativePublication": "not-copied",
+      "obligations": ["do-not-copy-review-material"]
+    },
+    {
+      "id": "chinese-names-research",
+      "project": "psychbruce/ChineseNames",
+      "usage": "excluded",
+      "license": "research-noncommercial",
+      "licenseClass": "noncommercial",
+      "derivativePublication": "prohibited",
+      "obligations": ["exclude-from-runtime", "exclude-from-derived-release-data"]
+    }
+  ]
+}

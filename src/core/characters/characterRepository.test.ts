@@ -281,6 +281,28 @@ const suitabilityReview = JSON.parse(
 };
 
 describe('V2 两层汉字库', () => {
+  it('Phase 6 将全部启用字分入 Core、Extended、Distinctive 且加载时保留层级', async () => {
+    const enabled = recommended.filter(({ naming }) => naming.suitable);
+    const tierCounts = Object.fromEntries(
+      ['core', 'extended', 'distinctive'].map((tier) => [
+        tier,
+        enabled.filter(({ naming }) => naming.tier === tier).length,
+      ]),
+    );
+
+    expect(tierCounts).toEqual({ core: 492, extended: 1029, distinctive: 639 });
+    expect(enabled.every(({ naming }) => naming.tier)).toBe(true);
+
+    vi.stubGlobal('fetch', vi.fn().mockResolvedValue({ ok: true, json: async () => recommended }));
+    try {
+      const loaded = await loadCharacterLibrary();
+      expect(loaded.find(({ char }) => char === enabled[0].char)?.recommendationTier)
+        .toBe(enabled[0].naming.tier);
+    } finally {
+      vi.unstubAllGlobals();
+    }
+  });
+
   it('预览筛选会排除用户选择的风格', () => {
     const characters = [
       {

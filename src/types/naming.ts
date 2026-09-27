@@ -28,6 +28,24 @@ export type NamingStyle =
   | '简约'
   | '中性';
 
+export type ClassicTheme =
+  | '品德'
+  | '志向'
+  | '智慧'
+  | '自然'
+  | '山水'
+  | '光明'
+  | '平和'
+  | '坚毅'
+  | '自由'
+  | '仁爱';
+
+export interface ClassicPhraseTag {
+  themes: ClassicTheme[];
+  styles: NamingStyle[];
+  suitability: number;
+}
+
 export interface NamingPreference {
   styles: NamingStyle[];
   excludeStyles?: NamingStyle[];
@@ -54,11 +72,23 @@ export interface ClassicWork {
   chapter?: string;
   lines: string[];
   display: string;
+  tags?: ClassicPhraseTag;
   imageryNames?: Array<{
     givenName: string;
     explanation: string;
     evidenceText?: string;
   }>;
+}
+
+export interface ClassicCharacterSource {
+  char: string;
+  workId: string;
+  source: ClassicSource;
+  display: string;
+  text: string;
+  themes: ClassicTheme[];
+  level: 'D';
+  use: 'character-only';
 }
 
 export interface ClassicReference {

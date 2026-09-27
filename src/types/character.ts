@@ -2,6 +2,7 @@ import type { FiveElement } from './bazi';
 import type { ClassicReference, Gender } from './naming';
 
 export type CharacterGender = Gender | 'neutral';
+export type CharacterRecommendationTier = 'core' | 'extended' | 'distinctive';
 
 export interface CharacterPronunciation {
   char: string;
@@ -30,6 +31,7 @@ export interface NamingCharacter {
   meaning: string;
   gender: CharacterGender;
   rarity: number;
+  recommendationTier?: CharacterRecommendationTier;
   styleTags: string[];
   negative?: boolean;
   classics?: ClassicReference[];
@@ -58,6 +60,7 @@ export interface NamingCharacterV2 {
     suitable: boolean;
     usageScore: number;
     rarity: number;
+    tier?: CharacterRecommendationTier;
     gender: CharacterGender;
     styleTags: string[];
   };

@@ -144,3 +144,27 @@
 | 默认状态 | `FEATURES.advancedExplanation=true`；`benchmarkModel=false`、`dynamicRetrieval=false`，生产仍使用 V2 检索与评分。Phase 4 的默认准入拒绝结论未被 Phase 5 绕过。 |
 
 结论：Phase 5 的 Step 32～36 已全部执行并通过门禁，专业解释已启用。解释层是只读投影，不构成新的命理判断，也不改变 Phase 4 被拒绝的排名模型准入结论；回退只需关闭 `advancedExplanation`，无需迁移或重算用户数据。
+
+## Phase 6：推荐库与典籍文化层
+
+| 项目 | 必填内容 |
+|---|---|
+| 新增文件 | `scripts/build-phase6-data.mjs`：许可证、审校闭合、分层、典籍标签、D 级单字来源与稳定重建统一门禁；`phase6-source-license-registry.json`：机器可读来源与衍生发布权登记；`character-sources.json`：D 级单字原文证据；`phase6-data-manifest.json`：计数、哈希与审计结论。 |
+| 修改文件 | 推荐字 V2 记录增加 `naming.tier`；典籍 962 篇增加 `tags`；典籍索引登记标签 schema 和 D 级独立资源；TypeScript 类型与 repository 增加分层字段及 D 级独立加载入口；README、来源声明、命令与测试同步更新。 |
+| 数据契约 | Core = `usageScore >= 70 && rarity <= 0.25`；Extended = `usageScore >= 50 && rarity <= 0.5`；其余已批准适名字符为 Distinctive。分层只描述推荐使用场景，不改变 `suitable` 决策。典籍主题从固定词表确定，未命中时使用书系级回退主题；适名度是检索元数据，不是人工审美结论。 |
+| 兼容策略 | 2,160 个既有启用字不增不减；生产 V2 检索、评分和 Phase 4 开关不变。A/B/C 仍专用于双字整名关联；D 固定为 `character-only`，类型、文件和加载入口均与双字出处分离。 |
+| 验收 | 来源衍生发布权机器门禁通过；所有既有审校批次 `pending=0`；受保护的首批拒绝与最终补充拒绝不回流；2,160 字全部且唯一分层；962 篇全部有标签；D 级每条为单个汉字且原文包含该字；生成脚本 `--check` 字节级无漂移；完整 test/lint/typecheck/build/notices 通过。 |
+| 回退 | 删除 `naming.tier`、典籍 `tags`、D 级登记表及其独立加载入口即可回到 Phase 5 数据；不涉及用户存储迁移，也不改变现有姓名分数和排序。 |
+
+### Phase 6 执行结果（2026-09-27）
+
+| 验收项 | 结果 |
+|---|---|
+| 来源与许可证 | 本轮新增外部来源 0。现有运行时或衍生证据来源全部登记固定许可证与再发布义务；研究性非商业数据继续标记为 excluded，Unicode/CC-CEDICT 继续限于 review-only，不复制进新增运行时产物。 |
+| 候选闭合 | 既有五个审校/审计批次均为 `pending=0`；本轮候选为 0、批准 0、拒绝 0。2,500～3,000 仅是方向目标，不以数量配额重开拒绝或降低音义、规范字、许可证门槛。 |
+| 推荐分层 | 2,160 个启用字全部分层：Core 492、Extended 1,029、Distinctive 639；唯一性和规范字校验通过，禁用记录不获得推荐层级。 |
+| 典籍标签 | 八类 962 篇全部写入主题、风格和 0～100 适名度元数据；标签用于文化检索，不改变 A/B/C 出处判定与姓名评分。 |
+| D 级单字来源 | 1,879 个启用字可追溯到至少一条精确原文；其余 281 字不伪造出处。D 级结构固定 `level=D`、`use=character-only`，不含 `givenName`，不进入双字 A/B/C 索引。 |
+| 稳定性与回归 | `data:build:phase6` 生成固定 JSON，`data:check:phase6` 做字节级复验；阶段测试覆盖分层边界、许可证拒绝、拒绝项回流、标签完整性和 D 级隔离。完整工程门禁结果记录于 `phase6-readiness.json`。 |
+
+结论：Phase 6 的 Step 37～41 已全部执行。项目在不新增来源、不降低质量阈值、不改变生产评分排序的前提下完成推荐层分层和典籍文化层升级；运行库保持 2,160 个启用字，低于方向性数量目标不构成阶段未完成。

@@ -54,7 +54,9 @@
     "data:audit-third-source-v2": "node scripts/audit-third-source-character-expansion.mjs",
     "data:audit-third-source-supplement-v2": "node scripts/audit-third-source-supplemental-review.mjs",
     "data:import-approved-characters-v2": "node scripts/import-approved-character-reviews.mjs",
-    "data:build:classics-v2": "node scripts/build-classic-library-v2.mjs"
+    "data:build:classics-v2": "node scripts/build-classic-library-v2.mjs",
+    "data:build:phase6": "node scripts/build-phase6-data.mjs",
+    "data:check:phase6": "node scripts/build-phase6-data.mjs --check"
   },
   "dependencies": {
     "lunar-typescript": "1.8.6",

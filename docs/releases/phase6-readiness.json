@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "phase": "Phase 6",
+  "status": "completed",
+  "completedAt": "2026-09-27",
+  "steps": {
+    "37": "completed: no new external sources; existing source licenses and derivative-publication rights are registered and gated",
+    "38": "completed: all existing review rounds are closed; this round admitted zero new candidates and imported zero records",
+    "39": "completed: 2160 enabled characters assigned to core, extended or distinctive",
+    "40": "completed: 962 classic works tagged with themes, styles and suitability",
+    "41": "completed: 1879 D-level single-character sources published separately from A/B/C whole-name references"
+  },
+  "data": {
+    "enabledCharacters": 2160,
+    "tiers": {
+      "core": 492,
+      "extended": 1029,
+      "distinctive": 639
+    },
+    "classicWorks": 962,
+    "taggedClassicWorks": 962,
+    "dLevelCharacterSources": 1879,
+    "uncoveredCharacters": 281,
+    "newExternalSources": 0,
+    "newCandidates": 0,
+    "pendingReviews": 0
+  },
+  "verification": {
+    "phase6StableRebuild": "passed",
+    "licenseAudit": "passed",
+    "protectedHardRejectAudit": "passed",
+    "tests": {
+      "files": 38,
+      "tests": 192,
+      "status": "passed"
+    },
+    "lint": "passed",
+    "typecheck": "passed",
+    "productionBuild": "passed",
+    "thirdPartyNotices": "passed",
+    "v2ArtifactManifest": {
+      "artifacts": 25,
+      "status": "passed"
+    },
+    "gitDiffCheck": "passed-with-line-ending-warnings-only"
+  },
+  "boundaries": {
+    "directionalSizeTargetIsBlocking": false,
+    "quotaBasedApprovalUsed": false,
+    "productionScoringOrRankingChanged": false,
+    "abcReferenceRulesChanged": false,
+    "dLevelMayClaimWholeNameOrigin": false,
+    "browserRuntimeCheckRequired": false
+  }
+}

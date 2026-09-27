@@ -6,6 +6,7 @@ import type { ClassicWork } from '../../types';
 import {
   createClassicPhraseIndex,
   findClassicReference,
+  loadClassicCharacterSources,
   loadClassicLibrary,
   loadClassicLibraryWithDiagnostics,
   mergeClassicImageryRegistry,
@@ -36,8 +37,30 @@ const v2Index = JSON.parse(
 ) as {
   packages: Array<{
     source: string;
+    path: string;
     workCount: number;
     available: boolean;
+  }>;
+};
+const phase6Works = v2Index.packages.flatMap(({ path }) =>
+  JSON.parse(
+    readFileSync(new URL(`../../../public/data/classics/${path}`, import.meta.url), 'utf8'),
+  ) as ClassicWork[],
+);
+const characterSourceRegistry = JSON.parse(
+  readFileSync(
+    new URL('../../../public/data/classics/character-sources.json', import.meta.url),
+    'utf8',
+  ),
+) as {
+  level: 'D';
+  use: 'character-only';
+  entries: Array<{
+    char: string;
+    text: string;
+    level: 'D';
+    use: 'character-only';
+    givenName?: string;
   }>;
 };
 const zhouyiWorks = JSON.parse(
@@ -208,6 +231,69 @@ describe('V2 补充典籍语料', () => {
         ),
       ),
     ).toBe(true);
+  });
+});
+
+describe('Phase 6 典籍标签与 D 级单字来源', () => {
+  it('为全部 962 篇典籍提供可检索的主题、风格与适名度标签', () => {
+    expect(phase6Works).toHaveLength(962);
+    phase6Works.forEach(({ tags }) => {
+      expect(tags?.themes.length).toBeGreaterThan(0);
+      expect(tags?.styles.length).toBeGreaterThan(0);
+      expect(tags?.suitability).toBeGreaterThanOrEqual(0);
+      expect(tags?.suitability).toBeLessThanOrEqual(100);
+    });
+  });
+
+  it('D 级登记表只表达单字原文出现，不进入双字 A/B/C 出处结构', () => {
+    expect(characterSourceRegistry).toMatchObject({
+      level: 'D',
+      use: 'character-only',
+    });
+    expect(characterSourceRegistry.entries).toHaveLength(1879);
+    expect(
+      characterSourceRegistry.entries.every(
+        ({ char, text, level, use, givenName }) =>
+          Array.from(char).length === 1 &&
+          text.includes(char) &&
+          level === 'D' &&
+          use === 'character-only' &&
+          givenName === undefined,
+      ),
+    ).toBe(true);
+    expect(
+      [...createClassicPhraseIndex(sampleWorks).values()].every(({ level }) =>
+        ['A', 'B', 'C'].includes(level ?? ''),
+      ),
+    ).toBe(true);
+  });
+
+  it('按独立入口加载 D 级登记表并校验单字证据', async () => {
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(async (input: string | URL | Request) => {
+        const requestPath = String(input);
+        return {
+          ok: true,
+          status: 200,
+          json: async () =>
+            requestPath.endsWith('index.json')
+              ? {
+                  schemaVersion: 3,
+                  packages: [],
+                  characterSourceRegistry: {
+                    path: 'character-sources.json',
+                    entryCount: characterSourceRegistry.entries.length,
+                    level: 'D',
+                    use: 'character-only',
+                  },
+                }
+              : characterSourceRegistry,
+        };
+      }),
+    );
+
+    await expect(loadClassicCharacterSources()).resolves.toHaveLength(1879);
   });
 });
 

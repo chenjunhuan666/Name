@@ -338,3 +338,11 @@ SOFTWARE.
 | 商业使用 | 允许，但再分发该转换数据必须保留署名、许可链接并遵守相同方式共享条件 |
 
 导入脚本保留 33 篇原文与繁体用字，只移除 Kanripo 的页码、数字化来源和 Org 标记，不自动简繁转换，不把该文本描述为唯一校勘版本。`public/data/classics/core/zhuangzi.json` 是 Name 对上述来源做过格式归一和元数据清理的转换版，本转换数据按 CC BY-SA 4.0 提供，再分发时须保留 Kanseki Repository/Kanripo 署名、本变更说明、许可链接并以相同方式共享。许可说明见 https://www.kanripo.org/catalog 和 https://creativecommons.org/licenses/by-sa/4.0/ 。
+
+## Phase 6 衍生元数据与许可证门禁
+
+Phase 6 没有引入新的外部数据源。`docs/releases/phase6-source-license-registry.json` 将本文件既有来源归一为机器可读的 runtime、derived-runtime-evidence、review-only 与 excluded 四类，并在生成前拒绝许可证未确认、仅限非商业使用或不允许衍生发布的运行时来源。
+
+`scripts/build-phase6-data.mjs` 对既有推荐字的 `usageScore` 与 `rarity` 计算 Core / Extended / Distinctive 推荐层；该分层不改变既有批准决定。脚本还为既有 962 篇典籍生成项目自有的主题、风格和适名度检索元数据，并从已发布原文中生成 D 级单字出现证据。D 级只表示某个单字在精确原文中出现，禁止作为双字整名出处；A/B/C 关联规则未改变。
+
+含 Kanripo《庄子》原文或由其转换得到的标签、D 级证据继续按上节所述保留署名、变更说明、许可链接和 CC BY-SA 4.0 相同方式共享义务。`ChineseNames` 非商业研究数据仍被排除；Unicode Unihan 与 CC-CEDICT 在本阶段仍仅作审校证据，没有复制进新增运行时数据。

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "imageryRegistry": {
     "path": "manual-imagery.json",
     "entryCount": 2,
@@ -86,5 +86,12 @@
       "available": true,
       "load": "on-demand"
     }
-  ]
+  ],
+  "tagSchemaVersion": 1,
+  "characterSourceRegistry": {
+    "path": "character-sources.json",
+    "entryCount": 1879,
+    "level": "D",
+    "use": "character-only"
+  }
 }

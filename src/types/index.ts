@@ -51,6 +51,7 @@ export type {
   CharacterElementInfo,
   CharacterGender,
   CharacterPronunciation,
+  CharacterRecommendationTier,
   NamingCharacter,
   NamingCharacterV2,
   StandardCharacterEntry,
@@ -63,7 +64,10 @@ export type {
 } from './explanation';
 export type {
   ClassicReference,
+  ClassicCharacterSource,
+  ClassicPhraseTag,
   ClassicSource,
+  ClassicTheme,
   ClassicWork,
   FavoriteNameRecord,
   GeneratedName,

@@ -1,4 +1,5 @@
 import type {
+  ClassicCharacterSource,
   ClassicReference,
   ClassicSource,
   ClassicWork,
@@ -18,13 +19,27 @@ interface ClassicPackage {
 }
 
 interface ClassicLibraryIndex {
-  schemaVersion: 2;
+  schemaVersion: 2 | 3;
   imageryRegistry?: {
     path: string;
     entryCount: number;
     reviewedAt: string;
   };
+  characterSourceRegistry?: {
+    path: string;
+    entryCount: number;
+    level: 'D';
+    use: 'character-only';
+  };
   packages: ClassicPackage[];
+}
+
+interface ClassicCharacterSourceRegistry {
+  schemaVersion: 1;
+  policy: string;
+  level: 'D';
+  use: 'character-only';
+  entries: ClassicCharacterSource[];
 }
 
 interface ClassicImageryRegistry {
@@ -258,4 +273,34 @@ export async function loadClassicLibrary(
   sources?: ClassicSource[],
 ): Promise<ClassicWork[]> {
   return (await loadClassicLibraryWithDiagnostics(sources)).works;
+}
+
+export async function loadClassicCharacterSources(): Promise<
+  ClassicCharacterSource[]
+> {
+  const index = await fetchJson<ClassicLibraryIndex>('index.json', '典籍索引');
+  if (!index.characterSourceRegistry) {
+    return [];
+  }
+  const registry = await fetchJson<ClassicCharacterSourceRegistry>(
+    index.characterSourceRegistry.path,
+    'D 级单字文化来源登记表',
+  );
+  if (
+    !Array.isArray(registry.entries) ||
+    registry.entries.length !== index.characterSourceRegistry.entryCount ||
+    registry.level !== 'D' ||
+    registry.use !== 'character-only' ||
+    registry.entries.some(
+      ({ char, text, level, use }) =>
+        Array.from(char).length !== 1 ||
+        !/^\p{Script=Han}$/u.test(char) ||
+        !text.includes(char) ||
+        level !== 'D' ||
+        use !== 'character-only',
+    )
+  ) {
+    throw new Error('D 级单字文化来源登记表格式或数量异常');
+  }
+  return registry.entries;
 }

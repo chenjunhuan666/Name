@@ -131,6 +131,7 @@ export async function loadCharacterLibrary(): Promise<NamingCharacter[]> {
         character.meanings.modern ?? character.meanings.classical ?? '释义待补充',
       gender: character.naming.gender,
       rarity: character.naming.rarity,
+      recommendationTier: character.naming.tier,
       styleTags: normalizeNamingStyles(character.naming.styleTags),
       negative: false,
     }));
