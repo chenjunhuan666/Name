@@ -20,6 +20,7 @@ import { scoreName } from './scorer';
 import { assessSemanticPair } from './semanticPair';
 import { rankNamingCharacters } from './retrieval/buckets';
 import { generateNamesV3 } from './retrieval';
+import { attachNameExplanations } from '../explanation';
 
 export { rankNamingCharacters } from './retrieval/buckets';
 
@@ -229,7 +230,8 @@ export function generateNamesV2({
 }
 
 export function generateNames(options: GenerateNamesOptions): GeneratedName[] {
-  return FEATURES.dynamicRetrieval
+  const names = FEATURES.dynamicRetrieval
     ? generateNamesV3(options)
     : generateNamesV2(options);
+  return attachNameExplanations(names, FEATURES.advancedExplanation);
 }

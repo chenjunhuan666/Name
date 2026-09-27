@@ -119,3 +119,28 @@
 | 默认切换 | 正式质量门禁拒绝；`FEATURES.benchmarkModel=false`、`FEATURES.dynamicRetrieval=false`，`NAMING_MODEL_VERSION` 不变，生产继续使用 V2。holdout 报告检查命令只验证 SHA-256 和结论，不会重新执行评估。 |
 
 结论：Phase 4 的 Step 26～31 已全部执行，代码、独立审查、冻结与唯一一次正式验收均已完成；但默认切换未获准。不得依据已查看的 `benchmark-v2.holdout.json` 和 `ranking-v4.holdout.ai.json` 回调参数。未来如需继续争取准入，应进入新的开发轮次并按新版本协议建立新的独立 holdout。
+
+## Phase 5：专业解释
+
+| 项目 | 必填内容 |
+|---|---|
+| 新增文件 | `src/types/explanation.ts`：统一 `ExplanationItem` 与普通/专业解释集合；`src/core/explanation/`：规则来源归并、八字解释和姓名解释的纯函数；`src/components/ExplanationPanel.tsx`：只负责模式切换和结构化展示；解释契约与边界测试。 |
+| 修改文件 | `BaziAnalysis`、`GeneratedName` 增加可选解释集合；`analyzeBazi()` 在 `advancedExplanation` 开启时由 core 生成八字解释；公开姓名生成入口在开关开启时由 core 附加姓名解释；Analysis 与 NameDetail 页面用统一组件展示，关闭开关时保留原页面；样式、README 与本执行表同步更新。 |
+| 数据契约 | `ExplanationItem` 固定包含 `id/title/summary`，可选 `detail/ruleIds/references/level`；普通模式只给用户可读推荐依据和注意点，专业模式覆盖日主、月令、藏干、旺衰证据、调候、十神、干支关系、五行方向，以及姓名八项评分、组合语义、音律、谐音和真实典籍关联。 |
+| 兼容策略 | `explanations` 为可选字段，不提升 storage schema，不要求迁移旧收藏；旧记录缺少解释时由 core 按保存快照即时生成展示数据，不重算分数。`advancedExplanation=false` 时页面与生成输出保持 Phase 4/V2 兼容路径；旧页面 JSX 保留为回退路径。 |
+| 验收 | core 输出确定、ID 唯一、ruleId 均能解析来源；普通模式无术语堆叠，专业模式覆盖计划字段；解释不得输出性格、事业、婚姻、健康、吉凶或现实命运判断；开关关闭时分析与姓名排序/分数不变；开启后完整 test/lint/typecheck/build/notices、V2 baseline 与 Phase 4 报告完整性门禁通过。 |
+| 回退 | 将 `FEATURES.advancedExplanation` 设为 `false` 即恢复原 Analysis/NameDetail 展示；解释字段为附加只读数据，不参与旺衰、起名倾向、候选、评分、排序或持久化迁移，回退无需修改用户数据。 |
+
+### Phase 5 执行结果（2026-09-22）
+
+| 验收项 | 结果 |
+|---|---|
+| 统一解释契约 | 新增 `ExplanationItem` 与 `ExplanationBundle`，八字和姓名共用 `id/title/summary/detail/ruleIds/references/level` 结构；解释字段保持可选，不提升 storage schema。 |
+| 八字解释 | core 同时生成普通与专业解释。普通模式覆盖结构、调候、五行方向和使用边界；专业模式覆盖日主、月令、藏干、旺衰证据、调候、十神、干支关系、五行方向，并从正式规则表归并可解析的 ruleId 与参考来源。 |
+| 姓名解释 | 普通模式解释五行、组合意义、音律、普通话谐音、真实典籍关联和现实核验边界；专业模式逐项展示八项评分及组合语义。解释只读取已有姓名快照，不重新计算分数或排序。 |
+| 页面与回退 | Analysis 和 NameDetail 共用纯展示 `ExplanationPanel`，默认普通解释，可切换专业解释。`advancedExplanation=false` 时原十神、倾向、证据、音韵、谐音、评分和典籍页面仍可完整显示；旧收藏缺少解释时由 core 基于保存快照即时补齐展示数据。 |
+| 自动化门禁 | 开关关闭时 37 个测试文件、182 项测试通过；开启后 37 个测试文件、183 项测试通过。lint、typecheck、生产 build、notices、V2 manifest 25 工件、V2 生成确定性 hash、180/60/60 质量 baseline、Phase 4 开发报告和一次性 holdout 完整性检查均通过。 |
+| 运行时验收 | 在本地 Chromium 中完成手动四柱 → 八字普通/专业解释切换 → 姓名生成 → 姓名详情普通/专业解释切换；页面展示和模式状态正常，旧评分保持 `99.6` 示例值不变。 |
+| 默认状态 | `FEATURES.advancedExplanation=true`；`benchmarkModel=false`、`dynamicRetrieval=false`，生产仍使用 V2 检索与评分。Phase 4 的默认准入拒绝结论未被 Phase 5 绕过。 |
+
+结论：Phase 5 的 Step 32～36 已全部执行并通过门禁，专业解释已启用。解释层是只读投影，不构成新的命理判断，也不改变 Phase 4 被拒绝的排名模型准入结论；回退只需关闭 `advancedExplanation`，无需迁移或重算用户数据。

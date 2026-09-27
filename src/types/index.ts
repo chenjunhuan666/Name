@@ -57,6 +57,11 @@ export type {
   StandardCharacterLibrary,
 } from './character';
 export type {
+  ExplanationBundle,
+  ExplanationItem,
+  ExplanationLevel,
+} from './explanation';
+export type {
   ClassicReference,
   ClassicSource,
   ClassicWork,

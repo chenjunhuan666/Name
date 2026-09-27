@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "phase": 5,
+  "status": "complete-enabled",
+  "implemented": {
+    "sharedExplanationContract": true,
+    "baziCoreExplanation": true,
+    "nameCoreExplanation": true,
+    "ordinaryMode": true,
+    "professionalMode": true,
+    "sharedPresentationComponent": true,
+    "legacyPageFallbackRetained": true,
+    "legacyRecordDisplayFallback": true
+  },
+  "boundaries": {
+    "readOnlyProjection": true,
+    "changesStrength": false,
+    "changesNamingTendencies": false,
+    "changesCandidateSelection": false,
+    "changesScoreOrRanking": false,
+    "changesStorageSchema": false,
+    "outputsFateJudgments": false
+  },
+  "verification": {
+    "featureOffTestFiles": 37,
+    "featureOffTests": 182,
+    "featureOnTestFiles": 37,
+    "featureOnTests": 183,
+    "lintPassed": true,
+    "typecheckPassed": true,
+    "productionBuildPassed": true,
+    "noticesPassed": true,
+    "v2ArtifactCount": 25,
+    "v2GenerationHash": "5522be82495cb33be2e1cc093410ce50507e146cb307d0f7c30a0c83c0fdca5b",
+    "v2QualitySplits": {
+      "train": 180,
+      "validation": 60,
+      "holdout": 60
+    },
+    "phase4DevelopmentReportPassed": true,
+    "phase4HoldoutIntegrityPassed": true,
+    "phase4HoldoutReexecuted": false,
+    "chromiumInteractionPassed": true
+  },
+  "advancedExplanationEnabled": true,
+  "benchmarkModelEnabled": false,
+  "dynamicRetrievalEnabled": false,
+  "productionScoringPath": "V2",
+  "rollback": "Set FEATURES.advancedExplanation to false. No storage migration or score recomputation is required.",
+  "evidenceBoundary": "Phase 5 exposes existing deterministic analysis and scoring evidence through ordinary and professional read-only explanations. It does not override the rejected Phase 4 ranking-model admission or validate real-world fate, dialect, duplicate-name, or registration outcomes."
+}

@@ -1,8 +1,11 @@
 import { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { ExplanationPanel } from '../../components/ExplanationPanel';
 import { PageIntro } from '../../components/PageIntro';
 import { PhaseNotice } from '../../components/PhaseNotice';
+import { FEATURES } from '../../config/featureFlags';
 import { NAMING_SCORE_DIMENSIONS } from '../../config/namingScore';
+import { createNameExplanationBundle } from '../../core/explanation';
 import {
   createFavoriteNameRecord,
   createRecentNameViewRecord,
@@ -20,6 +23,10 @@ export function NameDetailPage() {
   const isFavorite = state.favorites.some(
     ({ name: favorite }) => favorite.id === nameId,
   );
+  const advancedExplanations =
+    FEATURES.advancedExplanation && name
+      ? (name.explanations ?? createNameExplanationBundle(name))
+      : undefined;
 
   useEffect(() => {
     if (name) {
@@ -126,7 +133,17 @@ export function NameDetailPage() {
         ))}
       </section>
 
-      <section className="detailGrid">
+      {advancedExplanations ? (
+        <ExplanationPanel
+          bundle={advancedExplanations}
+          description="普通解释回答为什么推荐，专业解释完整展示八项评分、规则边界与可核对来源。"
+          title={`${name.fullName}的推荐依据`}
+        />
+      ) : null}
+
+      {!advancedExplanations ? (
+        <>
+          <section className="detailGrid">
         <article className="contentCard detailCard">
           <span className="detailCard__number">01</span>
           <h2>音韵结构</h2>
@@ -165,9 +182,9 @@ export function NameDetailPage() {
             当前覆盖完整姓名、名字两字、姓与首字的精确匹配，并对部分普通话近音和网络负面词作提示；不覆盖方言或全部人工联想。
           </p>
         </article>
-      </section>
+          </section>
 
-      <section className="scoreBreakdownPanel contentCard">
+          <section className="scoreBreakdownPanel contentCard">
         <div className="libraryHeading">
           <div>
             <p className="eyebrow">评分构成</p>
@@ -200,9 +217,9 @@ export function NameDetailPage() {
             );
           })}
         </div>
-      </section>
+          </section>
 
-      <section className="classicReferencePanel contentCard">
+          <section className="classicReferencePanel contentCard">
         <p className="eyebrow">
           {name.classic
             ? `${name.classic.level === 'C' ? '意象化用' : '原文取名'} · ${name.classic.level ?? 'A'}级`
@@ -225,12 +242,22 @@ export function NameDetailPage() {
             </p>
           </>
         )}
-      </section>
+          </section>
+        </>
+      ) : null}
 
       <PhaseNotice
-        eyebrow="Phase 9 已完成"
-        title="当前详情已加入最近浏览"
-        description="收藏和最近浏览只保存在当前浏览器；刷新页面后仍可从“本地记录”重新打开，不会上传到服务器。"
+        eyebrow={advancedExplanations ? 'V3.5 分层解释' : 'Phase 9 已完成'}
+        title={
+          advancedExplanations
+            ? '推荐依据已按阅读深度分层'
+            : '当前详情已加入最近浏览'
+        }
+        description={
+          advancedExplanations
+            ? '普通与专业模式使用同一份核心评分结果；页面不重新打分，也不把姓名分数解释为命运或吉凶。收藏和最近浏览仍只保存在当前浏览器。'
+            : '收藏和最近浏览只保存在当前浏览器；刷新页面后仍可从“本地记录”重新打开，不会上传到服务器。'
+        }
       />
 
       <div className="pageActions">

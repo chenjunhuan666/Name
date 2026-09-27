@@ -1,4 +1,5 @@
 import type { BaziRelation } from './relations';
+import type { ExplanationBundle } from './explanation';
 
 export type HeavenlyStem =
   | '甲'
@@ -176,6 +177,7 @@ export interface BaziAnalysis {
   namingTendencies?: ElementTendency[];
   relations?: BaziRelation[];
   tenGods?: TenGodOccurrence[];
+  explanations?: ExplanationBundle;
 }
 
 export type CompleteBaziAnalysis = Omit<

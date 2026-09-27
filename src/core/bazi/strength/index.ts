@@ -16,6 +16,7 @@ import { createSeasonalEvidence } from './seasonalStrength';
 import { resolveStrength } from './strengthResolver';
 import { createSupportEvidence } from './support';
 import { analyzeBasicTiaohou } from './tiaohou';
+import { createBaziExplanationBundle } from '../../explanation';
 
 function summarizeEvidence(
   evidence: readonly StrengthEvidence[],
@@ -70,11 +71,14 @@ export function analyzeBazi(
   features: Readonly<FeatureFlags> = FEATURES,
 ): CompleteBaziAnalysis {
   const basicAnalysis = analyzeBasicBazi(bazi);
-
-  return {
+  const analysis: CompleteBaziAnalysis = {
     ...basicAnalysis,
     ...analyzeStrength(bazi, basicAnalysis),
     relations: analyzeBaziRelations(bazi),
     ...(features.tenGods ? { tenGods: analyzeTenGods(bazi) } : {}),
   };
+
+  return features.advancedExplanation
+    ? { ...analysis, explanations: createBaziExplanationBundle(analysis) }
+    : analysis;
 }

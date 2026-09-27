@@ -1,6 +1,7 @@
 import type { Bazi, BaziAnalysis, FiveElement } from './bazi';
 import type { BirthInfo, CalendarResult } from './calendar';
 import type { NamingCharacter } from './character';
+import type { ExplanationBundle } from './explanation';
 
 export type Gender = 'male' | 'female';
 
@@ -172,6 +173,7 @@ export interface GeneratedName {
   semanticAssessment?: SemanticPairAssessment;
   recommendation: string;
   classic?: ClassicReference;
+  explanations?: ExplanationBundle;
 }
 
 export interface NamingRecordVersions {

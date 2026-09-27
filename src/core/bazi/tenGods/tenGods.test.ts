@@ -140,10 +140,12 @@ describe('十神映射与运行时接入', () => {
     expect(FEATURES.tenGods).toBe(true);
     const withoutTenGods = analyzeBazi(sampleBazi, {
       ...FEATURES,
+      advancedExplanation: false,
       tenGods: false,
     });
     const withTenGods = analyzeBazi(sampleBazi, {
       ...FEATURES,
+      advancedExplanation: false,
       tenGods: true,
     });
     const { tenGods, ...analysisWithoutTenGods } = withTenGods;

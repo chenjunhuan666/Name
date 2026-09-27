@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
+import { ExplanationPanel } from '../../components/ExplanationPanel';
 import { PageIntro } from '../../components/PageIntro';
 import { PhaseNotice } from '../../components/PhaseNotice';
 import { FEATURES } from '../../config/featureFlags';
+import { createBaziExplanationBundle } from '../../core/explanation';
 import { explainTenGodOccurrence } from '../../core/bazi/tenGods';
 import { FIVE_ELEMENTS } from '../../data/fiveElements';
 import { findBaziRule } from '../../data/baziRules';
@@ -27,6 +29,10 @@ export function AnalysisPage() {
   const { analysis, bazi, birthInfo, calendarResult } = state;
   const strengthBreakdown = analysis?.strengthBreakdown;
   const namingTendencies = analysis?.namingTendencies ?? [];
+  const advancedExplanations =
+    FEATURES.advancedExplanation && analysis
+      ? (analysis.explanations ?? createBaziExplanationBundle(analysis))
+      : undefined;
   const maximumElementCount = analysis
     ? Math.max(
         ...Object.values(analysis.surfaceElements),
@@ -273,7 +279,15 @@ export function AnalysisPage() {
         </section>
       </div>
 
-      {FEATURES.tenGods && analysis?.tenGods?.length ? (
+      {advancedExplanations ? (
+        <ExplanationPanel
+          bundle={advancedExplanations}
+          description="普通解释聚焦起名方向，专业解释展开日主、月令、藏干、旺衰、调候、十神、干支关系及规则来源。"
+          title="从八字结构到起名方向"
+        />
+      ) : null}
+
+      {!advancedExplanations && FEATURES.tenGods && analysis?.tenGods?.length ? (
         <details className="contentCard ruleEvidencePanel">
           <summary>
             十神结构
@@ -313,7 +327,7 @@ export function AnalysisPage() {
         </details>
       ) : null}
 
-      {analysis?.strength && strengthBreakdown ? (
+      {!advancedExplanations && analysis?.strength && strengthBreakdown ? (
         <section className="contentCard tendencyCard">
           <div className="cardTitleRow">
             <div>
@@ -352,7 +366,7 @@ export function AnalysisPage() {
         </section>
       ) : null}
 
-      {strengthBreakdown?.evidence.length ? (
+      {!advancedExplanations && strengthBreakdown?.evidence.length ? (
         <details className="ruleEvidencePanel contentCard">
           <summary>
             规则依据与来源
@@ -421,7 +435,9 @@ export function AnalysisPage() {
 
       <PhaseNotice
         eyebrow={
-          FEATURES.tenGods && analysis?.tenGods
+          advancedExplanations
+            ? 'V3.5 分层解释'
+            : FEATURES.tenGods && analysis?.tenGods
             ? 'V3.1 十神运行时'
             : analysis?.strength
               ? 'V2.1 规则引擎'
@@ -432,7 +448,9 @@ export function AnalysisPage() {
                   : 'Phase 2'
         }
         title={
-          FEATURES.tenGods && analysis?.tenGods
+          advancedExplanations
+            ? '普通与专业解释已由核心层统一生成'
+            : FEATURES.tenGods && analysis?.tenGods
             ? '十神结构已进入专业解释链路'
             : analysis?.strength
               ? 'V2 旺衰证据已进入起名链路'
@@ -443,7 +461,9 @@ export function AnalysisPage() {
               : '请先录入已知八字'
         }
         description={
-          FEATURES.tenGods && analysis?.tenGods
+          advancedExplanations
+            ? '页面只展示结构化解释项；切换模式不会重新计算旺衰、五行倾向或姓名分数，也不会输出性格、人生事件或吉凶判断。'
+            : FEATURES.tenGods && analysis?.tenGods
             ? '年、月、时干和四柱藏干已按日主映射十神并关联规则来源；该结果只作结构解释，不改变旺衰、起名倾向或姓名评分。'
             : analysis?.strength
               ? '月令、季节、通根、透干、生扶与克泄耗已转为可追溯证据；基础调候只修正起名五档倾向，不输出唯一喜用神。'

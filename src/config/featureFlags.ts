@@ -9,5 +9,5 @@ export const FEATURES: Readonly<FeatureFlags> = {
   tenGods: true,
   benchmarkModel: false,
   dynamicRetrieval: false,
-  advancedExplanation: false,
+  advancedExplanation: true,
 };
