@@ -8,6 +8,10 @@ import type {
 const HAN_CHARACTER_PAIR = /^\p{Script=Han}{2}$/u;
 const HAN_SEGMENT = /[\p{Script=Han}]+/gu;
 const REFERENCE_PRIORITY = { A: 3, B: 2, C: 1 } as const;
+const phraseIndexCache = new WeakMap<
+  readonly ClassicWork[],
+  Map<string, ClassicReference>
+>();
 
 interface ClassicPackage {
   source: ClassicSource;
@@ -121,8 +125,12 @@ function putReference(
 }
 
 export function createClassicPhraseIndex(
-  works: ClassicWork[],
+  works: readonly ClassicWork[],
 ): Map<string, ClassicReference> {
+  const cached = phraseIndexCache.get(works);
+  if (cached) {
+    return cached;
+  }
   const index = new Map<string, ClassicReference>();
 
   works.forEach((work) => {
@@ -172,6 +180,7 @@ export function createClassicPhraseIndex(
     });
   });
 
+  phraseIndexCache.set(works, index);
   return index;
 }
 

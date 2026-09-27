@@ -168,3 +168,27 @@
 | 稳定性与回归 | `data:build:phase6` 生成固定 JSON，`data:check:phase6` 做字节级复验；阶段测试覆盖分层边界、许可证拒绝、拒绝项回流、标签完整性和 D 级隔离。完整工程门禁结果记录于 `phase6-readiness.json`。 |
 
 结论：Phase 6 的 Step 37～41 已全部执行。项目在不新增来源、不降低质量阈值、不改变生产评分排序的前提下完成推荐层分层和典籍文化层升级；运行库保持 2,160 个启用字，低于方向性数量目标不构成阶段未完成。
+
+## Phase 7：产品化
+
+| 项目 | 必填内容 |
+|---|---|
+| 新增文件 | `docs/calendar-reference/`：香港天文台独立历法案例和可执行数据；`scripts/build-knowledge-pages.mjs`：生成七个静态知识主题、知识首页和 sitemap；`scripts/benchmark-phase7-productization.mjs` 与 Playwright 浏览器脚本：算法、冷/热缓存和可访问性报告；四份 Phase 7 机器可读验收报告。 |
+| 修改文件 | 典籍短语索引和推荐页数据加载增加同会话缓存；首页增加不破坏 Hash Router 的跳转主内容入口；页面补齐知识入口、焦点样式、语义区域和 WCAG AA 对比色；`prebuild` 固定重建知识页。 |
+| 数据契约 | 独立历法案例只把香港天文台用于公历/农历日期、闰月和节气分钟核对；干支柱与秒级边界继续作为固定依赖回归，不冒充独立天文结论。知识页为直接可抓取 HTML，各自具有 title、description、canonical 和 sitemap URL。 |
+| 兼容策略 | 保持 `/Name/` 基路径和 Hash Router；不引入服务端或运行时在线依赖；缓存只复用同一份不可变字库/典籍数组，不改变候选、评分、排序或结果 hash；Phase 0 的 storage schema 不变。 |
+| 验收 | 历法独立案例、知识页稳定重建、静态 HTML 审计、算法 30 次预热后基准、Chromium 4× CPU 冷/热缓存各 10 次、axe WCAG 自动检查、键盘路径、V1→V2 存储迁移回归，以及 GitHub Pages `/Name/` 路径、知识页、sitemap 和 SPA 路由。 |
+| 回退 | 删除静态知识页生成器、Phase 7 报告和缓存层即可回到 Phase 6；跳转主内容、对比度和语义标签属于低风险可访问性修复，可独立保留。 |
+
+### Phase 7 执行进度（2026-09-27）
+
+| 验收项 | 结果 |
+|---|---|
+| Step 42 独立历法参考 | 15 个案例覆盖 1901/1950/2000/2026/2050/2100 春节、2023 闰二月、立春/惊蛰/清明/立夏分钟边界和 23:00/00:00 换日；日期和节气证据来自香港天文台，测试通过。 |
+| Step 43 静态 SEO | 已生成知识首页、七个主题页和 `sitemap.xml`；10 个发布 HTML、10 个 sitemap URL 的 title、description、canonical、主标题、链接和 `/Name/` 资源路径静态审计通过。 |
+| Step 44 性能 | 典籍短语索引与 SPA 数据 Promise 已缓存，输出 hash 保持一致。Node 30 次基准中五个场景 p95 改善 15.33%～76.72%，但标准 2,100/2,160 字及 3,000 字多风格场景仍未达到 300ms 方向目标。Chromium 153、4× CPU 下推荐可见 p95 为 2,839ms，未达到 800ms 方向目标；没有同环境 V2 浏览器 baseline，因此不得冻结或宣称正式性能门禁通过。 |
+| Step 45 a11y | axe-core 4.13.0 对首页、推荐页和知识页的 WCAG A/AA 检查由 4 个可计算对比度节点修正到 0 violations；渐变背景导致的 contrast 项保留为 incomplete。新浏览器会话验证首个 Tab 命中跳转链接，Enter 后 URL 保持 `#/` 且焦点进入 `MAIN#main-content`；修复了原链接被 Hash Router 当成 404 路由的问题。 |
+| Step 46 迁移回归 | `namingPersistence.test.ts` 7/7 通过，覆盖三类 V1 数据迁移、幂等、单条损坏隔离、写入失败不覆盖 V1、显式恢复及恢复失败保留 V2。Phase 7 未改变 storage schema。 |
+| Step 47 Pages | 本地生产构建、`/Name/` 基路径、SPA 路由、about、知识页和 sitemap 已通过。当前远端 Pages 最新成功部署仍是 Phase 1 提交 `ea1ead9`；线上首页/about 返回 200，而 Phase 7 的 `/knowledge/` 和 `/sitemap.xml` 返回 404。Phase 7 尚未提交、未 push，因而没有对应部署运行可验收。 |
+
+结论：Phase 7 的本地实施与可执行验证已推进到 Step 47 的发布边界，但阶段尚未完成。剩余条件只有：提交并 push Phase 7、等待 GitHub Pages 工作流成功，再对线上知识页、sitemap、静态资源和 SPA 路由复验。性能方向目标仍未达到，作为已量化技术债保留；根据计划原文，在同环境 V2 baseline 未冻结前不把方向数字冒充正式准入门槛。

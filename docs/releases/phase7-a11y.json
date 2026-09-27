@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "measuredAt": "2026-09-27T03:10:26.489Z",
+  "engine": "axe-core 4.13.0",
+  "browser": "Chromium 153.0.8010.52",
+  "rules": ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"],
+  "automated": {
+    "violationCount": 0,
+    "routes": [
+      { "id": "home", "url": "/Name/#/", "passes": 23, "incompleteRuleIds": ["color-contrast"] },
+      { "id": "names", "url": "/Name/#/names", "passes": 21, "incompleteRuleIds": ["color-contrast"] },
+      { "id": "knowledge", "url": "/Name/knowledge/", "passes": 15, "incompleteRuleIds": [] }
+    ],
+    "incompleteBoundary": "axe cannot calculate several backgrounds that use CSS gradients. The four concrete contrast violations it could calculate were corrected and the rerun returned zero violations."
+  },
+  "browserKeyboardPath": {
+    "passed": true,
+    "steps": [
+      "Fresh browser load starts with BODY focused.",
+      "The first Tab focuses the skip link labelled 跳到主要内容.",
+      "Enter keeps the Hash Router URL at /Name/#/ and focuses MAIN#main-content.",
+      "All visible form controls expose accessible names in the browser accessibility snapshot.",
+      "Known-Bazi mode accepts keyboard-addressable surname and four-pillar controls, submits to analysis, and reaches the name recommendation route."
+    ],
+    "fixedDefect": "The original #main-content link was interpreted by Hash Router as a route and opened the 404 page. The click now prevents route mutation and focuses main directly."
+  }
+}

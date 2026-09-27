@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "phase": "Phase 7",
+  "status": "passed",
+  "basePath": "/Name/",
+  "auditedHtmlFiles": [
+    {
+      "path": "index.html",
+      "sha256": "b2630bc07f46c678943b70f43facc33f2c1c9024e7260b2467be9e0b10652ba4",
+      "bytes": 2333
+    },
+    {
+      "path": "about.html",
+      "sha256": "932326375fe5d34825f7a51ac9a86fb85598e25698ce7c860f86f6783978789f",
+      "bytes": 2637
+    },
+    {
+      "path": "knowledge/index.html",
+      "sha256": "b6238ba18f7b614d4a26efaa6fb291854d9e8d74b3eea3e1c5bc3c252340afec",
+      "bytes": 2891
+    },
+    {
+      "path": "knowledge/tiangan/index.html",
+      "sha256": "d49f9eec5cbd5ed40d203dae948dd628d1e959fb3c04abf21e24044692ff97c9",
+      "bytes": 3155
+    },
+    {
+      "path": "knowledge/dizhi/index.html",
+      "sha256": "ca8cadeae013d915046e0a2907c7986ed296f5d026b347069dba5ba099a82287",
+      "bytes": 3068
+    },
+    {
+      "path": "knowledge/wuxing/index.html",
+      "sha256": "53858477924bb14f5964212f98648df62efe6f43b12338b440fe14b6ea00bb95",
+      "bytes": 3177
+    },
+    {
+      "path": "knowledge/bazi/index.html",
+      "sha256": "2b9d58edb964579ff28202c23bcacd364b5aae8df959cac28218d1111baad3f4",
+      "bytes": 3149
+    },
+    {
+      "path": "knowledge/hidden-stems/index.html",
+      "sha256": "fe553d3f6fae238b400875b0453993a336343d835a576d2f6e2043391db8ce3f",
+      "bytes": 3057
+    },
+    {
+      "path": "knowledge/solar-terms/index.html",
+      "sha256": "b8a661544aa00f8c4d5e83538d69ebf09e5f084b56198bd140f1578cf025ee04",
+      "bytes": 3117
+    },
+    {
+      "path": "knowledge/naming/index.html",
+      "sha256": "7bfb5e7dc20badaaff9ab57e3367fc8af741e406b11d900b7ea1d7d76778c385",
+      "bytes": 3185
+    }
+  ],
+  "sitemapUrls": 10,
+  "checks": [
+    "language",
+    "title",
+    "description",
+    "canonical",
+    "single-h1",
+    "main-landmark",
+    "duplicate-id",
+    "safe-new-window-links",
+    "github-pages-base-path",
+    "sitemap",
+    "built-assets"
+  ],
+  "boundary": "静态审计不替代真实浏览器键盘路径、颜色对比度或屏幕阅读器人工测试。"
+}

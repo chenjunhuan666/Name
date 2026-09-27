@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "measuredAt": "2026-09-27T03:04:28.418Z",
+  "environment": {
+    "browser": "Chromium 153.0.8010.52",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+    "viewport": "1280x720",
+    "cpuThrottleRate": 4,
+    "origin": "http://127.0.0.1:4173/Name/",
+    "server": "vite preview",
+    "samplesPerScenario": 10
+  },
+  "contract": {
+    "coldCache": "Browser cache cleared before every full-document run.",
+    "hotCache": "HTTP cache retained across full-document runs.",
+    "recommendationReady": "SPA route transition from analysis to 30 visible recommendations with parsed local data and deterministic generation.",
+    "scope": "Local production preview only. This is not a remote GitHub Pages or physical-device result."
+  },
+  "cold": {
+    "failures": 0,
+    "routeReady": { "p50Ms": 6403, "p95Ms": 6797, "minMs": 2987, "maxMs": 6797 },
+    "firstContentfulPaint": { "p50Ms": 3504, "p95Ms": 3880, "minMs": 128, "maxMs": 3880 },
+    "coreLibraryResponseEnd": { "p50Ms": 3575.8, "p95Ms": 3914.2, "minMs": 175.9, "maxMs": 3914.2 },
+    "classicLibraryResponseEnd": { "p50Ms": 3708.1, "p95Ms": 6792.3, "minMs": 293.4, "maxMs": 6792.3 },
+    "routeReadySamplesMs": [3284, 6797, 3019, 2987, 6423, 3100, 6442, 6453, 6403, 6624]
+  },
+  "hot": {
+    "failures": 0,
+    "routeReady": { "p50Ms": 6545, "p95Ms": 6730, "minMs": 2998, "maxMs": 6730 },
+    "firstContentfulPaint": { "p50Ms": 3612, "p95Ms": 3776, "minMs": 120, "maxMs": 3776 },
+    "coreLibraryResponseEnd": { "p50Ms": 3649.8, "p95Ms": 3823.3, "minMs": 174.9, "maxMs": 3823.3 },
+    "classicLibraryResponseEnd": { "p50Ms": 3816, "p95Ms": 6582.5, "minMs": 278.7, "maxMs": 6582.5 },
+    "routeReadySamplesMs": [6538, 6396, 6577, 6632, 2998, 6573, 6588, 6545, 6520, 6730]
+  },
+  "recommendationReady": {
+    "failures": 0,
+    "p50Ms": 2574,
+    "p95Ms": 2839,
+    "minMs": 2529,
+    "maxMs": 2839,
+    "samplesMs": [2568, 2599, 2839, 2554, 2653, 2570, 2577, 2574, 2689, 2529]
+  },
+  "errors": {
+    "console": 0,
+    "page": 0
+  },
+  "optimization": {
+    "implemented": [
+      "Reuse a classic phrase index for the same immutable works array.",
+      "Reuse core-character, pronunciation and classic-library promises across SPA route remounts."
+    ],
+    "deterministicOutput": "The algorithm benchmark hashes are unchanged for every before/after scenario; see phase7-algorithm-performance.json."
+  },
+  "assessment": {
+    "directionalP95TargetMs": 800,
+    "recommendationTargetMet": false,
+    "formalGateFrozen": false,
+    "reason": "The V3 plan requires a preserved V2 browser baseline before freezing a formal threshold. That baseline was not captured in the same environment. The directional target is therefore reported as missed, not rewritten as passed."
+  }
+}

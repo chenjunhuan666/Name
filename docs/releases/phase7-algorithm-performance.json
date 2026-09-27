@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 1,
+  "phase": "Phase 7",
+  "runtime": {
+    "node": "v24.19.0",
+    "platform": "win32",
+    "architecture": "x64"
+  },
+  "protocol": {
+    "warmupCount": 3,
+    "runCount": 30,
+    "desktopDirectionalTargetMs": 300,
+    "mobileDirectionalTargetMs": 800
+  },
+  "optimization": "同一不可变典籍数组复用 A/B/C phrase index；不改变 V2 候选、评分、排序或输出 hash。",
+  "evidenceBoundary": "2500/3000 使用不进入运行时的合成字符扩容，只测容量开销；Node 数据不冒充移动端或浏览器体验。方向目标在设备与限速协议固定前不作为发布阻断。",
+  "scenarios": [
+    {
+      "id": "2100-standard-30",
+      "size": 2100,
+      "limit": 30,
+      "preference": {
+        "styles": [],
+        "rarityPreference": "balanced",
+        "genderExpression": "neutral",
+        "classicPreference": "none"
+      },
+      "dataMode": "runtime-data",
+      "uncached": {
+        "runCount": 30,
+        "p50Ms": 769.33,
+        "p95Ms": 807.1,
+        "peakHeapDeltaBytes": 129099672,
+        "outputHash": "fa0b12854fc679ed6e9d27e2b5abf75286070b5d2dbae9eb391877f8e23da61b"
+      },
+      "optimized": {
+        "runCount": 30,
+        "p50Ms": 639.42,
+        "p95Ms": 683.38,
+        "peakHeapDeltaBytes": 211098512,
+        "outputHash": "fa0b12854fc679ed6e9d27e2b5abf75286070b5d2dbae9eb391877f8e23da61b"
+      },
+      "p95ChangePercent": -15.33,
+      "deterministic": true,
+      "desktopDirectionalTargetMet": false
+    },
+    {
+      "id": "2160-standard-60",
+      "size": 2160,
+      "limit": 60,
+      "preference": {
+        "styles": [],
+        "rarityPreference": "balanced",
+        "genderExpression": "neutral",
+        "classicPreference": "none"
+      },
+      "dataMode": "runtime-data",
+      "uncached": {
+        "runCount": 30,
+        "p50Ms": 768.85,
+        "p95Ms": 842.01,
+        "peakHeapDeltaBytes": 371733352,
+        "outputHash": "fd7cd8d6cb99b69a595ed12b9874b236133507cb920e7afd2f0c5cfa95612993"
+      },
+      "optimized": {
+        "runCount": 30,
+        "p50Ms": 633.51,
+        "p95Ms": 655.42,
+        "peakHeapDeltaBytes": 212714664,
+        "outputHash": "fd7cd8d6cb99b69a595ed12b9874b236133507cb920e7afd2f0c5cfa95612993"
+      },
+      "p95ChangePercent": -22.16,
+      "deterministic": true,
+      "desktopDirectionalTargetMet": false
+    },
+    {
+      "id": "2500-classic-filter",
+      "size": 2500,
+      "limit": 30,
+      "preference": {
+        "styles": [],
+        "rarityPreference": "balanced",
+        "genderExpression": "neutral",
+        "classicPreference": "shijing"
+      },
+      "dataMode": "synthetic-capacity-only",
+      "uncached": {
+        "runCount": 30,
+        "p50Ms": 193.86,
+        "p95Ms": 232.36,
+        "peakHeapDeltaBytes": 213059800,
+        "outputHash": "28e7292c98a49df8a6b1e30b85e0e755778171ee4bed4473ad8ecb330524132b"
+      },
+      "optimized": {
+        "runCount": 30,
+        "p50Ms": 57.91,
+        "p95Ms": 65.65,
+        "peakHeapDeltaBytes": 123749488,
+        "outputHash": "28e7292c98a49df8a6b1e30b85e0e755778171ee4bed4473ad8ecb330524132b"
+      },
+      "p95ChangePercent": -71.75,
+      "deterministic": true,
+      "desktopDirectionalTargetMet": true
+    },
+    {
+      "id": "3000-include-character",
+      "size": 3000,
+      "limit": 30,
+      "preference": {
+        "styles": [],
+        "includeCharacters": [
+          "清"
+        ],
+        "rarityPreference": "balanced",
+        "genderExpression": "neutral",
+        "classicPreference": "none"
+      },
+      "dataMode": "synthetic-capacity-only",
+      "uncached": {
+        "runCount": 30,
+        "p50Ms": 169.27,
+        "p95Ms": 206.7,
+        "peakHeapDeltaBytes": 231839648,
+        "outputHash": "a6b344dddb668b3813580774de6a9418cacec347d63e16b3813e9dbe940009b9"
+      },
+      "optimized": {
+        "runCount": 30,
+        "p50Ms": 40.3,
+        "p95Ms": 48.13,
+        "peakHeapDeltaBytes": 47503248,
+        "outputHash": "a6b344dddb668b3813580774de6a9418cacec347d63e16b3813e9dbe940009b9"
+      },
+      "p95ChangePercent": -76.72,
+      "deterministic": true,
+      "desktopDirectionalTargetMet": true
+    },
+    {
+      "id": "3000-multi-style",
+      "size": 3000,
+      "limit": 60,
+      "preference": {
+        "styles": [
+          "清雅",
+          "儒雅"
+        ],
+        "rarityPreference": "balanced",
+        "genderExpression": "neutral",
+        "classicPreference": "none"
+      },
+      "dataMode": "synthetic-capacity-only",
+      "uncached": {
+        "runCount": 30,
+        "p50Ms": 794.12,
+        "p95Ms": 840.32,
+        "peakHeapDeltaBytes": 66996520,
+        "outputHash": "cd96fc09b38a62a90fd9c94fde2b7acd0199056dc06559d21ea961760427c329"
+      },
+      "optimized": {
+        "runCount": 30,
+        "p50Ms": 650.06,
+        "p95Ms": 685.79,
+        "peakHeapDeltaBytes": 304317216,
+        "outputHash": "cd96fc09b38a62a90fd9c94fde2b7acd0199056dc06559d21ea961760427c329"
+      },
+      "p95ChangePercent": -18.39,
+      "deterministic": true,
+      "desktopDirectionalTargetMet": false
+    }
+  ]
+}

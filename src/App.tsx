@@ -10,6 +10,16 @@ const navigation = [
 export function App() {
   return (
     <div className="siteFrame">
+      <a
+        className="skipLink"
+        href="#main-content"
+        onClick={(event) => {
+          event.preventDefault();
+          document.getElementById('main-content')?.focus();
+        }}
+      >
+        跳到主要内容
+      </a>
       <header className="siteHeader">
         <div className="headerInner">
           <NavLink className="brand" to="/" aria-label="返回起名首页">
@@ -41,7 +51,7 @@ export function App() {
         </div>
       </header>
 
-      <main>
+      <main id="main-content" tabIndex={-1}>
         <Outlet />
       </main>
 
@@ -52,6 +62,7 @@ export function App() {
             分析结果用于文化参考，不代表命运判断；出生信息仅在本地处理。
           </p>
           <a href={`${import.meta.env.BASE_URL}about.html`}>方法、数据与隐私说明</a>
+          <a href={`${import.meta.env.BASE_URL}knowledge/`}>传统文化知识</a>
         </div>
       </footer>
     </div>

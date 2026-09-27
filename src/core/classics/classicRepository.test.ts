@@ -77,6 +77,12 @@ const zhuangziWorks = JSON.parse(
 ) as ClassicWork[];
 
 describe('典籍 A/B/C 分级关联', () => {
+  it('同一只读典籍数组复用已构建索引，避免筛选交互反复扫描全部原文', () => {
+    expect(createClassicPhraseIndex(sampleWorks)).toBe(
+      createClassicPhraseIndex(sampleWorks),
+    );
+  });
+
   it('A 级优先关联原文中同序连续出现的名字', () => {
     const index = createClassicPhraseIndex(sampleWorks);
     const reference = index.get('清扬');

@@ -155,7 +155,7 @@ export function HomePage() {
           </div>
         </div>
 
-        <div className="namingPanel" aria-labelledby="naming-panel-title">
+        <section className="namingPanel" aria-labelledby="naming-panel-title">
           <div className="panelHeading">
             <div>
               <p className="eyebrow">起名信息</p>
@@ -266,7 +266,7 @@ export function HomePage() {
               ? '四柱仅在浏览器本地校验和保存，不会上传出生数据。'
               : '农历、节气和四柱均在浏览器本地计算；默认使用中国标准时间，真太阳时关闭。'}
           </p>
-        </div>
+        </section>
       </section>
 
       <section className="principleStrip">

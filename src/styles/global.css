@@ -63,6 +63,23 @@ a {
   white-space: nowrap;
 }
 
+.skipLink {
+  position: fixed;
+  z-index: 1000;
+  top: 12px;
+  left: 12px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--cinnabar-dark);
+  font-weight: 700;
+  transform: translateY(-160%);
+}
+
+.skipLink:focus {
+  transform: translateY(0);
+}
+
 button:focus-visible,
 a:focus-visible,
 input:focus-visible,
@@ -362,7 +379,7 @@ select:focus-visible {
   padding: 8px 12px;
   border: 0;
   border-radius: 7px;
-  color: #70746d;
+  color: #565c54;
   background: transparent;
   cursor: pointer;
   gap: 8px;
@@ -514,7 +531,7 @@ select:focus-visible {
 .segmentedControl button {
   border: 0;
   border-radius: 4px;
-  color: #777b74;
+  color: #565c54;
   background: transparent;
   cursor: pointer;
 }
@@ -2462,7 +2479,7 @@ select:focus-visible {
 
 .footerInner p {
   margin: 0;
-  color: #73766f;
+  color: #565c54;
   font-size: 12px;
 }
 

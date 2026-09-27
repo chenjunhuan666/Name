@@ -22,6 +22,8 @@ V3.5 已启用统一的专业解释层：八字分析和姓名详情都由 core 
 
 V3.6 已完成推荐库与典籍文化层升级。2,160 个启用字按固定质量阈值分为 Core 492、Extended 1,029、Distinctive 639；本轮没有为追求 2,500～3,000 的方向性规模目标引入新来源、放宽门槛或批准新字。962 篇典籍全部具有主题、风格和适名度标签。另有 1,879 条 D 级单字原文证据，只能说明该字在对应原文出现，使用独立数据结构和加载入口，禁止作为“双字名字出自某典籍”的依据；A/B/C 双字关联规则保持不变。`pnpm run data:check:phase6` 会复核许可证门禁、审校闭合、受保护拒绝项、稳定重建和全部生成物哈希。
 
+Phase 7 产品化已完成本地部分：独立历法参考案例、七个静态知识主题与 sitemap、算法/浏览器性能报告、axe 自动检查、键盘路径和 V1→V2 迁移回归均已落盘。知识页由 `prebuild` 稳定生成，入口为 `/Name/knowledge/`。当前浏览器方向性能目标尚未达到；Phase 7 改动也尚未 push，因此线上 Pages 仍不包含知识页与 sitemap，完整状态见 [`docs/releases/v3-plan.md`](docs/releases/v3-plan.md) 和 [`docs/releases/phase7-pages-acceptance.json`](docs/releases/phase7-pages-acceptance.json)。
+
 汉字数据分为《通用规范汉字表》8105 字标准层和 `ai-chinese-naming` 转换得到的推荐层，并为可定位字头关联康熙索引。初始推荐层采用正向语义、起名适用度不低于 40、生僻等级不高于 2 且核心字段完整的记录；后续扩容必须经过固定证据、明确决策和受控导入。第二来源 `Chinese-Names-Corpus` 只为未命中硬拒绝的中性候选补充观察到的姓名使用证据，不覆盖语义、读音或同音风险；非规范字不进入运行候选。典籍库分包包含《诗经》《楚辞》《论语》《孟子》《周易》《庄子》、基础唐诗和宋词；来源分别登记 MIT、CC0-1.0 或 CC-BY-SA-4.0 许可。历法计算依赖 MIT 许可的 `lunar-typescript`。完整来源与许可见 `THIRD_PARTY_NOTICES.md`。
 
 综合分权重集中在 `src/config/namingScore.ts`：五行方向 25%、字义与组合语义 20%、音律 15%、文化出处 15%、谐音安全 10%、现代审美 10%、字形与生僻度合计 5%。典籍关联分为 A 级原文连续、B 级同一分句按原顺序分别出现，以及只接受人工登记的 C 级同篇意象化用；不跨标点、不调换顺序、不自动编造 C 级出处。分数仅用于候选排序，不代表命运或吉凶。谐音检查覆盖完整姓名、名字两字、姓与首字的精确匹配，部分普通话近音作为软提示降分，常见网络负面词精确命中则进入硬过滤；不等同于方言或全部语境审查。
@@ -52,6 +54,9 @@ pnpm run data:check:naming-holdout-v2
 pnpm run data:check:naming-holdout-v2-frozen
 pnpm run benchmark:v4:ranking:holdout:check
 pnpm run data:check:phase6
+pnpm run knowledge:check
+pnpm run audit:phase7:static
+pnpm run benchmark:phase7
 ```
 
 V2 冻结结果见 [`docs/releases/v2-baseline.md`](docs/releases/v2-baseline.md)，完整发布 JSON 清单由 `pnpm run data:manifest:v2` 稳定生成到 [`docs/releases/v2-artifact-manifest.json`](docs/releases/v2-artifact-manifest.json)。

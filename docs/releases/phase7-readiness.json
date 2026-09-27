@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "phase": 7,
+  "updatedAt": "2026-09-27",
+  "status": "remote-deployment-pending",
+  "steps": [
+    {
+      "step": 42,
+      "name": "independent-calendar-reference",
+      "status": "passed",
+      "evidence": ["docs/calendar-reference/cases.json", "src/core/calendar/referenceCases.test.ts"]
+    },
+    {
+      "step": 43,
+      "name": "static-seo-pages-and-sitemap",
+      "status": "passed-locally",
+      "evidence": ["public/knowledge/", "public/sitemap.xml", "docs/releases/phase7-static-audit.json"]
+    },
+    {
+      "step": 44,
+      "name": "algorithm-and-browser-performance",
+      "status": "measured-directional-target-missed",
+      "evidence": ["docs/releases/phase7-algorithm-performance.json", "docs/releases/phase7-browser-performance.json"],
+      "blockingFormalGate": false,
+      "reason": "No same-environment V2 browser baseline exists, so the plan does not allow freezing a formal threshold. The missed directional targets remain explicit technical debt."
+    },
+    {
+      "step": 45,
+      "name": "accessibility",
+      "status": "passed-with-automated-incomplete-notes",
+      "evidence": ["docs/releases/phase7-a11y.json"]
+    },
+    {
+      "step": 46,
+      "name": "v1-to-v2-storage-migration-regression",
+      "status": "passed",
+      "evidence": ["docs/releases/phase7-migration-acceptance.json"]
+    },
+    {
+      "step": 47,
+      "name": "github-pages-full-chain",
+      "status": "local-passed-remote-pending",
+      "evidence": ["docs/releases/phase7-pages-acceptance.json"],
+      "remaining": [
+        "Commit Phase 7.",
+        "Push main to origin.",
+        "Wait for the GitHub Pages workflow for that commit to succeed.",
+        "Verify the published knowledge pages, sitemap, assets and SPA hash routes."
+      ]
+    }
+  ],
+  "phaseComplete": false
+}

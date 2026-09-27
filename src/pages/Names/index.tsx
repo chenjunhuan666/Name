@@ -68,6 +68,36 @@ const sortOptions = [
 ] as const;
 type SortKey = (typeof sortOptions)[number]['value'];
 
+let coreLibrariesPromise:
+  | Promise<[NamingCharacter[], CharacterPronunciation[]]>
+  | undefined;
+let classicLibraryPromise:
+  | ReturnType<typeof loadClassicLibraryWithDiagnostics>
+  | undefined;
+
+function loadCoreLibraries() {
+  coreLibrariesPromise ??= Promise.all([
+    loadCharacterLibrary(),
+    loadPronunciationLibrary(),
+  ]).catch((error: unknown) => {
+    coreLibrariesPromise = undefined;
+    throw error;
+  });
+
+  return coreLibrariesPromise;
+}
+
+function loadClassicLibrary() {
+  classicLibraryPromise ??= loadClassicLibraryWithDiagnostics().catch(
+    (error: unknown) => {
+      classicLibraryPromise = undefined;
+      throw error;
+    },
+  );
+
+  return classicLibraryPromise;
+}
+
 function sortNames(names: GeneratedName[], sortBy: SortKey): GeneratedName[] {
   return [...names].sort((left, right) => {
     const scoreDifference =
@@ -115,7 +145,7 @@ export function NamesPage() {
   useEffect(() => {
     let isActive = true;
 
-    Promise.all([loadCharacterLibrary(), loadPronunciationLibrary()])
+    loadCoreLibraries()
       .then(([library, pronunciationLibrary]) => {
         if (isActive) {
           setCharacters(library);
@@ -136,7 +166,7 @@ export function NamesPage() {
         }
       });
 
-    loadClassicLibraryWithDiagnostics().then(({ works, warnings }) => {
+    loadClassicLibrary().then(({ works, warnings }) => {
       if (isActive) {
         setClassicWorks(works);
         setClassicLoadWarning(

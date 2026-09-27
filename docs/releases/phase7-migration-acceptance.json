@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "verifiedAt": "2026-09-27",
+  "command": "pnpm exec vitest run src/core/storage/namingPersistence.test.ts",
+  "testFiles": 1,
+  "tests": 7,
+  "passed": 7,
+  "failed": 0,
+  "coveredContracts": [
+    "save and restore favorites, recent views and auto-calendar history",
+    "safe empty state for corrupt or unknown-version storage",
+    "isolate structurally incomplete records without rejecting healthy siblings",
+    "migrate all three V1 record categories to V2 while preserving original values and snapshots",
+    "repeat migration idempotently",
+    "record damaged-item diagnostics and counts",
+    "never overwrite V1 when the V2 write fails",
+    "restore explicitly from retained V1 data and preserve the existing V2 value if recovery fails"
+  ],
+  "storageSchemaChangedInPhase7": false,
+  "result": "passed"
+}

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-09-27",
+  "repository": "https://github.com/chenjunhuan666/Name",
+  "workflow": {
+    "path": ".github/workflows/deploy.yml",
+    "trigger": "push to main or workflow_dispatch",
+    "node": "22",
+    "pnpm": "9.15.9",
+    "artifact": "dist",
+    "basePath": "/Name/"
+  },
+  "localProductionPreview": {
+    "buildPassed": true,
+    "spaHomePassed": true,
+    "spaHashRoutesPassed": true,
+    "aboutPagePassed": true,
+    "knowledgePagesPassed": true,
+    "sitemapPassed": true,
+    "assetBasePathPassed": true,
+    "consoleErrors": 0
+  },
+  "currentRemoteBaseline": {
+    "latestDeployRun": "https://github.com/chenjunhuan666/Name/actions/runs/35480872800",
+    "headSha": "ea1ead93a09caf85c139fd2507a378490b11affc",
+    "conclusion": "success",
+    "home": { "url": "https://chenjunhuan666.github.io/Name/", "status": 200 },
+    "about": { "url": "https://chenjunhuan666.github.io/Name/about.html", "status": 200 },
+    "knowledge": { "url": "https://chenjunhuan666.github.io/Name/knowledge/", "status": 404 },
+    "sitemap": { "url": "https://chenjunhuan666.github.io/Name/sitemap.xml", "status": 404 }
+  },
+  "phase7RemoteArtifact": {
+    "committed": false,
+    "pushed": false,
+    "deployRunCreated": false,
+    "verified": false,
+    "reason": "Phase 7 changes are intentionally left uncommitted and no push was authorized. The published site therefore remains on Phase 1 and cannot contain the new knowledge pages or sitemap."
+  },
+  "result": "local-chain-passed-remote-phase7-pending"
+}

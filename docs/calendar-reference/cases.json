@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "evidenceBoundary": "公历/农历日期及 2026 节气分钟来自香港天文台公开表；八字日柱、时柱和秒级交节仍属于 lunar-typescript@1.8.6 回归，不以本文件冒充独立验证。",
+  "cases": [
+    {
+      "id": "cny-1901",
+      "input": "1901-01-01 12:00",
+      "timezone": "Asia/Shanghai",
+      "dayBoundaryConvention": "midnight",
+      "eightCharSect": 2,
+      "expectedLunar": "农历 1901 年正月初一",
+      "expectedSolar": "1901-02-19 12:00",
+      "source": { "name": "香港天文台公历与农历对照表", "version": "1901", "urlOrBibliography": "https://www.hko.gov.hk/en/gts/time/calendar/pdf/files/1901e.pdf", "accessedAt": "2026-09-27" }
+    },
+    {
+      "id": "cny-1950",
+      "input": "1950-01-01 12:00",
+      "timezone": "Asia/Shanghai",
+      "dayBoundaryConvention": "midnight",
+      "eightCharSect": 2,
+      "expectedLunar": "农历 1950 年正月初一",
+      "expectedSolar": "1950-02-17 12:00",
+      "source": { "name": "香港天文台公历与农历对照表", "version": "1950", "urlOrBibliography": "https://www.hko.gov.hk/en/gts/time/calendar/pdf/files/1950e.pdf", "accessedAt": "2026-09-27" }
+    },
+    {
+      "id": "cny-2000",
+      "input": "2000-01-01 12:00",
+      "timezone": "Asia/Shanghai",
+      "dayBoundaryConvention": "midnight",
+      "eightCharSect": 2,
+      "expectedLunar": "农历 2000 年正月初一",
+      "expectedSolar": "2000-02-05 12:00",
+      "source": { "name": "香港天文台公历与农历对照表", "version": "2000", "urlOrBibliography": "https://www.hko.gov.hk/en/gts/time/calendar/pdf/files/2000e.pdf", "accessedAt": "2026-09-27" }
+    },
+    {
+      "id": "cny-2026",
+      "input": "2026-01-01 12:00",
+      "timezone": "Asia/Shanghai",
+      "dayBoundaryConvention": "midnight",
+      "eightCharSect": 2,
+      "expectedLunar": "农历 2026 年正月初一",
+      "expectedSolar": "2026-02-17 12:00",
+      "source": { "name": "香港天文台 2026 年二月月历", "version": "2026", "urlOrBibliography": "https://www.hko.gov.hk/en/gts/astron2026/files/2026cal02.pdf", "accessedAt": "2026-09-27" }
+    },
+    {
+      "id": "cny-2050",
+      "input": "2050-01-01 12:00",
+      "timezone": "Asia/Shanghai",
+      "dayBoundaryConvention": "midnight",
+      "eightCharSect": 2,
+      "expectedLunar": "农历 2050 年正月初一",
+      "expectedSolar": "2050-01-23 12:00",
+      "source": { "name": "香港天文台公历与农历对照表", "version": "2050", "urlOrBibliography": "https://www.hko.gov.hk/en/gts/time/calendar/pdf/files/2050e.pdf", "accessedAt": "2026-09-27" }
+    },
+    {
+      "id": "cny-2100",
+      "input": "2100-01-01 12:00",
+      "timezone": "Asia/Shanghai",
+      "dayBoundaryConvention": "midnight",
+      "eightCharSect": 2,
+      "expectedLunar": "农历 2100 年正月初一",
+      "expectedSolar": "2100-02-09 12:00",
+      "source": { "name": "香港天文台公历与农历对照表", "version": "2100", "urlOrBibliography": "https://www.hko.gov.hk/en/gts/time/calendar/pdf/files/2100e.pdf", "accessedAt": "2026-09-27" }
+    },
+    {
+      "id": "leap-2023-second-month",
+      "input": "2023-L02-01 12:00",
+      "timezone": "Asia/Shanghai",
+      "dayBoundaryConvention": "midnight",
+      "eightCharSect": 2,
+      "expectedLunar": "农历 2023 年闰二月初一",
+      "expectedSolar": "2023-03-22 12:00",
+      "source": { "name": "香港天文台公历与农历对照表", "version": "2023", "urlOrBibliography": "https://www.hko.gov.hk/en/gts/time/calendar/pdf/files/2023e.pdf", "accessedAt": "2026-09-27" }
+    },
+    {
+      "id": "lichun-before-2026",
+      "input": "2025-12-17 04:01",
+      "timezone": "Asia/Shanghai",
+      "dayBoundaryConvention": "midnight",
+      "eightCharSect": 2,
+      "expectedLunar": "农历 2025 年腊月十七",
+      "expectedSolar": "2026-02-04 04:01",
+      "expectedNextTerm": { "name": "立春", "occurredAtMinute": "2026-02-04 04:02" },
+      "source": { "name": "香港天文台 2026 年二月月历", "version": "2026", "urlOrBibliography": "https://www.hko.gov.hk/en/gts/astron2026/files/2026cal02.pdf", "accessedAt": "2026-09-27" },
+      "boundaryToleranceSeconds": 60
+    },
+    {
+      "id": "lichun-after-2026",
+      "input": "2025-12-17 04:03",
+      "timezone": "Asia/Shanghai",
+      "dayBoundaryConvention": "midnight",
+      "eightCharSect": 2,
+      "expectedLunar": "农历 2025 年腊月十七",
+      "expectedSolar": "2026-02-04 04:03",
+      "expectedPreviousTerm": { "name": "立春", "occurredAtMinute": "2026-02-04 04:02" },
+      "source": { "name": "香港天文台 2026 年二月月历", "version": "2026", "urlOrBibliography": "https://www.hko.gov.hk/en/gts/astron2026/files/2026cal02.pdf", "accessedAt": "2026-09-27" },
+      "boundaryToleranceSeconds": 60
+    },
+    {
+      "id": "jingzhe-before-2026",
+      "input": "2026-01-17 21:58",
+      "timezone": "Asia/Shanghai",
+      "dayBoundaryConvention": "midnight",
+      "eightCharSect": 2,
+      "expectedLunar": "农历 2026 年正月十七",
+      "expectedSolar": "2026-03-05 21:58",
+      "expectedNextTerm": { "name": "惊蛰", "occurredAtMinute": "2026-03-05 21:59" },
+      "source": { "name": "香港天文台 2026 年三月月历", "version": "2026", "urlOrBibliography": "https://www.hko.gov.hk/en/gts/astron2026/files/2026cal03.pdf", "accessedAt": "2026-09-27" },
+      "boundaryToleranceSeconds": 60
+    },
+    {
+      "id": "jingzhe-after-2026",
+      "input": "2026-01-17 21:59",
+      "timezone": "Asia/Shanghai",
+      "dayBoundaryConvention": "midnight",
+      "eightCharSect": 2,
+      "expectedLunar": "农历 2026 年正月十七",
+      "expectedSolar": "2026-03-05 21:59",
+      "expectedPreviousTerm": { "name": "惊蛰", "occurredAtMinute": "2026-03-05 21:59" },
+      "source": { "name": "香港天文台 2026 年三月月历", "version": "2026", "urlOrBibliography": "https://www.hko.gov.hk/en/gts/astron2026/files/2026cal03.pdf", "accessedAt": "2026-09-27" },
+      "boundaryToleranceSeconds": 60
+    },
+    {
+      "id": "qingming-2026",
+      "input": "2026-02-18 02:40",
+      "timezone": "Asia/Shanghai",
+      "dayBoundaryConvention": "midnight",
+      "eightCharSect": 2,
+      "expectedLunar": "农历 2026 年二月十八",
+      "expectedSolar": "2026-04-05 02:40",
+      "expectedPreviousTerm": { "name": "清明", "occurredAtMinute": "2026-04-05 02:40" },
+      "source": { "name": "香港天文台 2026 年四月月历", "version": "2026", "urlOrBibliography": "https://www.hko.gov.hk/en/gts/astron2026/files/2026cal04.pdf", "accessedAt": "2026-09-27" },
+      "boundaryToleranceSeconds": 60
+    },
+    {
+      "id": "lixia-2026",
+      "input": "2026-03-19 19:49",
+      "timezone": "Asia/Shanghai",
+      "dayBoundaryConvention": "midnight",
+      "eightCharSect": 2,
+      "expectedLunar": "农历 2026 年三月十九",
+      "expectedSolar": "2026-05-05 19:49",
+      "expectedPreviousTerm": { "name": "立夏", "occurredAtMinute": "2026-05-05 19:48" },
+      "source": { "name": "香港天文台 2026 年五月月历", "version": "2026", "urlOrBibliography": "https://www.hko.gov.hk/en/gts/astron2026/files/2026cal05.pdf", "accessedAt": "2026-09-27" },
+      "boundaryToleranceSeconds": 60
+    },
+    {
+      "id": "midnight-before-2026",
+      "input": "2026-07-05 23:59",
+      "timezone": "Asia/Shanghai",
+      "dayBoundaryConvention": "midnight",
+      "eightCharSect": 2,
+      "expectedLunar": "农历 2026 年七月初五",
+      "expectedSolar": "2026-08-17 23:59",
+      "source": { "name": "香港天文台 2026 年八月月历", "version": "2026", "urlOrBibliography": "https://www.hko.gov.hk/en/gts/astron2026/files/2026cal08.pdf", "accessedAt": "2026-09-27" }
+    },
+    {
+      "id": "midnight-after-2026",
+      "input": "2026-07-06 00:00",
+      "timezone": "Asia/Shanghai",
+      "dayBoundaryConvention": "midnight",
+      "eightCharSect": 2,
+      "expectedLunar": "农历 2026 年七月初六",
+      "expectedSolar": "2026-08-18 00:00",
+      "source": { "name": "香港天文台 2026 年八月月历", "version": "2026", "urlOrBibliography": "https://www.hko.gov.hk/en/gts/astron2026/files/2026cal08.pdf", "accessedAt": "2026-09-27" }
+    }
+  ]
+}
